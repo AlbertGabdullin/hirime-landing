@@ -1,0 +1,80 @@
+---
+import type { Translations } from '../i18n/en';
+
+interface Props {
+  t: Translations['features'];
+}
+
+const { t } = Astro.props;
+---
+
+<section
+  id="features"
+  style="padding: 6rem 1.5rem; background-color: var(--bg-primary);"
+  aria-labelledby="features-title"
+>
+  <div style="max-width: 1180px; margin: 0 auto;">
+
+    <!-- Section header -->
+    <div class="fade-up" style="margin-bottom: 4rem;">
+      <span class="section-label">{t.label}</span>
+      <h2 id="features-title" class="section-title" style="margin-top: 0.75rem; margin-bottom: 1rem;">
+        {t.title}
+      </h2>
+      <p class="section-subtitle">{t.subtitle}</p>
+    </div>
+
+    <!-- Feature cards grid -->
+    <div class="grid sm:grid-cols-2 gap-5">
+      {t.cards.map((card, i) => (
+        <article
+          class={`card fade-up delay-${(i % 2 + 1) * 100}`}
+          style="display: flex; flex-direction: column; gap: 1rem;"
+        >
+          <!-- Icon + badge row -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem;">
+            <span style="
+              font-size: 2.25rem;
+              line-height: 1;
+              display: block;
+            " role="img" aria-label={card.title}>{card.emoji}</span>
+            {card.badge && (
+              <span class="badge">{card.badge}</span>
+            )}
+          </div>
+
+          <!-- Content -->
+          <div>
+            <h3 style="
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              letter-spacing: -0.01em;
+              margin-bottom: 0.5rem;
+            ">
+              {card.title}
+            </h3>
+            <p style="
+              font-size: 0.9375rem;
+              color: var(--text-secondary);
+              line-height: 1.65;
+            ">
+              {card.description}
+            </p>
+          </div>
+
+          <!-- Bottom accent line on hover (CSS) -->
+          <div aria-hidden="true" style="
+            height: 2px;
+            width: 2.5rem;
+            border-radius: 9999px;
+            background-color: var(--accent);
+            opacity: 0.4;
+            margin-top: auto;
+          "></div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

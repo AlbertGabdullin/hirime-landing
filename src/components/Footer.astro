@@ -1,0 +1,103 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import type { Translations } from '../i18n/en';
+import type { Lang } from '../i18n/utils';
+
+interface Props {
+  t: Translations['footer'];
+  lang: Lang;
+}
+
+const { t, lang } = Astro.props;
+---
+
+<footer style="padding: 3rem 1.5rem 2.5rem;">
+  <div style="max-width: 1180px; margin: 0 auto;">
+
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6" style="margin-bottom: 2rem;">
+
+      <!-- Logo + tagline -->
+      <div>
+        <a
+          href={lang === 'en' ? '/' : `/${lang}/`}
+          style="
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            margin-bottom: 0.375rem;
+          "
+          aria-label="Hirime — Home"
+        >
+          <span style="
+            font-family: 'Onest', system-ui, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: var(--text-primary);
+          ">Hirime</span>
+          <span style="
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            display: inline-block;
+          " aria-hidden="true"></span>
+        </a>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">
+          {t.tagline}
+        </p>
+      </div>
+
+      <!-- Links + language switcher -->
+      <div class="flex flex-col sm:items-end gap-3">
+        <nav aria-label="Footer navigation">
+          <ul style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          ">
+            <li>
+              <a href="/privacy" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;">
+                {t.links.privacy}
+              </a>
+            </li>
+            <li>
+              <a href="/terms" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;">
+                {t.links.terms}
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@hirime.com" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;">
+                {t.links.contact}
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <LanguageSwitcher currentLang={lang} />
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div style="
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    ">
+      <p style="font-size: 0.8125rem; color: var(--text-muted);">
+        {t.copyright}
+      </p>
+      <p style="font-size: 0.8125rem; color: var(--text-muted);">
+        Made with <span aria-label="love" style="color: var(--accent);">♥</span> for job seekers
+      </p>
+    </div>
+
+  </div>
+</footer>

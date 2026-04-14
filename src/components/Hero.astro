@@ -1,0 +1,203 @@
+---
+import type { Translations } from '../i18n/en';
+
+interface Props {
+  t: Translations['hero'];
+}
+
+const { t } = Astro.props;
+const rolesJson = JSON.stringify(t.roles);
+---
+
+<section
+  id="hero"
+  class="hero-gradient"
+  style="
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 1.5rem 5rem;
+    position: relative;
+    overflow: hidden;
+  "
+  aria-label="Hero"
+>
+  <!-- Decorative blobs -->
+  <div aria-hidden="true" style="
+    position: absolute;
+    top: 15%;
+    right: -8%;
+    width: min(480px, 60vw);
+    height: min(480px, 60vw);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(249,115,22,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  "></div>
+  <div aria-hidden="true" style="
+    position: absolute;
+    bottom: 10%;
+    left: -5%;
+    width: min(320px, 45vw);
+    height: min(320px, 45vw);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(249,115,22,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  "></div>
+
+  <div style="max-width: 1180px; margin: 0 auto; width: 100%;">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Copy -->
+      <div>
+        <!-- Eyebrow -->
+        <div class="fade-up" style="margin-bottom: 1.5rem;">
+          <span class="badge">✦ AI Resume Builder</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="fade-up delay-100" style="
+          font-family: 'Onest', system-ui, sans-serif;
+          font-size: clamp(2.5rem, 5.5vw, 4rem);
+          font-weight: 800;
+          line-height: 1.1;
+          letter-spacing: -0.04em;
+          color: var(--text-primary);
+          margin-bottom: 0.5rem;
+        ">
+          {t.prefix}<br />
+          <span
+            id="rotating-word"
+            data-words={rolesJson}
+            aria-live="polite"
+          >{t.roles[0]}</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="fade-up delay-200" style="
+          font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+          color: var(--text-secondary);
+          line-height: 1.65;
+          max-width: 42ch;
+          margin-top: 1.5rem;
+          margin-bottom: 2.5rem;
+        ">
+          {t.subheadline}
+        </p>
+
+        <!-- Email form -->
+        <form
+          id="hero-form"
+          class="waitlist-form fade-up delay-300"
+          style="margin-bottom: 1.25rem;"
+          novalidate
+        >
+          <div style="
+            display: flex;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+            max-width: 460px;
+          ">
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder={t.emailPlaceholder}
+              class="email-input"
+              style="flex: 1; min-width: 200px;"
+              aria-label={t.emailPlaceholder}
+            />
+            <button type="submit" class="btn-primary">
+              {t.cta}
+            </button>
+          </div>
+          <!-- Success state -->
+          <div class="success-msg" style="margin-top: 0.75rem;">
+            <span>✓</span>
+            <span>{t.successMessage}</span>
+          </div>
+        </form>
+
+        <!-- Social proof -->
+        <p class="fade-up delay-400" style="
+          font-size: 0.875rem;
+          color: var(--text-muted);
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        ">
+          <span aria-hidden="true">👥</span>
+          {t.socialProof}
+        </p>
+      </div>
+
+      <!-- Right: A4 Resume image -->
+      <div class="fade-up delay-300 hidden lg:flex" style="justify-content: center; align-items: center;">
+        <div class="resume-scene">
+          <div class="resume-shadow-card"></div>
+          <div class="resume-a4">
+            <img
+              src="/images/resume-preview.jpg"
+              alt="Resume preview"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block;"
+            />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .resume-scene {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Decorative tinted card peeking behind */
+  .resume-shadow-card {
+    position: absolute;
+    width: 88%;
+    aspect-ratio: 210 / 297;
+    border-radius: 8px;
+    background: var(--accent);
+    opacity: 0.15;
+    transform: rotate(5deg) translateY(6px);
+    pointer-events: none;
+  }
+
+  /* Main A4 card */
+  .resume-a4 {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 210 / 297;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow:
+      0 2px 4px rgba(0,0,0,0.04),
+      0 8px 24px rgba(0,0,0,0.10),
+      0 20px 48px rgba(0,0,0,0.07);
+    transform: rotate(-2deg);
+    transform-origin: center center;
+    cursor: default;
+  }
+
+  @keyframes rock {
+    0%   { transform: rotate(-2deg); }
+    25%  { transform: rotate(3.5deg); }
+    75%  { transform: rotate(-4deg); }
+    100% { transform: rotate(-2deg); }
+  }
+
+  .resume-a4:hover {
+    animation: rock 1.4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    box-shadow:
+      0 4px 8px rgba(0,0,0,0.06),
+      0 16px 40px rgba(0,0,0,0.14),
+      0 32px 64px rgba(0,0,0,0.10);
+  }
+</style>

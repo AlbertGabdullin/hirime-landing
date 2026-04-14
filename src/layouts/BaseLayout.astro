@@ -1,0 +1,327 @@
+---
+import '../styles/global.css';
+import type { Translations } from '../i18n/en';
+import type { Lang } from '../i18n/utils';
+
+interface Props {
+  t: Translations;
+  lang: Lang;
+}
+
+const { t, lang } = Astro.props;
+const { meta } = t;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/images/og-image.png', Astro.site);
+
+const hreflangs = [
+  { hreflang: 'en', href: new URL('/', Astro.site).href },
+  { hreflang: 'es', href: new URL('/es/', Astro.site).href },
+  { hreflang: 'fr', href: new URL('/fr/', Astro.site).href },
+  { hreflang: 'x-default', href: new URL('/', Astro.site).href },
+];
+---
+
+<!doctype html>
+<html lang={lang} class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary SEO -->
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <link rel="canonical" href={canonicalURL.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={meta.ogTitle} />
+    <meta property="og:description" content={meta.ogDescription} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:image" content={ogImage.href} />
+    <meta property="og:site_name" content="Hirime" />
+    <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang === 'es' ? 'es_ES' : 'fr_FR'} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={meta.ogTitle} />
+    <meta name="twitter:description" content={meta.ogDescription} />
+    <meta name="twitter:image" content={ogImage.href} />
+
+    <!-- hreflang -->
+    {hreflangs.map(({ hreflang, href }) => (
+      <link rel="alternate" hreflang={hreflang} href={href} />
+    ))}
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Fonts: Onest -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Theme init: prevent FOUC -->
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="grain">
+    <slot />
+
+    <!-- Waitlist modal -->
+    <div
+      id="waitlist-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        padding: 1.5rem;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <!-- Backdrop -->
+      <div
+        id="modal-backdrop"
+        style="
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.45);
+          backdrop-filter: blur(6px);
+          -webkit-backdrop-filter: blur(6px);
+        "
+      ></div>
+
+      <!-- Panel -->
+      <div style="
+        position: relative;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        box-shadow: var(--shadow-lg);
+        padding: clamp(1.75rem, 5vw, 2.5rem);
+        width: 100%;
+        max-width: 440px;
+        animation: modalIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      ">
+        <!-- Close button -->
+        <button
+          id="close-waitlist-modal"
+          aria-label="Close"
+          style="
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: background 0.15s, color 0.15s;
+          "
+          onmouseenter="this.style.background='var(--bg-secondary)';this.style.color='var(--text-primary)'"
+          onmouseleave="this.style.background='none';this.style.color='var(--text-muted)'"
+        >
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="1" y1="1" x2="13" y2="13"/>
+            <line x1="13" y1="1" x2="1" y2="13"/>
+          </svg>
+        </button>
+
+        <!-- Content -->
+        <div style="margin-bottom: 1.5rem;">
+          <span style="
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.5rem;
+          ">Early access</span>
+          <h2 id="modal-title" style="
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+          ">Join the waitlist</h2>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6;">
+            Be the first to know when Hirime launches. No spam, ever.
+          </p>
+        </div>
+
+        <form id="modal-form" class="waitlist-form" novalidate>
+          <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Enter your email address"
+              class="email-input"
+              aria-label="Email address"
+              style="width: 100%;"
+            />
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+              Join the Waitlist
+            </button>
+          </div>
+          <div class="success-msg" style="margin-top: 0.75rem;">
+            <span>✓</span>
+            <span>You're on the list! We'll be in touch soon. 🎉</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Global scripts -->
+    <script>
+      // ── Dark mode toggle ────────────────────────────────────────────
+      const toggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+      toggle?.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        const icon = document.getElementById('theme-icon');
+        if (icon) {
+          icon.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
+        }
+      });
+      // Set initial icon
+      const icon = document.getElementById('theme-icon');
+      if (icon) icon.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
+
+      // ── Navbar scroll effect ────────────────────────────────────────
+      const navbar = document.getElementById('navbar');
+      const handleScroll = () => {
+        if (window.scrollY > 12) {
+          navbar?.classList.add('scrolled');
+        } else {
+          navbar?.classList.remove('scrolled');
+        }
+      };
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      // ── Scroll animations (Intersection Observer) ───────────────────
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      );
+      document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+
+      // ── Waitlist forms ──────────────────────────────────────────────
+      document.querySelectorAll('.waitlist-form').forEach((form) => {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const emailInput = form.querySelector('input[type="email"]') as HTMLInputElement;
+          const btn = form.querySelector('button') as HTMLButtonElement;
+          const successMsg = form.querySelector('.success-msg') as HTMLElement;
+          console.log('Waitlist signup:', emailInput?.value);
+          if (emailInput) emailInput.style.display = 'none';
+          if (btn) btn.style.display = 'none';
+          if (successMsg) successMsg.style.display = 'flex';
+        });
+      });
+
+      // ── Rotating words ──────────────────────────────────────────────
+      const wordEl = document.getElementById('rotating-word');
+      if (wordEl) {
+        const words = JSON.parse(wordEl.dataset.words || '[]');
+        let idx = 0;
+        const rotate = () => {
+          wordEl.style.opacity = '0';
+          wordEl.style.transform = 'translateY(-8px)';
+          setTimeout(() => {
+            idx = (idx + 1) % words.length;
+            wordEl.textContent = words[idx];
+            wordEl.style.opacity = '1';
+            wordEl.style.transform = 'translateY(0)';
+          }, 280);
+        };
+        setInterval(rotate, 2800);
+      }
+
+      // ── Mobile menu toggle ──────────────────────────────────────────
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuToggle?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+
+      // ── Waitlist modal ──────────────────────────────────────────────
+      const modal = document.getElementById('waitlist-modal') as HTMLElement | null;
+      const openBtn = document.getElementById('open-waitlist-modal');
+      const closeBtn = document.getElementById('close-waitlist-modal');
+      const backdrop = document.getElementById('modal-backdrop');
+
+      const openModal = () => {
+        if (!modal) return;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        // reset form state
+        const form = document.getElementById('modal-form') as HTMLFormElement | null;
+        if (form) {
+          const input = form.querySelector('input[type="email"]') as HTMLInputElement | null;
+          const btn = form.querySelector('button') as HTMLButtonElement | null;
+          const msg = form.querySelector('.success-msg') as HTMLElement | null;
+          if (input) { input.style.display = ''; input.value = ''; }
+          if (btn) btn.style.display = '';
+          if (msg) msg.style.display = 'none';
+        }
+        // focus first input
+        setTimeout(() => {
+          (modal.querySelector('input[type="email"]') as HTMLInputElement | null)?.focus();
+        }, 50);
+      };
+
+      const closeModal = () => {
+        if (!modal) return;
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      };
+
+      openBtn?.addEventListener('click', openModal);
+      closeBtn?.addEventListener('click', closeModal);
+      backdrop?.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.style.display === 'flex') closeModal();
+      });
+    </script>
+
+    <style>
+      @keyframes modalIn {
+        from { opacity: 0; transform: scale(0.94) translateY(8px); }
+        to   { opacity: 1; transform: scale(1) translateY(0); }
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+---
+import type { Lang } from '../i18n/utils';
+import { alternates } from '../i18n/utils';
+
+interface Props {
+  currentLang: Lang;
+}
+
+const { currentLang } = Astro.props;
+
+const langs: { code: Lang; label: string }[] = [
+  { code: 'en', label: 'EN' },
+  { code: 'es', label: 'ES' },
+  { code: 'fr', label: 'FR' },
+];
+---
+
+<div class="flex items-center gap-0.5">
+  {langs.map(({ code, label }) => (
+    <a
+      href={alternates[code]}
+      class={`lang-btn ${currentLang === code ? 'active' : ''}`}
+      aria-current={currentLang === code ? 'true' : undefined}
+      aria-label={`Switch to ${label}`}
+    >
+      {label}
+    </a>
+  ))}
+</div>

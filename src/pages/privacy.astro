@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { en as t } from '../i18n/en';
+
+const lang = 'en' as const;
+---
+
+<BaseLayout t={t} lang={lang}>
+  <Navbar t={t.nav} lang={lang} />
+  <main style="padding: 7rem 1.5rem 5rem;">
+    <div style="max-width: 720px; margin: 0 auto;">
+
+      <!-- Header -->
+      <div style="margin-bottom: 3rem;">
+        <p style="
+          font-size: 0.8125rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 0.75rem;
+        ">Legal</p>
+        <h1 style="
+          font-family: 'Instrument Serif', Georgia, serif;
+          font-size: clamp(2rem, 5vw, 3rem);
+          font-weight: 400;
+          line-height: 1.15;
+          color: var(--text-primary);
+          margin-bottom: 1rem;
+        ">Privacy Policy</h1>
+        <p style="font-size: 0.9375rem; color: var(--text-muted);">
+          Last updated: April 14, 2025
+        </p>
+      </div>
+
+      <!-- Content -->
+      <div class="prose-content">
+
+        <section>
+          <p>
+            Hirime ("we", "us", or "our") operates hirime.com. This page explains what information we collect,
+            how we use it, and what rights you have. We keep it short and plain.
+          </p>
+        </section>
+
+        <section>
+          <h2>1. Information We Collect</h2>
+          <p><strong>Email address.</strong> When you join our waitlist, we collect your email address. That's the only personal data we request during the pre-launch phase.</p>
+          <p><strong>Usage data.</strong> We may collect basic analytics such as page views, referral source, country, and browser type. This data is aggregated and does not identify you personally.</p>
+          <p><strong>Cookies.</strong> We use a small number of functional cookies (e.g. to remember your theme preference). We do not use tracking or advertising cookies.</p>
+        </section>
+
+        <section>
+          <h2>2. How We Use Your Information</h2>
+          <ul>
+            <li>To notify you when Hirime launches or reaches a milestone.</li>
+            <li>To send you early access invitations and product updates.</li>
+            <li>To understand how people discover and use our site so we can improve it.</li>
+          </ul>
+          <p>We will never sell your data to third parties.</p>
+        </section>
+
+        <section>
+          <h2>3. Data Storage & Security</h2>
+          <p>
+            Email addresses collected via the waitlist form are stored securely with our email service provider.
+            We use industry-standard encryption (HTTPS/TLS) for all data in transit. We retain waitlist data
+            until you unsubscribe or request deletion.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. Third-Party Services</h2>
+          <p>We may use the following types of third-party services:</p>
+          <ul>
+            <li><strong>Email delivery</strong> — to send you waitlist confirmations and launch updates.</li>
+            <li><strong>Analytics</strong> — privacy-respecting, cookieless analytics to measure site traffic.</li>
+            <li><strong>Hosting</strong> — our site is hosted on a third-party cloud infrastructure provider.</li>
+          </ul>
+          <p>Each provider processes only the data necessary to perform its function and is contractually bound to protect it.</p>
+        </section>
+
+        <section>
+          <h2>5. Your Rights</h2>
+          <p>You have the right to:</p>
+          <ul>
+            <li>Access the personal data we hold about you.</li>
+            <li>Request correction or deletion of your data.</li>
+            <li>Withdraw consent and unsubscribe at any time via the link in any email we send.</li>
+          </ul>
+          <p>To exercise any of these rights, email us at <a href="mailto:privacy@hirime.com">privacy@hirime.com</a>. We will respond within 30 days.</p>
+        </section>
+
+        <section>
+          <h2>6. Children's Privacy</h2>
+          <p>
+            Hirime is not directed at children under 13. We do not knowingly collect personal data from children.
+            If you believe a child has provided us with their information, please contact us and we will delete it promptly.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Changes to This Policy</h2>
+          <p>
+            We may update this policy as our product evolves. When we do, we'll update the "Last updated" date above.
+            If changes are significant, we'll notify waitlist members by email.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Contact</h2>
+          <p>
+            Questions or concerns? Reach us at <a href="mailto:privacy@hirime.com">privacy@hirime.com</a>.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <Footer t={t.footer} lang={lang} />
+</BaseLayout>
+
+<style>
+  .prose-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .prose-content section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .prose-content h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+
+  .prose-content p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+
+  .prose-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .prose-content li {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+
+  .prose-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .prose-content a:hover {
+    color: var(--accent-hover);
+  }
+
+  .prose-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .prose-content section:not(:last-child) {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+</style>

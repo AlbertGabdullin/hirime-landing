@@ -1,0 +1,170 @@
+---
+import type { Translations } from '../i18n/en';
+
+interface Props {
+  t: Translations['comingSoon'];
+}
+
+const { t } = Astro.props;
+---
+
+<section
+  id="coming-soon"
+  style="
+    padding: 6rem 1.5rem;
+    background-color: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+  "
+  aria-labelledby="coming-soon-title"
+>
+  <!-- Top / bottom rules -->
+  <div aria-hidden="true" style="
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  "></div>
+  <div aria-hidden="true" style="
+    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  "></div>
+
+  <div style="max-width: 1180px; margin: 0 auto;">
+
+    <!-- Section header -->
+    <div class="fade-up" style="text-align: center; margin-bottom: 4rem;">
+      <span class="section-label">{t.label}</span>
+      <h2 id="coming-soon-title" class="section-title" style="margin-top: 0.75rem; margin-bottom: 1rem;">
+        {t.title}
+      </h2>
+      <p class="section-subtitle" style="margin: 0 auto;">
+        {t.subtitle}
+      </p>
+    </div>
+
+    <!-- Locked feature cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" style="margin-bottom: 5rem;">
+      {t.features.map((feature, i) => (
+        <div class={`card-locked fade-up delay-${(i % 4 + 1) * 100}`}>
+          <!-- Lock icon -->
+          <div style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+          ">
+            <span style="font-size: 2rem;" role="img" aria-hidden="true">{feature.emoji}</span>
+            <span style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              border: 1.5px solid var(--border);
+              color: var(--text-muted);
+              font-size: 12px;
+            " aria-hidden="true">🔒</span>
+          </div>
+
+          <h3 style="
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+          ">
+            {feature.title}
+          </h3>
+          <p style="
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+          ">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Second email CTA -->
+    <div class="fade-up" style="
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 5vw, 3.5rem);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      max-width: 640px;
+      margin: 0 auto;
+    ">
+      <!-- Decorative background accent -->
+      <div aria-hidden="true" style="
+        position: absolute;
+        top: -40px; left: 50%;
+        transform: translateX(-50%);
+        width: 300px; height: 200px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%);
+        pointer-events: none;
+      "></div>
+
+      <span class="section-label" style="position: relative;">{t.cta.eyebrow}</span>
+
+      <h3 style="
+        font-family: 'Onest', system-ui, sans-serif;
+        font-size: clamp(1.75rem, 4vw, 2.375rem);
+        font-weight: 800;
+        color: var(--text-primary);
+        letter-spacing: -0.03em;
+        margin-top: 0.75rem;
+        margin-bottom: 0.875rem;
+        position: relative;
+      ">
+        {t.cta.title}
+      </h3>
+      <p style="
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        line-height: 1.65;
+        max-width: 36ch;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+      ">
+        {t.cta.description}
+      </p>
+
+      <form class="waitlist-form" novalidate style="position: relative;">
+        <div style="
+          display: flex;
+          gap: 0.625rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 420px;
+          margin: 0 auto;
+        ">
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder={t.cta.emailPlaceholder}
+            class="email-input"
+            style="flex: 1; min-width: 200px;"
+            aria-label={t.cta.emailPlaceholder}
+          />
+          <button type="submit" class="btn-primary">
+            {t.cta.button}
+          </button>
+        </div>
+        <div class="success-msg" style="margin-top: 0.875rem; justify-content: center;">
+          <span>✓</span>
+          <span>{t.cta.successMessage}</span>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
