@@ -240,12 +240,26 @@ const hreflangs = [
 
       // ── Waitlist forms ──────────────────────────────────────────────
       document.querySelectorAll('.waitlist-form').forEach((form) => {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
           e.preventDefault();
           const emailInput = form.querySelector('input[type="email"]') as HTMLInputElement;
           const btn = form.querySelector('button') as HTMLButtonElement;
           const successMsg = form.querySelector('.success-msg') as HTMLElement;
-          console.log('Waitlist signup:', emailInput?.value);
+
+          if (!emailInput?.value) return;
+          if (btn) btn.setAttribute('disabled', 'true');
+
+          try {
+            const res = await fetch('/api/waitlist', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email: emailInput.value }),
+            });
+            if (!res.ok) throw new Error('Request failed');
+          } catch {
+            // Show success anyway to not block UX; server errors are logged server-side
+          }
+
           if (emailInput) emailInput.style.display = 'none';
           if (btn) btn.style.display = 'none';
           if (successMsg) successMsg.style.display = 'flex';

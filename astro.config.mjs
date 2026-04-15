@@ -2,10 +2,12 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import node from '@astrojs/node';
 
 export default defineConfig({
   site: 'https://hirime.com',
   output: 'static',
+  adapter: node({ mode: 'standalone' }),
   integrations: [
     sitemap({
       i18n: {
