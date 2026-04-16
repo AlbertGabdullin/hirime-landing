@@ -4,7 +4,9 @@ export const fr: Translations = {
   meta: {
     title: "Hirime \u2014 Cr\u00e9ateur de CV propuls\u00e9 par IA",
     description:
-      "Cr\u00e9ez votre CV une fois. Laissez l\u2019IA l\u2019adapter pour chaque candidature. Rejoignez la liste d\u2019attente.",
+      "Cr\u00e9ateur de CV par IA qui adapte automatiquement votre CV \u00e0 chaque offre d\u2019emploi. Passez les filtres ATS et d\u00e9crochez plus d\u2019entretiens. Rejoignez la liste d\u2019attente.",
+    keywords:
+      "cr\u00e9ateur de CV IA, CV personnalis\u00e9, optimisation ATS, g\u00e9n\u00e9rateur de CV, intelligence artificielle emploi, CV adapt\u00e9 automatiquement, lettre de motivation IA, faire un CV gratuit",
     ogTitle: "Hirime \u2014 Cr\u00e9ateur de CV propuls\u00e9 par IA",
     ogDescription:
       "Le CV qui vous fait d\u00e9crocher le poste. Cr\u00e9\u00e9 une fois, adapt\u00e9 par l\u2019IA pour chaque offre.",

@@ -2,7 +2,9 @@ export const en = {
   meta: {
     title: 'Hirime — AI-Powered Resume Builder',
     description:
-      'Build your resume once. Let AI tailor it for every job application. Join the waitlist for early access.',
+      'AI resume builder that automatically tailors your resume to any job description. Beat ATS filters, land more interviews. Join the waitlist for early access.',
+    keywords:
+      'AI resume builder, resume tailoring, ATS optimization, ATS-friendly resume, CV builder AI, resume generator, job application, cover letter generator, AI CV, resume builder free',
     ogTitle: 'Hirime — AI-Powered Resume Builder',
     ogDescription:
       'The resume that gets you hired. Build once, AI adapts for every role.',

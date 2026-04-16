@@ -4,7 +4,9 @@ export const es: Translations = {
   meta: {
     title: 'Hirime — Constructor de CV con IA',
     description:
-      'Crea tu currículum una vez. Deja que la IA lo adapte para cada solicitud de empleo. Únete a la lista de espera.',
+      'Constructor de CV con IA que adapta tu currículum a cada oferta de trabajo automáticamente. Supera filtros ATS y consigue más entrevistas. Únete a la lista de espera.',
+    keywords:
+      'constructor de CV con IA, currículum vitae inteligente, optimización ATS, generador de currículum, IA para empleo, currículum adaptado, crear CV gratis, carta de presentación IA',
     ogTitle: 'Hirime — Constructor de CV con IA',
     ogDescription:
       'El currículum que te consigue el trabajo. Créalo una vez, la IA lo adapta para cada puesto.',
