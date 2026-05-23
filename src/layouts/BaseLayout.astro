@@ -67,6 +67,9 @@ const hreflangs = [
       rel="stylesheet"
     />
 
+    <!-- Page-specific head content (JSON-LD, extra fonts, etc.) -->
+    <slot name="head" />
+
     <!-- Theme init: prevent FOUC -->
     <script is:inline>
       (function () {

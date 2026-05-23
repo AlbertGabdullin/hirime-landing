@@ -16,6 +16,9 @@ export const es: Translations = {
     features: 'Características',
     comingSoon: 'Próximamente',
     joinWaitlist: 'Unirse',
+    freeTools: 'Herramientas gratis',
+    atsChecker: 'Verificador ATS',
+    atsCheckerSub: 'Analiza tu currículum en 30 segundos',
   },
   hero: {
     prefix: 'El currículum que te contrata como',

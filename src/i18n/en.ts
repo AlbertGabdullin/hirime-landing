@@ -14,6 +14,9 @@ export const en = {
     features: 'Features',
     comingSoon: 'Coming soon',
     joinWaitlist: 'Join Waitlist',
+    freeTools: 'Free tools',
+    atsChecker: 'ATS Resume Checker',
+    atsCheckerSub: 'Scan your resume in 30 seconds',
   },
   hero: {
     prefix: 'The resume that gets you hired as a',

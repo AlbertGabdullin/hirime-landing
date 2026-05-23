@@ -1,0 +1,1113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { en as base } from '../../i18n/en';
+
+const lang = 'en' as const;
+
+const t = {
+  ...base,
+  meta: {
+    title: 'Free ATS Resume Checker — Scan Your Resume in 30 Seconds | Hirime',
+    description:
+      'Free ATS resume checker. Upload your PDF and get an instant report on whether applicant tracking systems can read your resume. 100% free, no signup.',
+    keywords:
+      'ATS resume checker, ATS scanner, ATS resume scan, is my resume ATS friendly, free ATS resume check, resume ATS test, applicant tracking system checker',
+    ogTitle: 'Free ATS Resume Checker — Hirime',
+    ogDescription:
+      'Upload your resume and get an instant ATS readability score, category breakdown, and fixes. 100% free.',
+  },
+} as const;
+
+const faqs = [
+  {
+    q: 'What is an ATS resume checker?',
+    a: 'An ATS resume checker scans your resume the way an Applicant Tracking System would — testing whether the software can correctly extract your name, work history, skills and education from the file. It then flags formatting issues, missing sections, and weak content so you can fix them before you apply.',
+  },
+  {
+    q: 'Is this ATS checker really free?',
+    a: 'Yes. There is no signup, no email, no credit card, and no paywall. We built this as a free tool to introduce people to Hirime — our AI resume builder that goes a step further and rewrites your resume to match each job.',
+  },
+  {
+    q: 'How accurate is the ATS score?',
+    a: 'Our analyzer is modeled on the parsing rules used by major Applicant Tracking Systems (Workday, Greenhouse, Lever, Taleo, iCIMS). It tests the same signals: layout, fonts, section headers, encoding, and content density. No checker can perfectly mirror every ATS in production, but the issues we flag are the ones that consistently cause real-world parsing failures.',
+  },
+  {
+    q: 'Which ATS platforms does this support?',
+    a: 'We test against the parsing logic of Workday, Greenhouse, Lever, Taleo, iCIMS, SmartRecruiters, BambooHR and Ashby — the systems used by the vast majority of Fortune 500 employers and high-growth startups.',
+  },
+  {
+    q: "What's the best resume format for ATS?",
+    a: 'A single-column PDF with standard section headers ("Work Experience", "Education", "Skills"), a clean sans-serif font (Helvetica, Calibri, Arial), no tables, no images, no text boxes, and contact information in the main body — not the header or footer. Save from the source document directly to PDF; never scan or screenshot.',
+  },
+  {
+    q: 'Should I use a template from Word or Canva?',
+    a: 'Word templates are generally safe. Canva and other design-first templates often produce PDFs with multi-column layouts, decorative typography, or text-as-image elements that ATS parsers struggle with. If you use a designer template, run it through this checker before submitting.',
+  },
+  {
+    q: 'Do ATS systems read PDFs?',
+    a: 'Yes — modern ATS platforms read PDFs reliably, provided the PDF contains real text (not a scanned image). Older systems can struggle with complex layouts, so the safest path is a text-based PDF exported from your word processor.',
+  },
+  {
+    q: 'How can I make my resume ATS-friendly?',
+    a: "Use a single-column layout, standard section headings, a common font, plain bullet points, and quantified achievements. Avoid graphics, columns, tables, headers and footers. Run your resume through this checker and address each flagged item — that's the fastest path to an ATS-ready file.",
+  },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const softwareJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Hirime ATS Resume Checker',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  url: 'https://hirime.com/tools/ats-resume-checker',
+};
+---
+
+<BaseLayout t={t} lang={lang}>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(softwareJsonLd)} />
+  </Fragment>
+
+  <Navbar t={t.nav} lang={lang} />
+
+  <main class="ats-tool" style="padding-top: 64px;">
+    <!-- HERO + UPLOAD / RESULTS -->
+    <section class="ats-hero">
+      <div class="container" id="tool-root">
+        <div id="tool-intro" style="text-align: center; margin-bottom: 40px;">
+          <span class="eyebrow"><span class="spark">✦</span> Free ATS Resume Checker</span>
+          <h1 class="hero-headline">
+            Is your resume <span class="serif-em">ATS-friendly?</span><br />
+            Find out in 30 seconds.
+          </h1>
+          <p class="lede hero-lede">
+            Upload your resume and get an instant report on whether applicant tracking systems can actually read it — and exactly how to fix what they can't.
+          </p>
+        </div>
+
+        <!-- IDLE -->
+        <div id="state-idle" class="upload-card">
+          <div class="dropzone" id="dropzone">
+            <div class="drop-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </div>
+            <div class="drop-title">Drop your resume here</div>
+            <div class="drop-sub">or browse from your device</div>
+            <div class="drop-actions">
+              <button type="button" class="ats-btn ats-btn-primary ats-btn-lg" id="browse-btn">Choose PDF</button>
+            </div>
+            <input id="file-input" class="sr-only" type="file" accept=".pdf,application/pdf" aria-label="Upload resume PDF" />
+            <div class="file-meta">PDF only · max 5MB · processed securely, never stored</div>
+          </div>
+        </div>
+
+        <!-- SELECTED -->
+        <div id="state-selected" class="upload-card hidden">
+          <div style="padding: 16px;">
+            <div class="file-row">
+              <div class="file-thumb" aria-hidden="true">PDF</div>
+              <div class="file-info">
+                <div class="file-name" id="file-name"></div>
+                <div class="file-sub" id="file-sub"></div>
+              </div>
+              <button type="button" class="file-remove" id="file-remove" aria-label="Remove file">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              </button>
+            </div>
+            <button type="button" class="ats-btn ats-btn-primary ats-btn-lg" id="analyze-btn" style="width: 100%; justify-content: center;">
+              Scan resume →
+            </button>
+          </div>
+        </div>
+
+        <!-- ANALYZING -->
+        <div id="state-analyzing" class="upload-card hidden">
+          <div class="analyzing">
+            <div class="ana-spinner" aria-hidden="true"></div>
+            <div class="ana-msg" id="ana-msg">Extracting text from your PDF…</div>
+            <div class="ana-bar"><div class="ana-bar-fill" id="ana-bar-fill" style="width: 25%;"></div></div>
+            <div class="ana-steps" id="ana-steps"></div>
+          </div>
+        </div>
+
+        <!-- ERROR -->
+        <div id="state-error" class="upload-card hidden">
+          <div style="padding: 32px; text-align: center;">
+            <div class="drop-icon" style="background: var(--ats-bad-soft); color: var(--ats-bad);" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="drop-title">Couldn't scan that file</div>
+            <div class="drop-sub" id="error-msg">Something went wrong. Please try again.</div>
+            <div class="drop-actions">
+              <button type="button" class="ats-btn ats-btn-primary ats-btn-lg" id="error-retry">Try again</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="state-results" class="results hidden">
+          <div class="results-hero">
+            <div class="verdict-pill" id="verdict-pill">●</div>
+            <div class="gauge-wrap" id="gauge-wrap">
+              <svg viewBox="0 0 240 240" aria-hidden="true">
+                <circle class="gauge-track" cx="120" cy="120" r="100" fill="none" stroke-width="14"/>
+                <circle class="gauge-fill" id="gauge-fill" cx="120" cy="120" r="100" fill="none" stroke-width="14" stroke-linecap="round" stroke-dasharray="628.32" stroke-dashoffset="628.32"/>
+              </svg>
+              <div class="gauge-num">
+                <div class="gauge-num-inner">
+                  <div class="num" id="gauge-num">0</div>
+                  <div class="out">/ 100</div>
+                </div>
+              </div>
+            </div>
+            <div class="verdict" id="verdict-label">Your resume scored 0 / 100</div>
+            <div class="verdict-sub" id="verdict-sub"></div>
+          </div>
+
+          <div class="cat-grid" id="cat-grid"></div>
+
+          <div class="results-cta">
+            <h3>Fix every issue automatically with Hirime.</h3>
+            <p>Hirime's AI rewrites your resume to pass ATS systems and match any job description.</p>
+            <div class="actions">
+              <button type="button" class="ats-btn ats-btn-primary ats-btn-lg" id="open-waitlist-modal-results">Join the Waitlist →</button>
+            </div>
+          </div>
+
+          <div class="scan-another">
+            <button type="button" id="scan-another">← Scan another resume</button>
+          </div>
+        </div>
+
+        <div class="trust-row" id="trust-row">
+          <span><span class="check">✓</span> 100% free</span>
+          <span><span class="check">✓</span> No signup needed</span>
+          <span><span class="check">✓</span> Your resume isn't stored</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="spark">✦</span> How it works</span>
+          <h2>From upload to <span class="serif-em">actionable report</span> in&nbsp;under a&nbsp;minute.</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num"><span class="num-dot"></span>01 — UPLOAD</div>
+            <div class="step-emoji">📤</div>
+            <h3>Drop in your PDF</h3>
+            <p>No signup, no email. Pick a file and we get to work.</p>
+          </div>
+          <div class="step">
+            <div class="step-num"><span class="num-dot"></span>02 — ANALYZE</div>
+            <div class="step-emoji">🤖</div>
+            <h3>AI scans 50+ ATS factors</h3>
+            <p>Formatting, parseability, action verbs, section structure, keyword density, and red flags.</p>
+          </div>
+          <div class="step">
+            <div class="step-num"><span class="num-dot"></span>03 — FIX</div>
+            <div class="step-emoji">📊</div>
+            <h3>Get specific fixes</h3>
+            <p>Category-by-category breakdown with exact issues and how to resolve each one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" style="padding-top: 48px;">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="spark">✦</span> What we check</span>
+          <h2>Every signal an ATS uses to parse your&nbsp;resume.</h2>
+          <p class="lede">We test against the same parsing logic used by major Applicant Tracking Systems.</p>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="feat-emoji">🔍</div>
+            <h3>Cross-ATS parseability</h3>
+            <p>Tested against Workday, Greenhouse, Lever, Taleo, and iCIMS parsing engines.</p>
+          </div>
+          <div class="feature">
+            <div class="feat-emoji">🎯</div>
+            <h3>Keyword match scoring</h3>
+            <p>Action verbs, density, and presence of role-relevant hard skills are scored automatically.</p>
+          </div>
+          <div class="feature">
+            <div class="feat-emoji">📐</div>
+            <h3>Layout &amp; formatting</h3>
+            <p>Detects multi-column layouts, tables, headers/footers, and graphic elements that break parsing.</p>
+          </div>
+          <div class="feature">
+            <div class="feat-emoji">✍️</div>
+            <h3>Action verb strength</h3>
+            <p>Flags weak openers and missing quantification. Suggests stronger replacements.</p>
+          </div>
+          <div class="feature">
+            <div class="feat-emoji">🔤</div>
+            <h3>Fonts &amp; encoding</h3>
+            <p>Catches special characters, unusual fonts, and ligatures that ATS systems misread.</p>
+          </div>
+          <div class="feature">
+            <div class="feat-emoji">📑</div>
+            <h3>Section completeness</h3>
+            <p>Verifies you have all standard sections under names ATS systems are trained to find.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ATS -->
+    <section>
+      <div class="container">
+        <div class="section-head" style="margin-bottom: 56px;">
+          <span class="eyebrow"><span class="spark">✦</span> Why it matters</span>
+          <h2>Why ATS optimization <span class="serif-em">matters</span> in&nbsp;2026.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-text">
+            <p>Before a recruiter ever reads your resume, an <b>Applicant Tracking System</b> reads it first. ATS software parses your PDF, extracts structured data, and ranks you against the job description — all in milliseconds.</p>
+            <p>If your formatting trips up the parser (tables, columns, embedded images, decorative fonts), entire sections of your experience may be invisible to the recruiter. Even strong candidates get filtered out before a human ever sees the file.</p>
+            <p>Optimizing for ATS isn't about gaming the system — it's about making sure the system can actually read what you've already built.</p>
+          </div>
+          <div class="why-stat">
+            <div class="stat-num">75%</div>
+            <div class="stat-label">of resumes are rejected by ATS before a human ever sees them.</div>
+          </div>
+        </div>
+        <div class="ats-row">
+          <div class="ats-row-label">Compatible with the systems used by 90% of Fortune 500</div>
+          <span class="ats-chip">Workday</span>
+          <span class="ats-chip">Greenhouse</span>
+          <span class="ats-chip">Lever</span>
+          <span class="ats-chip">Taleo</span>
+          <span class="ats-chip">iCIMS</span>
+          <span class="ats-chip">SmartRecruiters</span>
+          <span class="ats-chip">BambooHR</span>
+          <span class="ats-chip">Ashby</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="spark">✦</span> FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          {faqs.map((f, i) => (
+            <div class={`faq-item ${i === 0 ? 'open' : ''}`}>
+              <button class="faq-q" aria-expanded={i === 0 ? 'true' : 'false'}>
+                <span>{f.q}</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+              </button>
+              <div class="faq-a"><div class="faq-a-inner">{f.a}</div></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="coming-soon">
+      <div class="container">
+        <div class="final-cta">
+          <span class="eyebrow"><span class="spark">✦</span> Beyond the checker</span>
+          <h2>Stop checking. <span class="serif-em">Start getting hired.</span></h2>
+          <p>Hirime auto-tailors your resume for every job application. Join the waitlist for early access.</p>
+          <form class="email-form waitlist-form" id="tool-waitlist-form" novalidate>
+            <input type="email" name="email" required placeholder="you@example.com" aria-label="Email address" />
+            <button class="ats-btn ats-btn-primary" type="submit">Join Waitlist</button>
+            <div class="success-msg-tool" style="display: none;">✓ You're on the list. We'll be in touch soon. 🎉</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} />
+</BaseLayout>
+
+<style is:global>
+  .ats-tool {
+    /* Scoped design tokens (purple/cream from the design spec) */
+    --ats-bg: var(--bg-primary);
+    --ats-bg-elev: var(--bg-card);
+    --ats-ink: var(--text-primary);
+    --ats-ink-2: var(--text-secondary);
+    --ats-ink-3: var(--text-muted);
+    --ats-line: var(--border);
+    --ats-line-2: color-mix(in oklab, var(--border) 70%, var(--text-muted));
+    --ats-accent: var(--accent);
+    --ats-accent-ink: var(--accent-fg);
+    --ats-accent-soft: color-mix(in oklab, var(--accent) 16%, var(--bg-card));
+    --ats-good: #1a8a4a;
+    --ats-warn: #c87b14;
+    --ats-bad: #c43a3a;
+    --ats-good-soft: #e5f4ea;
+    --ats-warn-soft: #faecd5;
+    --ats-bad-soft: #fae5e5;
+    --ats-radius: 18px;
+    --ats-radius-lg: 24px;
+    --ats-shadow-sm: 0 1px 0 rgba(17,17,15,.04), 0 1px 2px rgba(17,17,15,.04);
+    --ats-shadow-md: 0 1px 0 rgba(17,17,15,.04), 0 8px 24px -8px rgba(17,17,15,.10);
+    font-family: 'Onest', system-ui, sans-serif;
+    color: var(--ats-ink);
+    line-height: 1.55;
+  }
+  .dark .ats-tool {
+    --ats-accent-soft: color-mix(in oklab, var(--accent) 22%, var(--bg-card));
+    --ats-good-soft: #11261a;
+    --ats-warn-soft: #2b1f0c;
+    --ats-bad-soft: #2b1313;
+    --ats-shadow-sm: 0 1px 0 rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.3);
+    --ats-shadow-md: 0 1px 0 rgba(0,0,0,.4), 0 12px 32px -12px rgba(0,0,0,.5);
+  }
+
+  .ats-tool .hidden { display: none !important; }
+  .ats-tool .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  .ats-tool h1, .ats-tool h2, .ats-tool h3 { letter-spacing: -0.025em; line-height: 1.1; margin: 0; font-weight: 700; }
+  .ats-tool h1 { font-size: clamp(40px, 6vw, 64px); letter-spacing: -0.035em; }
+  .ats-tool h2 { font-size: clamp(32px, 4.2vw, 44px); }
+  .ats-tool h3 { font-size: 19px; letter-spacing: -0.015em; line-height: 1.3; }
+  .ats-tool .serif-em {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic; font-weight: 400; letter-spacing: -0.02em;
+  }
+  .ats-tool .lede {
+    font-size: 18px; color: var(--ats-ink-2); max-width: 580px;
+    margin: 0 auto; line-height: 1.5;
+  }
+
+  .ats-tool section { padding: 96px 0; }
+  @media (max-width: 720px) { .ats-tool section { padding: 64px 0; } }
+  .ats-tool .ats-hero { padding-top: 72px; padding-bottom: 80px; text-align: center; }
+  .ats-tool .section-head { text-align: center; margin-bottom: 56px; }
+  .ats-tool .section-head .eyebrow { margin-bottom: 20px; }
+  .ats-tool .section-head .lede { margin-top: 18px; }
+
+  .ats-tool .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 500; color: var(--ats-ink-2);
+    padding: 6px 12px; border: 1px solid var(--ats-line); border-radius: 999px;
+    background: var(--ats-bg-elev);
+  }
+  .ats-tool .eyebrow .spark { color: var(--ats-accent); font-size: 14px; }
+
+  .ats-tool .hero-headline { margin: 22px auto 18px; max-width: 880px; }
+  .ats-tool .hero-lede { margin: 0 auto 40px; }
+
+  .ats-tool .ats-btn {
+    font-size: 14px; font-weight: 600;
+    padding: 10px 16px; border-radius: 10px;
+    transition: transform .08s ease, background .15s, color .15s, border-color .15s, filter .15s;
+    display: inline-flex; align-items: center; gap: 6px;
+    border: none; cursor: pointer; font-family: inherit;
+  }
+  .ats-tool .ats-btn:active { transform: translateY(1px); }
+  .ats-tool .ats-btn-primary { background: var(--ats-accent); color: var(--ats-accent-ink); }
+  .ats-tool .ats-btn-primary:hover { filter: brightness(1.05); }
+  .ats-tool .ats-btn-lg { padding: 14px 22px; font-size: 15px; border-radius: 12px; }
+
+  /* TRUST ROW */
+  .ats-tool .trust-row {
+    display: flex; gap: 28px; justify-content: center; flex-wrap: wrap;
+    margin-top: 32px; font-size: 13px; color: var(--ats-ink-2);
+  }
+  .ats-tool .trust-row span { display: inline-flex; align-items: center; gap: 6px; }
+  .ats-tool .trust-row .check {
+    width: 16px; height: 16px; border-radius: 999px;
+    background: var(--ats-good-soft); color: var(--ats-good);
+    display: inline-grid; place-items: center;
+    font-size: 10px; font-weight: 700;
+  }
+  .dark .ats-tool .trust-row .check { color: #6fd99a; }
+
+  /* UPLOAD */
+  .ats-tool .upload-card {
+    max-width: 720px; margin: 0 auto;
+    background: var(--ats-bg-elev);
+    border: 1px solid var(--ats-line);
+    border-radius: var(--ats-radius-lg);
+    padding: 8px;
+    box-shadow: var(--ats-shadow-md);
+  }
+  .ats-tool .dropzone {
+    border: 2px dashed var(--ats-line-2);
+    border-radius: 18px;
+    padding: 56px 32px;
+    text-align: center;
+    transition: background .2s, border-color .2s;
+    background: color-mix(in oklab, var(--ats-bg) 50%, transparent);
+    position: relative;
+  }
+  .ats-tool .dropzone.hot {
+    border-color: var(--ats-accent);
+    background: var(--ats-accent-soft);
+  }
+  .ats-tool .drop-icon {
+    width: 56px; height: 56px; border-radius: 16px;
+    background: var(--ats-accent-soft); color: var(--ats-accent);
+    margin: 0 auto 16px;
+    display: grid; place-items: center;
+  }
+  .ats-tool .drop-title { font-size: 18px; font-weight: 600; margin-bottom: 6px; letter-spacing: -0.015em; }
+  .ats-tool .drop-sub { font-size: 14px; color: var(--ats-ink-3); margin-bottom: 22px; }
+  .ats-tool .drop-actions { display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .ats-tool .file-meta {
+    font-size: 12px; color: var(--ats-ink-3); margin-top: 18px;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  .ats-tool .file-row {
+    display: flex; align-items: center; gap: 14px;
+    padding: 18px;
+    background: var(--ats-bg);
+    border-radius: 14px;
+    border: 1px solid var(--ats-line);
+    margin-bottom: 12px;
+  }
+  .ats-tool .file-thumb {
+    width: 44px; height: 56px;
+    background: var(--ats-accent-soft); color: var(--ats-accent);
+    border-radius: 6px;
+    display: grid; place-items: center;
+    font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; font-weight: 600;
+    flex: none;
+  }
+  .ats-tool .file-info { flex: 1; text-align: left; min-width: 0; }
+  .ats-tool .file-name { font-weight: 600; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .ats-tool .file-sub { font-size: 12px; color: var(--ats-ink-3); font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .ats-tool .file-remove {
+    width: 32px; height: 32px; border-radius: 8px;
+    color: var(--ats-ink-3); border: none; background: none; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .ats-tool .file-remove:hover { background: var(--ats-bad-soft); color: var(--ats-bad); }
+
+  /* ANALYZING */
+  .ats-tool .analyzing { padding: 56px 32px; text-align: center; }
+  .ats-tool .ana-spinner {
+    width: 48px; height: 48px; border-radius: 999px;
+    border: 3px solid var(--ats-line);
+    border-top-color: var(--ats-accent);
+    margin: 0 auto 22px;
+    animation: ats-spin 0.9s linear infinite;
+  }
+  @keyframes ats-spin { to { transform: rotate(360deg); } }
+  .ats-tool .ana-msg { font-size: 15px; font-weight: 500; color: var(--ats-ink); min-height: 22px; transition: opacity .25s; }
+  .ats-tool .ana-bar {
+    margin: 22px auto 0; max-width: 320px;
+    height: 4px; background: var(--ats-line); border-radius: 999px; overflow: hidden;
+  }
+  .ats-tool .ana-bar-fill {
+    height: 100%; background: var(--ats-accent); border-radius: 999px;
+    transition: width .35s ease;
+  }
+  .ats-tool .ana-steps { display: flex; flex-direction: column; gap: 8px; max-width: 320px; margin: 28px auto 0; text-align: left; }
+  .ats-tool .ana-step { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ats-ink-3); transition: color .2s; }
+  .ats-tool .ana-step.done { color: var(--ats-ink-2); }
+  .ats-tool .ana-step.active { color: var(--ats-ink); font-weight: 500; }
+  .ats-tool .ana-step .dot {
+    width: 14px; height: 14px; border-radius: 999px;
+    border: 1.5px solid var(--ats-line-2);
+    display: grid; place-items: center;
+    flex: none;
+  }
+  .ats-tool .ana-step.done .dot { background: var(--ats-good); border-color: var(--ats-good); color: white; }
+  .ats-tool .ana-step.active .dot { border-color: var(--ats-accent); position: relative; }
+  .ats-tool .ana-step.active .dot::after {
+    content: ""; width: 6px; height: 6px; border-radius: 999px;
+    background: var(--ats-accent); animation: ats-pulse 1s ease infinite;
+  }
+  @keyframes ats-pulse { 50% { opacity: .3; } }
+
+  /* RESULTS */
+  .ats-tool .results { animation: ats-fadeUp .5s ease; }
+  @keyframes ats-fadeUp { from { opacity: 0; transform: translateY(12px); } }
+
+  .ats-tool .results-hero {
+    max-width: 720px; margin: 0 auto 32px;
+    background: var(--ats-bg-elev);
+    border: 1px solid var(--ats-line);
+    border-radius: var(--ats-radius-lg);
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--ats-shadow-md);
+  }
+  .ats-tool .gauge-wrap { position: relative; width: 240px; height: 240px; margin: 0 auto; }
+  .ats-tool .gauge-wrap svg { transform: rotate(-90deg); width: 100%; height: 100%; }
+  .ats-tool .gauge-track { stroke: var(--ats-line); }
+  .ats-tool .gauge-fill { transition: stroke-dashoffset 1.2s cubic-bezier(.2,.7,.2,1), stroke 0.4s; }
+  .ats-tool .gauge-num {
+    position: absolute; inset: 0; display: grid; place-items: center;
+  }
+  .ats-tool .gauge-num-inner { text-align: center; }
+  .ats-tool .gauge-num .num {
+    font-size: 72px; font-weight: 700; letter-spacing: -0.04em; line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .ats-tool .gauge-num .out { font-size: 14px; color: var(--ats-ink-3); margin-top: 4px; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .ats-tool .verdict { margin-top: 22px; font-size: 22px; font-weight: 600; letter-spacing: -0.015em; }
+  .ats-tool .verdict-sub { font-size: 14px; color: var(--ats-ink-2); margin-top: 6px; max-width: 380px; margin-left: auto; margin-right: auto; }
+  .ats-tool .verdict-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 4px 10px; border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .ats-tool .verdict-pill.good { background: var(--ats-good-soft); color: var(--ats-good); }
+  .ats-tool .verdict-pill.warn { background: var(--ats-warn-soft); color: var(--ats-warn); }
+  .ats-tool .verdict-pill.bad { background: var(--ats-bad-soft); color: var(--ats-bad); }
+  .dark .ats-tool .verdict-pill.good { color: #6fd99a; }
+  .dark .ats-tool .verdict-pill.warn { color: #f0c071; }
+  .dark .ats-tool .verdict-pill.bad { color: #f08080; }
+
+  .ats-tool .cat-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 16px; max-width: 960px; margin: 0 auto;
+  }
+  @media (max-width: 720px) { .ats-tool .cat-grid { grid-template-columns: 1fr; } }
+  .ats-tool .cat-card {
+    background: var(--ats-bg-elev);
+    border: 1px solid var(--ats-line);
+    border-radius: var(--ats-radius);
+    padding: 24px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .ats-tool .cat-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .ats-tool .cat-title { display: flex; align-items: center; gap: 12px; }
+  .ats-tool .cat-emoji {
+    width: 40px; height: 40px; border-radius: 12px;
+    background: var(--ats-bg); border: 1px solid var(--ats-line);
+    display: grid; place-items: center; font-size: 20px;
+  }
+  .ats-tool .cat-name { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
+  .ats-tool .cat-score { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; color: var(--ats-ink-3); }
+  .ats-tool .cat-score b { color: var(--ats-ink); font-weight: 600; }
+  .ats-tool .cat-bar { height: 4px; background: var(--ats-line); border-radius: 999px; overflow: hidden; }
+  .ats-tool .cat-bar-fill { height: 100%; border-radius: 999px; transition: width 1s ease; }
+  .ats-tool .findings { display: flex; flex-direction: column; gap: 8px; margin: 4px 0 6px; }
+  .ats-tool .finding {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: var(--ats-ink-2); line-height: 1.45;
+  }
+  .ats-tool .finding-mark {
+    flex: none; width: 16px; height: 16px; border-radius: 999px;
+    display: grid; place-items: center; margin-top: 2px;
+    font-size: 10px; font-weight: 700;
+  }
+  .ats-tool .finding.ok .finding-mark { background: var(--ats-good-soft); color: var(--ats-good); }
+  .ats-tool .finding.warn .finding-mark { background: var(--ats-warn-soft); color: var(--ats-warn); }
+  .ats-tool .finding.bad .finding-mark { background: var(--ats-bad-soft); color: var(--ats-bad); }
+  .dark .ats-tool .finding.ok .finding-mark { color: #6fd99a; }
+  .dark .ats-tool .finding.warn .finding-mark { color: #f0c071; }
+  .dark .ats-tool .finding.bad .finding-mark { color: #f08080; }
+
+  .ats-tool .fix-tip {
+    margin-top: 4px; padding: 12px; border-radius: 10px;
+    background: var(--ats-bg);
+    border: 1px solid var(--ats-line);
+    font-size: 12.5px; color: var(--ats-ink-2); line-height: 1.5;
+  }
+  .ats-tool .fix-tip b { color: var(--ats-ink); font-weight: 600; }
+
+  .ats-tool .results-cta {
+    max-width: 960px; margin: 32px auto 0;
+    background: var(--ats-ink);
+    color: var(--ats-bg);
+    border-radius: var(--ats-radius-lg);
+    padding: 48px;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .dark .ats-tool .results-cta {
+    background: var(--ats-bg-elev);
+    border: 1px solid var(--ats-line);
+    color: var(--ats-ink);
+  }
+  .ats-tool .results-cta::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 0%, color-mix(in oklab, var(--ats-accent) 30%, transparent), transparent 60%);
+    pointer-events: none;
+  }
+  .ats-tool .results-cta h3 { font-size: 30px; letter-spacing: -0.025em; margin-bottom: 12px; position: relative; color: inherit; }
+  .ats-tool .results-cta p { font-size: 16px; opacity: .75; margin: 0 0 24px; position: relative; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .ats-tool .results-cta .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+  .ats-tool .scan-another {
+    text-align: center; margin-top: 32px;
+    font-size: 14px; color: var(--ats-ink-3);
+  }
+  .ats-tool .scan-another button {
+    color: var(--ats-accent); font-weight: 500;
+    text-decoration: underline; text-underline-offset: 4px;
+    border: none; background: none; cursor: pointer; font: inherit;
+  }
+
+  /* HOW IT WORKS */
+  .ats-tool .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 820px) { .ats-tool .steps { grid-template-columns: 1fr; } }
+  .ats-tool .step {
+    padding: 32px; border: 1px solid var(--ats-line);
+    border-radius: var(--ats-radius);
+    background: var(--ats-bg-elev);
+    position: relative;
+  }
+  .ats-tool .step-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12px; color: var(--ats-ink-3); font-weight: 500;
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .ats-tool .step-num .num-dot {
+    width: 6px; height: 6px; border-radius: 999px; background: var(--ats-accent);
+  }
+  .ats-tool .step-emoji {
+    width: 48px; height: 48px; border-radius: 14px;
+    background: var(--ats-accent-soft);
+    display: grid; place-items: center; font-size: 22px;
+    margin-bottom: 18px;
+  }
+  .ats-tool .step h3 { margin-bottom: 8px; }
+  .ats-tool .step p { margin: 0; color: var(--ats-ink-2); font-size: 14.5px; line-height: 1.55; }
+
+  /* FEATURES */
+  .ats-tool .features {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--ats-line);
+    border: 1px solid var(--ats-line);
+    border-radius: var(--ats-radius-lg);
+    overflow: hidden;
+  }
+  @media (max-width: 820px) { .ats-tool .features { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .ats-tool .features { grid-template-columns: 1fr; } }
+  .ats-tool .feature { background: var(--ats-bg-elev); padding: 32px 28px; }
+  .ats-tool .feat-emoji {
+    width: 40px; height: 40px; border-radius: 12px;
+    background: var(--ats-bg); border: 1px solid var(--ats-line);
+    display: grid; place-items: center; font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .ats-tool .feature h3 { font-size: 17px; margin-bottom: 6px; }
+  .ats-tool .feature p { margin: 0; color: var(--ats-ink-2); font-size: 14px; line-height: 1.55; }
+
+  /* WHY ATS */
+  .ats-tool .why-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center;
+  }
+  @media (max-width: 820px) { .ats-tool .why-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .ats-tool .why-text p { color: var(--ats-ink-2); font-size: 16px; line-height: 1.65; }
+  .ats-tool .why-text p + p { margin-top: 16px; }
+  .ats-tool .why-stat {
+    background: var(--ats-bg-elev);
+    border: 1px solid var(--ats-line);
+    border-radius: var(--ats-radius-lg);
+    padding: 40px;
+    text-align: center;
+  }
+  .ats-tool .stat-num {
+    font-size: 88px; font-weight: 700; letter-spacing: -0.05em; line-height: 1;
+    color: var(--ats-accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .ats-tool .stat-label { font-size: 15px; color: var(--ats-ink-2); margin-top: 12px; max-width: 240px; margin-left: auto; margin-right: auto; line-height: 1.45; }
+  .ats-tool .ats-row {
+    margin-top: 48px;
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px 12px;
+  }
+  .ats-tool .ats-row-label {
+    width: 100%; text-align: center; font-size: 12px; color: var(--ats-ink-3);
+    font-family: 'JetBrains Mono', ui-monospace, monospace; margin-bottom: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .ats-tool .ats-chip {
+    padding: 8px 16px; border: 1px solid var(--ats-line);
+    border-radius: 999px; font-size: 14px; font-weight: 500;
+    background: var(--ats-bg-elev); color: var(--ats-ink-2);
+  }
+
+  /* FAQ */
+  .ats-tool .faq { max-width: 760px; margin: 0 auto; }
+  .ats-tool .faq-item { border-bottom: 1px solid var(--ats-line); }
+  .ats-tool .faq-item:first-child { border-top: 1px solid var(--ats-line); }
+  .ats-tool .faq-q {
+    width: 100%; text-align: left;
+    padding: 24px 8px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    font-size: 17px; font-weight: 500; letter-spacing: -0.01em;
+    color: var(--ats-ink);
+    border: none; background: none; cursor: pointer; font-family: inherit;
+  }
+  .ats-tool .faq-q:hover { color: var(--ats-accent); }
+  .ats-tool .faq-icon {
+    flex: none; width: 24px; height: 24px; border-radius: 999px;
+    border: 1px solid var(--ats-line-2);
+    display: grid; place-items: center;
+    color: var(--ats-ink-2);
+    transition: transform .25s, background .15s;
+  }
+  .ats-tool .faq-item.open .faq-icon {
+    transform: rotate(45deg); background: var(--ats-accent);
+    color: var(--ats-accent-ink); border-color: var(--ats-accent);
+  }
+  .ats-tool .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+  .ats-tool .faq-item.open .faq-a { max-height: 500px; }
+  .ats-tool .faq-a-inner {
+    padding: 0 8px 24px;
+    color: var(--ats-ink-2);
+    font-size: 15px; line-height: 1.65;
+    max-width: 640px;
+  }
+
+  /* FINAL CTA */
+  .ats-tool .final-cta {
+    text-align: center;
+    background: var(--ats-ink);
+    color: var(--ats-bg);
+    border-radius: var(--ats-radius-lg);
+    padding: 80px 32px;
+    position: relative; overflow: hidden;
+  }
+  .dark .ats-tool .final-cta {
+    background: var(--ats-bg-elev);
+    color: var(--ats-ink);
+    border: 1px solid var(--ats-line);
+  }
+  .ats-tool .final-cta::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 50% 100%, color-mix(in oklab, var(--ats-accent) 35%, transparent), transparent 60%);
+    pointer-events: none;
+  }
+  .ats-tool .final-cta .eyebrow {
+    background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.12);
+    color: rgba(255,255,255,.8); margin-bottom: 20px; position: relative;
+  }
+  .dark .ats-tool .final-cta .eyebrow {
+    background: var(--ats-bg-elev); border-color: var(--ats-line); color: var(--ats-ink-2);
+  }
+  .ats-tool .final-cta h2 { color: inherit; max-width: 700px; margin: 0 auto 18px; position: relative; }
+  .ats-tool .final-cta p { font-size: 17px; opacity: .7; max-width: 540px; margin: 0 auto 36px; position: relative; }
+  .ats-tool .email-form {
+    display: flex; gap: 8px; max-width: 460px; margin: 0 auto;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 14px;
+    padding: 6px;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .dark .ats-tool .email-form { background: var(--ats-bg); border-color: var(--ats-line-2); }
+  .ats-tool .email-form input {
+    flex: 1; min-width: 0;
+    background: none; border: none; outline: none;
+    color: white; font: inherit;
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+  .dark .ats-tool .email-form input { color: var(--ats-ink); }
+  .ats-tool .email-form input::placeholder { color: rgba(255,255,255,.5); }
+  .dark .ats-tool .email-form input::placeholder { color: var(--ats-ink-3); }
+  .ats-tool .email-form button { padding: 12px 18px; border-radius: 10px; }
+  .ats-tool .success-msg-tool {
+    width: 100%; padding: 12px 14px; color: white; font-size: 15px;
+  }
+  .dark .ats-tool .success-msg-tool { color: var(--ats-ink); }
+
+  .ats-tool .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+</style>
+
+<script>
+  // ─── ATS Resume Checker — state machine ───────────────────────────────
+  type Finding = { kind: 'ok' | 'warn' | 'bad'; text: string };
+  type Category = {
+    key: string;
+    emoji: string;
+    name: string;
+    score: number;
+    findings: Finding[];
+    tip: string;
+  };
+  type Report = { overall: number; categories: Category[]; filename?: string; pages?: number; words?: number };
+
+  const MAX_BYTES = 5 * 1024 * 1024;
+
+  const els = {
+    intro: document.getElementById('tool-intro') as HTMLElement,
+    trustRow: document.getElementById('trust-row') as HTMLElement,
+    idle: document.getElementById('state-idle') as HTMLElement,
+    selected: document.getElementById('state-selected') as HTMLElement,
+    analyzing: document.getElementById('state-analyzing') as HTMLElement,
+    error: document.getElementById('state-error') as HTMLElement,
+    results: document.getElementById('state-results') as HTMLElement,
+    dropzone: document.getElementById('dropzone') as HTMLElement,
+    fileInput: document.getElementById('file-input') as HTMLInputElement,
+    browseBtn: document.getElementById('browse-btn') as HTMLButtonElement,
+    fileName: document.getElementById('file-name') as HTMLElement,
+    fileSub: document.getElementById('file-sub') as HTMLElement,
+    fileRemove: document.getElementById('file-remove') as HTMLButtonElement,
+    analyzeBtn: document.getElementById('analyze-btn') as HTMLButtonElement,
+    anaMsg: document.getElementById('ana-msg') as HTMLElement,
+    anaBarFill: document.getElementById('ana-bar-fill') as HTMLElement,
+    anaSteps: document.getElementById('ana-steps') as HTMLElement,
+    errorMsg: document.getElementById('error-msg') as HTMLElement,
+    errorRetry: document.getElementById('error-retry') as HTMLButtonElement,
+    verdictPill: document.getElementById('verdict-pill') as HTMLElement,
+    verdictLabel: document.getElementById('verdict-label') as HTMLElement,
+    verdictSub: document.getElementById('verdict-sub') as HTMLElement,
+    gaugeFill: document.getElementById('gauge-fill') as unknown as SVGCircleElement,
+    gaugeNum: document.getElementById('gauge-num') as HTMLElement,
+    catGrid: document.getElementById('cat-grid') as HTMLElement,
+    scanAnother: document.getElementById('scan-another') as HTMLButtonElement,
+    openWaitlistFromResults: document.getElementById('open-waitlist-modal-results') as HTMLButtonElement,
+  };
+
+  const ANA_MESSAGES = [
+    'Extracting text from your PDF…',
+    'Checking ATS parseability…',
+    'Analyzing keywords and structure…',
+    'Generating your report…',
+  ];
+
+  function setVisible(node: HTMLElement, visible: boolean) {
+    node.classList.toggle('hidden', !visible);
+  }
+
+  function showState(s: 'idle' | 'selected' | 'analyzing' | 'error' | 'results') {
+    setVisible(els.idle, s === 'idle');
+    setVisible(els.selected, s === 'selected');
+    setVisible(els.analyzing, s === 'analyzing');
+    setVisible(els.error, s === 'error');
+    setVisible(els.results, s === 'results');
+    setVisible(els.intro, s !== 'results');
+    setVisible(els.trustRow, s !== 'results');
+  }
+
+  function renderAnalyzingSteps(activeIdx: number) {
+    els.anaSteps.innerHTML = ANA_MESSAGES.map((m, i) => {
+      const cls = i < activeIdx ? 'done' : i === activeIdx ? 'active' : '';
+      const dot =
+        i < activeIdx
+          ? '<svg width="8" height="8" viewBox="0 0 8 8"><path d="M1 4l2 2 4-4" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+          : '';
+      return `<div class="ana-step ${cls}"><span class="dot">${dot}</span><span>${m}</span></div>`;
+    }).join('');
+  }
+
+  function verdictFor(score: number) {
+    if (score >= 75) return { pill: 'good', label: 'Excellent', sub: 'Your resume is well-optimized for most ATS systems. A few small tweaks will push it higher.' };
+    if (score >= 50) return { pill: 'warn', label: 'Good — with some fixes', sub: 'Most ATS systems will parse your resume correctly, but there are clear opportunities to improve.' };
+    return { pill: 'bad', label: 'Needs work', sub: 'Several issues are likely preventing your resume from being parsed correctly. Fix these first.' };
+  }
+
+  function colorForScore(score: number) {
+    if (score >= 75) return 'var(--ats-good)';
+    if (score >= 50) return 'var(--ats-warn)';
+    return 'var(--ats-bad)';
+  }
+
+  function escapeHtml(s: string) {
+    return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string));
+  }
+
+  function renderReport(report: Report) {
+    const v = verdictFor(report.overall);
+    els.verdictPill.className = `verdict-pill ${v.pill}`;
+    els.verdictPill.textContent = `● ${v.label}`;
+    els.verdictLabel.textContent = `Your resume scored ${report.overall} / 100`;
+    els.verdictSub.textContent = v.sub;
+    els.gaugeNum.textContent = String(report.overall);
+
+    const r = 100;
+    const C = 2 * Math.PI * r;
+    const offset = C * (1 - report.overall / 100);
+    els.gaugeFill.setAttribute('stroke-dasharray', String(C));
+    els.gaugeFill.setAttribute('stroke', colorForScore(report.overall));
+    // force reflow then animate
+    els.gaugeFill.setAttribute('stroke-dashoffset', String(C));
+    requestAnimationFrame(() => {
+      els.gaugeFill.setAttribute('stroke-dashoffset', String(offset));
+    });
+
+    els.catGrid.innerHTML = report.categories
+      .map((c) => {
+        const color = colorForScore(c.score);
+        const findings = c.findings
+          .map(
+            (f) =>
+              `<div class="finding ${f.kind}">
+                 <span class="finding-mark">${f.kind === 'ok' ? '✓' : f.kind === 'warn' ? '!' : '×'}</span>
+                 <span>${escapeHtml(f.text)}</span>
+               </div>`,
+          )
+          .join('');
+        return `
+          <div class="cat-card">
+            <div class="cat-head">
+              <div class="cat-title">
+                <div class="cat-emoji">${escapeHtml(c.emoji)}</div>
+                <div class="cat-name">${escapeHtml(c.name)}</div>
+              </div>
+              <div class="cat-score"><b>${c.score}</b> / 100</div>
+            </div>
+            <div class="cat-bar"><div class="cat-bar-fill" style="width: ${c.score}%; background: ${color};"></div></div>
+            <div class="findings">${findings}</div>
+            <div class="fix-tip"><b>How to fix:</b> ${escapeHtml(c.tip)}</div>
+          </div>`;
+      })
+      .join('');
+  }
+
+  let currentFile: File | null = null;
+  let analyzing = false;
+
+  function chooseFile(file: File) {
+    if (file.size > MAX_BYTES) {
+      showError('File exceeds 5MB limit. Please upload a smaller PDF.');
+      return;
+    }
+    const isPdf =
+      file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
+    if (!isPdf) {
+      showError('PDF files only. Please export your resume as a PDF first.');
+      return;
+    }
+    currentFile = file;
+    els.fileName.textContent = file.name;
+    els.fileSub.textContent = `${(file.size / 1024).toFixed(1)} KB · ready to scan`;
+    showState('selected');
+  }
+
+  function showError(msg: string) {
+    els.errorMsg.textContent = msg;
+    showState('error');
+  }
+
+  function reset() {
+    currentFile = null;
+    els.fileInput.value = '';
+    showState('idle');
+  }
+
+  async function startAnalysis() {
+    if (!currentFile || analyzing) return;
+    analyzing = true;
+    showState('analyzing');
+    renderAnalyzingSteps(0);
+    els.anaMsg.textContent = ANA_MESSAGES[0];
+    els.anaBarFill.style.width = '25%';
+
+    // Visual pacing — advance UI through messages while the request is in flight
+    const visualTimers: number[] = [];
+    const advance = (i: number, pct: number) => {
+      els.anaMsg.textContent = ANA_MESSAGES[i];
+      els.anaBarFill.style.width = `${pct}%`;
+      renderAnalyzingSteps(i);
+    };
+    visualTimers.push(window.setTimeout(() => advance(1, 50), 700));
+    visualTimers.push(window.setTimeout(() => advance(2, 75), 1600));
+
+    const form = new FormData();
+    form.append('file', currentFile);
+
+    try {
+      const res = await fetch('/api/ats-check', { method: 'POST', body: form });
+      const data = await res.json();
+      visualTimers.forEach(clearTimeout);
+      if (!res.ok) {
+        showError(data?.error || 'Analysis failed — please try again.');
+        analyzing = false;
+        return;
+      }
+      advance(3, 100);
+      // brief pause so users see the final step before transition
+      window.setTimeout(() => {
+        renderReport(data as Report);
+        showState('results');
+        analyzing = false;
+        document.getElementById('state-results')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 350);
+    } catch (err) {
+      visualTimers.forEach(clearTimeout);
+      console.error(err);
+      showError('Network error — please check your connection and try again.');
+      analyzing = false;
+    }
+  }
+
+  // ─── Events ───────────────────────────────────────────────────────────
+  els.browseBtn.addEventListener('click', () => els.fileInput.click());
+  els.fileInput.addEventListener('change', (e) => {
+    const f = (e.target as HTMLInputElement).files?.[0];
+    if (f) chooseFile(f);
+  });
+
+  ['dragenter', 'dragover'].forEach((evt) =>
+    els.dropzone.addEventListener(evt, (e) => {
+      e.preventDefault();
+      els.dropzone.classList.add('hot');
+    }),
+  );
+  ['dragleave', 'drop'].forEach((evt) =>
+    els.dropzone.addEventListener(evt, (e) => {
+      e.preventDefault();
+      els.dropzone.classList.remove('hot');
+    }),
+  );
+  els.dropzone.addEventListener('drop', (e) => {
+    const f = (e as DragEvent).dataTransfer?.files?.[0];
+    if (f) chooseFile(f);
+  });
+
+  els.fileRemove.addEventListener('click', reset);
+  els.analyzeBtn.addEventListener('click', startAnalysis);
+  els.errorRetry.addEventListener('click', reset);
+  els.scanAnother.addEventListener('click', reset);
+
+  // Results-screen CTA opens the same waitlist modal as the navbar
+  els.openWaitlistFromResults?.addEventListener('click', () => {
+    document.getElementById('open-waitlist-modal')?.dispatchEvent(new MouseEvent('click'));
+  });
+
+  // ─── FAQ accordion ────────────────────────────────────────────────────
+  document.querySelectorAll<HTMLButtonElement>('.ats-tool .faq-q').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      if (!item) return;
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+</script>

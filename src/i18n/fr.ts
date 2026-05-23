@@ -16,6 +16,9 @@ export const fr: Translations = {
     features: "Fonctionnalit\u00e9s",
     comingSoon: "Bient\u00f4t disponible",
     joinWaitlist: "Rejoindre",
+    freeTools: "Outils gratuits",
+    atsChecker: "V\u00e9rificateur ATS",
+    atsCheckerSub: "Analysez votre CV en 30 secondes",
   },
   hero: {
     prefix: "Le CV qui vous fait recruter comme",
