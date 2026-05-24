@@ -1,0 +1,558 @@
+<!DOCTYPE html><html lang="en" class="" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v6.1.5"><!-- Primary SEO --><title>Hirime — AI-Powered Resume Builder</title><meta name="description" content="AI resume builder that automatically tailors your resume to any job description. Beat ATS filters, land more interviews. Join the waitlist for early access."><meta name="keywords" content="AI resume builder, resume tailoring, ATS optimization, ATS-friendly resume, CV builder AI, resume generator, job application, cover letter generator, AI CV, resume builder free"><link rel="canonical" href="https://hirime.com/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Hirime — AI-Powered Resume Builder"><meta property="og:description" content="The resume that gets you hired. Build once, AI adapts for every role."><meta property="og:url" content="https://hirime.com/"><meta property="og:image" content="https://hirime.com/images/og-image.png"><meta property="og:site_name" content="Hirime"><meta property="og:locale" content="en_US"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Hirime — AI-Powered Resume Builder"><meta name="twitter:description" content="The resume that gets you hired. Build once, AI adapts for every role."><meta name="twitter:image" content="https://hirime.com/images/og-image.png"><!-- hreflang --><link rel="alternate" hreflang="en" href="https://hirime.com/"><link rel="alternate" hreflang="es" href="https://hirime.com/es/"><link rel="alternate" hreflang="fr" href="https://hirime.com/fr/"><link rel="alternate" hreflang="x-default" href="https://hirime.com/"><!-- Favicons --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Fonts: Onest --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet"><!-- Page-specific head content (JSON-LD, extra fonts, etc.) --><!-- Theme init: prevent FOUC --><script>
+      (function () {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/Footer.DI2TR1Dq.css">
+<style>.resume-scene[data-astro-cid-bbe6dxrz]{position:relative;width:100%;max-width:340px;display:flex;justify-content:center;align-items:center}.resume-shadow-card[data-astro-cid-bbe6dxrz]{position:absolute;width:88%;aspect-ratio:210 / 297;border-radius:8px;background:var(--accent);opacity:.15;transform:rotate(5deg) translateY(6px);pointer-events:none}.resume-a4[data-astro-cid-bbe6dxrz]{position:relative;width:100%;aspect-ratio:210 / 297;border-radius:8px;overflow:hidden;box-shadow:0 2px 4px #0000000a,0 8px 24px #0000001a,0 20px 48px #00000012;transform:rotate(-2deg);transform-origin:center center;cursor:default}@keyframes rock{0%{transform:rotate(-2deg)}25%{transform:rotate(3.5deg)}75%{transform:rotate(-4deg)}to{transform:rotate(-2deg)}}.resume-a4[data-astro-cid-bbe6dxrz]:hover{animation:rock 1.4s cubic-bezier(.45,.05,.55,.95) infinite;box-shadow:0 4px 8px #0000000f,0 16px 40px #00000024,0 32px 64px #0000001a}
+</style></head> <body class="grain" data-astro-cid-37fxchfa>  <nav id="navbar" aria-label="Main navigation" data-astro-cid-5blmo7yk> <div style="max-width: 1180px; margin: 0 auto; padding: 0 1.5rem;" data-astro-cid-5blmo7yk> <div class="flex items-center justify-between" style="height: 64px;" data-astro-cid-5blmo7yk> <!-- Logo --> <a href="/" class="flex items-center gap-2" aria-label="Hirime — Home" style="text-decoration: none;" data-astro-cid-5blmo7yk> <span style="
+          font-size: 1.375rem;
+          font-weight: 800;
+          letter-spacing: -0.04em;
+          color: var(--text-primary);
+          font-family: 'Onest', system-ui, sans-serif;
+        " data-astro-cid-5blmo7yk>Hirime</span> <span style="
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: var(--accent);
+          margin-bottom: 2px;
+          display: inline-block;
+        " data-astro-cid-5blmo7yk></span> </a> <!-- Desktop nav links --> <div class="hidden md:flex items-center gap-1" data-astro-cid-5blmo7yk> <!-- Free tools dropdown --> <div class="nav-dropdown" id="nav-dropdown" data-astro-cid-5blmo7yk> <button type="button" class="btn-ghost dropdown-trigger" id="dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-menu" data-astro-cid-5blmo7yk> Free tools <svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-5blmo7yk> <path d="M2 4l3 3 3-3" data-astro-cid-5blmo7yk></path> </svg> </button> <div class="dropdown-menu" id="dropdown-menu" role="menu" data-astro-cid-5blmo7yk> <a href="/tools/ats-resume-checker" class="dropdown-item" role="menuitem" data-astro-cid-5blmo7yk> <span class="dropdown-emoji" aria-hidden="true" data-astro-cid-5blmo7yk>🎯</span> <span class="dropdown-text" data-astro-cid-5blmo7yk> <span class="dropdown-item-title" data-astro-cid-5blmo7yk>ATS Resume Checker</span> <span class="dropdown-item-sub" data-astro-cid-5blmo7yk>Scan your resume in 30 seconds</span> </span> </a> </div> </div> <a href="#how-it-works" class="btn-ghost" data-astro-cid-5blmo7yk>How it works</a> <a href="#features" class="btn-ghost" data-astro-cid-5blmo7yk>Features</a> <a href="#coming-soon" class="btn-ghost" data-astro-cid-5blmo7yk>Coming soon</a> </div> <!-- Right controls --> <div class="flex items-center gap-3" data-astro-cid-5blmo7yk> <div class="hidden sm:flex items-center gap-2" data-astro-cid-5blmo7yk> <div class="flex items-center gap-0.5"> <a href="/" class="lang-btn active" aria-current="true" aria-label="Switch to EN"> EN </a><a href="/es/" class="lang-btn " aria-label="Switch to ES"> ES </a><a href="/fr/" class="lang-btn " aria-label="Switch to FR"> FR </a> </div> <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"> <span id="theme-icon" aria-hidden="true">🌙</span> </button> </div> <button id="open-waitlist-modal" class="btn-primary" style="font-size: 0.875rem; padding: 0.5rem 1.125rem;" data-astro-cid-5blmo7yk> Join Waitlist </button> <!-- Mobile menu button --> <button id="menu-toggle" class="md:hidden" aria-label="Open menu" style="
+            width: 2.25rem;
+            height: 2.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            border: 1.5px solid var(--border);
+            background: var(--bg-card);
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: color 0.2s ease, background-color 0.2s ease;
+          " data-astro-cid-5blmo7yk> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-5blmo7yk> <line x1="3" y1="6" x2="21" y2="6" data-astro-cid-5blmo7yk></line> <line x1="3" y1="12" x2="21" y2="12" data-astro-cid-5blmo7yk></line> <line x1="3" y1="18" x2="21" y2="18" data-astro-cid-5blmo7yk></line> </svg> </button> </div> </div> <!-- Mobile menu --> <div id="mobile-menu" class="hidden md:hidden pb-4" style="border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 0;" data-astro-cid-5blmo7yk> <div class="flex flex-col gap-1" data-astro-cid-5blmo7yk> <div class="mobile-section-label" data-astro-cid-5blmo7yk>Free tools</div> <a href="/tools/ats-resume-checker" class="btn-ghost mobile-tool-link" style="justify-content: flex-start;" data-astro-cid-5blmo7yk> <span aria-hidden="true" style="margin-right: 0.5rem;" data-astro-cid-5blmo7yk>🎯</span> <span data-astro-cid-5blmo7yk>ATS Resume Checker</span> </a> <div style="height: 0.5rem;" data-astro-cid-5blmo7yk></div> <a href="#how-it-works" class="btn-ghost" style="justify-content: flex-start;" data-astro-cid-5blmo7yk>How it works</a> <a href="#features" class="btn-ghost" style="justify-content: flex-start;" data-astro-cid-5blmo7yk>Features</a> <a href="#coming-soon" class="btn-ghost" style="justify-content: flex-start;" data-astro-cid-5blmo7yk>Coming soon</a> </div> <div class="flex items-center gap-3 mt-4" data-astro-cid-5blmo7yk> <div class="flex items-center gap-0.5"> <a href="/" class="lang-btn active" aria-current="true" aria-label="Switch to EN"> EN </a><a href="/es/" class="lang-btn " aria-label="Switch to ES"> ES </a><a href="/fr/" class="lang-btn " aria-label="Switch to FR"> FR </a> </div> <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"> <span id="theme-icon" aria-hidden="true">🌙</span> </button> </div> </div> </div> </nav>  <script type="module">const e=document.getElementById("nav-dropdown"),o=document.getElementById("dropdown-trigger"),a=document.getElementById("dropdown-menu");if(e&&o&&a){let d;const s=()=>{window.clearTimeout(d),e.classList.add("open"),o.setAttribute("aria-expanded","true")},n=()=>{e.classList.remove("open"),o.setAttribute("aria-expanded","false")},i=()=>{window.clearTimeout(d),d=window.setTimeout(n,140)};o.addEventListener("click",t=>{t.stopPropagation(),e.classList.contains("open")?n():s()}),e.addEventListener("mouseenter",s),e.addEventListener("mouseleave",i),document.addEventListener("click",t=>{e.contains(t.target)||n()}),document.addEventListener("keydown",t=>{t.key==="Escape"&&n()})}</script> <main> <section id="hero" class="hero-gradient" style="
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 1.5rem 5rem;
+    position: relative;
+    overflow: hidden;
+  " aria-label="Hero" data-astro-cid-bbe6dxrz> <!-- Decorative blobs --> <div aria-hidden="true" style="
+    position: absolute;
+    top: 15%;
+    right: -8%;
+    width: min(480px, 60vw);
+    height: min(480px, 60vw);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(249,115,22,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  " data-astro-cid-bbe6dxrz></div> <div aria-hidden="true" style="
+    position: absolute;
+    bottom: 10%;
+    left: -5%;
+    width: min(320px, 45vw);
+    height: min(320px, 45vw);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(249,115,22,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  " data-astro-cid-bbe6dxrz></div> <div style="max-width: 1180px; margin: 0 auto; width: 100%;" data-astro-cid-bbe6dxrz> <div class="grid lg:grid-cols-2 gap-16 items-center" data-astro-cid-bbe6dxrz> <!-- Left: Copy --> <div data-astro-cid-bbe6dxrz> <!-- Eyebrow --> <div class="fade-up" style="margin-bottom: 1.5rem;" data-astro-cid-bbe6dxrz> <span class="badge" data-astro-cid-bbe6dxrz>✦ AI Resume Builder</span> </div> <!-- Headline --> <h1 class="fade-up delay-100" style="
+          font-family: 'Onest', system-ui, sans-serif;
+          font-size: clamp(2.5rem, 5.5vw, 4rem);
+          font-weight: 800;
+          line-height: 1.1;
+          letter-spacing: -0.04em;
+          color: var(--text-primary);
+          margin-bottom: 0.5rem;
+        " data-astro-cid-bbe6dxrz> The resume that gets you hired as a<br data-astro-cid-bbe6dxrz> <span id="rotating-word" data-words="[&#34;Developer&#34;,&#34;Designer&#34;,&#34;Manager&#34;,&#34;Marketer&#34;]" aria-live="polite" data-astro-cid-bbe6dxrz>Developer</span> </h1> <!-- Subheadline --> <p class="fade-up delay-200" style="
+          font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+          color: var(--text-secondary);
+          line-height: 1.65;
+          max-width: 42ch;
+          margin-top: 1.5rem;
+          margin-bottom: 2.5rem;
+        " data-astro-cid-bbe6dxrz> Build your resume once. Let AI tailor it for every job application. </p> <!-- Email form --> <form id="hero-form" class="waitlist-form fade-up delay-300" style="margin-bottom: 1.25rem;" novalidate data-astro-cid-bbe6dxrz> <div style="
+            display: flex;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+            max-width: 460px;
+          " data-astro-cid-bbe6dxrz> <input type="email" name="email" required placeholder="Enter your email address" class="email-input" style="flex: 1; min-width: 200px;" aria-label="Enter your email address" data-astro-cid-bbe6dxrz> <button type="submit" class="btn-primary" data-astro-cid-bbe6dxrz> Join the Waitlist </button> </div> <!-- Success state --> <div class="success-msg" style="margin-top: 0.75rem;" data-astro-cid-bbe6dxrz> <span data-astro-cid-bbe6dxrz>✓</span> <span data-astro-cid-bbe6dxrz>You&#39;re on the list! We&#39;ll be in touch soon. 🎉</span> </div> </form> <!-- Social proof --> <p class="fade-up delay-400" style="
+          font-size: 0.875rem;
+          color: var(--text-muted);
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        " data-astro-cid-bbe6dxrz> <span aria-hidden="true" data-astro-cid-bbe6dxrz>👥</span> Be the first to know when we launch </p> </div> <!-- Right: A4 Resume image --> <div class="fade-up delay-300 hidden lg:flex" style="justify-content: center; align-items: center;" data-astro-cid-bbe6dxrz> <div class="resume-scene" data-astro-cid-bbe6dxrz> <div class="resume-shadow-card" data-astro-cid-bbe6dxrz></div> <div class="resume-a4" data-astro-cid-bbe6dxrz> <img src="/images/resume-preview.jpg" alt="Resume preview" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block;" data-astro-cid-bbe6dxrz> </div> </div> </div> </div> </div> </section> <section id="how-it-works" style="
+    padding: 6rem 1.5rem;
+    background-color: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+  " aria-labelledby="how-it-works-title"> <!-- Decorative top rule --> <div aria-hidden="true" style="
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  "></div> <div aria-hidden="true" style="
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  "></div> <div style="max-width: 1180px; margin: 0 auto;"> <!-- Section header --> <div class="fade-up" style="text-align: center; margin-bottom: 4.5rem;"> <span class="section-label">How it works</span> <h2 id="how-it-works-title" class="section-title" style="margin-top: 0.75rem; margin-bottom: 1rem;"> Three steps to your perfect resume </h2> <p class="section-subtitle" style="margin: 0 auto;"> From a single profile to a perfectly tailored resume for every opportunity. </p> </div> <!-- Steps --> <div class="grid md:grid-cols-3 gap-8 lg:gap-12" style="position: relative;"> <div class="fade-up delay-100" style="position: relative;"> <!-- Step card --> <div style="
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            height: 100%;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+          " class="card"> <!-- Number + emoji --> <div style="
+              display: flex;
+              align-items: center;
+              gap: 0.875rem;
+              margin-bottom: 1.5rem;
+            "> <span style="
+                font-size: 2rem;
+                line-height: 1;
+              " role="img" aria-hidden="true">📝</span> <span style="
+                font-family: 'Onest', system-ui, sans-serif;
+                font-size: 3rem;
+                font-weight: 800;
+                line-height: 1;
+                color: var(--accent);
+                opacity: 0.2;
+                letter-spacing: -0.05em;
+              " aria-hidden="true">01</span> </div> <!-- Content --> <h3 style="
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin-bottom: 0.625rem;
+              letter-spacing: -0.01em;
+            "> Fill in your experience </h3> <p style="
+              font-size: 0.9375rem;
+              color: var(--text-secondary);
+              line-height: 1.65;
+            "> Enter your skills, experience, and accomplishments once into your master profile. </p> <!-- Connector arrow (between cards on desktop) --> <div aria-hidden="true" style="
+                display: none;
+                position: absolute;
+                top: 50%;
+                right: -2rem;
+                transform: translateY(-50%);
+                color: var(--border);
+                font-size: 1.25rem;
+              " class="md:block">
+→
+</div> </div> </div><div class="fade-up delay-200" style="position: relative;"> <!-- Step card --> <div style="
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            height: 100%;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+          " class="card"> <!-- Number + emoji --> <div style="
+              display: flex;
+              align-items: center;
+              gap: 0.875rem;
+              margin-bottom: 1.5rem;
+            "> <span style="
+                font-size: 2rem;
+                line-height: 1;
+              " role="img" aria-hidden="true">🤖</span> <span style="
+                font-family: 'Onest', system-ui, sans-serif;
+                font-size: 3rem;
+                font-weight: 800;
+                line-height: 1;
+                color: var(--accent);
+                opacity: 0.2;
+                letter-spacing: -0.05em;
+              " aria-hidden="true">02</span> </div> <!-- Content --> <h3 style="
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin-bottom: 0.625rem;
+              letter-spacing: -0.01em;
+            "> AI adapts your resume </h3> <p style="
+              font-size: 0.9375rem;
+              color: var(--text-secondary);
+              line-height: 1.65;
+            "> Our AI reads the job description and tailors your resume to match it precisely. </p> <!-- Connector arrow (between cards on desktop) --> <div aria-hidden="true" style="
+                display: none;
+                position: absolute;
+                top: 50%;
+                right: -2rem;
+                transform: translateY(-50%);
+                color: var(--border);
+                font-size: 1.25rem;
+              " class="md:block">
+→
+</div> </div> </div><div class="fade-up delay-300" style="position: relative;"> <!-- Step card --> <div style="
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            height: 100%;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+          " class="card"> <!-- Number + emoji --> <div style="
+              display: flex;
+              align-items: center;
+              gap: 0.875rem;
+              margin-bottom: 1.5rem;
+            "> <span style="
+                font-size: 2rem;
+                line-height: 1;
+              " role="img" aria-hidden="true">🚀</span> <span style="
+                font-family: 'Onest', system-ui, sans-serif;
+                font-size: 3rem;
+                font-weight: 800;
+                line-height: 1;
+                color: var(--accent);
+                opacity: 0.2;
+                letter-spacing: -0.05em;
+              " aria-hidden="true">03</span> </div> <!-- Content --> <h3 style="
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              margin-bottom: 0.625rem;
+              letter-spacing: -0.01em;
+            "> Apply with confidence </h3> <p style="
+              font-size: 0.9375rem;
+              color: var(--text-secondary);
+              line-height: 1.65;
+            "> Send a perfectly optimized application and land more interviews. </p> <!-- Connector arrow (between cards on desktop) -->  </div> </div> </div> </div> </section> <section id="features" style="padding: 6rem 1.5rem; background-color: var(--bg-primary);" aria-labelledby="features-title"> <div style="max-width: 1180px; margin: 0 auto;"> <!-- Section header --> <div class="fade-up" style="margin-bottom: 4rem;"> <span class="section-label">Features</span> <h2 id="features-title" class="section-title" style="margin-top: 0.75rem; margin-bottom: 1rem;"> Everything you need to land the job </h2> <p class="section-subtitle">Built for modern job seekers who want to work smarter, not harder.</p> </div> <!-- Feature cards grid --> <div class="grid sm:grid-cols-2 gap-5"> <article class="card fade-up delay-100" style="display: flex; flex-direction: column; gap: 1rem;"> <!-- Icon + badge row --> <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem;"> <span style="
+              font-size: 2.25rem;
+              line-height: 1;
+              display: block;
+            " role="img" aria-label="AI Resume Tailoring">✨</span>  </div> <!-- Content --> <div> <h3 style="
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              letter-spacing: -0.01em;
+              margin-bottom: 0.5rem;
+            "> AI Resume Tailoring </h3> <p style="
+              font-size: 0.9375rem;
+              color: var(--text-secondary);
+              line-height: 1.65;
+            "> Automatically adapt your resume to any job description with precision keyword matching. </p> </div> <!-- Bottom accent line on hover (CSS) --> <div aria-hidden="true" style="
+            height: 2px;
+            width: 2.5rem;
+            border-radius: 9999px;
+            background-color: var(--accent);
+            opacity: 0.4;
+            margin-top: auto;
+          "></div> </article><article class="card fade-up delay-200" style="display: flex; flex-direction: column; gap: 1rem;"> <!-- Icon + badge row --> <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem;"> <span style="
+              font-size: 2.25rem;
+              line-height: 1;
+              display: block;
+            " role="img" aria-label="Multiple Versions">📄</span>  </div> <!-- Content --> <div> <h3 style="
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              letter-spacing: -0.01em;
+              margin-bottom: 0.5rem;
+            "> Multiple Versions </h3> <p style="
+              font-size: 0.9375rem;
+              color: var(--text-secondary);
+              line-height: 1.65;
+            "> Create and manage tailored resume versions for different roles and industries. </p> </div> <!-- Bottom accent line on hover (CSS) --> <div aria-hidden="true" style="
+            height: 2px;
+            width: 2.5rem;
+            border-radius: 9999px;
+            background-color: var(--accent);
+            opacity: 0.4;
+            margin-top: auto;
+          "></div> </article><article class="card fade-up delay-100" style="display: flex; flex-direction: column; gap: 1rem;"> <!-- Icon + badge row --> <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem;"> <span style="
+              font-size: 2.25rem;
+              line-height: 1;
+              display: block;
+            " role="img" aria-label="ATS Optimized">🎯</span> <span class="badge">Coming soon</span> </div> <!-- Content --> <div> <h3 style="
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              letter-spacing: -0.01em;
+              margin-bottom: 0.5rem;
+            "> ATS Optimized </h3> <p style="
+              font-size: 0.9375rem;
+              color: var(--text-secondary);
+              line-height: 1.65;
+            "> Pass applicant tracking systems with keyword-rich, properly formatted resumes. </p> </div> <!-- Bottom accent line on hover (CSS) --> <div aria-hidden="true" style="
+            height: 2px;
+            width: 2.5rem;
+            border-radius: 9999px;
+            background-color: var(--accent);
+            opacity: 0.4;
+            margin-top: auto;
+          "></div> </article><article class="card fade-up delay-200" style="display: flex; flex-direction: column; gap: 1rem;"> <!-- Icon + badge row --> <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem;"> <span style="
+              font-size: 2.25rem;
+              line-height: 1;
+              display: block;
+            " role="img" aria-label="Multilingual Resumes">🌍</span>  </div> <!-- Content --> <div> <h3 style="
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              letter-spacing: -0.01em;
+              margin-bottom: 0.5rem;
+            "> Multilingual Resumes </h3> <p style="
+              font-size: 0.9375rem;
+              color: var(--text-secondary);
+              line-height: 1.65;
+            "> Generate your resume in multiple languages to unlock global job opportunities. </p> </div> <!-- Bottom accent line on hover (CSS) --> <div aria-hidden="true" style="
+            height: 2px;
+            width: 2.5rem;
+            border-radius: 9999px;
+            background-color: var(--accent);
+            opacity: 0.4;
+            margin-top: auto;
+          "></div> </article> </div> </div> </section> <section id="coming-soon" style="
+    padding: 6rem 1.5rem;
+    background-color: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+  " aria-labelledby="coming-soon-title"> <!-- Top / bottom rules --> <div aria-hidden="true" style="
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  "></div> <div aria-hidden="true" style="
+    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  "></div> <div style="max-width: 1180px; margin: 0 auto;"> <!-- Section header --> <div class="fade-up" style="text-align: center; margin-bottom: 4rem;"> <span class="section-label">Coming soon</span> <h2 id="coming-soon-title" class="section-title" style="margin-top: 0.75rem; margin-bottom: 1rem;"> We&#39;re building something amazing </h2> <p class="section-subtitle" style="margin: 0 auto;"> Join our waitlist to get early access and shape the future of Hirime. </p> </div> <!-- Locked feature cards --> <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" style="margin-bottom: 5rem;"> <div class="card-locked fade-up delay-100"> <!-- Lock icon --> <div style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+          "> <span style="font-size: 2rem;" role="img" aria-hidden="true">📋</span> <span style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              border: 1.5px solid var(--border);
+              color: var(--text-muted);
+              font-size: 12px;
+            " aria-hidden="true">🔒</span> </div> <h3 style="
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+          "> Resume Builder Form </h3> <p style="
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+          "> A guided form to build and maintain your master resume profile. </p> </div><div class="card-locked fade-up delay-200"> <!-- Lock icon --> <div style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+          "> <span style="font-size: 2rem;" role="img" aria-hidden="true">🔍</span> <span style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              border: 1.5px solid var(--border);
+              color: var(--text-muted);
+              font-size: 12px;
+            " aria-hidden="true">🔒</span> </div> <h3 style="
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+          "> AI Job Matching </h3> <p style="
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+          "> Discover jobs that match your unique skills and experience. </p> </div><div class="card-locked fade-up delay-300"> <!-- Lock icon --> <div style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+          "> <span style="font-size: 2rem;" role="img" aria-hidden="true">📊</span> <span style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              border: 1.5px solid var(--border);
+              color: var(--text-muted);
+              font-size: 12px;
+            " aria-hidden="true">🔒</span> </div> <h3 style="
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+          "> ATS Score Checker </h3> <p style="
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+          "> See your resume score before you hit send. </p> </div><div class="card-locked fade-up delay-400"> <!-- Lock icon --> <div style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+          "> <span style="font-size: 2rem;" role="img" aria-hidden="true">✉️</span> <span style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              border: 1.5px solid var(--border);
+              color: var(--text-muted);
+              font-size: 12px;
+            " aria-hidden="true">🔒</span> </div> <h3 style="
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+          "> Cover Letter Generator </h3> <p style="
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+          "> AI-written cover letters tailored to each role. </p> </div> </div> <!-- Second email CTA --> <div class="fade-up" style="
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 5vw, 3.5rem);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      max-width: 640px;
+      margin: 0 auto;
+    "> <!-- Decorative background accent --> <div aria-hidden="true" style="
+        position: absolute;
+        top: -40px; left: 50%;
+        transform: translateX(-50%);
+        width: 300px; height: 200px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%);
+        pointer-events: none;
+      "></div> <span class="section-label" style="position: relative;">Get early access</span> <h3 style="
+        font-family: 'Onest', system-ui, sans-serif;
+        font-size: clamp(1.75rem, 4vw, 2.375rem);
+        font-weight: 800;
+        color: var(--text-primary);
+        letter-spacing: -0.03em;
+        margin-top: 0.75rem;
+        margin-bottom: 0.875rem;
+        position: relative;
+      "> Be the first to know </h3> <p style="
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        line-height: 1.65;
+        max-width: 36ch;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+      "> Join thousands of job seekers already waiting for Hirime to launch. </p> <form class="waitlist-form" novalidate style="position: relative;"> <div style="
+          display: flex;
+          gap: 0.625rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 420px;
+          margin: 0 auto;
+        "> <input type="email" name="email" required placeholder="Enter your email address" class="email-input" style="flex: 1; min-width: 200px;" aria-label="Enter your email address"> <button type="submit" class="btn-primary"> Join the Waitlist </button> </div> <div class="success-msg" style="margin-top: 0.875rem; justify-content: center;"> <span>✓</span> <span>You&#39;re on the list! We&#39;ll be in touch soon. 🎉</span> </div> </form> </div> </div> </section> </main> <footer style="padding: 3rem 1.5rem 2.5rem;"> <div style="max-width: 1180px; margin: 0 auto;"> <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6" style="margin-bottom: 2rem;"> <!-- Logo + tagline --> <div> <a href="/" style="
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            margin-bottom: 0.375rem;
+          " aria-label="Hirime — Home"> <span style="
+            font-family: 'Onest', system-ui, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: var(--text-primary);
+          ">Hirime</span> <span style="
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            display: inline-block;
+          " aria-hidden="true"></span> </a> <p style="font-size: 0.875rem; color: var(--text-muted);"> AI-powered resumes for every opportunity. </p> </div> <!-- Links + language switcher --> <div class="flex flex-col sm:items-end gap-3"> <nav aria-label="Footer navigation"> <ul style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          "> <li> <a href="/privacy" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;"> Privacy Policy </a> </li> <li> <a href="/terms" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;"> Terms </a> </li> <li> <a href="mailto:hello@hirime.com" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;"> Contact </a> </li> </ul> </nav> <div class="flex items-center gap-0.5"> <a href="/" class="lang-btn active" aria-current="true" aria-label="Switch to EN"> EN </a><a href="/es/" class="lang-btn " aria-label="Switch to ES"> ES </a><a href="/fr/" class="lang-btn " aria-label="Switch to FR"> FR </a> </div> </div> </div> <!-- Bottom bar --> <div style="
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    "> <p style="font-size: 0.8125rem; color: var(--text-muted);"> © 2025 Hirime.com. All rights reserved. </p> <p style="font-size: 0.8125rem; color: var(--text-muted);">
+Made with <span aria-label="love" style="color: var(--accent);">♥</span> for job seekers
+</p> </div> </div> </footer>  <!-- Waitlist modal --> <div id="waitlist-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        padding: 1.5rem;
+        align-items: center;
+        justify-content: center;
+      " data-astro-cid-37fxchfa> <!-- Backdrop --> <div id="modal-backdrop" style="
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.45);
+          backdrop-filter: blur(6px);
+          -webkit-backdrop-filter: blur(6px);
+        " data-astro-cid-37fxchfa></div> <!-- Panel --> <div style="
+        position: relative;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        box-shadow: var(--shadow-lg);
+        padding: clamp(1.75rem, 5vw, 2.5rem);
+        width: 100%;
+        max-width: 440px;
+        animation: modalIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      " data-astro-cid-37fxchfa> <!-- Close button --> <button id="close-waitlist-modal" aria-label="Close" style="
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: background 0.15s, color 0.15s;
+          " onmouseenter="this.style.background='var(--bg-secondary)';this.style.color='var(--text-primary)'" onmouseleave="this.style.background='none';this.style.color='var(--text-muted)'" data-astro-cid-37fxchfa> <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" data-astro-cid-37fxchfa> <line x1="1" y1="1" x2="13" y2="13" data-astro-cid-37fxchfa></line> <line x1="13" y1="1" x2="1" y2="13" data-astro-cid-37fxchfa></line> </svg> </button> <!-- Content --> <div style="margin-bottom: 1.5rem;" data-astro-cid-37fxchfa> <span style="
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.5rem;
+          " data-astro-cid-37fxchfa>Early access</span> <h2 id="modal-title" style="
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+          " data-astro-cid-37fxchfa>Join the waitlist</h2> <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6;" data-astro-cid-37fxchfa>
+Be the first to know when Hirime launches. No spam, ever.
+</p> </div> <form id="modal-form" class="waitlist-form" novalidate data-astro-cid-37fxchfa> <div style="display: flex; flex-direction: column; gap: 0.625rem;" data-astro-cid-37fxchfa> <input type="email" name="email" required placeholder="Enter your email address" class="email-input" aria-label="Email address" style="width: 100%;" data-astro-cid-37fxchfa> <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;" data-astro-cid-37fxchfa>
+Join the Waitlist
+</button> </div> <div class="success-msg" style="margin-top: 0.75rem;" data-astro-cid-37fxchfa> <span data-astro-cid-37fxchfa>✓</span> <span data-astro-cid-37fxchfa>You're on the list! We'll be in touch soon. 🎉</span> </div> </form> </div> </div> <!-- Global scripts --> <script type="module">const u=document.getElementById("theme-toggle"),c=document.documentElement;u?.addEventListener("click",()=>{c.classList.toggle("dark"),localStorage.setItem("theme",c.classList.contains("dark")?"dark":"light");const e=document.getElementById("theme-icon");e&&(e.textContent=c.classList.contains("dark")?"☀️":"🌙")});const a=document.getElementById("theme-icon");a&&(a.textContent=c.classList.contains("dark")?"☀️":"🌙");const r=document.getElementById("navbar"),m=()=>{window.scrollY>12?r?.classList.add("scrolled"):r?.classList.remove("scrolled")};window.addEventListener("scroll",m,{passive:!0});m();const y=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&t.target.classList.add("visible")})},{threshold:.08,rootMargin:"0px 0px -40px 0px"});document.querySelectorAll(".fade-up").forEach(e=>y.observe(e));document.querySelectorAll(".waitlist-form").forEach(e=>{e.addEventListener("submit",async t=>{t.preventDefault();const n=e.querySelector('input[type="email"]'),s=e.querySelector("button"),d=e.querySelector(".success-msg");if(n?.value){s&&s.setAttribute("disabled","true");try{if(!(await fetch("/api/waitlist",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:n.value})})).ok)throw new Error("Request failed")}catch{}n&&(n.style.display="none"),s&&(s.style.display="none"),d&&(d.style.display="flex")}})});const o=document.getElementById("rotating-word");if(o){const e=JSON.parse(o.dataset.words||"[]");let t=0;setInterval(()=>{o.style.opacity="0",o.style.transform="translateY(-8px)",setTimeout(()=>{t=(t+1)%e.length,o.textContent=e[t],o.style.opacity="1",o.style.transform="translateY(0)"},280)},2800)}const p=document.getElementById("menu-toggle"),g=document.getElementById("mobile-menu");p?.addEventListener("click",()=>{g?.classList.toggle("hidden")});const l=document.getElementById("waitlist-modal"),f=document.getElementById("open-waitlist-modal"),E=document.getElementById("close-waitlist-modal"),v=document.getElementById("modal-backdrop"),b=()=>{if(!l)return;l.style.display="flex",document.body.style.overflow="hidden";const e=document.getElementById("modal-form");if(e){const t=e.querySelector('input[type="email"]'),n=e.querySelector("button"),s=e.querySelector(".success-msg");t&&(t.style.display="",t.value=""),n&&(n.style.display=""),s&&(s.style.display="none")}setTimeout(()=>{l.querySelector('input[type="email"]')?.focus()},50)},i=()=>{l&&(l.style.display="none",document.body.style.overflow="")};f?.addEventListener("click",b);E?.addEventListener("click",i);v?.addEventListener("click",i);document.addEventListener("keydown",e=>{e.key==="Escape"&&l?.style.display==="flex"&&i()});</script> </body> </html>
