@@ -145,7 +145,7 @@ const POST = async ({ request }) => {
   }
   const truncated = text.length > MAX_RESUME_CHARS ? text.slice(0, MAX_RESUME_CHARS) : text;
   const words = truncated.split(/\s+/).filter(Boolean).length;
-  const openai = new OpenAI({ apiKey: "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" });
+  const openai = new OpenAI({ apiKey: "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" });
   const model = "gpt-4o-mini";
   let parsed;
   try {
