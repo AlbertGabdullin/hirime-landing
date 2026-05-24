@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import OpenAI from 'openai';
-import { PDFParse } from 'pdf-parse';
+import { extractText, getDocumentProxy } from 'unpdf';
 import { ATS_SYSTEM_PROMPT, buildUserPrompt } from '../../lib/atsPrompt';
 
 export const prerender = false;
@@ -88,13 +88,12 @@ export const POST: APIRoute = async ({ request }) => {
   let pages = 0;
   try {
     const buffer = new Uint8Array(await file.arrayBuffer());
-    const parser = new PDFParse({ data: buffer });
-    const result = await parser.getText();
-    await parser.destroy();
+    const pdf = await getDocumentProxy(buffer);
+    const result = await extractText(pdf, { mergePages: true });
     text = (result.text ?? '').trim();
-    pages = result.total ?? result.pages?.length ?? 0;
+    pages = result.totalPages ?? 0;
   } catch (err) {
-    console.error('pdf-parse error:', err);
+    console.error('unpdf error:', err);
     return json({ error: 'Could not read this PDF — try re-exporting it from your editor' }, 422);
   }
 
