@@ -19,6 +19,8 @@ export const es: Translations = {
     freeTools: 'Herramientas gratis',
     atsChecker: 'Verificador ATS',
     atsCheckerSub: 'Analiza tu currículum en 30 segundos',
+    bulletGenerator: 'Generador de Viñetas para CV',
+    bulletGeneratorSub: 'Convierte tu trabajo en viñetas sólidas',
   },
   hero: {
     prefix: 'El currículum que te contrata como',

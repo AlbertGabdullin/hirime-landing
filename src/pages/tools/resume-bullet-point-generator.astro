@@ -1,0 +1,1491 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import {en as base} from '../../i18n/en';
+
+const lang = 'en' as const;
+
+const t = {
+    ...base,
+    meta: {
+        title: 'Free Resume Bullet Point Generator — Interview-Ready Bullets in Seconds | Hirime',
+        description:
+            'Free resume bullet point generator. Describe what you do and get 5 strong, quantified, ATS-friendly resume bullets in seconds. No signup, fully private.',
+        keywords:
+            'resume bullet point generator, resume bullet points, bullet point generator, resume achievements, quantified resume bullets, ATS resume bullets, resume writing tool, action verb bullets',
+        ogTitle: 'Free Resume Bullet Point Generator — Hirime',
+        ogDescription:
+            'Describe your job in plain words and get 5 styles of strong, quantified, ATS-friendly resume bullet points. 100% free.',
+    },
+} as const;
+
+const faqs = [
+    {
+        q: 'What is a resume bullet point generator?',
+        a: "It's a free tool that turns a plain-language description of your work into polished, achievement-focused resume bullet points. Instead of staring at a blank page, you describe what you did and get multiple ready-to-use options written the way recruiters and applicant tracking systems expect.",
+    },
+    {
+        q: 'Is it really free?',
+        a: 'Yes — no signup, no email, no credit card. We built it as a free tool to introduce people to Hirime, our AI resume builder that tailors your whole resume to each job you apply for.',
+    },
+    {
+        q: 'Are the numbers in the bullets real?',
+        a: 'The generator suggests realistic, plausible metrics to show you the format strong bullets take. Always replace them with your own true numbers before using a bullet on your resume — accuracy matters, and specific real metrics are far more convincing than round estimates.',
+    },
+    {
+        q: 'What makes a good resume bullet point?',
+        a: 'A strong action verb to open, a specific accomplishment (not a responsibility), and a quantified result — a percentage, dollar amount, count, or time saved. The best bullets follow an "accomplished X, measured by Y, by doing Z" structure and stay under about 20 words.',
+    },
+    {
+        q: 'Will these bullets pass ATS?',
+        a: 'Yes. The bullets are plain text, use standard action verbs and role-relevant keywords, and avoid tables, graphics, or special characters — exactly what applicant tracking systems parse reliably. Pair this with our free ATS Resume Checker to test your full document.',
+    },
+    {
+        q: 'Does it work for my industry?',
+        a: 'Yes — the generator adapts to any role or field, from software engineering and sales to nursing, teaching, hospitality, and operations. The more specific your description, the more tailored the bullets.',
+    },
+];
+
+const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: {'@type': 'Answer', text: f.a},
+    })),
+};
+
+const softwareJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Hirime Resume Bullet Point Generator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    offers: {'@type': 'Offer', price: '0', priceCurrency: 'USD'},
+    url: 'https://hirime.com/tools/resume-bullet-point-generator',
+};
+---
+
+<BaseLayout t={t} lang={lang}>
+    <Fragment slot="head">
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+        />
+        <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)}/>
+        <script type="application/ld+json" set:html={JSON.stringify(softwareJsonLd)}/>
+    </Fragment>
+
+    <Navbar t={t.nav} lang={lang}/>
+
+    <main class="gen-tool" style="padding-top: 64px;">
+        <!-- HERO + GENERATOR -->
+        <section class="gen-hero">
+            <div class="container">
+                <div style="text-align: center;">
+                    <span class="eyebrow"><span class="spark">✦</span> Free Resume Bullet Point Generator</span>
+                    <h1 class="hero-headline">
+                        Describe your job.<br/>
+                        Get <span class="serif-em">interview-ready</span> bullets.
+                    </h1>
+                    <p class="lede hero-lede">
+                        Tell us what you do in plain words. We'll turn it into 5 sets of strong, quantified,
+                        ATS-friendly resume bullet points — each in a different style.
+                    </p>
+                </div>
+
+                <!-- GENERATOR CARD -->
+                <div class="gen-card" id="gen-card">
+                    <div class="gen-row">
+                        <div class="field">
+                            <label class="field-label" for="gen-role">Your role / title</label>
+                            <input class="txt" id="gen-role" type="text" placeholder="e.g. Social Media Manager"
+                                   autocomplete="off"/>
+                        </div>
+                        <div class="field">
+                            <label class="field-label" for="gen-level">Seniority</label>
+                            <select id="gen-level">
+                                <option>Entry-level</option>
+                                <option selected>Mid-level</option>
+                                <option>Senior</option>
+                                <option>Lead / Manager</option>
+                                <option>Director+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="gen-desc">
+                            What do you do? <span class="opt">plain words are fine</span>
+                        </label>
+                        <textarea
+                                id="gen-desc"
+                                placeholder="e.g. I run all the social media for a small coffee brand — Instagram, TikTok and their email list. Grew the following a lot this year and started making short videos."
+                        ></textarea>
+                    </div>
+                    <div class="gen-foot">
+                        <span class="gen-hint">5 styles · 3 bullets each · ~10s</span>
+                        <button type="button" class="gen-btn gen-btn-primary gen-btn-lg" id="gen-submit" disabled>
+                            Generate bullet points ✦
+                        </button>
+                    </div>
+                </div>
+
+                <!-- RESULTS SLOT (loading, results, or error) -->
+                <div id="gen-results-slot"></div>
+
+                <div class="trust-row" id="gen-trust">
+                    <span><span class="check">✓</span> 100% free</span>
+                    <span><span class="check">✓</span> No signup needed</span>
+                    <span><span class="check">✓</span> 5 styles per generation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEFORE / AFTER -->
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow"><span class="spark">✦</span> The difference</span>
+                    <h2>From <span class="serif-em">"I did stuff"</span> to bullets that get read.</h2>
+                </div>
+                <div class="ba-grid">
+                    <div class="ba-card before">
+                        <div class="ba-tag">✕ What you wrote</div>
+                        <div class="ba-bullet"><span class="dot"></span><span>Responsible for managing the social media accounts.</span>
+                        </div>
+                        <div class="ba-bullet"><span
+                                class="dot"></span><span>Helped increase followers and engagement.</span></div>
+                        <div class="ba-bullet"><span
+                                class="dot"></span><span>Made content for different platforms.</span></div>
+                    </div>
+                    <div class="ba-card after">
+                        <div class="ba-tag">✦ What we generate</div>
+                        <div class="ba-bullet"><span class="dot"></span><span>Grew a 5-platform social presence from 12K to 89K followers in 11 months through a data-driven content calendar.</span>
+                        </div>
+                        <div class="ba-bullet"><span class="dot"></span><span>Lifted average post engagement 3.4× by A/B testing formats and posting cadence across Instagram and TikTok.</span>
+                        </div>
+                        <div class="ba-bullet"><span class="dot"></span><span>Produced 40+ short-form videos monthly, driving a 27% increase in inbound demo requests.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section id="how-it-works">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow"><span class="spark">✦</span> How it works</span>
+                    <h2>Three fields. Five styles. <span class="serif-em">Seconds.</span></h2>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num"><span class="num-dot"></span>01 — DESCRIBE</div>
+                        <div class="step-emoji">✍️</div>
+                        <h3>Say what you did</h3>
+                        <p>In plain language — no resume-speak needed. Add your role and any numbers you remember.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num"><span class="num-dot"></span>02 — GENERATE</div>
+                        <div class="step-emoji">🤖</div>
+                        <h3>Get 5 styles instantly</h3>
+                        <p>Impact-led, leadership, technical, concise, and metric-heavy — each set tailored to your
+                            role.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num"><span class="num-dot"></span>03 — COPY</div>
+                        <div class="step-emoji">📋</div>
+                        <h3>Copy the ones you love</h3>
+                        <p>Copy a single bullet or a whole set with one click. Mix and match across styles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" style="padding-top: 48px;">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow"><span class="spark">✦</span> Why these bullets work</span>
+                    <h2>Written the way recruiters and ATS both&nbsp;want.</h2>
+                </div>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feat-emoji">🎯</div>
+                        <h3>Strong action verbs</h3>
+                        <p>Every bullet opens with a decisive verb — Led, Shipped, Cut, Scaled — never "responsible
+                            for".</p></div>
+                    <div class="feature">
+                        <div class="feat-emoji">📊</div>
+                        <h3>Quantified impact</h3>
+                        <p>We prompt for and weave in numbers: percentages, dollars, time saved, scale.</p></div>
+                    <div class="feature">
+                        <div class="feat-emoji">🔑</div>
+                        <h3>ATS-friendly keywords</h3>
+                        <p>Natural, role-relevant terms that applicant tracking systems are trained to find.</p></div>
+                    <div class="feature">
+                        <div class="feat-emoji">🎨</div>
+                        <h3>Five distinct styles</h3>
+                        <p>From concise one-liners to metric-heavy — pick the tone that fits the job.</p></div>
+                    <div class="feature">
+                        <div class="feat-emoji">🌍</div>
+                        <h3>Any role or industry</h3>
+                        <p>Engineering, sales, design, nursing, ops — the generator adapts to your field.</p></div>
+                    <div class="feature">
+                        <div class="feat-emoji">🔒</div>
+                        <h3>Private by default</h3>
+                        <p>No account, no saved history. What you type is used only to generate your bullets.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow"><span class="spark">✦</span> FAQ</span>
+                    <h2>Frequently asked questions</h2>
+                </div>
+                <div class="faq">
+                    {faqs.map((f, i) => (
+                            <div class={`faq-item ${i === 0 ? 'open' : ''}`}>
+                                <button class="faq-q" aria-expanded={i === 0 ? 'true' : 'false'}>
+                                    <span>{f.q}</span>
+                                    <span class="faq-icon" aria-hidden="true">
+                  <svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1v8M1 5h8" stroke="currentColor"
+                                                                        stroke-width="1.5"
+                                                                        stroke-linecap="round"/></svg>
+                </span>
+                                </button>
+                                <div class="faq-a">
+                                    <div class="faq-a-inner">{f.a}</div>
+                                </div>
+                            </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section id="coming-soon">
+            <div class="container">
+                <div class="final-cta">
+                    <span class="eyebrow"><span class="spark">✦</span> Beyond the generator</span>
+                    <h2>One tool for your <span class="serif-em">whole</span> resume.</h2>
+                    <p>Hirime writes, tailors and ATS-checks your entire resume for every job you apply to. Join the
+                        waitlist for early access.</p>
+                    <form class="email-form waitlist-form" id="tool-waitlist-form" novalidate>
+                        <input type="email" name="email" required placeholder="you@example.com"
+                               aria-label="Email address"/>
+                        <button class="gen-btn gen-btn-primary" type="submit">Join Waitlist</button>
+                        <div class="success-msg-tool" style="display: none;">✓ You're on the list. We'll be in touch
+                            soon. 🎉
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer t={t.footer} lang={lang}/>
+</BaseLayout>
+
+<style is:global>
+    .gen-tool {
+        --gen-bg: var(--bg-primary);
+        --gen-bg-elev: var(--bg-card);
+        --gen-ink: var(--text-primary);
+        --gen-ink-2: var(--text-secondary);
+        --gen-ink-3: var(--text-muted);
+        --gen-line: var(--border);
+        --gen-line-2: color-mix(in oklab, var(--border) 70%, var(--text-muted));
+        --gen-accent: var(--accent);
+        --gen-accent-ink: var(--accent-fg);
+        --gen-accent-soft: color-mix(in oklab, var(--accent) 16%, var(--bg-card));
+        --gen-good: #1a8a4a;
+        --gen-good-soft: #e5f4ea;
+        --gen-warn: #c87b14;
+        --gen-warn-soft: #faecd5;
+        --gen-radius: 18px;
+        --gen-radius-lg: 24px;
+        --gen-shadow-md: 0 1px 0 rgba(17, 17, 15, .04), 0 8px 24px -8px rgba(17, 17, 15, .10);
+        font-family: 'Onest', system-ui, sans-serif;
+        color: var(--gen-ink);
+        line-height: 1.55;
+    }
+
+    .dark .gen-tool {
+        --gen-accent-soft: color-mix(in oklab, var(--accent) 22%, var(--bg-card));
+        --gen-good-soft: #11261a;
+        --gen-warn-soft: #2b1f0c;
+        --gen-shadow-md: 0 1px 0 rgba(0, 0, 0, .4), 0 12px 32px -12px rgba(0, 0, 0, .5);
+    }
+
+    .gen-tool .hidden {
+        display: none !important;
+    }
+
+    .gen-tool .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    .gen-tool h1, .gen-tool h2, .gen-tool h3 {
+        letter-spacing: -0.025em;
+        line-height: 1.1;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .gen-tool h1 {
+        font-size: clamp(40px, 6vw, 62px);
+        letter-spacing: -0.035em;
+        line-height: 1.05;
+    }
+
+    .gen-tool h2 {
+        font-size: clamp(32px, 4.2vw, 44px);
+    }
+
+    .gen-tool h3 {
+        font-size: 19px;
+        letter-spacing: -0.015em;
+        line-height: 1.3;
+    }
+
+    .gen-tool .serif-em {
+        font-family: 'Instrument Serif', Georgia, serif;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+    }
+
+    .gen-tool .lede {
+        font-size: 18px;
+        color: var(--gen-ink-2);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    .gen-tool section {
+        padding: 96px 0;
+    }
+
+    @media (max-width: 720px) {
+        .gen-tool section {
+            padding: 64px 0;
+        }
+    }
+
+    .gen-tool .gen-hero {
+        padding-top: 72px;
+        padding-bottom: 80px;
+        text-align: center;
+    }
+
+    .gen-tool .section-head {
+        text-align: center;
+        margin-bottom: 56px;
+    }
+
+    .gen-tool .section-head .eyebrow {
+        margin-bottom: 20px;
+    }
+
+    .gen-tool .section-head .lede {
+        margin-top: 18px;
+    }
+
+    .gen-tool .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--gen-ink-2);
+        padding: 6px 12px;
+        border: 1px solid var(--gen-line);
+        border-radius: 999px;
+        background: var(--gen-bg-elev);
+    }
+
+    .gen-tool .eyebrow .spark {
+        color: var(--gen-accent);
+        font-size: 14px;
+    }
+
+    .gen-tool .hero-headline {
+        margin: 22px auto 18px;
+        max-width: 860px;
+    }
+
+    .gen-tool .hero-lede {
+        margin: 0 auto 40px;
+    }
+
+    /* BUTTONS */
+    .gen-tool .gen-btn {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: 10px;
+        transition: transform .08s ease, background .15s, color .15s, border-color .15s, filter .15s;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    .gen-tool .gen-btn:active {
+        transform: translateY(1px);
+    }
+
+    .gen-tool .gen-btn:disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+
+    .gen-tool .gen-btn-primary {
+        background: var(--gen-accent);
+        color: var(--gen-accent-ink);
+    }
+
+    .gen-tool .gen-btn-primary:hover:not(:disabled) {
+        filter: brightness(1.05);
+    }
+
+    .gen-tool .gen-btn-outline {
+        border: 1px solid var(--gen-line-2);
+        color: var(--gen-ink);
+        background: var(--gen-bg-elev);
+    }
+
+    .gen-tool .gen-btn-outline:hover {
+        border-color: var(--gen-ink-3);
+    }
+
+    .gen-tool .gen-btn-lg {
+        padding: 14px 22px;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+
+    /* TRUST ROW */
+    .gen-tool .trust-row {
+        display: flex;
+        gap: 28px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        font-size: 13px;
+        color: var(--gen-ink-2);
+    }
+
+    .gen-tool .trust-row span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .gen-tool .trust-row .check {
+        width: 16px;
+        height: 16px;
+        border-radius: 999px;
+        background: var(--gen-good-soft);
+        color: var(--gen-good);
+        display: inline-grid;
+        place-items: center;
+        font-size: 10px;
+        font-weight: 700;
+    }
+
+    .dark .gen-tool .trust-row .check {
+        color: #6fd99a;
+    }
+
+    /* GENERATOR CARD */
+    .gen-tool .gen-card {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: left;
+        background: var(--gen-bg-elev);
+        border: 1px solid var(--gen-line);
+        border-radius: var(--gen-radius-lg);
+        padding: 28px;
+        box-shadow: var(--gen-shadow-md);
+    }
+
+    .gen-tool .field {
+        margin-bottom: 18px;
+    }
+
+    .gen-tool .field:last-child {
+        margin-bottom: 0;
+    }
+
+    .gen-tool .field-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--gen-ink);
+        margin-bottom: 8px;
+    }
+
+    .gen-tool .field-label .opt {
+        font-weight: 500;
+        color: var(--gen-ink-3);
+        font-size: 12px;
+    }
+
+    .gen-tool textarea, .gen-tool input.txt, .gen-tool select {
+        width: 100%;
+        font: inherit;
+        color: var(--gen-ink);
+        background: var(--gen-bg);
+        border: 1px solid var(--gen-line-2);
+        border-radius: 12px;
+        padding: 14px 16px;
+        outline: none;
+        transition: border-color .15s, box-shadow .15s;
+        resize: vertical;
+    }
+
+    .gen-tool textarea:focus, .gen-tool input.txt:focus, .gen-tool select:focus {
+        border-color: var(--gen-accent);
+        box-shadow: 0 0 0 3px color-mix(in oklab, var(--gen-accent) 18%, transparent);
+    }
+
+    .gen-tool textarea {
+        min-height: 96px;
+        line-height: 1.5;
+    }
+
+    .gen-tool textarea::placeholder, .gen-tool input.txt::placeholder {
+        color: var(--gen-ink-3);
+    }
+
+    .gen-tool .gen-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    @media (max-width: 560px) {
+        .gen-tool .gen-row {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .gen-tool .gen-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 22px;
+        flex-wrap: wrap;
+    }
+
+    .gen-tool .gen-hint {
+        font-size: 12px;
+        color: var(--gen-ink-3);
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    /* EXAMPLE CHIPS */
+    .gen-tool .examples {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .gen-tool .ex-chip {
+        font-size: 12.5px;
+        color: var(--gen-ink-2);
+        border: 1px solid var(--gen-line);
+        border-radius: 999px;
+        padding: 6px 12px;
+        background: var(--gen-bg);
+        cursor: pointer;
+        font-family: inherit;
+        transition: border-color .15s, color .15s, background .15s;
+    }
+
+    .gen-tool .ex-chip:hover {
+        border-color: var(--gen-accent);
+        color: var(--gen-accent);
+        background: var(--gen-accent-soft);
+    }
+
+    /* RESULTS */
+    .gen-tool .results {
+        max-width: 820px;
+        margin: 40px auto 0;
+        text-align: left;
+        animation: gen-fadeUp .4s ease;
+    }
+
+    @keyframes gen-fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+    }
+
+    .gen-tool .results-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .gen-tool .results-head .title {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .gen-tool .results-head .title span {
+        color: var(--gen-ink-3);
+        font-weight: 500;
+    }
+
+    .gen-tool .variant {
+        background: var(--gen-bg-elev);
+        border: 1px solid var(--gen-line);
+        border-radius: var(--gen-radius);
+        padding: 22px 24px;
+        margin-bottom: 14px;
+        animation: gen-fadeUp .4s ease backwards;
+    }
+
+    .gen-tool .variant-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+    }
+
+    .gen-tool .variant-tag {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--gen-accent);
+        background: var(--gen-accent-soft);
+        padding: 4px 10px;
+        border-radius: 999px;
+    }
+
+    .gen-tool .variant-emoji {
+        font-size: 18px;
+    }
+
+    .gen-tool .variant-desc {
+        font-size: 12.5px;
+        color: var(--gen-ink-3);
+    }
+
+    .gen-tool .bullet {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 0;
+        border-top: 1px solid var(--gen-line);
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--gen-ink);
+    }
+
+    .gen-tool .bullet:first-of-type {
+        border-top: none;
+    }
+
+    .gen-tool .bullet .dot {
+        flex: none;
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--gen-accent);
+        margin-top: 9px;
+    }
+
+    .gen-tool .bullet .txt {
+        flex: 1;
+    }
+
+    .gen-tool .bullet .copy-one {
+        flex: none;
+        opacity: 0;
+        color: var(--gen-ink-3);
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        border: none;
+        background: none;
+        cursor: pointer;
+        transition: opacity .15s, color .15s, background .15s;
+    }
+
+    .gen-tool .bullet:hover .copy-one, .gen-tool .bullet:focus-within .copy-one {
+        opacity: 1;
+    }
+
+    .gen-tool .copy-one:hover {
+        background: var(--gen-accent-soft);
+        color: var(--gen-accent);
+    }
+
+    .gen-tool .copy-one.copied {
+        color: var(--gen-good);
+        opacity: 1;
+    }
+
+    .dark .gen-tool .copy-one.copied {
+        color: #6fd99a;
+    }
+
+    .gen-tool .variant-foot {
+        margin-top: 12px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .gen-tool .copy-all {
+        font-size: 12.5px;
+        font-weight: 500;
+        color: var(--gen-ink-2);
+        border: 1px solid var(--gen-line);
+        border-radius: 8px;
+        padding: 7px 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        background: none;
+        font-family: inherit;
+        transition: border-color .15s, color .15s;
+    }
+
+    .gen-tool .copy-all:hover {
+        border-color: var(--gen-accent);
+        color: var(--gen-accent);
+    }
+
+    .gen-tool .copy-all.copied {
+        color: var(--gen-good);
+        border-color: var(--gen-good);
+    }
+
+    .dark .gen-tool .copy-all.copied {
+        color: #6fd99a;
+    }
+
+    /* LOADING SKELETON */
+    .gen-tool .skeleton .variant {
+        pointer-events: none;
+    }
+
+    .gen-tool .sk-line {
+        height: 14px;
+        border-radius: 6px;
+        background: var(--gen-line);
+        position: relative;
+        overflow: hidden;
+        margin: 14px 0;
+    }
+
+    .gen-tool .sk-line::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--gen-bg-elev) 60%, transparent), transparent);
+        animation: gen-shimmer 1.3s infinite;
+    }
+
+    @keyframes gen-shimmer {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(100%);
+        }
+    }
+
+    .gen-tool .loading-msg {
+        text-align: center;
+        color: var(--gen-ink-2);
+        font-size: 14px;
+        margin: 8px 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .gen-tool .loading-msg .spin {
+        width: 16px;
+        height: 16px;
+        border-radius: 999px;
+        border: 2px solid var(--gen-line);
+        border-top-color: var(--gen-accent);
+        animation: gen-spin .9s linear infinite;
+    }
+
+    @keyframes gen-spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .gen-tool .err-box {
+        max-width: 760px;
+        margin: 20px auto 0;
+        background: var(--gen-warn-soft);
+        border: 1px solid color-mix(in oklab, var(--gen-warn) 30%, transparent);
+        color: var(--gen-ink);
+        border-radius: 14px;
+        padding: 16px 18px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .gen-tool .start-over {
+        text-align: center;
+        margin-top: 28px;
+        font-size: 14px;
+        color: var(--gen-ink-3);
+    }
+
+    .gen-tool .start-over button {
+        color: var(--gen-accent);
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font: inherit;
+    }
+
+    /* BEFORE / AFTER */
+    .gen-tool .ba-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 720px) {
+        .gen-tool .ba-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .gen-tool .ba-card {
+        border: 1px solid var(--gen-line);
+        border-radius: var(--gen-radius);
+        padding: 28px;
+        background: var(--gen-bg-elev);
+    }
+
+    .gen-tool .ba-card.after {
+        border-color: color-mix(in oklab, var(--gen-accent) 40%, var(--gen-line));
+    }
+
+    .gen-tool .ba-tag {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .gen-tool .ba-card.before .ba-tag {
+        color: var(--gen-ink-3);
+    }
+
+    .gen-tool .ba-card.after .ba-tag {
+        color: var(--gen-accent);
+    }
+
+    .gen-tool .ba-bullet {
+        display: flex;
+        gap: 10px;
+        font-size: 15px;
+        line-height: 1.55;
+        padding: 10px 0;
+    }
+
+    .gen-tool .ba-bullet + .ba-bullet {
+        border-top: 1px solid var(--gen-line);
+    }
+
+    .gen-tool .ba-card.before .ba-bullet {
+        color: var(--gen-ink-3);
+    }
+
+    .gen-tool .ba-card.before .ba-bullet .dot {
+        background: var(--gen-line-2);
+    }
+
+    .gen-tool .ba-bullet .dot {
+        flex: none;
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--gen-accent);
+        margin-top: 9px;
+    }
+
+    /* HOW IT WORKS */
+    .gen-tool .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    @media (max-width: 820px) {
+        .gen-tool .steps {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .gen-tool .step {
+        padding: 32px;
+        border: 1px solid var(--gen-line);
+        border-radius: var(--gen-radius);
+        background: var(--gen-bg-elev);
+    }
+
+    .gen-tool .step-num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 12px;
+        color: var(--gen-ink-3);
+        font-weight: 500;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .gen-tool .step-num .num-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--gen-accent);
+    }
+
+    .gen-tool .step-emoji {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: var(--gen-accent-soft);
+        display: grid;
+        place-items: center;
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .gen-tool .step h3 {
+        margin-bottom: 8px;
+    }
+
+    .gen-tool .step p {
+        margin: 0;
+        color: var(--gen-ink-2);
+        font-size: 14.5px;
+        line-height: 1.55;
+    }
+
+    /* FEATURES */
+    .gen-tool .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--gen-line);
+        border: 1px solid var(--gen-line);
+        border-radius: var(--gen-radius-lg);
+        overflow: hidden;
+    }
+
+    @media (max-width: 820px) {
+        .gen-tool .features {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 520px) {
+        .gen-tool .features {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .gen-tool .feature {
+        background: var(--gen-bg-elev);
+        padding: 32px 28px;
+    }
+
+    .gen-tool .feat-emoji {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: var(--gen-bg);
+        border: 1px solid var(--gen-line);
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .gen-tool .feature h3 {
+        font-size: 17px;
+        margin-bottom: 6px;
+    }
+
+    .gen-tool .feature p {
+        margin: 0;
+        color: var(--gen-ink-2);
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    /* FAQ */
+    .gen-tool .faq {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .gen-tool .faq-item {
+        border-bottom: 1px solid var(--gen-line);
+    }
+
+    .gen-tool .faq-item:first-child {
+        border-top: 1px solid var(--gen-line);
+    }
+
+    .gen-tool .faq-q {
+        width: 100%;
+        text-align: left;
+        padding: 24px 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: var(--gen-ink);
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    .gen-tool .faq-q:hover {
+        color: var(--gen-accent);
+    }
+
+    .gen-tool .faq-icon {
+        flex: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 999px;
+        border: 1px solid var(--gen-line-2);
+        display: grid;
+        place-items: center;
+        color: var(--gen-ink-2);
+        transition: transform .25s, background .15s;
+    }
+
+    .gen-tool .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+        background: var(--gen-accent);
+        color: var(--gen-accent-ink);
+        border-color: var(--gen-accent);
+    }
+
+    .gen-tool .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s ease;
+    }
+
+    .gen-tool .faq-item.open .faq-a {
+        max-height: 500px;
+    }
+
+    .gen-tool .faq-a-inner {
+        padding: 0 8px 24px;
+        color: var(--gen-ink-2);
+        font-size: 15px;
+        line-height: 1.65;
+        max-width: 640px;
+    }
+
+    /* FINAL CTA */
+    .gen-tool .final-cta {
+        text-align: center;
+        background: var(--gen-ink);
+        color: var(--gen-bg);
+        border-radius: var(--gen-radius-lg);
+        padding: 80px 32px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .dark .gen-tool .final-cta {
+        background: var(--gen-bg-elev);
+        color: var(--gen-ink);
+        border: 1px solid var(--gen-line);
+    }
+
+    .gen-tool .final-cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 70% 80% at 50% 100%, color-mix(in oklab, var(--gen-accent) 35%, transparent), transparent 60%);
+        pointer-events: none;
+    }
+
+    .gen-tool .final-cta .eyebrow {
+        background: rgba(255, 255, 255, .08);
+        border-color: rgba(255, 255, 255, .12);
+        color: rgba(255, 255, 255, .8);
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .dark .gen-tool .final-cta .eyebrow {
+        background: var(--gen-bg-elev);
+        border-color: var(--gen-line);
+        color: var(--gen-ink-2);
+    }
+
+    .gen-tool .final-cta h2 {
+        color: inherit;
+        max-width: 700px;
+        margin: 0 auto 18px;
+        position: relative;
+    }
+
+    .gen-tool .final-cta p {
+        font-size: 17px;
+        opacity: .7;
+        max-width: 540px;
+        margin: 0 auto 36px;
+        position: relative;
+    }
+
+    .gen-tool .email-form {
+        display: flex;
+        gap: 8px;
+        max-width: 460px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, .08);
+        border: 1px solid rgba(255, 255, 255, .14);
+        border-radius: 14px;
+        padding: 6px;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .dark .gen-tool .email-form {
+        background: var(--gen-bg);
+        border-color: var(--gen-line-2);
+    }
+
+    .gen-tool .email-form input {
+        flex: 1;
+        min-width: 0;
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+        font: inherit;
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+
+    .dark .gen-tool .email-form input {
+        color: var(--gen-ink);
+    }
+
+    .gen-tool .email-form input::placeholder {
+        color: rgba(255, 255, 255, .5);
+    }
+
+    .dark .gen-tool .email-form input::placeholder {
+        color: var(--gen-ink-3);
+    }
+
+    .gen-tool .email-form button {
+        padding: 12px 18px;
+        border-radius: 10px;
+    }
+
+    .gen-tool .success-msg-tool {
+        width: 100%;
+        padding: 12px 14px;
+        color: white;
+        font-size: 15px;
+    }
+
+    .dark .gen-tool .success-msg-tool {
+        color: var(--gen-ink);
+    }
+
+    .gen-tool .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+</style>
+
+<script>
+    // ─── Resume Bullet Point Generator ────────────────────────────────────
+    type Variant = { key: string; style: string; bullets: string[] };
+
+    const STYLE_META: Record<string, { emoji: string; desc: string }> = {
+        impact: {emoji: '🚀', desc: 'Result first, then the how'},
+        leadership: {emoji: '👥', desc: 'Ownership, scope & people'},
+        technical: {emoji: '⚙️', desc: 'Tools, systems & methods'},
+        concise: {emoji: '✂️', desc: 'Tight one-liners'},
+        metric: {emoji: '📈', desc: 'Numbers front and center'},
+    };
+    const STYLE_ORDER = ['impact', 'leadership', 'technical', 'concise', 'metric'];
+
+    const LOADING_MSGS = [
+        'Reading your role…',
+        'Choosing strong action verbs…',
+        'Weaving in metrics…',
+        'Writing 5 styles…',
+    ];
+
+    const roleEl = document.getElementById('gen-role') as HTMLInputElement | null;
+    const levelEl = document.getElementById('gen-level') as HTMLSelectElement | null;
+    const descEl = document.getElementById('gen-desc') as HTMLTextAreaElement | null;
+    const submitBtn = document.getElementById('gen-submit') as HTMLButtonElement | null;
+    const slotEl = document.getElementById('gen-results-slot') as HTMLElement | null;
+    const trustEl = document.getElementById('gen-trust') as HTMLElement | null;
+
+    if (roleEl && levelEl && descEl && submitBtn && slotEl) {
+        let loading = false;
+
+        const COPY_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+        const CHECK_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+
+        function escapeHtml(s: string) {
+            return s.replace(/[&<>"']/g, (c) => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[c] as string));
+        }
+
+
+        function syncSubmit() {
+            submitBtn.disabled = descEl.value.trim().length === 0 || loading;
+        }
+
+        descEl.addEventListener('input', syncSubmit);
+
+        function copyToClipboard(text: string, btn: HTMLElement, withLabel: boolean) {
+            navigator.clipboard.writeText(text).then(() => {
+                btn.classList.add('copied');
+                if (withLabel) btn.innerHTML = `${CHECK_ICON} Copied`;
+                else btn.innerHTML = CHECK_ICON;
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    if (withLabel) btn.innerHTML = `${COPY_ICON} Copy set`;
+                    else btn.innerHTML = COPY_ICON;
+                }, 1400);
+            }).catch(() => {
+            });
+        }
+
+        function renderLoading() {
+            slotEl!.innerHTML = `
+        <div class="results">
+          <div class="loading-msg"><span class="spin"></span> <span id="load-msg">${LOADING_MSGS[0]}</span></div>
+          <div class="skeleton">
+            ${[0, 1, 2].map(() => `
+              <div class="variant">
+                <div class="sk-line" style="width: 30%;"></div>
+                <div class="sk-line" style="width: 92%;"></div>
+                <div class="sk-line" style="width: 85%;"></div>
+                <div class="sk-line" style="width: 70%;"></div>
+              </div>`).join('')}
+          </div>
+        </div>`;
+        }
+
+        function renderResults(variants: Variant[]) {
+            const cards = variants.map((v, i) => {
+                const meta = STYLE_META[v.key] ?? {emoji: '•', desc: ''};
+                const bullets = v.bullets.map((b, bi) => `
+          <div class="bullet">
+            <span class="dot"></span>
+            <span class="txt">${escapeHtml(b)}</span>
+            <button type="button" class="copy-one" data-copy-one="${i}-${bi}" aria-label="Copy this bullet">${COPY_ICON}</button>
+          </div>`).join('');
+                return `
+          <div class="variant" style="animation-delay: ${(i * 0.06).toFixed(2)}s;">
+            <div class="variant-head">
+              <span class="variant-emoji">${meta.emoji}</span>
+              <span class="variant-tag">${escapeHtml(v.style)}</span>
+              <span class="variant-desc">${escapeHtml(meta.desc)}</span>
+            </div>
+            ${bullets}
+            <div class="variant-foot">
+              <button type="button" class="copy-all" data-copy-set="${i}" aria-label="Copy all bullets in this style">${COPY_ICON} Copy set</button>
+            </div>
+          </div>`;
+            }).join('');
+
+            slotEl!.innerHTML = `
+        <div class="results">
+          <div class="results-head">
+            <div class="title">Your bullet points <span>· ${variants.length} styles, pick what fits</span></div>
+            <button type="button" class="gen-btn gen-btn-outline" id="gen-regenerate">↻ Regenerate</button>
+          </div>
+          ${cards}
+          <div class="start-over"><button type="button" id="gen-start-over">← Start over with a new description</button></div>
+        </div>`;
+
+            // Wire copy buttons
+            variants.forEach((v, i) => {
+                const setBtn = slotEl!.querySelector<HTMLButtonElement>(`[data-copy-set="${i}"]`);
+                setBtn?.addEventListener('click', () => copyToClipboard(v.bullets.map((b) => '• ' + b).join('\n'), setBtn, true));
+                v.bullets.forEach((b, bi) => {
+                    const oneBtn = slotEl!.querySelector<HTMLButtonElement>(`[data-copy-one="${i}-${bi}"]`);
+                    oneBtn?.addEventListener('click', () => copyToClipboard(b, oneBtn, false));
+                });
+            });
+
+            document.getElementById('gen-regenerate')?.addEventListener('click', () => generate());
+            document.getElementById('gen-start-over')?.addEventListener('click', () => {
+                slotEl!.innerHTML = '';
+                roleEl.value = '';
+                descEl.value = '';
+                levelEl.value = 'Mid-level';
+                trustEl?.classList.remove('hidden');
+                syncSubmit();
+                document.getElementById('gen-card')?.scrollIntoView({behavior: 'smooth', block: 'center'});
+            });
+        }
+
+        async function generate() {
+            if (loading || !descEl.value.trim()) return;
+            loading = true;
+            syncSubmit();
+            submitBtn.textContent = 'Generating…';
+            trustEl?.classList.add('hidden');
+            renderLoading();
+            setTimeout(() => slotEl!.scrollIntoView({behavior: 'smooth', block: 'start'}), 100);
+
+            const loadMsgEl = document.getElementById('load-msg');
+            let msgIdx = 0;
+            const msgTimer = window.setInterval(() => {
+                msgIdx = (msgIdx + 1) % LOADING_MSGS.length;
+                if (loadMsgEl) loadMsgEl.textContent = LOADING_MSGS[msgIdx];
+            }, 900);
+
+            let variants: Variant[] | null = null;
+            let errMsg: string | null = null;
+
+            try {
+                const res = await fetch('/api/bullet-points', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        role: roleEl.value.trim(),
+                        level: levelEl.value,
+                        description: descEl.value.trim(),
+                    }),
+                });
+                const data = await res.json().catch(() => null);
+                if (!res.ok || !data || !Array.isArray(data.variants) || data.variants.length === 0) {
+                    throw new Error((data && data.error) || 'Generation failed');
+                }
+                variants = (data.variants as Variant[]).slice(0, 5);
+            } catch (err) {
+                console.error(err);
+                errMsg = err instanceof Error && err.message && err.message !== 'Failed to fetch'
+                    ? err.message
+                    : 'Something went wrong while generating your bullet points. Please try again.';
+            }
+
+            window.clearInterval(msgTimer);
+            loading = false;
+            submitBtn.textContent = 'Generate bullet points ✦';
+            syncSubmit();
+
+            if (!variants) {
+                showError(errMsg || 'Generation failed — please try again.');
+                return;
+            }
+
+            // ensure variant keys follow canonical order for meta lookup
+            const ordered = variants.map((v, i) => ({
+                ...v,
+                key: v.key && STYLE_META[v.key] ? v.key : STYLE_ORDER[i] || v.key
+            }));
+            renderResults(ordered);
+            setTimeout(() => slotEl!.scrollIntoView({behavior: 'smooth', block: 'start'}), 120);
+        }
+
+        function showError(msg: string) {
+            slotEl!.innerHTML = `
+        <div class="results">
+          <div class="err-box" style="margin-top: 0;">
+            <strong>Couldn't generate bullets.</strong> ${escapeHtml(msg)}
+          </div>
+          <div class="start-over">
+            <button type="button" id="gen-retry">↻ Try again</button>
+          </div>
+        </div>`;
+            trustEl?.classList.remove('hidden');
+            document.getElementById('gen-retry')?.addEventListener('click', () => generate());
+        }
+
+        submitBtn.addEventListener('click', () => generate());
+        syncSubmit();
+    }
+
+    // ─── FAQ accordion ────────────────────────────────────────────────────
+    document.querySelectorAll<HTMLButtonElement>('.gen-tool .faq-q').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            if (!item) return;
+            const open = item.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+    });
+</script>

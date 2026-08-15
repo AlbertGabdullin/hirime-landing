@@ -17,6 +17,8 @@ export const en = {
     freeTools: 'Free tools',
     atsChecker: 'ATS Resume Checker',
     atsCheckerSub: 'Scan your resume in 30 seconds',
+    bulletGenerator: 'Resume Bullet Point Generator',
+    bulletGeneratorSub: 'Turn your job into strong bullets',
   },
   hero: {
     prefix: 'The resume that gets you hired as a',
