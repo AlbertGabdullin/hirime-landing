@@ -101,27 +101,38 @@ export const es: Translations = {
     label: 'Próximamente',
     title: 'Estamos construyendo algo increíble',
     subtitle:
-      'Únete a nuestra lista de espera para obtener acceso anticipado y dar forma al futuro de Hirime.',
+      'Dos herramientas ya están disponibles y son gratuitas — el resto está en camino. Únete a la lista de espera para acceso anticipado.',
+    liveLabel: 'Gratis · Disponible ya',
     features: [
+      {
+        emoji: '📊',
+        title: 'Puntuación ATS',
+        description: 'Ve la puntuación de tu currículum antes de enviarlo.',
+        href: '/tools/ats-resume-checker',
+      },
+      {
+        emoji: '✍️',
+        title: 'Generador de Viñetas',
+        description: 'Convierte palabras sencillas en viñetas sólidas y cuantificadas para tu CV.',
+        href: '/tools/resume-bullet-point-generator',
+      },
       {
         emoji: '📋',
         title: 'Formulario de CV',
         description: 'Un formulario guiado para construir y mantener tu perfil maestro.',
+        href: '',
       },
       {
         emoji: '🔍',
         title: 'Matching con IA',
         description: 'Descubre empleos que coincidan con tus habilidades únicas.',
-      },
-      {
-        emoji: '📊',
-        title: 'Puntuación ATS',
-        description: 'Ve la puntuación de tu currículum antes de enviarlo.',
+        href: '',
       },
       {
         emoji: '✉️',
         title: 'Generador de Cartas',
         description: 'Cartas de presentación escritas por IA para cada puesto.',
+        href: '',
       },
     ],
     cta: {

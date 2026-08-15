@@ -41,48 +41,77 @@ const { t } = Astro.props;
       </p>
     </div>
 
-    <!-- Locked feature cards -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" style="margin-bottom: 5rem;">
+    <!-- Feature cards: live tools link out, upcoming ones stay locked -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" style="margin-bottom: 5rem;">
       {t.features.map((feature, i) => (
-        <div class={`card-locked fade-up delay-${(i % 4 + 1) * 100}`}>
-          <!-- Lock icon -->
-          <div style="
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1.25rem;
-          ">
-            <span style="font-size: 2rem;" role="img" aria-hidden="true">{feature.emoji}</span>
-            <span style="
+        feature.href ? (
+          <a href={feature.href} class={`card-live fade-up delay-${(i % 3 + 1) * 100}`} aria-label={`${feature.title} — ${t.liveLabel}`}>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <span style="font-size: 2rem;" role="img" aria-hidden="true">{feature.emoji}</span>
+              <span class="live-pill">
+                <span class="live-dot" aria-hidden="true"></span>
+                {t.liveLabel}
+              </span>
+            </div>
+
+            <h3 style="
+              font-size: 1rem;
+              font-weight: 700;
+              color: var(--text-primary);
+              letter-spacing: -0.01em;
+              margin-bottom: 0.5rem;
+            ">
+              {feature.title}
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+              {feature.description}
+            </p>
+            <span class="live-cta">
+              Try it free
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        ) : (
+          <div class={`card-locked fade-up delay-${(i % 3 + 1) * 100}`}>
+            <!-- Lock icon -->
+            <div style="
               display: flex;
               align-items: center;
-              justify-content: center;
-              width: 28px;
-              height: 28px;
-              border-radius: 50%;
-              border: 1.5px solid var(--border);
-              color: var(--text-muted);
-              font-size: 12px;
-            " aria-hidden="true">🔒</span>
-          </div>
+              justify-content: space-between;
+              margin-bottom: 1.25rem;
+            ">
+              <span style="font-size: 2rem;" role="img" aria-hidden="true">{feature.emoji}</span>
+              <span style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                border: 1.5px solid var(--border);
+                color: var(--text-muted);
+                font-size: 12px;
+              " aria-hidden="true">🔒</span>
+            </div>
 
-          <h3 style="
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text-secondary);
-            letter-spacing: -0.01em;
-            margin-bottom: 0.5rem;
-          ">
-            {feature.title}
-          </h3>
-          <p style="
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-          ">
-            {feature.description}
-          </p>
-        </div>
+            <h3 style="
+              font-size: 1rem;
+              font-weight: 700;
+              color: var(--text-secondary);
+              letter-spacing: -0.01em;
+              margin-bottom: 0.5rem;
+            ">
+              {feature.title}
+            </h3>
+            <p style="
+              font-size: 0.875rem;
+              color: var(--text-muted);
+              line-height: 1.6;
+            ">
+              {feature.description}
+            </p>
+          </div>
+        )
       ))}
     </div>
 
@@ -168,3 +197,64 @@ const { t } = Astro.props;
 
   </div>
 </section>
+
+<style>
+  .card-live {
+    display: block;
+    background: var(--bg-card);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .card-live:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  .live-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--accent) 14%, var(--bg-card));
+    color: var(--accent);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 60%, transparent);
+    animation: live-pulse 1.8s ease-out infinite;
+  }
+  @keyframes live-pulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 55%, transparent); }
+    70% { box-shadow: 0 0 0 6px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+
+  .live-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .live-cta svg {
+    transition: transform 0.2s ease;
+  }
+  .card-live:hover .live-cta svg {
+    transform: translateX(3px);
+  }
+</style>

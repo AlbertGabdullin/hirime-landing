@@ -99,27 +99,38 @@ export const en = {
     label: 'Coming soon',
     title: "We're building something amazing",
     subtitle:
-      'Join our waitlist to get early access and shape the future of Hirime.',
+      'Two tools are already live and free to use — the rest are on the way. Join the waitlist for early access.',
+    liveLabel: 'Free · Live now',
     features: [
+      {
+        emoji: '📊',
+        title: 'ATS Score Checker',
+        description: 'See your resume score before you hit send.',
+        href: '/tools/ats-resume-checker',
+      },
+      {
+        emoji: '✍️',
+        title: 'Bullet Point Generator',
+        description: 'Turn plain words into strong, quantified, ATS-ready bullet points.',
+        href: '/tools/resume-bullet-point-generator',
+      },
       {
         emoji: '📋',
         title: 'Resume Builder Form',
         description: 'A guided form to build and maintain your master resume profile.',
+        href: '',
       },
       {
         emoji: '🔍',
         title: 'AI Job Matching',
         description: 'Discover jobs that match your unique skills and experience.',
-      },
-      {
-        emoji: '📊',
-        title: 'ATS Score Checker',
-        description: 'See your resume score before you hit send.',
+        href: '',
       },
       {
         emoji: '✉️',
         title: 'Cover Letter Generator',
         description: 'AI-written cover letters tailored to each role.',
+        href: '',
       },
     ],
     cta: {

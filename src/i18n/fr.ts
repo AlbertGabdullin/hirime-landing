@@ -101,27 +101,38 @@ export const fr: Translations = {
     label: "Bient\u00f4t disponible",
     title: "Nous construisons quelque chose d\u2019extraordinaire",
     subtitle:
-      "Rejoignez notre liste d\u2019attente pour un acc\u00e8s anticip\u00e9 et participez \u00e0 l\u2019avenir de Hirime.",
+      "Deux outils sont d\u00e9j\u00e0 disponibles et gratuits \u2014 le reste arrive bient\u00F4t. Rejoignez la liste d\u2019attente pour un acc\u00e8s anticip\u00e9.",
+    liveLabel: "Gratuit \u00B7 Disponible",
     features: [
+      {
+        emoji: "\uD83D\uDCCA",
+        title: "Score ATS",
+        description: "Voyez le score de votre CV avant de postuler.",
+        href: "/tools/ats-resume-checker",
+      },
+      {
+        emoji: "\u270D\uFE0F",
+        title: "G\u00e9n\u00e9rateur de puces",
+        description: "Transformez des mots simples en puces solides et chiffr\u00e9es pour votre CV.",
+        href: "/tools/resume-bullet-point-generator",
+      },
       {
         emoji: "\uD83D\uDCCB",
         title: "Formulaire de CV",
         description: "Un formulaire guid\u00e9 pour construire votre profil ma\u00eetre.",
+        href: "",
       },
       {
         emoji: "\uD83D\uDD0D",
         title: "Matching IA",
         description: "D\u00e9couvrez les offres qui correspondent \u00e0 vos comp\u00e9tences.",
-      },
-      {
-        emoji: "\uD83D\uDCCA",
-        title: "Score ATS",
-        description: "Voyez le score de votre CV avant de postuler.",
+        href: "",
       },
       {
         emoji: "\u2709\uFE0F",
         title: "G\u00e9n\u00e9rateur de lettre",
         description: "Lettres de motivation r\u00e9dig\u00e9es par IA pour chaque poste.",
+        href: "",
       },
     ],
     cta: {
