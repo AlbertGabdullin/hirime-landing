@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { en as base } from '../i18n/en';
+
+const lang = 'en' as const;
+
+const t = {
+  ...base,
+  meta: {
+    ...base.meta,
+    title: 'About Hirime — Why We Built an AI Resume Builder',
+    description:
+      'Hirime is an AI resume builder that tailors your resume to each job and helps you beat ATS filters. Learn who we are, why we built it, and how we handle your data.',
+    ogTitle: 'About Hirime — Why We Built an AI Resume Builder',
+    ogDescription:
+      'Who we are, why we built Hirime, and how we handle your data.',
+  },
+} as const;
+
+const canonical = new URL('/about', Astro.site).href;
+
+const aboutJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About Hirime',
+  url: canonical,
+  publisher: { '@id': 'https://hirime.com/#organization' },
+};
+---
+
+<BaseLayout t={t} lang={lang}>
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(aboutJsonLd)} />
+  <Navbar t={t.nav} lang={lang} />
+  <main style="padding: 7rem 1.5rem 5rem;">
+    <div style="max-width: 720px; margin: 0 auto;">
+
+      <!-- Header -->
+      <div style="margin-bottom: 3rem;">
+        <p style="
+          font-size: 0.8125rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 0.75rem;
+        ">About</p>
+        <h1 style="
+          font-family: 'Instrument Serif', Georgia, serif;
+          font-size: clamp(2rem, 5vw, 3rem);
+          font-weight: 400;
+          line-height: 1.15;
+          color: var(--text-primary);
+          margin-bottom: 1rem;
+        ">The resume should adapt to the job — not the other way around</h1>
+        <p style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.7;">
+          Hirime is an AI-powered resume builder that tailors your resume to each role you apply for,
+          so more of your applications get past automated filters and in front of a human.
+        </p>
+      </div>
+
+      <!-- Content -->
+      <div class="prose-content">
+
+        <section>
+          <h2>Why we built Hirime</h2>
+          <p>
+            Most qualified people don't lose out because they lack the skills — they lose out because
+            their resume never reaches a recruiter. Companies run applications through applicant tracking
+            systems (ATS) that scan for specific keywords and structure, and a single generic resume
+            rarely matches the dozens of different roles a job seeker applies to.
+          </p>
+          <p>
+            The usual workaround is to hand-edit your resume for every application. It works, but it's slow,
+            tedious, and easy to get wrong. We built Hirime to do that work for you: describe your
+            experience once, and let AI adapt it to each job description — keeping it truthful, readable,
+            and ATS-friendly.
+          </p>
+        </section>
+
+        <section>
+          <h2>What we believe</h2>
+          <ul>
+            <li><strong>Honest over impressive.</strong> Our tools help you phrase real experience clearly — not invent it. A resume you can defend in an interview beats an inflated one every time.</li>
+            <li><strong>Built for real hiring pipelines.</strong> We optimize for how resumes are actually screened today: ATS parsing first, human attention second.</li>
+            <li><strong>Useful before you sign up.</strong> Our ATS checker, bullet point generator, and resume-skills guides are free to use, no account required.</li>
+            <li><strong>Privacy by default.</strong> We collect the minimum we need and never sell your data.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What you can use today</h2>
+          <p>Hirime is in active development ahead of launch, but several tools are already live and free:</p>
+          <ul>
+            <li><a href="/tools/ats-resume-checker">ATS Resume Checker</a> — see whether tracking systems can actually read your resume, and how to fix it.</li>
+            <li><a href="/tools/resume-bullet-point-generator">Resume Bullet Point Generator</a> — turn a plain description of your work into quantified, ATS-friendly bullet points.</li>
+            <li><a href="/resume-skills">Resume Skills by Profession</a> — the skills that matter for your role, organized by category and experience level.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How we handle your data</h2>
+          <p>
+            During pre-launch, the only personal information we ask for is your email address when you
+            join the waitlist. The free tools process the text you enter solely to return the result you
+            requested. For the full details, see our <a href="/privacy">Privacy Policy</a> and
+            <a href="/terms">Terms of Service</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Get in touch</h2>
+          <p>
+            Questions, feedback, or partnership ideas? Email us at
+            <a href="mailto:hello@hirime.com">hello@hirime.com</a> — we read everything.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <Footer t={t.footer} lang={lang} />
+</BaseLayout>
+
+<style>
+  .prose-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .prose-content section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .prose-content h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+
+  .prose-content p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+
+  .prose-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .prose-content li {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+
+  .prose-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .prose-content a:hover {
+    color: var(--accent-hover);
+  }
+
+  .prose-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .prose-content section:not(:last-child) {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+</style>

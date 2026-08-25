@@ -1,0 +1,27 @@
+# Hirime
+
+> Hirime is an AI-powered resume builder that automatically tailors your resume to any job description. Build your resume once, and AI adapts it for every role — helping you beat ATS (applicant tracking system) filters and land more interviews. Currently in pre-launch with a public waitlist and a set of free resume tools.
+
+## Free tools
+
+- [ATS Resume Checker](https://hirime.com/tools/ats-resume-checker/): Upload a PDF resume and get an instant report on whether applicant tracking systems can read it, plus a compatibility score and fixes.
+- [Resume Bullet Point Generator](https://hirime.com/tools/resume-bullet-point-generator/): Describe what you do and get strong, quantified, ATS-friendly resume bullet points in seconds.
+
+## Resume skills reference
+
+- [Resume Skills by Profession](https://hirime.com/resume-skills/): Browse the skills that matter on a resume, organized by profession, category, and experience level (junior, mid, senior), with real examples.
+
+## Product
+
+- [Homepage](https://hirime.com/): Product overview and waitlist signup for early access.
+- [Español](https://hirime.com/es/): Spanish-language homepage.
+- [Français](https://hirime.com/fr/): French-language homepage.
+
+## Legal
+
+- [Privacy Policy](https://hirime.com/privacy)
+- [Terms of Service](https://hirime.com/terms)
+
+## Contact
+
+- Email: hello@hirime.com

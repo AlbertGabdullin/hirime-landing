@@ -1,0 +1,54 @@
+---
+// Homepage structured data. Emits an Organization + WebSite + SoftwareApplication
+// graph so search engines and AI assistants can understand the product.
+interface Props {
+  lang: 'en' | 'es' | 'fr';
+  description: string;
+}
+
+const { lang, description } = Astro.props;
+
+const site = 'https://hirime.com';
+const homeUrl = lang === 'en' ? `${site}/` : `${site}/${lang}/`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${site}/#organization`,
+      name: 'Hirime',
+      url: `${site}/`,
+      logo: `${site}/web-app-manifest-512x512.png`,
+      email: 'hello@hirime.com',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${site}/#website`,
+      url: `${site}/`,
+      name: 'Hirime',
+      description,
+      inLanguage: lang,
+      publisher: { '@id': `${site}/#organization` },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': `${site}/#app`,
+      name: 'Hirime',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      url: homeUrl,
+      description,
+      inLanguage: lang,
+      publisher: { '@id': `${site}/#organization` },
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

@@ -6,20 +6,19 @@ import type { Lang } from '../i18n/utils';
 interface Props {
   t: Translations;
   lang: Lang;
+  /**
+   * hreflang alternates for this page. Only pass this on pages that have real
+   * translated equivalents (e.g. the homepage). Pages without translations must
+   * omit it so we don't advertise localized URLs that 404.
+   */
+  alternates?: { hreflang: string; href: string }[];
 }
 
-const { t, lang } = Astro.props;
+const { t, lang, alternates } = Astro.props;
 const { meta } = t;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/images/og-image.png', Astro.site);
-
-const hreflangs = [
-  { hreflang: 'en', href: new URL('/', Astro.site).href },
-  { hreflang: 'es', href: new URL('/es/', Astro.site).href },
-  { hreflang: 'fr', href: new URL('/fr/', Astro.site).href },
-  { hreflang: 'x-default', href: new URL('/', Astro.site).href },
-];
 ---
 
 <!doctype html>
@@ -50,8 +49,8 @@ const hreflangs = [
     <meta name="twitter:description" content={meta.ogDescription} />
     <meta name="twitter:image" content={ogImage.href} />
 
-    <!-- hreflang -->
-    {hreflangs.map(({ hreflang, href }) => (
+    <!-- hreflang (only emitted on pages with real translated equivalents) -->
+    {alternates?.map(({ hreflang, href }: { hreflang: string; href: string }) => (
       <link rel="alternate" hreflang={hreflang} href={href} />
     ))}
 

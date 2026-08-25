@@ -6,12 +6,21 @@ import HowItWorks from '../../components/HowItWorks.astro';
 import Features from '../../components/Features.astro';
 import ComingSoon from '../../components/ComingSoon.astro';
 import Footer from '../../components/Footer.astro';
+import SeoJsonLd from '../../components/SeoJsonLd.astro';
 import { fr as t } from '../../i18n/fr';
 
 const lang = 'fr' as const;
+
+const alternates = [
+  { hreflang: 'en', href: new URL('/', Astro.site).href },
+  { hreflang: 'es', href: new URL('/es/', Astro.site).href },
+  { hreflang: 'fr', href: new URL('/fr/', Astro.site).href },
+  { hreflang: 'x-default', href: new URL('/', Astro.site).href },
+];
 ---
 
-<BaseLayout t={t} lang={lang}>
+<BaseLayout t={t} lang={lang} alternates={alternates}>
+  <SeoJsonLd slot="head" lang={lang} description={t.meta.description} />
   <Navbar t={t.nav} lang={lang} />
   <main>
     <Hero t={t.hero} />

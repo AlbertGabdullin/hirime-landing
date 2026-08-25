@@ -151,6 +151,7 @@ export const fr: Translations = {
   footer: {
     tagline: "Des CV propuls\u00e9s par IA pour chaque opportunit\u00e9.",
     links: {
+      about: "\u00c0 propos",
       privacy: "Politique de confidentialit\u00e9",
       terms: "Conditions",
       contact: "Contact",

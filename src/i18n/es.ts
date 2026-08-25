@@ -151,6 +151,7 @@ export const es: Translations = {
   footer: {
     tagline: 'Currículums con IA para cada oportunidad.',
     links: {
+      about: 'Acerca de',
       privacy: 'Política de Privacidad',
       terms: 'Términos',
       contact: 'Contacto',
