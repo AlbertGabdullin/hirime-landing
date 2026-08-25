@@ -1,0 +1,440 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Backend Developer",
+    "shortName": "Backend",
+    "category": "Software Engineering",
+    "family": "backend-developer",
+    "familyName": "Backend Developer",
+    "order": 3
+  },
+  "seo": {
+    "title": "Backend Developer Resume Skills: 60+ for 2026 | Hirime",
+    "description": "Backend developer and backend engineer resume skills for 2026 — the ATS keywords recruiters scan for: languages, databases, APIs and cloud. Free AI generator.",
+    "keywords": "backend developer resume skills, backend engineer resume skills, back-end developer skills, skills for a backend developer resume, API and database skills, ATS keywords"
+  },
+  "hero": {
+    "title": "Backend Developer Resume Skills: *60+ skills* for your resume",
+    "lede": "The back-end skills hiring managers and ATS actually scan for in 2026 — whether the role is called backend developer or backend engineer. Languages, databases, APIs, cloud and system design, organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Python",
+      "Node.js",
+      "Java",
+      "Go",
+      "PostgreSQL",
+      "Redis",
+      "REST APIs",
+      "Docker",
+      "AWS",
+      "Microservices"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a backend developer put on a resume?",
+    "answer": "Backend developer and backend engineer roles look for the same core skills. Lead with a primary language (Python, Java, Go or Node.js) and a framework you've shipped with, then a solid database story (PostgreSQL plus Redis), API design (REST, and GraphQL where relevant), and the cloud and delivery basics — Docker, CI/CD and a cloud provider. As you grow, add system design, messaging (Kafka or RabbitMQ) and observability. Tailor the exact mix to the job you're targeting.",
+    "essentials": [
+      "Python",
+      "Node.js",
+      "SQL",
+      "PostgreSQL",
+      "REST APIs",
+      "Git",
+      "Docker",
+      "Redis",
+      "System Design",
+      "Testing"
+    ]
+  },
+  "categories": [
+    {
+      "id": "languages",
+      "title": "Languages",
+      "lead": "Include your primary language plus the ones you've shipped production services in — add depth in parentheses where you can, e.g. “Python (async, typing)”.",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "SQL",
+        { "label": "TypeScript", "tier": "mid" },
+        { "label": "Go", "tier": "mid" },
+        { "label": "C#", "tier": "mid" },
+        { "label": "Ruby", "tier": "mid" },
+        { "label": "PHP", "tier": "mid" },
+        { "label": "Kotlin", "tier": "senior" },
+        { "label": "Rust", "tier": "senior" },
+        { "label": "Scala", "tier": "senior" },
+        { "label": "Elixir", "tier": "senior" },
+        { "label": "C++", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "Frameworks & Runtimes",
+      "lead": "List the frameworks you've actually built and shipped with — not everything you've read about.",
+      "skills": [
+        "Node.js",
+        "Express",
+        { "label": "Django", "tier": "mid" },
+        { "label": "Flask", "tier": "mid" },
+        { "label": "FastAPI", "tier": "mid" },
+        { "label": "Spring Boot", "tier": "mid" },
+        { "label": "NestJS", "tier": "mid" },
+        { "label": "Ruby on Rails", "tier": "mid" },
+        { "label": "Laravel", "tier": "mid" },
+        { "label": "ASP.NET Core", "tier": "mid" },
+        { "label": "Gin", "tier": "senior" },
+        { "label": "gRPC Services", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "databases-sql",
+      "title": "Relational Databases",
+      "lead": "The data foundation of most backends. Show depth where you've designed schemas and tuned real queries.",
+      "skills": [
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "Database Design",
+        { "label": "Query Optimization", "tier": "mid" },
+        { "label": "Indexing", "tier": "mid" },
+        { "label": "Transactions", "tier": "mid" },
+        { "label": "SQLAlchemy / ORMs", "tier": "mid" },
+        { "label": "Stored Procedures", "tier": "senior" },
+        { "label": "Replication", "tier": "senior" },
+        { "label": "Sharding", "tier": "senior" },
+        { "label": "Partitioning", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "databases-nosql",
+      "title": "NoSQL & Caching",
+      "lead": "Show breadth beyond relational — list the stores you've used on real workloads, not just tried.",
+      "skills": [
+        "Redis",
+        { "label": "MongoDB", "tier": "mid" },
+        { "label": "Elasticsearch", "tier": "mid" },
+        { "label": "DynamoDB", "tier": "mid" },
+        { "label": "Memcached", "tier": "mid" },
+        { "label": "Cassandra", "tier": "senior" },
+        { "label": "Neo4j", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "apis",
+      "title": "APIs & Communication",
+      "lead": "How your services talk to clients and each other — include the styles and clients you've actually built with.",
+      "skills": [
+        "REST APIs",
+        "JSON",
+        "HTTP",
+        { "label": "API Design", "tier": "mid" },
+        { "label": "GraphQL", "tier": "mid" },
+        { "label": "OpenAPI / Swagger", "tier": "mid" },
+        { "label": "WebSockets", "tier": "mid" },
+        { "label": "Webhooks", "tier": "mid" },
+        { "label": "Pagination", "tier": "mid" },
+        { "label": "gRPC", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "messaging",
+      "title": "Messaging & Streaming",
+      "lead": "The async backbone of scalable systems — include the brokers and patterns you've shipped with.",
+      "skills": [
+        { "label": "Message Queues", "tier": "mid" },
+        { "label": "RabbitMQ", "tier": "mid" },
+        { "label": "Apache Kafka", "tier": "mid" },
+        { "label": "Amazon SQS", "tier": "mid" },
+        { "label": "Redis Pub/Sub", "tier": "mid" },
+        { "label": "Event-Driven Architecture", "tier": "senior" },
+        { "label": "NATS", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "auth-security",
+      "title": "Auth & Security",
+      "lead": "Even a couple of these signal you build safely — list what you've implemented, not just heard of.",
+      "skills": [
+        "Authentication",
+        "Authorization",
+        "Input Validation",
+        { "label": "OAuth 2.0", "tier": "mid" },
+        { "label": "JWT", "tier": "mid" },
+        { "label": "RBAC", "tier": "mid" },
+        { "label": "Password Hashing", "tier": "mid" },
+        { "label": "TLS / SSL", "tier": "mid" },
+        { "label": "Rate Limiting", "tier": "mid" },
+        { "label": "OpenID Connect", "tier": "senior" },
+        { "label": "OWASP Top 10", "tier": "senior" },
+        { "label": "Encryption", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "cloud-infra",
+      "title": "Cloud & Infrastructure",
+      "lead": "Backend increasingly means owning delivery too — list the tools you genuinely operate day to day.",
+      "skills": [
+        "Linux",
+        "Git",
+        { "label": "Docker", "tier": "mid" },
+        { "label": "AWS", "tier": "mid" },
+        { "label": "CI/CD", "tier": "mid" },
+        { "label": "Nginx", "tier": "mid" },
+        { "label": "GCP", "tier": "mid" },
+        { "label": "Kubernetes", "tier": "senior" },
+        { "label": "Terraform", "tier": "senior" },
+        { "label": "Serverless / Lambda", "tier": "senior" },
+        { "label": "Azure", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture & Design",
+      "lead": "The judgment skills that grow with seniority — claim the ones you can defend with real decisions.",
+      "skills": [
+        { "label": "Clean Code", "tier": "mid" },
+        { "label": "Design Patterns", "tier": "mid" },
+        { "label": "SOLID Principles", "tier": "mid" },
+        { "label": "Microservices", "tier": "mid" },
+        { "label": "Caching Strategies", "tier": "mid" },
+        { "label": "System Design", "tier": "senior" },
+        { "label": "Distributed Systems", "tier": "senior" },
+        { "label": "Domain-Driven Design", "tier": "senior" },
+        { "label": "Clean Architecture", "tier": "senior" },
+        { "label": "CQRS", "tier": "senior" },
+        { "label": "Event Sourcing", "tier": "senior" },
+        { "label": "Scalability", "tier": "senior" },
+        { "label": "Load Balancing", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "Observability & Reliability",
+      "lead": "Higher signal when you can back it with a result — an SLA hit, an incident resolved, an outage prevented.",
+      "skills": [
+        { "label": "Logging", "tier": "mid" },
+        { "label": "Monitoring", "tier": "mid" },
+        { "label": "Sentry", "tier": "mid" },
+        { "label": "Prometheus", "tier": "senior" },
+        { "label": "Grafana", "tier": "senior" },
+        { "label": "Distributed Tracing", "tier": "senior" },
+        { "label": "OpenTelemetry", "tier": "senior" },
+        { "label": "SLOs / SLAs", "tier": "senior" },
+        { "label": "Incident Response", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "Testing & Quality",
+      "lead": "Even one or two of these signal you ship code that stays working — add the ones you've used on real projects.",
+      "skills": [
+        "Unit Testing",
+        "Debugging",
+        "Postman",
+        { "label": "Integration Testing", "tier": "mid" },
+        { "label": "TDD", "tier": "mid" },
+        { "label": "pytest", "tier": "mid" },
+        { "label": "JUnit", "tier": "mid" },
+        { "label": "Mocking", "tier": "mid" },
+        { "label": "Load Testing", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "Performance & Data Handling",
+      "lead": "Pick the ones you've actually moved a number with — latency, throughput, cost or memory.",
+      "skills": [
+        { "label": "Caching", "tier": "mid" },
+        { "label": "Async Programming", "tier": "mid" },
+        { "label": "Batch Processing", "tier": "mid" },
+        { "label": "Concurrency", "tier": "senior" },
+        { "label": "Connection Pooling", "tier": "senior" },
+        { "label": "Database Optimization", "tier": "senior" },
+        { "label": "Profiling", "tier": "senior" },
+        { "label": "Memory Management", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can demonstrate through real work examples, not just claim — prove them in your experience bullets.",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Collaboration",
+        "Attention to Detail",
+        { "label": "Code Review", "tier": "mid" },
+        { "label": "Agile / Scrum", "tier": "mid" },
+        { "label": "Documentation", "tier": "mid" },
+        { "label": "Ownership", "tier": "senior" },
+        { "label": "Mentoring", "tier": "senior" },
+        { "label": "Technical Leadership", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Languages",
+    "types": ["Languages", "Frameworks", "Databases", "APIs", "Cloud & DevOps", "Soft Skills", "All"],
+    "levels": ["Entry Level", "Mid Level", "Senior"],
+    "defaultLevel": "Mid Level"
+  },
+  "experienceLevels": [
+    {
+      "name": "Entry Level",
+      "subtitle": "Build the fundamentals",
+      "filled": 1,
+      "skills": ["Python", "SQL", "REST APIs", "Git", "PostgreSQL", "Node.js"]
+    },
+    {
+      "name": "Mid-Level",
+      "subtitle": "Ship reliable services",
+      "filled": 2,
+      "skills": [
+        "Docker",
+        "Redis",
+        "Testing",
+        "API Design",
+        "CI/CD",
+        "Message Queues"
+      ]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Own systems & scale",
+      "filled": 3,
+      "skills": [
+        "System Design",
+        "Microservices",
+        "Kubernetes",
+        "Distributed Systems",
+        "Observability",
+        "Technical Leadership"
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Python", "PostgreSQL", "Redis", "Docker", "AWS", "REST APIs"],
+      "note": "A tight, scannable list of your strongest, most relevant tools — not everything you've touched."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Backend Developer with 4+ years building ==REST APIs== and ==scalable services== in ==Python== and ==PostgreSQL==, focused on reliability and clean architecture.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and focus."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Cut average API response time by 40% by ==adding a Redis caching layer== and ==optimizing slow PostgreSQL queries==.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "Python",
+      "better": "Python — FastAPI, async I/O, SQLAlchemy, pytest"
+    },
+    {
+      "basic": "PostgreSQL",
+      "better": "PostgreSQL — schema design, indexing, query optimization"
+    },
+    {
+      "basic": "REST APIs",
+      "better": "REST API design — versioning, pagination, auth and OpenAPI docs"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Looking for a backend developer experienced with ==Python or Node.js==, ==PostgreSQL==, ==REST APIs==, ==Docker==, and ==AWS==, comfortable designing and scaling services.\"",
+    "prioritizedSkills": [
+      "Python / Node.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "AWS"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing every technology you've ever touched.",
+      "detail": "A wall of 60 tools reads as noise. Curate to what you can defend in an interview."
+    },
+    {
+      "title": "Adding generic computer skills.",
+      "detail": "\"Microsoft Office\" and \"email\" are assumed and waste prime space."
+    },
+    {
+      "title": "Claiming scale or impact you can't quantify.",
+      "detail": "\"Built scalable APIs\" is empty. Attach numbers — RPS, latency, data volume, uptime."
+    },
+    {
+      "title": "Listing skills you can't discuss in an interview.",
+      "detail": "Every skill on the page is fair game for deep-dive and system-design questions."
+    },
+    {
+      "title": "Copying every keyword from the job description.",
+      "detail": "Keyword-stuffing is transparent to recruiters and often to ATS too."
+    },
+    {
+      "title": "Listing skills you never demonstrate in your experience.",
+      "detail": "Back each headline skill with a bullet that proves it."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern backend roles these are assumed or off-target — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Office",
+      "Email",
+      "Basic computer skills",
+      "Typing",
+      "Windows / macOS",
+      "HTML / CSS"
+    ]
+  },
+  "related": [
+    "software-engineer",
+    "full-stack-developer",
+    "frontend-developer",
+    "devops-engineer",
+    "web-developer"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a backend developer put on a resume?",
+      "a": "Aim for 12–16 well-chosen skills. Enough to cover your language, a framework, databases, APIs and the cloud or infrastructure a job asks for — but curated to what you can actually discuss. A wall of 60 tools reads as noise and dilutes your strongest signals."
+    },
+    {
+      "q": "Is a backend developer the same as a backend engineer?",
+      "a": "In most companies, yes — \"backend developer\" and \"backend engineer\" are used interchangeably for the same role, and job postings mix the two freely. \"Engineer\" sometimes signals a little more emphasis on system design, scale and reliability, but the core skills are the same. Every skill on this page applies whether the posting says backend developer or backend engineer."
+    },
+    {
+      "q": "What are the most important backend developer skills?",
+      "a": "A primary language (Python, Java, Go or Node.js), a framework you've shipped with, and a solid database story (PostgreSQL plus Redis) are the foundation. Beyond those, employers look for REST API design, testing, version control with Git, containers (Docker), CI/CD and a cloud provider — with system design and messaging (Kafka or RabbitMQ) growing in weight as you get more senior."
+    },
+    {
+      "q": "Which backend programming language should I put on my resume?",
+      "a": "Lead with the language you're strongest in and have shipped production code with — Python, Java, Go, Node.js or C#. Make it specific where you can: \"Python (FastAPI, async, SQLAlchemy)\" or \"Go (gRPC, concurrency)\" signals far more depth than the bare name, and mirrors how backend job descriptions are written."
+    },
+    {
+      "q": "Should backend developers list cloud and DevOps skills?",
+      "a": "Yes. Modern backend roles increasingly expect ownership beyond application code — containers (Docker), a cloud provider (AWS or GCP), CI/CD, and often orchestration (Kubernetes) and infrastructure as code (Terraform). List the ones you genuinely operate and back the important ones with a result in your experience."
+    },
+    {
+      "q": "What skills should a junior backend developer include?",
+      "a": "Focus on the fundamentals you can demonstrate: a language like Python or JavaScript, SQL and a relational database, REST APIs, Git, and basic testing. Back each with a project or bullet. At entry level, depth in the basics beats a long list of tools you've only tried once."
+    },
+    {
+      "q": "How do I tailor backend skills to a job description?",
+      "a": "Read the posting and note the specific skills it names — language, databases, messaging, cloud. Mirror those in your own true words and move them toward the top of your skills section. Applicant tracking systems rank you partly on how well your resume echoes the job's language, so relevant, honest overlap matters."
+    }
+  ]
+}

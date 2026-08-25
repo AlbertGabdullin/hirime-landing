@@ -10,11 +10,12 @@
   },
   "seo": {
     "title": "Frontend Developer Resume Skills: 40+ for 2026 | Hirime",
-    "description": "Frontend developer resume skills that matter in 2026 — the ATS keywords recruiters scan for, by category and experience level, with real examples. Free AI generator."
+    "description": "Frontend developer and frontend engineer resume skills for 2026 — the ATS keywords recruiters scan for, by category and level, with real examples. Free AI generator.",
+    "keywords": "frontend developer resume skills, frontend engineer resume skills, front-end developer skills, skills for a frontend developer resume, React resume skills, ATS keywords"
   },
   "hero": {
     "title": "Frontend Developer Resume Skills: *40+ skills* for your resume",
-    "lede": "The front-end skills hiring managers and ATS actually scan for in 2026 — organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "lede": "The front-end skills hiring managers and ATS actually scan for in 2026 — whether the role is called frontend developer or frontend engineer. Organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
     "featuredSkills": [
       "React",
       "TypeScript",
@@ -32,7 +33,7 @@
   },
   "quickAnswer": {
     "question": "What skills should a frontend developer put on a resume?",
-    "answer": "Lead with the fundamentals every team expects — JavaScript, TypeScript, HTML and CSS — then your primary framework (usually React), plus proof you can ship quality: testing, version control, API integration and performance. Tailor the exact mix to the job you're targeting.",
+    "answer": "Frontend developer and frontend engineer roles look for the same core skills. Lead with the fundamentals every team expects — JavaScript, TypeScript, HTML and CSS — then your primary framework (usually React), plus proof you can ship quality: testing, version control, API integration and performance. Tailor the exact mix to the job you're targeting.",
     "essentials": [
       "JavaScript",
       "TypeScript",
@@ -380,6 +381,10 @@
     {
       "q": "How many skills should a frontend developer put on a resume?",
       "a": "Aim for 10–15 well-chosen skills. Enough to cover the fundamentals and the specific technologies a job asks for, but curated to what you can actually discuss in an interview. A wall of 40 tools reads as noise and dilutes your strongest signals."
+    },
+    {
+      "q": "Is a frontend developer the same as a frontend engineer?",
+      "a": "In most companies, yes — \"frontend developer\" and \"frontend engineer\" are used interchangeably for the same role, and job postings mix the two freely. \"Engineer\" sometimes signals a little more emphasis on architecture, testing and performance, but the core skills are the same. Every skill on this page applies whether the posting says frontend developer or frontend engineer."
     },
     {
       "q": "What are the most important frontend developer skills?",
