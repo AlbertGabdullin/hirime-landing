@@ -1,0 +1,52 @@
+---
+import RichText from './RichText.astro';
+
+interface Cta {
+  label: string;
+  href: string;
+}
+interface Props {
+  professionName: string;
+  hero: {
+    title: string;
+    lede: string;
+    featuredSkills: string[];
+    primaryCta?: Cta;
+    secondaryCta?: Cta;
+  };
+}
+
+const { professionName, hero } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/resume-skills">Resume Skills</a>
+      <span class="sep">/</span>
+      <span>{professionName}</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <h1><RichText text={hero.title} /></h1>
+        <p class="lede">{hero.lede}</p>
+        <div class="hero-cta">
+          {hero.primaryCta && (
+            <a href={hero.primaryCta.href} class="btn btn-primary btn-lg">{hero.primaryCta.label}</a>
+          )}
+          {hero.secondaryCta && (
+            <a href={hero.secondaryCta.href} class="btn btn-outline btn-lg">{hero.secondaryCta.label}</a>
+          )}
+        </div>
+      </div>
+      <div class="hero-preview">
+        <span class="kicker">Most-listed {professionName.toLowerCase()} skills</span>
+        <div class="pill-row">
+          {hero.featuredSkills.map((s) => (
+            <span class="pill"><span class="pd"></span>{s}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

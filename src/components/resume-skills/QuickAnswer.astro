@@ -1,0 +1,34 @@
+---
+interface Props {
+  quickAnswer: {
+    question: string;
+    answer: string;
+    essentials: string[];
+  };
+}
+
+const { quickAnswer } = Astro.props;
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="qa">
+      <div class="qa-grid">
+        <div class="qa-q">
+          <span class="qmark">?</span>
+          <h2>{quickAnswer.question}</h2>
+        </div>
+        <div>
+          <p>{quickAnswer.answer}</p>
+          <span class="kicker">The {quickAnswer.essentials.length} essentials, in order</span>
+          <div class="qa-pills">
+            {quickAnswer.essentials.map((s, i) => (
+              <span class="qa-pill"><span class="n">{pad(i + 1)}</span>{s}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

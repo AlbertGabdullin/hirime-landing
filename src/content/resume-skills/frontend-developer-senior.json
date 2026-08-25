@@ -1,0 +1,66 @@
+{
+  "status": "draft",
+  "profession": {
+    "name": "Senior Frontend Developer",
+    "shortName": "Senior Frontend",
+    "category": "Software Engineering",
+    "family": "frontend-developer",
+    "familyName": "Frontend Developer",
+    "level": "senior",
+    "order": 2
+  },
+  "seo": {
+    "title": "Senior Frontend Developer Resume Skills: Architecture, Performance & Leadership | Hirime",
+    "description": "The senior frontend developer skills that matter on a resume in 2026 — frontend architecture, performance, testing strategy and the leadership signals that separate senior from mid. Free AI generator."
+  },
+  "hero": {
+    "title": "Senior Frontend Developer Resume Skills: *architecture, scale & leadership*",
+    "lede": "At the senior level you're hired on judgment, not tool count — frontend architecture, performance strategy, testing discipline and the ability to lift a team. These are the skills and signals that separate a senior frontend resume from a mid-level one.",
+    "featuredSkills": [
+      "Frontend Architecture",
+      "TypeScript",
+      "Core Web Vitals",
+      "Performance Optimization",
+      "Testing Strategy",
+      "TanStack Query",
+      "Mentoring",
+      "System Design"
+    ],
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a senior frontend developer put on a resume?",
+    "answer": "Lead with the senior differentiators — frontend architecture, performance strategy and a real testing discipline — on top of deep TypeScript and framework expertise. Then show scope beyond code: mentoring, code review, technical decisions and cross-team collaboration. The strongest senior resumes pair each headline skill with a measurable outcome, not just a name.",
+    "essentials": [
+      "Frontend Architecture",
+      "TypeScript",
+      "Performance Optimization",
+      "Core Web Vitals",
+      "Testing Strategy",
+      "Code Review",
+      "Mentoring",
+      "Ownership"
+    ]
+  },
+  "generator": {
+    "defaultLevel": "Senior"
+  },
+  "faq": [
+    {
+      "q": "What separates a senior frontend resume from a mid-level one?",
+      "a": "Scope and judgment. Mid-level resumes list what you can build; senior resumes show what you've owned — architecture you shaped, performance budgets you set, testing standards you introduced, and engineers you mentored. Lead with those and quantify the impact rather than adding more frameworks to the list."
+    },
+    {
+      "q": "What are the most important senior frontend developer skills?",
+      "a": "Beyond deep JavaScript and TypeScript, employers look for frontend architecture, performance optimization (Core Web Vitals, code splitting), a real testing strategy, and state/data management at scale. Just as important are the leadership signals — mentoring, code review, and driving technical decisions across teams."
+    },
+    {
+      "q": "Should a senior frontend developer list soft skills and leadership?",
+      "a": "Yes — at the senior level they carry real weight and are often what the hiring decision turns on. But prove them in context: \"Mentored three engineers and introduced a testing standard that cut regressions\" says far more than the words \"leadership\" and \"mentoring\" alone."
+    },
+    {
+      "q": "How many skills should a senior frontend resume list?",
+      "a": "Around 12–16 curated skills. Enough to cover architecture, your core stack, performance and testing, plus the specific technologies a role names — but every one should be defensible in a deep-dive or system-design interview. A wall of tools reads as junior, not senior."
+    }
+  ]
+}

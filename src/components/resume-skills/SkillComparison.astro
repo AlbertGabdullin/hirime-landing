@@ -1,0 +1,28 @@
+---
+interface Props {
+  comparisons: { basic: string; better: string }[];
+}
+
+const { comparisons } = Astro.props;
+---
+
+<section style="background: var(--bg-card);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><span class="spark">✦</span> Specificity wins</span>
+      <h2>Make your skills more specific</h2>
+      <p>A bare keyword tells a recruiter nothing. A specific one shows depth — and matches more of the phrases an ATS looks for.</p>
+    </div>
+    <div class="cmp">
+      {comparisons.map((c) => (
+        <div class="cmp-row">
+          <div class="cmp-basic"><span class="tag">Basic</span><span class="v">{c.basic}</span></div>
+          <div class="cmp-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <div class="cmp-better"><span class="tag">Better</span><span class="v">{c.better}</span></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,308 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Senior Backend Engineer",
+    "shortName": "Backend"
+  },
+  "seo": {
+    "title": "Senior Backend Engineer Resume Skills: 45+ Skills for Your Resume | Hirime",
+    "description": "The senior backend engineer skills that matter on a resume in 2026 — system design, distributed systems, cloud and leadership, with real resume examples. Generate personalized skills with AI, free."
+  },
+  "hero": {
+    "title": "Senior Backend Engineer Resume Skills: *45+ skills* for your resume",
+    "lede": "The skills hiring managers and ATS actually scan for at the senior level in 2026 — system design, distributed systems, databases, cloud and the leadership signals that separate senior from mid. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "System Design",
+      "Distributed Systems",
+      "Go",
+      "Java",
+      "PostgreSQL",
+      "Kafka",
+      "Kubernetes",
+      "AWS",
+      "Microservices",
+      "Technical Leadership"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a senior backend engineer put on a resume?",
+    "answer": "Lead with the senior-level differentiators — system design, distributed systems and scalability — then your primary language and framework, a strong database and messaging story (PostgreSQL, Redis, Kafka), and cloud plus infrastructure (AWS, Docker, Kubernetes). Round it out with observability and the leadership signals a senior role expects: mentoring, architecture decisions and cross-team work. Tailor the exact mix to the job you're targeting.",
+    "essentials": [
+      "System Design",
+      "Distributed Systems",
+      "Microservices",
+      "PostgreSQL",
+      "Redis",
+      "Kafka",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Technical Leadership"
+    ]
+  },
+  "categories": [
+    {
+      "id": "architecture",
+      "title": "Architecture & System Design",
+      "countLabel": "8 core",
+      "lead": "The senior-level foundation that separates you from mid-level engineers. List the ones you've actually designed for — add scale in parentheses where you can, e.g. “Distributed Systems (10k+ RPS)”.",
+      "skills": [
+        "System Design",
+        "Distributed Systems",
+        "Microservices",
+        "Event-Driven Architecture",
+        "Scalability",
+        "High Availability",
+        "Caching Strategies",
+        "API Design"
+      ]
+    },
+    {
+      "id": "languages",
+      "title": "Languages & Runtimes",
+      "lead": "Include your primary language plus the ones you've shipped production services in — not everything you've read about.",
+      "skills": [
+        "Go",
+        "Java",
+        "Python",
+        "Node.js",
+        "C#",
+        "Rust",
+        "SQL",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "databases",
+      "title": "Databases & Data Stores",
+      "countLabel": "8 stores",
+      "lead": "Show breadth across relational, NoSQL and caching — and depth where you've tuned real workloads.",
+      "skills": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "DynamoDB",
+        "Elasticsearch",
+        "Query Optimization",
+        "Database Sharding"
+      ]
+    },
+    {
+      "id": "infra",
+      "title": "Infrastructure & DevOps",
+      "lead": "The cloud and delivery skills a senior engineer owns end to end — list the ones you use day to day, not once in a tutorial.",
+      "skills": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "CI/CD",
+        "Linux",
+        "GCP",
+        "Nginx"
+      ]
+    },
+    {
+      "id": "apis",
+      "title": "APIs & Messaging",
+      "lead": "How your services talk to each other and the world — include the protocols and brokers you've actually built with.",
+      "skills": [
+        "REST APIs",
+        "gRPC",
+        "GraphQL",
+        "Kafka",
+        "RabbitMQ",
+        "WebSockets"
+      ]
+    },
+    {
+      "id": "reliability",
+      "title": "Observability & Reliability",
+      "lead": "Fewer skills, higher signal — pick the ones you can back with a measurable result like an SLA hit or an incident resolved.",
+      "skills": [
+        "Prometheus",
+        "Grafana",
+        "OpenTelemetry",
+        "SLOs / SLAs",
+        "Incident Response",
+        "Structured Logging"
+      ]
+    },
+    {
+      "id": "leadership",
+      "title": "Leadership & Collaboration",
+      "countLabel": "choose 3–5",
+      "lead": "At the senior level these carry real weight — choose 3–5 you can demonstrate through real work examples, not just claim.",
+      "skills": [
+        "Technical Leadership",
+        "Mentoring",
+        "Architecture Decisions",
+        "Code Review",
+        "Cross-team Collaboration",
+        "Stakeholder Management"
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Architecture",
+    "types": ["Architecture", "Languages", "Databases", "Infrastructure", "Leadership", "All"],
+    "levels": ["Mid Level", "Senior", "Staff+"],
+    "defaultLevel": "Senior"
+  },
+  "experienceLevels": [
+    {
+      "name": "Mid-Level",
+      "subtitle": "Ship reliable services",
+      "filled": 1,
+      "skills": ["REST APIs", "PostgreSQL", "Docker", "Testing", "CI/CD", "Cloud Basics"]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Own systems & scale",
+      "filled": 2,
+      "skills": [
+        "System Design",
+        "Distributed Systems",
+        "Microservices",
+        "Performance Tuning",
+        "Kubernetes",
+        "Observability"
+      ]
+    },
+    {
+      "name": "Staff+",
+      "subtitle": "Set direction across teams",
+      "filled": 3,
+      "skills": [
+        "Platform Architecture",
+        "Technical Strategy",
+        "Cross-team Leadership",
+        "Mentoring",
+        "Reliability Engineering",
+        "Technical Roadmapping"
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Go", "PostgreSQL", "Kafka", "Kubernetes", "AWS", "System Design"],
+      "note": "A tight, scannable list of your strongest, most relevant tools — not everything you've touched."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Senior Backend Engineer with 8+ years designing ==distributed systems== and ==microservices== at scale, focused on ==reliability== and mentoring engineering teams.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and focus."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Cut p99 API latency by 40% by ==redesigning the caching layer with Redis== and ==introducing async processing with Kafka==.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "Microservices",
+      "better": "Microservices — service boundaries, event-driven design, resilience patterns"
+    },
+    {
+      "basic": "PostgreSQL",
+      "better": "PostgreSQL — indexing, query optimization, replication and partitioning"
+    },
+    {
+      "basic": "AWS",
+      "better": "AWS (ECS, Lambda, RDS, SQS) with Terraform-managed infrastructure"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Looking for a senior backend engineer experienced with ==distributed systems==, ==Go or Java==, ==PostgreSQL==, ==Kafka==, and ==Kubernetes==, who can mentor engineers and own architecture decisions.\"",
+    "prioritizedSkills": [
+      "Distributed Systems",
+      "Go / Java",
+      "PostgreSQL",
+      "Kafka",
+      "Kubernetes",
+      "Technical Leadership"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing every technology you've ever touched.",
+      "detail": "A wall of 50 tools reads as noise. Curate to what you can defend at senior depth."
+    },
+    {
+      "title": "Reading like a mid-level resume.",
+      "detail": "Senior roles are hired on system design, scale and impact — not a longer tool list. Lead with architecture and outcomes."
+    },
+    {
+      "title": "Claiming scale you can't quantify.",
+      "detail": "\"Built scalable systems\" is empty. Attach numbers — RPS, latency, data volume, uptime."
+    },
+    {
+      "title": "Listing skills you can't discuss in an interview.",
+      "detail": "Every skill on the page is fair game for deep-dive and system-design questions."
+    },
+    {
+      "title": "Omitting leadership and mentoring.",
+      "detail": "At senior level, evidence of mentoring, code review and cross-team work is expected, not optional."
+    },
+    {
+      "title": "Including outdated or irrelevant technologies.",
+      "detail": "A stack that stopped at SOAP and monoliths signals you haven't kept current."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For senior backend roles these are assumed or too junior to earn space — including them dilutes your stronger signals. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Word",
+      "Email",
+      "HTML / CSS",
+      "Basic computer skills",
+      "Typing",
+      "Windows / macOS"
+    ]
+  },
+  "related": [
+    "backend-developer",
+    "software-engineer",
+    "full-stack-developer",
+    "devops-engineer",
+    "frontend-developer"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a senior backend engineer put on a resume?",
+      "a": "Aim for 12–18 well-chosen skills. Enough to cover architecture, your core language, databases, infrastructure and the specific technologies a job asks for — but curated to what you can discuss in depth. At the senior level, a strong system-design and leadership story matters more than a long tool list."
+    },
+    {
+      "q": "What are the most important senior backend engineer skills?",
+      "a": "System design and distributed systems are the non-negotiable senior differentiators, alongside a primary backend language (Go, Java, Python or Node.js) and a solid database story. Beyond those, employers look for microservices, messaging (Kafka or RabbitMQ), cloud and containers (AWS, Docker, Kubernetes), observability, and evidence of technical leadership and mentoring."
+    },
+    {
+      "q": "What separates a senior backend resume from a mid-level one?",
+      "a": "Scope and impact. Mid-level resumes list what you can build; senior resumes show what you've owned — systems designed for scale, decisions you drove, incidents you resolved, and engineers you mentored. Lead with architecture and quantified outcomes rather than a longer list of frameworks."
+    },
+    {
+      "q": "Should I list a programming language or a framework first?",
+      "a": "Lead with the language you're strongest in, then the frameworks you've shipped production services with. \"Go (gRPC, concurrency, profiling)\" or \"Java (Spring Boot, JVM tuning)\" signals far more depth than the bare name, and mirrors how backend job descriptions are written."
+    },
+    {
+      "q": "Do senior backend engineers need to list cloud and DevOps skills?",
+      "a": "Yes. Senior backend roles increasingly expect ownership beyond application code — cloud (AWS or GCP), containers and orchestration (Docker, Kubernetes), infrastructure as code (Terraform), and CI/CD. List the ones you genuinely operate, and back the important ones with a result in your experience."
+    },
+    {
+      "q": "How do I tailor backend skills to a job description?",
+      "a": "Read the posting and note the specific skills it names — language, databases, messaging, cloud. Mirror those in your own true words and move them toward the top of your skills section. Applicant tracking systems rank you partly on how well your resume echoes the job's language, so relevant, honest overlap matters."
+    }
+  ]
+}

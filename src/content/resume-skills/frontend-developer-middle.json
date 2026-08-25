@@ -1,0 +1,66 @@
+{
+  "status": "draft",
+  "profession": {
+    "name": "Middle Frontend Developer",
+    "shortName": "Middle Frontend",
+    "category": "Software Engineering",
+    "family": "frontend-developer",
+    "familyName": "Frontend Developer",
+    "level": "mid",
+    "order": 2
+  },
+  "seo": {
+    "title": "Middle Frontend Developer Resume Skills: Ship With Quality & Structure | Hirime",
+    "description": "The mid-level frontend developer skills that matter on a resume in 2026 — TypeScript, testing, state management and performance, with real examples. Free AI skill generator."
+  },
+  "hero": {
+    "title": "Middle Frontend Developer Resume Skills: *ship with quality & structure*",
+    "lede": "Past the fundamentals, a mid-level frontend developer is trusted to ship features that stay working. These are the skills that show you write typed, tested, well-structured code — and can own a feature end to end.",
+    "featuredSkills": [
+      "TypeScript",
+      "React",
+      "Testing",
+      "State Management",
+      "REST APIs",
+      "Component Architecture",
+      "Performance",
+      "Code Review"
+    ],
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a mid-level frontend developer put on a resume?",
+    "answer": "On top of the fundamentals, a middle frontend developer is expected to write typed, tested, maintainable code. Lead with TypeScript, a solid testing habit, state and data management, and API integration — then show you can own a feature: component architecture, code review, and an eye on performance. Tailor the exact mix to the roles you're targeting.",
+    "essentials": [
+      "TypeScript",
+      "React",
+      "Testing",
+      "State Management",
+      "REST APIs",
+      "Component Architecture",
+      "Performance",
+      "Code Review"
+    ]
+  },
+  "generator": {
+    "defaultLevel": "Mid Level"
+  },
+  "faq": [
+    {
+      "q": "What separates a mid-level frontend resume from a junior one?",
+      "a": "Autonomy and quality. Junior resumes prove you know the fundamentals; mid-level resumes show you ship features that stay working — typed with TypeScript, covered by tests, structured into reusable components, and integrated with real APIs. Back each with a bullet where you owned the work end to end."
+    },
+    {
+      "q": "What are the most important mid-level frontend developer skills?",
+      "a": "Beyond HTML, CSS, JavaScript and React, employers look for TypeScript, a real testing discipline (unit and integration), state and data management, API integration, component architecture, and awareness of performance. Code review and collaboration start to matter as much as raw output."
+    },
+    {
+      "q": "How many skills should a mid-level frontend resume list?",
+      "a": "Around 12–16 curated skills. Enough to cover your core stack plus testing, TypeScript and the specific technologies a role names — but every one should be defensible in an interview. Depth you can discuss beats a long list of tools you've only touched once."
+    },
+    {
+      "q": "Should a mid-level frontend developer list soft skills?",
+      "a": "Yes, in context. At this stage, code review, collaboration and ownership are real signals — prove them with a bullet like \"Reviewed PRs and mentored a junior on component patterns\" rather than listing \"teamwork\" on its own."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+---
+interface Props {
+  categories: { id: string; title: string }[];
+}
+
+const { categories } = Astro.props;
+---
+
+<div class="cat-nav" id="categories">
+  <div class="container cat-nav-inner">
+    {categories.map((c) => (
+      <a href={`#c-${c.id}`}>{c.title}</a>
+    ))}
+  </div>
+</div>

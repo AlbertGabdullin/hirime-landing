@@ -1,0 +1,66 @@
+{
+  "status": "draft",
+  "profession": {
+    "name": "Junior Frontend Developer",
+    "shortName": "Junior Frontend",
+    "category": "Software Engineering",
+    "family": "frontend-developer",
+    "familyName": "Frontend Developer",
+    "level": "junior",
+    "order": 2
+  },
+  "seo": {
+    "title": "Junior Frontend Developer Resume Skills: What to List With Little Experience | Hirime",
+    "description": "The frontend developer skills that get juniors hired in 2026 — the fundamentals to lead with, what to skip, and how to prove them with projects. Free AI skill generator."
+  },
+  "hero": {
+    "title": "Junior Frontend Developer Resume Skills: *the fundamentals* that get you hired",
+    "lede": "With little or no commercial experience, depth in the basics beats a long tool list. These are the skills hiring managers expect from a junior frontend developer — and how to back each one with a project.",
+    "featuredSkills": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Git",
+      "Responsive Design",
+      "Semantic HTML",
+      "REST APIs"
+    ],
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a junior frontend developer put on a resume?",
+    "answer": "Lead with the fundamentals you can demonstrate — HTML, CSS and JavaScript — plus a framework you've built something real in (usually React), version control with Git, and responsive design. At the junior level, employers care less about breadth and more about proof: back each skill with a project, a course build, or an open-source contribution.",
+    "essentials": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Git",
+      "Responsive Design",
+      "Semantic HTML",
+      "Problem Solving"
+    ]
+  },
+  "generator": {
+    "defaultLevel": "Entry Level"
+  },
+  "faq": [
+    {
+      "q": "What skills should a junior frontend developer include with no experience?",
+      "a": "Focus on the fundamentals you can actually demonstrate: HTML, CSS, JavaScript, a framework like React, Git, and responsive design. Back each with a portfolio project, a bootcamp build, or an open-source contribution. At entry level, depth in the basics and evidence you can ship beats a long list of tools you've only tried once."
+    },
+    {
+      "q": "How many skills should a junior frontend resume list?",
+      "a": "Around 8–12 well-chosen skills. Enough to cover the fundamentals and the specific technologies a job asks for, but curated to what you can discuss in an interview. A junior resume padded with 30 tools reads as inexperience, not range."
+    },
+    {
+      "q": "Do I need to know React to get a junior frontend job?",
+      "a": "Not always, but a modern framework helps — React is the most in-demand and a frequent ATS keyword. Solid vanilla JavaScript, HTML and CSS come first; a framework you've built a real project in is the strongest next signal. Match the framework to the jobs you're targeting."
+    },
+    {
+      "q": "Should a junior frontend developer list soft skills?",
+      "a": "Yes, but show them in context rather than as a generic list. \"Collaborated with a designer to ship a responsive landing page\" proves communication far better than the word \"communication\" on its own. Pick a couple you can evidence in a project bullet."
+    }
+  ]
+}

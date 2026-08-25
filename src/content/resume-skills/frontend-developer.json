@@ -1,0 +1,405 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Frontend Developer",
+    "shortName": "Frontend",
+    "category": "Software Engineering",
+    "family": "frontend-developer",
+    "familyName": "Frontend Developer",
+    "order": 2
+  },
+  "seo": {
+    "title": "Frontend Developer Resume Skills: 40+ Skills for Your Resume | Hirime",
+    "description": "The frontend developer skills that matter on a resume in 2026 — by category and experience level, with real resume examples. Generate personalized skills with AI, free."
+  },
+  "hero": {
+    "title": "Frontend Developer Resume Skills: *40+ skills* for your resume",
+    "lede": "The skills hiring managers and ATS actually scan for in 2026 — organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Testing",
+      "REST APIs",
+      "Performance Optimization",
+      "Responsive Design"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a frontend developer put on a resume?",
+    "answer": "Lead with the fundamentals every team expects — JavaScript, TypeScript, HTML and CSS — then your primary framework (usually React), plus proof you can ship quality: testing, version control, API integration and performance. Tailor the exact mix to the job you're targeting.",
+    "essentials": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "HTML5",
+      "CSS3",
+      "Git",
+      "REST APIs",
+      "Testing",
+      "Responsive Design",
+      "Performance"
+    ]
+  },
+  "categories": [
+    {
+      "id": "languages",
+      "title": "Languages & Markup",
+      "lead": "The non-negotiable foundation. List the ones you use confidently — add depth in parentheses where you can, e.g. “JavaScript (ES6+)”.",
+      "skills": [
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3",
+        { "label": "TypeScript", "tier": "mid" },
+        { "label": "Sass / SCSS", "tier": "mid" },
+        "JSON",
+        { "label": "Less", "tier": "mid" },
+        { "label": "Regular Expressions", "tier": "mid" },
+        { "label": "WebAssembly", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "Frameworks & Meta-frameworks",
+      "lead": "Include your primary framework plus the libraries you’ve actually shipped with — not everything you’ve read about.",
+      "skills": [
+        "React",
+        { "label": "Next.js", "tier": "mid" },
+        { "label": "Vue.js", "tier": "mid" },
+        { "label": "Nuxt", "tier": "mid" },
+        { "label": "Angular", "tier": "mid" },
+        { "label": "Svelte", "tier": "mid" },
+        { "label": "SvelteKit", "tier": "senior" },
+        { "label": "Astro", "tier": "mid" },
+        { "label": "Remix", "tier": "senior" },
+        { "label": "SolidJS", "tier": "senior" },
+        { "label": "Preact", "tier": "senior" },
+        { "label": "Qwik", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "styling",
+      "title": "Styling & UI",
+      "lead": "Show the styling approach and component libraries you build with day to day.",
+      "skills": [
+        "Responsive Design",
+        "Flexbox",
+        "CSS Grid",
+        "Tailwind CSS",
+        { "label": "CSS Modules", "tier": "mid" },
+        { "label": "styled-components", "tier": "mid" },
+        { "label": "Emotion", "tier": "mid" },
+        { "label": "PostCSS", "tier": "mid" },
+        { "label": "Material UI (MUI)", "tier": "mid" },
+        { "label": "shadcn/ui", "tier": "mid" },
+        { "label": "Chakra UI", "tier": "mid" },
+        { "label": "Bootstrap", "tier": "mid" },
+        { "label": "Radix UI", "tier": "senior" },
+        { "label": "Framer Motion", "tier": "mid" },
+        { "label": "CSS Animations", "tier": "mid" },
+        { "label": "Design Systems", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "state",
+      "title": "State & Data Management",
+      "lead": "List the state and data-fetching tools you’ve used on real projects, not just tried.",
+      "skills": [
+        { "label": "React Hooks", "tier": "mid" },
+        { "label": "Context API", "tier": "mid" },
+        { "label": "Redux Toolkit", "tier": "mid" },
+        { "label": "Zustand", "tier": "mid" },
+        { "label": "TanStack Query", "tier": "mid" },
+        { "label": "SWR", "tier": "mid" },
+        { "label": "Jotai", "tier": "senior" },
+        { "label": "Recoil", "tier": "senior" },
+        { "label": "MobX", "tier": "senior" },
+        { "label": "XState", "tier": "senior" },
+        { "label": "Apollo Client", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "apis",
+      "title": "APIs & Integration",
+      "lead": "How your UI talks to the backend — include the protocols and clients you’ve integrated.",
+      "skills": [
+        "REST APIs",
+        "Fetch API",
+        { "label": "Axios", "tier": "mid" },
+        { "label": "GraphQL", "tier": "mid" },
+        { "label": "WebSockets", "tier": "mid" },
+        { "label": "OAuth / JWT", "tier": "mid" },
+        { "label": "tRPC", "tier": "senior" },
+        { "label": "Server-Sent Events", "tier": "senior" },
+        { "label": "Browser APIs", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Build Tools & Tooling",
+      "lead": "List the tools you genuinely use day to day — skip anything you’ve only tried once.",
+      "skills": [
+        "Git",
+        "GitHub",
+        "npm",
+        "Chrome DevTools",
+        "Figma",
+        "ESLint",
+        "Prettier",
+        { "label": "Vite", "tier": "mid" },
+        { "label": "Webpack", "tier": "mid" },
+        { "label": "pnpm", "tier": "mid" },
+        { "label": "Babel", "tier": "mid" },
+        { "label": "Storybook", "tier": "mid" },
+        { "label": "GitLab", "tier": "mid" },
+        { "label": "Rollup", "tier": "senior" },
+        { "label": "esbuild", "tier": "senior" },
+        { "label": "Turbopack", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "Testing & Quality",
+      "lead": "Even one or two of these signals that you ship code that stays working — add the ones you’ve used on real projects.",
+      "skills": [
+        { "label": "Unit Testing", "tier": "mid" },
+        { "label": "Jest", "tier": "mid" },
+        { "label": "Vitest", "tier": "mid" },
+        { "label": "React Testing Library", "tier": "mid" },
+        { "label": "Cypress", "tier": "senior" },
+        { "label": "Playwright", "tier": "senior" },
+        { "label": "Integration Testing", "tier": "senior" },
+        { "label": "E2E Testing", "tier": "senior" },
+        { "label": "MSW (Mock Service Worker)", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "Performance & Optimization",
+      "lead": "Higher signal when you can back it with a measurable result — pick the ones you’ve actually moved a number with.",
+      "skills": [
+        { "label": "Core Web Vitals", "tier": "mid" },
+        { "label": "Code Splitting", "tier": "mid" },
+        { "label": "Lazy Loading", "tier": "mid" },
+        { "label": "Memoization", "tier": "mid" },
+        { "label": "Lighthouse", "tier": "mid" },
+        { "label": "Image Optimization", "tier": "mid" },
+        { "label": "Tree Shaking", "tier": "senior" },
+        { "label": "Bundle Analysis", "tier": "senior" },
+        { "label": "Caching Strategies", "tier": "senior" },
+        { "label": "SSR / SSG", "tier": "senior" },
+        { "label": "Web Workers", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "title": "Accessibility",
+      "lead": "Even a couple of these signals you build for everyone — a strong differentiator on a resume.",
+      "skills": [
+        "Semantic HTML",
+        "Color Contrast",
+        { "label": "WCAG", "tier": "mid" },
+        { "label": "ARIA", "tier": "mid" },
+        { "label": "Keyboard Navigation", "tier": "mid" },
+        { "label": "Screen Reader Support", "tier": "senior" },
+        { "label": "Focus Management", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture & Practices",
+      "lead": "The judgment skills that grow with seniority — claim the ones you can defend with real decisions.",
+      "skills": [
+        { "label": "Component Architecture", "tier": "mid" },
+        { "label": "Clean Code", "tier": "mid" },
+        { "label": "Progressive Web Apps (PWA)", "tier": "mid" },
+        { "label": "SEO Fundamentals", "tier": "mid" },
+        { "label": "Design Patterns", "tier": "senior" },
+        { "label": "Micro-frontends", "tier": "senior" },
+        { "label": "Monorepos", "tier": "senior" },
+        { "label": "SOLID Principles", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can demonstrate through real work examples, not just claim — prove them in your experience bullets.",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Attention to Detail",
+        "Adaptability",
+        "Collaboration",
+        { "label": "Code Review", "tier": "mid" },
+        { "label": "Agile / Scrum", "tier": "mid" },
+        { "label": "Ownership", "tier": "senior" },
+        { "label": "Mentoring", "tier": "senior" },
+        { "label": "Technical Leadership", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Frameworks",
+    "types": ["Frameworks", "Styling", "State Management", "Testing", "Performance", "Soft Skills", "All"],
+    "levels": ["Entry Level", "Mid Level", "Senior"],
+    "defaultLevel": "Mid Level"
+  },
+  "experienceLevels": [
+    {
+      "name": "Entry Level",
+      "subtitle": "Build the fundamentals",
+      "filled": 1,
+      "skills": ["HTML", "CSS", "JavaScript", "React", "Git", "Responsive Design"]
+    },
+    {
+      "name": "Mid-Level",
+      "subtitle": "Ship with quality & structure",
+      "filled": 2,
+      "skills": [
+        "TypeScript",
+        "Testing",
+        "State Management",
+        "Performance Optimization",
+        "API Integration",
+        "Component Architecture"
+      ]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Own systems & people",
+      "filled": 3,
+      "skills": [
+        "Frontend Architecture",
+        "System Design",
+        "Performance Strategy",
+        "Mentoring",
+        "Technical Leadership",
+        "Cross-team Collaboration"
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["React", "TypeScript", "Next.js", "Jest", "Playwright", "Tailwind CSS"],
+      "note": "A tight, scannable list of your strongest, most relevant tools — not everything you've touched."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Frontend Developer with 5+ years building scalable ==React== and ==TypeScript== applications, focused on ==performance== and accessible UI.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and focus."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Improved application rendering performance by 35% through ==React component optimization== and ==code splitting==.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "React",
+      "better": "React — Hooks, component architecture, performance optimization"
+    },
+    {
+      "basic": "JavaScript",
+      "better": "JavaScript ES6+, asynchronous programming, browser APIs"
+    },
+    {
+      "basic": "Testing",
+      "better": "Unit and integration testing with Vitest and React Testing Library"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Looking for a frontend developer experienced with ==React==, ==TypeScript==, ==REST APIs==, ==automated testing==, and ==performance optimization==.\"",
+    "prioritizedSkills": [
+      "React",
+      "TypeScript",
+      "REST APIs",
+      "Automated Testing",
+      "Performance Optimization"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing every technology you've ever touched.",
+      "detail": "A wall of 40 tools reads as noise. Curate to what you can defend."
+    },
+    {
+      "title": "Adding generic computer skills.",
+      "detail": "\"Microsoft Office\" and \"email\" are assumed and waste prime space."
+    },
+    {
+      "title": "Listing skills you can't discuss in an interview.",
+      "detail": "Every skill on the page is fair game for questions."
+    },
+    {
+      "title": "Copying every keyword from the job description.",
+      "detail": "Keyword-stuffing is transparent to recruiters and often to ATS too."
+    },
+    {
+      "title": "Including outdated or irrelevant technologies.",
+      "detail": "jQuery-only or Flash signals a stack you haven't refreshed."
+    },
+    {
+      "title": "Listing skills you never demonstrate in your experience.",
+      "detail": "Back each headline skill with a bullet that proves it."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern frontend roles these are assumed — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Word",
+      "Email",
+      "Internet",
+      "Basic computer skills",
+      "Typing",
+      "Windows / macOS"
+    ]
+  },
+  "related": [
+    "software-engineer",
+    "full-stack-developer",
+    "backend-developer",
+    "web-developer",
+    "ui-developer"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a frontend developer put on a resume?",
+      "a": "Aim for 10–15 well-chosen skills. Enough to cover the fundamentals and the specific technologies a job asks for, but curated to what you can actually discuss in an interview. A wall of 40 tools reads as noise and dilutes your strongest signals."
+    },
+    {
+      "q": "What are the most important frontend developer skills?",
+      "a": "JavaScript, TypeScript, HTML and CSS are the non-negotiable foundation, followed by a primary framework (usually React). Beyond those, employers look for testing, version control with Git, API integration, responsive design, and performance optimization."
+    },
+    {
+      "q": "Should frontend developers list soft skills?",
+      "a": "Yes, but sparingly and in context. Rather than a generic \"communication\", show it in a work-experience bullet — collaborating with designers and product managers to ship a feature. A few contextual soft skills beat a long list of generic ones."
+    },
+    {
+      "q": "Should I list React as a resume skill?",
+      "a": "If you use it, absolutely — React is one of the most in-demand frontend skills and a frequent ATS keyword. Make it more specific where you can: \"React (Hooks, component architecture, performance optimization)\" signals far more depth than \"React\" alone."
+    },
+    {
+      "q": "What skills should a junior frontend developer include?",
+      "a": "Focus on the fundamentals you can demonstrate: HTML, CSS, JavaScript, a framework like React, Git, and responsive design. Back each with a project or bullet. At entry level, depth in the basics beats a long list of tools you've only tried once."
+    },
+    {
+      "q": "How do I tailor frontend skills to a job description?",
+      "a": "Read the posting and note the specific skills it names. Mirror those — in your own true words — and move them toward the top of your skills section. Applicant tracking systems rank you partly on how well your resume echoes the job's language, so relevant, honest overlap matters."
+    }
+  ]
+}

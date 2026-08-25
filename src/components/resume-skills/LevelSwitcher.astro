@@ -1,0 +1,40 @@
+---
+interface LevelLink {
+  label: string;
+  tone: 'all' | 'junior' | 'mid' | 'senior';
+  href: string;
+  active: boolean;
+}
+interface Props {
+  links: LevelLink[];
+}
+
+const { links } = Astro.props;
+---
+
+{
+  links.length > 1 && (
+    <div class="rs-level-switch">
+      <div class="container">
+        <div class="lsw-inner">
+          <span class="lsw-label">Tailor to your level</span>
+          <div class="lsw-track" role="tablist">
+            {links.map((l) =>
+              l.active ? (
+                <span class={`lsw-btn on tone-${l.tone}`} aria-current="page">
+                  <span class="lsw-dot" aria-hidden="true" />
+                  {l.label}
+                </span>
+              ) : (
+                <a class={`lsw-btn tone-${l.tone}`} href={l.href}>
+                  <span class="lsw-dot" aria-hidden="true" />
+                  {l.label}
+                </a>
+              ),
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

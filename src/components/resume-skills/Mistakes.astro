@@ -1,0 +1,25 @@
+---
+interface Props {
+  mistakes: { title: string; detail: string }[];
+}
+
+const { mistakes } = Astro.props;
+const roman = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x'];
+---
+
+<section style="background: var(--bg-card);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><span class="spark">✦</span> Avoid these</span>
+      <h2>Common resume skills mistakes</h2>
+    </div>
+    <div class="mist">
+      {mistakes.map((m, i) => (
+        <div class="mist-row">
+          <span class="mx">{roman[i] ?? i + 1}</span>
+          <div class="mtext"><b>{m.title}</b> <span>{m.detail}</span></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

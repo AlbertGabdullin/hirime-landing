@@ -21,6 +21,9 @@ export const es: Translations = {
     atsCheckerSub: 'Analiza tu currículum en 30 segundos',
     bulletGenerator: 'Generador de Viñetas para CV',
     bulletGeneratorSub: 'Convierte tu trabajo en viñetas sólidas',
+    resources: 'Recursos',
+    resumeSkills: 'Habilidades para CV',
+    resumeSkillsSub: 'Habilidades por profesión, con ejemplos',
   },
   hero: {
     prefix: 'El currículum que te contrata como',

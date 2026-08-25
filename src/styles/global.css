@@ -3,6 +3,52 @@
 /* Class-based dark mode override */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ─── shadcn/ui semantic-token bridge ───────────────────────────────────
+   Map Tailwind's semantic color utilities (bg-primary, text-muted-foreground,
+   border-border, ring-ring, …) straight onto the existing site tokens so
+   shadcn primitives inherit the live Hirime look. `inline` makes each utility
+   emit the var() at the use site, so `.dark` overrides stay reactive.
+   Note: Tailwind's `--color-accent` is deliberately mapped to a SUBTLE surface
+   (--bg-secondary), NOT the brand color — the brand lives in `--color-primary`
+   (= --accent). This avoids the accent-name collision. */
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --color-card: var(--bg-card);
+  --color-card-foreground: var(--text-primary);
+  --color-popover: var(--bg-card);
+  --color-popover-foreground: var(--text-primary);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--accent-fg);
+  --color-secondary: var(--bg-secondary);
+  --color-secondary-foreground: var(--text-primary);
+  --color-muted: var(--bg-secondary);
+  --color-muted-foreground: var(--text-muted);
+  --color-accent: var(--bg-secondary);
+  --color-accent-foreground: var(--text-primary);
+  --color-destructive: #c43a3a;
+  --color-destructive-foreground: #ffffff;
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: var(--accent);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-accordion-down: accordion-down 0.3s ease-out;
+  --animate-accordion-up: accordion-up 0.3s ease-out;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
 /* ─── Theme tokens ─────────────────────────────────────────────────── */
 :root {
   --bg-primary:    #FEF8FB;

@@ -1,0 +1,45 @@
+---
+interface Level {
+  name: string;
+  subtitle: string;
+  filled: number;
+  skills: string[];
+}
+interface Props {
+  professionName: string;
+  levels: Level[];
+}
+
+const { professionName, levels } = Astro.props;
+---
+
+<section id="levels">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow"><span class="spark">✦</span> Progression</span>
+      <h2>{professionName} skills by experience level</h2>
+      <p>As you grow, the emphasis shifts from building features to owning systems and people. Here's what belongs on your resume at each stage.</p>
+    </div>
+    <div class="levels">
+      {levels.map((lvl, i) => (
+        <div class={`lvl l${i + 1}`}>
+          <div class="lvl-top">
+            <div class="lvl-bars">
+              {[0, 1, 2].map((b) => (
+                <i class={b < lvl.filled ? 'f' : ''}></i>
+              ))}
+            </div>
+          </div>
+          <h3>{lvl.name}</h3>
+          <div class="lvl-sub">{lvl.subtitle}</div>
+          <div class="lvl-skills">
+            {lvl.skills.map((s) => (
+              <div class="ls"><span class="d"></span>{s}</div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="lvl-flow"><span>Foundational</span><span class="ln"></span><span>Ownership &amp; scope</span></div>
+  </div>
+</section>

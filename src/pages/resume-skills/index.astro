@@ -1,0 +1,268 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import FinalCta from '../../components/resume-skills/FinalCta.astro';
+import { en as base } from '../../i18n/en';
+
+import '../../styles/resume-skills.css';
+
+const pages = await getCollection('resumeSkills', ({ data }) => data.status !== 'draft');
+
+const LEVEL_LABEL = { junior: 'Junior', mid: 'Middle', senior: 'Senior' } as const;
+const LEVEL_ORDER = { junior: 1, mid: 2, senior: 3 } as const;
+
+// Order of category blocks on the page; anything else falls into "More resume skills".
+const CATEGORY_ORDER = [
+  'Software Engineering',
+  'Infrastructure & Cloud',
+  'Data & AI',
+  'Quality & Security',
+];
+const FALLBACK_CATEGORY = 'More resume skills';
+
+// Hub pages (no `level`) are the primary cards; level variants surface as pills on them.
+const hubs = pages.filter((p) => !p.data.profession.level);
+
+const levelPagesForFamily = (family?: string) =>
+  !family
+    ? []
+    : pages
+        .filter((p) => p.data.profession.family === family && p.data.profession.level)
+        .sort(
+          (a, b) => LEVEL_ORDER[a.data.profession.level!] - LEVEL_ORDER[b.data.profession.level!],
+        )
+        .map((p) => ({ label: LEVEL_LABEL[p.data.profession.level!], href: `/resume-skills/${p.id}` }));
+
+const cards = hubs.map((p) => ({
+  slug: p.id,
+  name: p.data.profession.familyName ?? p.data.profession.name,
+  category: p.data.profession.category ?? FALLBACK_CATEGORY,
+  order: p.data.profession.order ?? 999,
+  lede: p.data.quickAnswer.answer,
+  skills: p.data.hero.featuredSkills.slice(0, 6),
+  levels: levelPagesForFamily(p.data.profession.family),
+}));
+
+const categoryNames = [
+  ...CATEGORY_ORDER.filter((c) => cards.some((card) => card.category === c)),
+  ...[...new Set(cards.map((c) => c.category))]
+    .filter((c) => !CATEGORY_ORDER.includes(c))
+    .sort(),
+];
+
+const groups = categoryNames.map((category) => ({
+  category,
+  cards: cards
+    .filter((c) => c.category === category)
+    .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name)),
+}));
+
+const lang = 'en' as const;
+
+const metaTitle = 'Resume Skills by Profession | Hirime';
+const metaDescription =
+  'Browse resume skills by profession — the skills that matter on a resume, organized by category and experience level, with real examples. Free, no signup.';
+
+const t = {
+  ...base,
+  meta: {
+    title: metaTitle,
+    description: metaDescription,
+    keywords: 'resume skills, skills for resume, resume skills by profession, ATS keywords',
+    ogTitle: metaTitle,
+    ogDescription: metaDescription,
+  },
+} as const;
+
+const canonical = new URL('/resume-skills', Astro.site).href;
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Resume Skills', item: canonical },
+  ],
+};
+
+const itemListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: cards.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: `${c.name} Resume Skills`,
+    url: new URL(`/resume-skills/${c.slug}`, Astro.site).href,
+  })),
+};
+---
+
+<BaseLayout t={t} lang={lang}>
+  <Fragment slot="head">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(itemListJsonLd)} />
+  </Fragment>
+
+  <Navbar t={t.nav} lang={lang} />
+
+  <main class="rs" style="padding-top: 64px;">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow" style="margin-bottom: 18px;"><span class="spark">✦</span> Resume Skills</span>
+        <h1 style="max-width: 760px; margin-bottom: 20px;">
+          The right <span class="serif-em">resume skills</span> for your profession
+        </h1>
+        <p class="lede" style="max-width: 620px;">
+          Pick your role to see the skills hiring managers and ATS actually scan for — organized by
+          category and experience level, with real examples and a free AI generator.
+        </p>
+      </div>
+    </section>
+
+    {groups.map((group) => (
+      <section style="padding-top: 0;">
+        <div class="container">
+          <div class="section-head" style="margin-bottom: 28px;">
+            <h2 style="font-size: clamp(22px, 2.4vw, 28px);">{group.category}</h2>
+          </div>
+          <div class="prof-grid">
+            {group.cards.map((p) => (
+              <div class="prof-card">
+                <a class="prof-card-main" href={`/resume-skills/${p.slug}`}>
+                  <div class="prof-card-head">
+                    <h3 class="prof-card-title">{p.name}</h3>
+                    <span class="prof-card-ar" aria-hidden="true">→</span>
+                  </div>
+                  <p class="prof-card-lede">{p.lede}</p>
+                  <div class="pill-row">
+                    {p.skills.map((s) => (
+                      <span class="pill"><span class="pd"></span>{s}</span>
+                    ))}
+                  </div>
+                </a>
+                {p.levels.length > 0 && (
+                  <div class="prof-card-levels">
+                    <span class="prof-card-levels-label">By level</span>
+                    {p.levels.map((lvl) => (
+                      <a class="prof-card-level" href={lvl.href}>{lvl.label}</a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <FinalCta />
+  </main>
+
+  <Footer t={t.footer} lang={lang} />
+</BaseLayout>
+
+<style>
+  .prof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  .prof-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 26px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lgx);
+    background: var(--bg-elev);
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  .prof-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  /* Whole-card link to the hub (stretched over the card) */
+  .prof-card-main {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .prof-card-main::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lgx);
+  }
+  .prof-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .prof-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .prof-card-ar {
+    color: var(--ink-3);
+    font-size: 18px;
+    transition: transform 0.15s, color 0.15s;
+    flex: none;
+  }
+  .prof-card:hover .prof-card-ar {
+    color: var(--accent);
+    transform: translateX(3px);
+  }
+  .prof-card-lede {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink-2);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  /* Per-level links — sit above the stretched card link so they stay clickable */
+  .prof-card-levels {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 4px;
+  }
+  .prof-card-levels-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-family: var(--font-mono);
+  }
+  .prof-card-level {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 11px;
+    border-radius: 999px;
+    border: 1px solid var(--line-2);
+    background: var(--bg);
+    color: var(--ink-2);
+    transition: border-color 0.12s, color 0.12s, background 0.12s;
+  }
+  .prof-card-level:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+</style>

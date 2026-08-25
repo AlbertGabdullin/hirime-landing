@@ -19,6 +19,9 @@ export const en = {
     atsCheckerSub: 'Scan your resume in 30 seconds',
     bulletGenerator: 'Resume Bullet Point Generator',
     bulletGeneratorSub: 'Turn your job into strong bullets',
+    resources: 'Resources',
+    resumeSkills: 'Resume Skills',
+    resumeSkillsSub: 'Skills by profession, with examples',
   },
   hero: {
     prefix: 'The resume that gets you hired as a',

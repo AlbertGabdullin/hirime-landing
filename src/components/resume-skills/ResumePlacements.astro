@@ -1,0 +1,58 @@
+---
+import RichText from './RichText.astro';
+
+interface Placement {
+  title: string;
+  kind: 'skills' | 'summary' | 'bullet';
+  roleLabel: string;
+  skills?: string[];
+  text?: string;
+  note: string;
+}
+interface Props {
+  professionName: string;
+  placements: Placement[];
+}
+
+const { professionName, placements } = Astro.props;
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><span class="spark">✦</span> Placement</span>
+      <h2>Where to put {professionName.toLowerCase()} skills on your resume</h2>
+      <p>Skills shouldn't live in one list at the bottom. Strong resumes weave them through three places — here's each, with a real example.</p>
+    </div>
+    <div class="usage3">
+      {placements.map((p, i) => (
+        <div class="u-card">
+          <div class="u-head"><span class="num">{pad(i + 1)}</span><span class="h">{p.title}</span></div>
+          <div class="u-body">
+            <div class="rz">
+              <div class="rz-role">{p.roleLabel}</div>
+              {p.kind === 'skills' && p.skills && (
+                <div class="rz-skills">
+                  {p.skills.map((s, si) => (
+                    <>
+                      {si > 0 && <span class="dot">·</span>}
+                      <span class="s">{s}</span>
+                    </>
+                  ))}
+                </div>
+              )}
+              {p.kind === 'summary' && p.text && (
+                <div class="rz-sum"><RichText text={p.text} /></div>
+              )}
+              {p.kind === 'bullet' && p.text && (
+                <div class="rz-bullet"><span class="bd"></span><div><RichText text={p.text} /></div></div>
+              )}
+            </div>
+            <div class="u-note">{p.note}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

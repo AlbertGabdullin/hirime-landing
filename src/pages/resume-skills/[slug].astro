@@ -1,0 +1,219 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { en as base } from '../../i18n/en';
+
+import '../../styles/resume-skills.css';
+
+import Hero from '../../components/resume-skills/Hero.astro';
+import LevelSwitcher from '../../components/resume-skills/LevelSwitcher.astro';
+import QuickAnswer from '../../components/resume-skills/QuickAnswer.astro';
+import CatNav from '../../components/resume-skills/CatNav.astro';
+import ExperienceLevels from '../../components/resume-skills/ExperienceLevels.astro';
+import ResumePlacements from '../../components/resume-skills/ResumePlacements.astro';
+import SkillComparison from '../../components/resume-skills/SkillComparison.astro';
+import JobDescriptionMatch from '../../components/resume-skills/JobDescriptionMatch.astro';
+import Mistakes from '../../components/resume-skills/Mistakes.astro';
+import SkillsToSkip from '../../components/resume-skills/SkillsToSkip.astro';
+import RelatedProfessions from '../../components/resume-skills/RelatedProfessions.astro';
+import FinalCta from '../../components/resume-skills/FinalCta.astro';
+import SkillCategories from '../../components/resume-skills/SkillCategories.tsx';
+import SkillGenerator from '../../components/resume-skills/SkillGenerator.tsx';
+import SelectedSkillsTray from '../../components/resume-skills/SelectedSkillsTray.tsx';
+import Faq from '../../components/resume-skills/Faq.tsx';
+import ToasterMount from '../../components/resume-skills/ToasterMount.tsx';
+
+export async function getStaticPaths() {
+  const LEVEL_LABEL = { junior: 'Junior', mid: 'Middle', senior: 'Senior' } as const;
+  const pages = await getCollection('resumeSkills', ({ data }) => data.status !== 'draft');
+
+  // slug -> published page title/href, for resolving related links.
+  const lookup = new Map(
+    pages.map((p) => [
+      p.id,
+      { title: `${p.data.profession.name} Resume Skills`, href: `/resume-skills/${p.id}` },
+    ]),
+  );
+
+  // family slug -> its hub entry (the one without a `level`), source of shared skills.
+  const familyHub = new Map(
+    pages
+      .filter((p) => p.data.profession.family && !p.data.profession.level)
+      .map((p) => [p.data.profession.family as string, p]),
+  );
+
+  const levelOrder = { junior: 1, mid: 2, senior: 3 } as const;
+
+  return pages.map((entry) => {
+    const { family, level } = entry.data.profession;
+
+    const related = (entry.data.related ?? [])
+      .map((slug) => lookup.get(slug))
+      .filter((r): r is { title: string; href: string } => Boolean(r));
+
+    // Level pages inherit their skills from the family hub when omitted.
+    const categories = entry.data.categories ?? familyHub.get(family ?? '')?.data.categories ?? [];
+
+    // Cross-linking + on-page switch between the hub and its level variants.
+    const siblings = family
+      ? pages.filter((p) => p.data.profession.family === family)
+      : [];
+    const levelLinks =
+      siblings.length > 1
+        ? [
+            ...(familyHub.has(family ?? '')
+              ? [
+                  {
+                    label: 'All levels',
+                    tone: 'all',
+                    href: `/resume-skills/${familyHub.get(family ?? '')!.id}`,
+                    active: !level,
+                  },
+                ]
+              : []),
+            ...siblings
+              .filter((p) => p.data.profession.level)
+              .sort(
+                (a, b) =>
+                  levelOrder[a.data.profession.level!] - levelOrder[b.data.profession.level!],
+              )
+              .map((p) => ({
+                label: LEVEL_LABEL[p.data.profession.level!],
+                tone: p.data.profession.level!,
+                href: `/resume-skills/${p.id}`,
+                active: p.id === entry.id,
+              })),
+          ]
+        : [];
+
+    return {
+      params: { slug: entry.id },
+      props: {
+        data: entry.data,
+        related,
+        categories,
+        activeTier: level ?? null,
+        tiered: Boolean(family),
+        levelLinks,
+      },
+    };
+  });
+}
+
+const { data, related, categories, activeTier, tiered, levelLinks } = Astro.props;
+const { profession, seo, hero, quickAnswer, generator } = data;
+const name = profession.name;
+
+// ── Derived SEO (overridable via `seo` in JSON) ─────────────────────────
+const metaTitle = seo.title ?? `${name} Resume Skills | Hirime`;
+const metaDescription =
+  seo.description ??
+  `The ${name.toLowerCase()} skills that matter on a resume — by category and experience level, with real examples. Generate a tailored set with AI, free.`;
+const metaKeywords =
+  seo.keywords ??
+  `${name.toLowerCase()} resume skills, ${name.toLowerCase()} skills resume, resume skills, ATS keywords`;
+
+const t = {
+  ...base,
+  meta: {
+    title: metaTitle,
+    description: metaDescription,
+    keywords: metaKeywords,
+    ogTitle: seo.ogTitle ?? metaTitle,
+    ogDescription: seo.ogDescription ?? metaDescription,
+  },
+} as const;
+
+const lang = 'en' as const;
+const canonical = new URL(`/resume-skills/${Astro.params.slug}`, Astro.site).href;
+
+// ── Structured data ─────────────────────────────────────────────────────
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: data.faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Resume Skills', item: new URL('/resume-skills', Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: `${name} Resume Skills`, item: canonical },
+  ],
+};
+---
+
+<BaseLayout t={t} lang={lang}>
+  <Fragment slot="head">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  </Fragment>
+
+  <Navbar t={t.nav} lang={lang} />
+
+  <main class="rs" style="padding-top: 64px;">
+    <Hero professionName={name} hero={hero} />
+    <LevelSwitcher links={levelLinks} />
+    <QuickAnswer quickAnswer={quickAnswer} />
+
+    <CatNav categories={categories} />
+    <section style="padding-top: 0;">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="spark">✦</span> The full list</span>
+          <h2>Essential {name.toLowerCase()} skills</h2>
+          <p>Tap any skill to select it, copy one, or grab a whole category — then paste straight into your resume.</p>
+        </div>
+        <SkillCategories client:visible categories={categories} tiered={tiered} defaultTier={activeTier} />
+      </div>
+    </section>
+
+    <section id="generator" style="background: var(--bg-card);">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow"><span class="spark">✦</span> Interactive · free</span>
+          <h2>Generate {name.toLowerCase()} skills with <span class="serif-em">AI</span></h2>
+          <p>Pick a focus and your level — we'll suggest a tailored, ATS-ready skill set you can select from and copy straight into your resume.</p>
+        </div>
+        <SkillGenerator client:visible profession={name} config={generator} />
+      </div>
+    </section>
+
+    {data.experienceLevels && <ExperienceLevels professionName={name} levels={data.experienceLevels} />}
+    {data.placements && <ResumePlacements professionName={name} placements={data.placements} />}
+    {data.comparisons && <SkillComparison comparisons={data.comparisons} />}
+    {data.jobDescriptionExample && <JobDescriptionMatch jobDescriptionExample={data.jobDescriptionExample} />}
+    {data.mistakes && <Mistakes mistakes={data.mistakes} />}
+    {data.skillsToAvoid && <SkillsToSkip skillsToAvoid={data.skillsToAvoid} />}
+
+    <RelatedProfessions related={related} />
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow"><span class="spark">✦</span> FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <Faq client:visible items={data.faq} />
+      </div>
+    </section>
+
+    <FinalCta />
+  </main>
+
+  <Footer t={t.footer} lang={lang} />
+
+  <SelectedSkillsTray client:idle />
+  <ToasterMount client:idle />
+</BaseLayout>

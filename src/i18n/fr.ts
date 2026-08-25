@@ -21,6 +21,9 @@ export const fr: Translations = {
     atsCheckerSub: "Analysez votre CV en 30 secondes",
     bulletGenerator: "G\u00e9n\u00e9rateur de puces pour CV",
     bulletGeneratorSub: "Transformez votre poste en puces percutantes",
+    resources: "Ressources",
+    resumeSkills: "Comp\u00e9tences pour CV",
+    resumeSkillsSub: "Comp\u00e9tences par m\u00e9tier, avec exemples",
   },
   hero: {
     prefix: "Le CV qui vous fait recruter comme",

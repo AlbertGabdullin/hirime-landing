@@ -1,0 +1,27 @@
+---
+interface Props {
+  skillsToAvoid: {
+    heading?: string;
+    description?: string;
+    skills: string[];
+  };
+}
+
+const { skillsToAvoid } = Astro.props;
+---
+
+<section style="padding-top: 80px;">
+  <div class="container">
+    <div class="skip">
+      <div>
+        <h3>{skillsToAvoid.heading ?? "Skills you usually don't need to list"}</h3>
+        {skillsToAvoid.description && <p>{skillsToAvoid.description}</p>}
+      </div>
+      <div class="skip-pills">
+        {skillsToAvoid.skills.map((s) => (
+          <span class="skip-pill">{s}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

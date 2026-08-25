@@ -25,6 +25,15 @@ const tools = [
     sub: t.bulletGeneratorSub,
   },
 ];
+
+const resources = [
+  {
+    href: '/resume-skills',
+    emoji: '🧩',
+    title: t.resumeSkills,
+    sub: t.resumeSkillsSub,
+  },
+];
 ---
 
 <nav id="navbar" aria-label="Main navigation">
@@ -58,14 +67,12 @@ const tools = [
       <!-- Desktop nav links -->
       <div class="hidden md:flex items-center gap-1">
         <!-- Free tools dropdown -->
-        <div class="nav-dropdown" id="nav-dropdown">
+        <div class="nav-dropdown">
           <button
             type="button"
             class="btn-ghost dropdown-trigger"
-            id="dropdown-trigger"
             aria-expanded="false"
             aria-haspopup="true"
-            aria-controls="dropdown-menu"
           >
             {t.freeTools}
             <svg
@@ -83,13 +90,50 @@ const tools = [
               <path d="M2 4l3 3 3-3"/>
             </svg>
           </button>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-menu" role="menu">
             {tools.map((tool) => (
               <a href={tool.href} class="dropdown-item" role="menuitem">
                 <span class="dropdown-emoji" aria-hidden="true">{tool.emoji}</span>
                 <span class="dropdown-text">
                   <span class="dropdown-item-title">{tool.title}</span>
                   <span class="dropdown-item-sub">{tool.sub}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Resources dropdown -->
+        <div class="nav-dropdown">
+          <button
+            type="button"
+            class="btn-ghost dropdown-trigger"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            {t.resources}
+            <svg
+              class="dropdown-chevron"
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M2 4l3 3 3-3"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            {resources.map((item) => (
+              <a href={item.href} class="dropdown-item" role="menuitem">
+                <span class="dropdown-emoji" aria-hidden="true">{item.emoji}</span>
+                <span class="dropdown-text">
+                  <span class="dropdown-item-title">{item.title}</span>
+                  <span class="dropdown-item-sub">{item.sub}</span>
                 </span>
               </a>
             ))}
@@ -147,6 +191,14 @@ const tools = [
           <a href={tool.href} class="btn-ghost mobile-tool-link" style="justify-content: flex-start;">
             <span aria-hidden="true" style="margin-right: 0.5rem;">{tool.emoji}</span>
             <span>{tool.title}</span>
+          </a>
+        ))}
+        <div style="height: 0.5rem;"></div>
+        <div class="mobile-section-label">{t.resources}</div>
+        {resources.map((item) => (
+          <a href={item.href} class="btn-ghost mobile-tool-link" style="justify-content: flex-start;">
+            <span aria-hidden="true" style="margin-right: 0.5rem;">{item.emoji}</span>
+            <span>{item.title}</span>
           </a>
         ))}
         <div style="height: 0.5rem;"></div>
@@ -258,22 +310,32 @@ const tools = [
 </style>
 
 <script>
-  // ─── Nav dropdown (Free tools) ───────────────────────────────────────
-  const dropdown = document.getElementById('nav-dropdown');
-  const trigger = document.getElementById('dropdown-trigger');
-  const menu = document.getElementById('dropdown-menu');
+  // ─── Nav dropdowns (Free tools, Resources) ───────────────────────────
+  const dropdowns = Array.from(
+    document.querySelectorAll<HTMLElement>('.nav-dropdown'),
+  );
 
-  if (dropdown && trigger && menu) {
+  dropdowns.forEach((dropdown) => {
+    const trigger = dropdown.querySelector<HTMLElement>('.dropdown-trigger');
+    if (!trigger) return;
+
     let hoverTimeout: number | undefined;
 
-    const open = () => {
-      window.clearTimeout(hoverTimeout);
-      dropdown.classList.add('open');
-      trigger.setAttribute('aria-expanded', 'true');
-    };
     const close = () => {
       dropdown.classList.remove('open');
       trigger.setAttribute('aria-expanded', 'false');
+    };
+    const open = () => {
+      window.clearTimeout(hoverTimeout);
+      // Only one dropdown open at a time.
+      dropdowns.forEach((d) => {
+        if (d !== dropdown) {
+          d.classList.remove('open');
+          d.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+      dropdown.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
     };
     const scheduleClose = () => {
       window.clearTimeout(hoverTimeout);
@@ -286,12 +348,22 @@ const tools = [
     });
     dropdown.addEventListener('mouseenter', open);
     dropdown.addEventListener('mouseleave', scheduleClose);
+  });
 
-    document.addEventListener('click', (e) => {
-      if (!dropdown.contains(e.target as Node)) close();
+  document.addEventListener('click', (e) => {
+    dropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(e.target as Node)) {
+        dropdown.classList.remove('open');
+        dropdown.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+      }
     });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') close();
-    });
-  }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      dropdowns.forEach((dropdown) => {
+        dropdown.classList.remove('open');
+        dropdown.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
 </script>
