@@ -1,0 +1,368 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Data Scientist",
+    "shortName": "Data Scientist",
+    "category": "Data & AI",
+    "family": "data-scientist",
+    "familyName": "Data Scientist",
+    "order": 2
+  },
+  "seo": {
+    "title": "Data Scientist Resume Skills: 100+ for 2026 | Hirime",
+    "description": "Data scientist resume skills for 2026 — the Python, machine learning, SQL, deep learning and MLOps keywords recruiters and ATS scan for, by level.",
+    "keywords": "data scientist resume skills, machine learning resume skills, Python data science skills, deep learning resume skills, MLOps resume skills, data science skills resume, ATS keywords"
+  },
+  "hero": {
+    "title": "Data Scientist Resume Skills: *100+ skills* for your resume",
+    "lede": "The data science skills hiring managers and ATS actually scan for in 2026 — Python, machine learning, statistics, and the deep-learning and MLOps stack behind production models. Organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Python",
+      "Machine Learning",
+      "SQL",
+      "Statistics",
+      "TensorFlow",
+      "PyTorch",
+      "pandas",
+      "scikit-learn",
+      "Deep Learning",
+      "A/B Testing"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a data scientist put on a resume?",
+    "answer": "Lead with the technical foundation every team expects — Python, SQL, and strong statistics — then your machine learning depth: scikit-learn, feature engineering, and model evaluation, plus deep learning where relevant (TensorFlow or PyTorch). Show you can put models to work with data engineering and MLOps, and prove you turn results into business impact through experimentation and communication. Tailor the exact mix to the job.",
+    "essentials": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Statistics",
+      "scikit-learn",
+      "pandas",
+      "A/B Testing",
+      "Data Visualization",
+      "Feature Engineering",
+      "Model Evaluation"
+    ]
+  },
+  "categories": [
+    {
+      "id": "programming",
+      "title": "Programming & Data Wrangling",
+      "lead": "Python and SQL are the non-negotiable base. List the libraries you work in daily, not just the language.",
+      "skills": [
+        "Python",
+        "SQL",
+        "pandas",
+        "NumPy",
+        "Git",
+        { "label": "R", "tier": "mid" },
+        { "label": "Jupyter Notebooks", "tier": "mid" },
+        { "label": "Bash / Command Line", "tier": "mid" },
+        { "label": "Scala", "tier": "senior" },
+        { "label": "Object-Oriented Programming", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "ml",
+      "title": "Machine Learning",
+      "lead": "The core of the role. List the algorithm families and workflow steps you've actually shipped, not just studied.",
+      "skills": [
+        "Machine Learning",
+        { "label": "scikit-learn", "tier": "mid" },
+        { "label": "Supervised Learning", "tier": "mid" },
+        { "label": "Unsupervised Learning", "tier": "mid" },
+        { "label": "Regression", "tier": "mid" },
+        { "label": "Classification", "tier": "mid" },
+        { "label": "Clustering", "tier": "mid" },
+        { "label": "Feature Engineering", "tier": "mid" },
+        { "label": "Model Evaluation", "tier": "mid" },
+        { "label": "Cross-Validation", "tier": "mid" },
+        { "label": "Random Forests", "tier": "mid" },
+        { "label": "Gradient Boosting (XGBoost / LightGBM)", "tier": "senior" },
+        { "label": "Hyperparameter Tuning", "tier": "senior" },
+        { "label": "Ensemble Methods", "tier": "senior" },
+        { "label": "Recommendation Systems", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "dl",
+      "title": "Deep Learning & AI",
+      "lead": "Increasingly expected. List a framework plus the architectures you've built with it.",
+      "skills": [
+        { "label": "Deep Learning", "tier": "mid" },
+        { "label": "Neural Networks", "tier": "mid" },
+        { "label": "TensorFlow", "tier": "mid" },
+        { "label": "PyTorch", "tier": "mid" },
+        { "label": "Keras", "tier": "mid" },
+        { "label": "Natural Language Processing (NLP)", "tier": "senior" },
+        { "label": "Computer Vision", "tier": "senior" },
+        { "label": "CNNs", "tier": "senior" },
+        { "label": "RNNs / LSTMs", "tier": "senior" },
+        { "label": "Transformers", "tier": "senior" },
+        { "label": "Large Language Models (LLMs)", "tier": "senior" },
+        { "label": "Hugging Face", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "stats",
+      "title": "Statistics & Experimentation",
+      "lead": "The reasoning that separates data science from data plumbing. Even a few here signal real rigor.",
+      "skills": [
+        "Statistics",
+        "Probability",
+        { "label": "Hypothesis Testing", "tier": "mid" },
+        { "label": "A/B Testing", "tier": "mid" },
+        { "label": "Experimental Design", "tier": "mid" },
+        { "label": "Regression Analysis", "tier": "mid" },
+        { "label": "Time Series Analysis", "tier": "senior" },
+        { "label": "Bayesian Statistics", "tier": "senior" },
+        { "label": "Linear Algebra", "tier": "senior" },
+        { "label": "Statistical Modeling", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "dataeng",
+      "title": "Data Engineering",
+      "lead": "Getting data to the model is half the job. List the pipeline tools you've worked with.",
+      "skills": [
+        { "label": "ETL", "tier": "mid" },
+        { "label": "Data Pipelines", "tier": "mid" },
+        { "label": "Data Warehousing", "tier": "mid" },
+        { "label": "Apache Spark", "tier": "senior" },
+        { "label": "Apache Airflow", "tier": "senior" },
+        { "label": "dbt", "tier": "senior" },
+        { "label": "Kafka", "tier": "senior" },
+        { "label": "Hadoop", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "viz",
+      "title": "Visualization & BI",
+      "lead": "You have to show the result, not just compute it. List what you present findings in.",
+      "skills": [
+        "Data Visualization",
+        { "label": "Matplotlib", "tier": "mid" },
+        { "label": "Seaborn", "tier": "mid" },
+        { "label": "Plotly", "tier": "mid" },
+        { "label": "Tableau", "tier": "mid" },
+        { "label": "Power BI", "tier": "mid" },
+        { "label": "Dashboards", "tier": "mid" },
+        { "label": "Storytelling with Data", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud & MLOps",
+      "lead": "Where models actually run in production. A strong differentiator — list the platforms you've deployed on.",
+      "skills": [
+        { "label": "AWS", "tier": "mid" },
+        { "label": "Google Cloud Platform (GCP)", "tier": "mid" },
+        { "label": "Azure", "tier": "mid" },
+        { "label": "Docker", "tier": "senior" },
+        { "label": "MLflow", "tier": "senior" },
+        { "label": "Amazon SageMaker", "tier": "senior" },
+        { "label": "Vertex AI", "tier": "senior" },
+        { "label": "MLOps", "tier": "senior" },
+        { "label": "Model Deployment", "tier": "senior" },
+        { "label": "Kubernetes", "tier": "senior" },
+        { "label": "CI/CD for ML", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "bigdata",
+      "title": "Databases & Big Data",
+      "lead": "Where the data lives at scale. List the warehouses and stores you've queried.",
+      "skills": [
+        { "label": "BigQuery", "tier": "mid" },
+        { "label": "Snowflake", "tier": "mid" },
+        { "label": "PostgreSQL", "tier": "mid" },
+        { "label": "Amazon Redshift", "tier": "senior" },
+        { "label": "Databricks", "tier": "senior" },
+        { "label": "Hive", "tier": "senior" },
+        { "label": "NoSQL / MongoDB", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "business",
+      "title": "Analytics & Business Impact",
+      "lead": "What the models are for. The skills that turn a data scientist into a driver of decisions.",
+      "skills": [
+        { "label": "Predictive Modeling", "tier": "mid" },
+        { "label": "Forecasting", "tier": "mid" },
+        { "label": "Customer Segmentation", "tier": "mid" },
+        { "label": "Anomaly Detection", "tier": "senior" },
+        { "label": "KPI Definition", "tier": "senior" },
+        { "label": "Business Intelligence", "tier": "mid" },
+        { "label": "Data-Driven Decision Making", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can demonstrate through real work — a model no one understands never ships.",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Critical Thinking",
+        "Curiosity",
+        { "label": "Data Storytelling", "tier": "mid" },
+        { "label": "Business Acumen", "tier": "mid" },
+        { "label": "Cross-functional Collaboration", "tier": "mid" },
+        { "label": "Research", "tier": "senior" },
+        { "label": "Mentoring", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Machine Learning",
+    "types": ["Machine Learning", "Deep Learning", "Programming", "Statistics", "Cloud & MLOps", "Soft Skills", "All"],
+    "levels": ["Entry Level", "Mid Level", "Senior"],
+    "defaultLevel": "Mid Level"
+  },
+  "experienceLevels": [
+    {
+      "name": "Entry Level",
+      "subtitle": "Build the analytical core",
+      "filled": 1,
+      "skills": ["Python", "SQL", "Statistics", "scikit-learn", "Data Visualization", "pandas"]
+    },
+    {
+      "name": "Mid-Level",
+      "subtitle": "Ship real models",
+      "filled": 2,
+      "skills": ["Feature Engineering", "Model Evaluation", "A/B Testing", "Deep Learning", "XGBoost", "Data Pipelines"]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Own systems & impact",
+      "filled": 3,
+      "skills": ["MLOps", "Model Deployment", "Experimental Design", "Data Storytelling", "Recommendation Systems", "Mentoring"]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Python", "SQL", "scikit-learn", "PyTorch", "A/B Testing", "AWS SageMaker"],
+      "note": "A tight, scannable list of your strongest, most relevant tools — pair frameworks with the depth you actually have."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Data Scientist with 5+ years building ==machine learning== models in ==Python==, from ==feature engineering== to ==production deployment==, with a focus on measurable business impact.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and impact."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Built and deployed a ==churn prediction model== (==XGBoost==, ==scikit-learn==) that lifted retention 12% and saved an estimated $1.2M in annual revenue.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "Machine Learning",
+      "better": "Machine learning — feature engineering, model evaluation, XGBoost, deployment"
+    },
+    {
+      "basic": "Python",
+      "better": "Python — pandas, NumPy, scikit-learn, PyTorch"
+    },
+    {
+      "basic": "Statistics",
+      "better": "Statistics — hypothesis testing, A/B testing, experimental design"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Looking for a data scientist strong in ==Python==, ==machine learning==, ==SQL==, ==statistics==, and experience deploying models to production (==MLOps==).\"",
+    "prioritizedSkills": [
+      "Python",
+      "Machine Learning",
+      "SQL",
+      "Statistics",
+      "MLOps"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing every algorithm you've read about.",
+      "detail": "Recruiters value depth — name the models you've actually trained and shipped."
+    },
+    {
+      "title": "Skipping SQL.",
+      "detail": "Data scientists live in data; a missing SQL is a fast way to get filtered out."
+    },
+    {
+      "title": "No business impact anywhere.",
+      "detail": "A model with no result reads as a school project. Tie skills to numbers moved."
+    },
+    {
+      "title": "Confusing tools with skills.",
+      "detail": "“TensorFlow” alone says little — pair it with the architecture and the problem you solved."
+    },
+    {
+      "title": "Ignoring deployment.",
+      "detail": "Companies want models in production. Show MLOps or deployment even if lightly."
+    },
+    {
+      "title": "Generic soft-skill lists.",
+      "detail": "“Team player” is filler. Show communication through an example of explaining a model to stakeholders."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern data scientist roles these are assumed — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Word",
+      "Email",
+      "Internet Research",
+      "Basic computer skills",
+      "Microsoft Office",
+      "Data Entry"
+    ]
+  },
+  "related": [
+    "data-analyst",
+    "backend-developer",
+    "product-manager",
+    "business-analyst",
+    "financial-analyst"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a data scientist put on a resume?",
+      "a": "Aim for 14–18 well-chosen skills across programming, machine learning, statistics, and tools. Enough to show technical range, but curated to what you can defend in an interview and back up with a project. Depth beats a wall of frameworks."
+    },
+    {
+      "q": "What are the most important data scientist skills?",
+      "a": "Python, SQL, statistics, and core machine learning (scikit-learn, feature engineering, model evaluation) are the foundation. Beyond those, employers increasingly value deep learning (PyTorch or TensorFlow), experimentation, and MLOps to get models into production."
+    },
+    {
+      "q": "Do I need deep learning on my data scientist resume?",
+      "a": "Only if the role calls for it. Many data science jobs are well served by classical ML on tabular data. List deep learning (with a framework and architecture) when you've genuinely used it or the posting emphasizes NLP, computer vision, or LLMs — don't pad the section to look impressive."
+    },
+    {
+      "q": "What's the difference between a data scientist and a data analyst resume?",
+      "a": "Both share SQL, statistics, and visualization, but a data scientist resume leans harder into machine learning, modeling, programming depth, and increasingly MLOps. An analyst resume centers on BI tools, reporting, and business insight. If you're transitioning, emphasize the modeling and Python work you've done."
+    },
+    {
+      "q": "Should I list cloud and MLOps skills?",
+      "a": "Yes, if you have them — they're a growing differentiator. Companies want models that run reliably in production, so AWS/GCP/Azure, Docker, and tools like MLflow or SageMaker signal you can ship, not just prototype in a notebook."
+    },
+    {
+      "q": "What skills should a junior data scientist include?",
+      "a": "Focus on the fundamentals you can demonstrate: Python, SQL, statistics, scikit-learn, and data visualization, plus one solid end-to-end project. At entry level, a well-explained model with real results beats a long list of advanced frameworks."
+    },
+    {
+      "q": "How do I tailor data science skills to a job description?",
+      "a": "Read the posting and note the exact stack — the ML libraries, whether deep learning or MLOps is required, the cloud platform. Mirror those in your own true words and move them toward the top of your skills section, since ATS ranks you partly on how well your resume echoes the job's language."
+    }
+  ]
+}

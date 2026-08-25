@@ -16,8 +16,12 @@ const LEVEL_ORDER = { junior: 1, mid: 2, senior: 3 } as const;
 // Order of category blocks on the page; anything else falls into "More resume skills".
 const CATEGORY_ORDER = [
   'Software Engineering',
-  'Infrastructure & Cloud',
   'Data & AI',
+  'Product & Design',
+  'Business & Management',
+  'Marketing',
+  'Finance',
+  'Infrastructure & Cloud',
   'Quality & Security',
 ];
 const FALLBACK_CATEGORY = 'More resume skills';
@@ -82,7 +86,8 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Resume Skills', item: canonical },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: 'Resume Skills', item: canonical },
   ],
 };
 

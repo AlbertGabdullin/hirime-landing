@@ -1,0 +1,350 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "UX Designer",
+    "shortName": "UX Designer",
+    "category": "Product & Design",
+    "family": "ux-designer",
+    "familyName": "UX Designer",
+    "order": 2
+  },
+  "seo": {
+    "title": "UX Designer Resume Skills: 90+ for 2026 | Hirime",
+    "description": "UX designer resume skills for 2026 — the research, interaction design, Figma, prototyping and accessibility keywords recruiters and ATS scan for.",
+    "keywords": "ux designer resume skills, ux ui designer resume skills, ux design skills resume, Figma resume skills, user research resume skills, product designer skills, ATS keywords"
+  },
+  "hero": {
+    "title": "UX Designer Resume Skills: *90+ skills* for your resume",
+    "lede": "The UX design skills hiring managers and ATS actually scan for in 2026 — research, interaction design, prototyping, and the accessibility and collaboration that ship real products. Whether the role is called UX designer, UX/UI designer, or product designer. Organized by category and level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Figma",
+      "Interaction Design",
+      "Usability Testing",
+      "Design Systems",
+      "Information Architecture",
+      "Accessibility",
+      "User Flows"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a UX designer put on a resume?",
+    "answer": "Lead with the design craft — wireframing, prototyping, interaction and UI design in Figma — then the research that grounds it: user research, usability testing, and journey mapping. Add information architecture, accessibility, and the collaboration skills to work with product and engineering. Roles labeled UX designer, UX/UI designer, and product designer look for the same core. Tailor the exact mix to the job and your seniority.",
+    "essentials": [
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Figma",
+      "Interaction Design",
+      "Usability Testing",
+      "Information Architecture",
+      "Design Systems",
+      "Accessibility",
+      "User Flows"
+    ]
+  },
+  "categories": [
+    {
+      "id": "research",
+      "title": "UX Research",
+      "lead": "The evidence behind good design. Even a few here signal you design for users, not just aesthetics.",
+      "skills": [
+        "User Research",
+        "Usability Testing",
+        "User Interviews",
+        "Personas",
+        { "label": "Surveys", "tier": "mid" },
+        { "label": "Journey Mapping", "tier": "mid" },
+        { "label": "Card Sorting", "tier": "mid" },
+        { "label": "A/B Testing", "tier": "mid" },
+        { "label": "Heuristic Evaluation", "tier": "senior" },
+        { "label": "Contextual Inquiry", "tier": "senior" },
+        { "label": "Competitive Analysis", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Interaction & UI Design",
+      "lead": "The core making craft. List the design activities you do day to day.",
+      "skills": [
+        "Wireframing",
+        "Prototyping",
+        "Interaction Design",
+        "UI Design",
+        "Visual Design",
+        "Responsive Design",
+        { "label": "Design Systems", "tier": "mid" },
+        { "label": "Mobile Design", "tier": "mid" },
+        { "label": "Micro-interactions", "tier": "senior" },
+        { "label": "Layout & Grids", "tier": "mid" },
+        { "label": "Typography", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "ia",
+      "title": "Information Architecture",
+      "lead": "How you structure content so users can find their way. A strong, often-overlooked signal.",
+      "skills": [
+        "Information Architecture",
+        "User Flows",
+        "Sitemaps",
+        { "label": "Navigation Design", "tier": "mid" },
+        { "label": "Taxonomy", "tier": "senior" },
+        { "label": "Content Strategy", "tier": "senior" },
+        { "label": "Card Sorting", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools",
+      "lead": "Figma is table stakes — list it plus the others you genuinely design and prototype in.",
+      "skills": [
+        "Figma",
+        { "label": "Sketch", "tier": "mid" },
+        { "label": "Adobe XD", "tier": "mid" },
+        { "label": "InVision", "tier": "mid" },
+        { "label": "Framer", "tier": "senior" },
+        { "label": "Miro", "tier": "mid" },
+        { "label": "Zeplin", "tier": "mid" },
+        { "label": "Adobe Photoshop", "tier": "mid" },
+        { "label": "Adobe Illustrator", "tier": "mid" },
+        { "label": "Maze", "tier": "senior" },
+        { "label": "Axure", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "process",
+      "title": "Process & Methods",
+      "lead": "How you run design work. These signal maturity and a repeatable practice.",
+      "skills": [
+        "Design Thinking",
+        "User-Centered Design",
+        { "label": "Lean UX", "tier": "mid" },
+        { "label": "Agile UX", "tier": "mid" },
+        { "label": "Design Sprints", "tier": "mid" },
+        { "label": "Iterative Design", "tier": "mid" },
+        { "label": "Double Diamond", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "title": "Accessibility",
+      "lead": "Designing for everyone. Even a couple here is a genuine differentiator on a UX resume.",
+      "skills": [
+        "Accessible Design",
+        "Color Contrast",
+        { "label": "WCAG", "tier": "mid" },
+        { "label": "Inclusive Design", "tier": "mid" },
+        { "label": "ARIA", "tier": "senior" },
+        { "label": "Screen Reader Testing", "tier": "senior" },
+        { "label": "Keyboard Navigation", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "collab",
+      "title": "Collaboration & Handoff",
+      "lead": "Design ships as a team sport. Show you work well with product and engineering.",
+      "skills": [
+        { "label": "Design Handoff", "tier": "mid" },
+        { "label": "Developer Collaboration", "tier": "mid" },
+        { "label": "Design Critique", "tier": "mid" },
+        { "label": "Stakeholder Management", "tier": "mid" },
+        { "label": "Design Documentation", "tier": "senior" },
+        { "label": "Cross-functional Collaboration", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical Awareness",
+      "lead": "You don't have to build it, but understanding the medium sharpens your designs and earns trust.",
+      "skills": [
+        { "label": "HTML", "tier": "mid" },
+        { "label": "CSS", "tier": "mid" },
+        { "label": "Design Tokens", "tier": "senior" },
+        { "label": "Front-end Fundamentals", "tier": "senior" },
+        { "label": "Responsive Design", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "strategy",
+      "title": "UX Strategy",
+      "lead": "The senior end of the craft — connecting design to product and business outcomes.",
+      "skills": [
+        { "label": "UX Strategy", "tier": "senior" },
+        { "label": "Product Thinking", "tier": "mid" },
+        { "label": "Design Metrics", "tier": "senior" },
+        { "label": "Conversion Optimization", "tier": "mid" },
+        { "label": "Service Design", "tier": "senior" },
+        { "label": "Design Leadership", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can prove through real work — empathy and communication are the heart of UX.",
+      "skills": [
+        "Communication",
+        "Empathy",
+        "Collaboration",
+        "Problem Solving",
+        { "label": "Storytelling", "tier": "mid" },
+        { "label": "Presentation", "tier": "mid" },
+        { "label": "Critical Thinking", "tier": "mid" },
+        { "label": "Attention to Detail", "tier": "mid" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "UX Research",
+    "types": ["UX Research", "Interaction & UI", "Information Architecture", "Tools", "Accessibility", "Soft Skills", "All"],
+    "levels": ["Junior UX", "UX Designer", "Senior / Lead UX"],
+    "defaultLevel": "UX Designer"
+  },
+  "experienceLevels": [
+    {
+      "name": "Junior UX",
+      "subtitle": "Build the craft",
+      "filled": 1,
+      "skills": ["Wireframing", "Prototyping", "Figma", "User Flows", "Usability Testing", "Visual Design"]
+    },
+    {
+      "name": "UX Designer",
+      "subtitle": "Own features end to end",
+      "filled": 2,
+      "skills": ["User Research", "Interaction Design", "Design Systems", "Information Architecture", "Accessibility", "Design Handoff"]
+    },
+    {
+      "name": "Senior / Lead UX",
+      "subtitle": "Own strategy & systems",
+      "filled": 3,
+      "skills": ["UX Strategy", "Design Leadership", "Service Design", "Design Metrics", "Cross-functional Collaboration", "Mentoring"]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["User Research", "Figma", "Prototyping", "Design Systems", "Interaction Design", "Accessibility"],
+      "note": "A tight, scannable mix of research, craft, and tools — the three areas recruiters scan for."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "UX Designer with 5+ years shipping ==research-driven== interfaces in ==Figma==, from ==prototyping== to ==design systems==, with a focus on accessible, measurable product experiences.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your process and impact."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Redesigned the checkout flow through ==user research== and ==usability testing==, lifting conversion 18% and cutting drop-off at payment by a third.",
+      "note": "The most convincing place — show a skill delivering a measurable outcome, not just a nicer screen."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "Figma",
+      "better": "Figma — components, auto-layout, prototyping, and shared design systems"
+    },
+    {
+      "basic": "User Research",
+      "better": "User research — interviews, usability testing, and journey mapping"
+    },
+    {
+      "basic": "UI Design",
+      "better": "Interaction and UI design with reusable, accessible design systems"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking a UX/UI designer skilled in ==user research==, ==wireframing and prototyping (Figma)==, ==interaction design==, ==design systems==, and ==usability testing==.\"",
+    "prioritizedSkills": [
+      "User Research",
+      "Prototyping",
+      "Figma",
+      "Design Systems",
+      "Usability Testing"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing tools but no process.",
+      "detail": "Figma proficiency is assumed. Show the research and thinking behind your designs."
+    },
+    {
+      "title": "No research anywhere.",
+      "detail": "Pure visual skills read as UI-only. Include research to signal true UX depth."
+    },
+    {
+      "title": "Skipping the results.",
+      "detail": "Tie designs to outcomes — conversion, task success, drop-off reduced."
+    },
+    {
+      "title": "No portfolio link.",
+      "detail": "UX resumes live or die on the portfolio. Make the link prominent and current."
+    },
+    {
+      "title": "Ignoring accessibility.",
+      "detail": "It's now a common requirement — even basic WCAG and contrast knowledge stands out."
+    },
+    {
+      "title": "Generic soft-skill filler.",
+      "detail": "“Creative” means little alone. Show empathy and collaboration through real design work."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern UX designer roles these are assumed or too generic — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Office",
+      "Email",
+      "Basic computer skills",
+      "Creativity (as a bare word)",
+      "Team Player",
+      "Microsoft Paint"
+    ]
+  },
+  "related": [
+    "product-manager",
+    "frontend-developer",
+    "digital-marketing-manager",
+    "data-analyst",
+    "business-analyst"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a UX designer put on a resume?",
+      "a": "Aim for 12–16 skills spanning research, interaction and UI craft, tools, and collaboration. Enough to show you cover the full design process, but curated to what your portfolio backs up. Recruiters weigh the portfolio heavily, so keep the skills list honest and focused."
+    },
+    {
+      "q": "What are the most important UX designer skills?",
+      "a": "User research, wireframing, prototyping, and interaction design are the core, executed in Figma. Beyond those, employers value information architecture, design systems, usability testing, accessibility, and the collaboration to work with product and engineering."
+    },
+    {
+      "q": "Is UX designer the same as UX/UI designer or product designer?",
+      "a": "The titles overlap heavily and job postings mix them freely. UX/UI leans toward owning both research and visual interface work; product designer often adds product-thinking and business outcomes. The core skills on this page apply to all three — emphasize research for UX, visual craft for UI, and outcomes for product designer."
+    },
+    {
+      "q": "Do UX designers need to know how to code?",
+      "a": "No, but basic technical awareness helps. Understanding HTML, CSS, responsive behavior, and design tokens makes your designs more buildable and earns trust with engineers. List these as a bonus if you have them — they're rarely a hard requirement but often a differentiator."
+    },
+    {
+      "q": "Should I list accessibility skills?",
+      "a": "Yes — it's increasingly a requirement, not a nice-to-have. Even foundational knowledge of WCAG, color contrast, and keyboard navigation signals you design for everyone, which stands out on a UX resume and appears in more job descriptions every year."
+    },
+    {
+      "q": "What skills should a junior UX designer include?",
+      "a": "Focus on craft fundamentals you can show in a portfolio: wireframing, prototyping, Figma, user flows, and basic usability testing. Back each with a project. At entry level, a couple of well-documented case studies beat a long list of methods you haven't applied."
+    },
+    {
+      "q": "How do I tailor UX skills to a job description?",
+      "a": "Read the posting and note whether it leans research, visual/UI, or product strategy, plus the tools it names. Mirror those in your own true words and move them toward the top of your skills section, since ATS ranks you partly on how well your resume echoes the job's language."
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Project Manager",
+    "shortName": "Project Manager",
+    "category": "Business & Management",
+    "family": "project-manager",
+    "familyName": "Project Manager",
+    "order": 1
+  },
+  "seo": {
+    "title": "Project Manager Resume Skills: 90+ for 2026 | Hirime",
+    "description": "Project manager resume skills for 2026 — the Agile, planning, risk, budget and stakeholder keywords recruiters and ATS scan for, with real examples.",
+    "keywords": "project manager resume skills, PM resume skills, project management skills resume, Agile resume skills, PMP resume skills, stakeholder management skills, ATS keywords"
+  },
+  "hero": {
+    "title": "Project Manager Resume Skills: *90+ skills* for your resume",
+    "lede": "The project management skills hiring managers and ATS actually scan for in 2026 — methodologies, planning, risk, budget, and the stakeholder communication that keeps projects on track. Organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Agile",
+      "Scrum",
+      "Project Planning",
+      "Risk Management",
+      "Budget Management",
+      "Stakeholder Management",
+      "Jira",
+      "Waterfall",
+      "Resource Allocation",
+      "Change Management"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a project manager put on a resume?",
+    "answer": "Lead with the methodologies you run projects in — Agile, Scrum, Waterfall — then the delivery core: planning, scheduling, risk management, and budgeting. Add the stakeholder and communication skills that keep everyone aligned, name the tools you use (Jira, MS Project, Asana), and note any certifications like PMP or CSM. Tailor the exact mix to the industry and seniority you're targeting.",
+    "essentials": [
+      "Agile",
+      "Scrum",
+      "Project Planning",
+      "Risk Management",
+      "Budget Management",
+      "Stakeholder Management",
+      "Resource Allocation",
+      "Change Management",
+      "Jira",
+      "Communication"
+    ]
+  },
+  "categories": [
+    {
+      "id": "methodologies",
+      "title": "Methodologies & Frameworks",
+      "lead": "The approaches you deliver in. Lead with the ones you've actually run, not just trained in.",
+      "skills": [
+        "Agile",
+        "Scrum",
+        "Waterfall",
+        "Kanban",
+        { "label": "Lean", "tier": "mid" },
+        { "label": "Hybrid (Agile-Waterfall)", "tier": "mid" },
+        { "label": "Scrumban", "tier": "mid" },
+        { "label": "SAFe (Scaled Agile)", "tier": "senior" },
+        { "label": "Six Sigma", "tier": "senior" },
+        { "label": "PRINCE2", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "planning",
+      "title": "Planning & Scheduling",
+      "lead": "The core craft of the role. These are the most-scanned project management skills.",
+      "skills": [
+        "Project Planning",
+        "Scheduling",
+        "Scope Management",
+        "Milestone Tracking",
+        { "label": "Work Breakdown Structure (WBS)", "tier": "mid" },
+        { "label": "Gantt Charts", "tier": "mid" },
+        { "label": "Timeline Management", "tier": "mid" },
+        { "label": "Sprint Planning", "tier": "mid" },
+        { "label": "Critical Path Method (CPM)", "tier": "senior" },
+        { "label": "Capacity Planning", "tier": "senior" },
+        { "label": "Resource Allocation", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "risk",
+      "title": "Risk & Quality",
+      "lead": "How you keep projects from going sideways. Even a few here signal you plan for reality.",
+      "skills": [
+        "Risk Management",
+        "Issue Tracking",
+        { "label": "Risk Assessment", "tier": "mid" },
+        { "label": "Change Management", "tier": "mid" },
+        { "label": "Quality Assurance", "tier": "mid" },
+        { "label": "Contingency Planning", "tier": "senior" },
+        { "label": "Dependency Management", "tier": "senior" },
+        { "label": "Risk Mitigation", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "budget",
+      "title": "Budget & Resources",
+      "lead": "The commercial side. Owning a budget is a strong differentiator, especially at senior level.",
+      "skills": [
+        { "label": "Budget Management", "tier": "mid" },
+        { "label": "Cost Control", "tier": "mid" },
+        { "label": "Resource Management", "tier": "mid" },
+        { "label": "Forecasting", "tier": "senior" },
+        { "label": "Vendor Management", "tier": "senior" },
+        { "label": "Procurement", "tier": "senior" },
+        { "label": "ROI Analysis", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "stakeholder",
+      "title": "Stakeholder & Communication",
+      "lead": "Most of a PM's day is communication. These carry real weight with recruiters.",
+      "skills": [
+        "Stakeholder Management",
+        "Communication",
+        "Status Reporting",
+        "Meeting Facilitation",
+        { "label": "Client Management", "tier": "mid" },
+        { "label": "Expectation Management", "tier": "mid" },
+        { "label": "Presentations", "tier": "mid" },
+        { "label": "Conflict Resolution", "tier": "senior" },
+        { "label": "Negotiation", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery & Governance",
+      "lead": "The broader discipline of getting things done and keeping them accountable.",
+      "skills": [
+        { "label": "Project Delivery", "tier": "mid" },
+        { "label": "SDLC", "tier": "mid" },
+        { "label": "Release Management", "tier": "mid" },
+        { "label": "Retrospectives", "tier": "mid" },
+        { "label": "Program Management", "tier": "senior" },
+        { "label": "Portfolio Management", "tier": "senior" },
+        { "label": "Governance", "tier": "senior" },
+        { "label": "PMO", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools",
+      "lead": "List the ones you genuinely run projects in — recruiters scan for these by name.",
+      "skills": [
+        "Jira",
+        "Asana",
+        "Trello",
+        "Microsoft Excel",
+        { "label": "Microsoft Project", "tier": "mid" },
+        { "label": "Confluence", "tier": "mid" },
+        { "label": "Monday.com", "tier": "mid" },
+        { "label": "Smartsheet", "tier": "mid" },
+        { "label": "ClickUp", "tier": "mid" },
+        { "label": "Wrike", "tier": "senior" },
+        { "label": "Notion", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "certs",
+      "title": "Certifications",
+      "lead": "Credentials recruiters filter on. List the ones you hold (or are actively pursuing).",
+      "skills": [
+        { "label": "PMP", "tier": "senior" },
+        { "label": "CAPM", "tier": "mid" },
+        { "label": "Certified ScrumMaster (CSM)", "tier": "mid" },
+        { "label": "PMI-ACP", "tier": "senior" },
+        { "label": "PRINCE2", "tier": "senior" },
+        { "label": "ITIL", "tier": "senior" },
+        { "label": "Six Sigma (Green/Black Belt)", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can prove through real projects — leadership and communication are the heart of the job.",
+      "skills": [
+        "Leadership",
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Team Leadership",
+        { "label": "Adaptability", "tier": "mid" },
+        { "label": "Decision Making", "tier": "mid" },
+        { "label": "Emotional Intelligence", "tier": "senior" },
+        { "label": "Negotiation", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Methodologies",
+    "types": ["Methodologies", "Planning & Scheduling", "Risk & Quality", "Budget & Resources", "Stakeholder & Communication", "Soft Skills", "All"],
+    "levels": ["Coordinator", "Project Manager", "Senior / Program Manager"],
+    "defaultLevel": "Project Manager"
+  },
+  "experienceLevels": [
+    {
+      "name": "Coordinator",
+      "subtitle": "Support delivery",
+      "filled": 1,
+      "skills": ["Scheduling", "Status Reporting", "Jira", "Milestone Tracking", "Meeting Facilitation", "Issue Tracking"]
+    },
+    {
+      "name": "Project Manager",
+      "subtitle": "Own projects end to end",
+      "filled": 2,
+      "skills": ["Project Planning", "Risk Management", "Budget Management", "Stakeholder Management", "Scrum", "Resource Allocation"]
+    },
+    {
+      "name": "Senior / Program Manager",
+      "subtitle": "Own programs & portfolios",
+      "filled": 3,
+      "skills": ["Program Management", "Portfolio Management", "Governance", "Vendor Management", "Change Management", "Conflict Resolution"]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Agile / Scrum", "Project Planning", "Risk Management", "Budget Management", "Stakeholder Management", "Jira"],
+      "note": "A tight, scannable mix of methodology, delivery, and communication skills — the three recruiters scan for."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "PMP-certified Project Manager with 7+ years delivering cross-functional projects on time and on budget, using ==Agile== and ==Waterfall== with strong ==risk== and ==stakeholder management==.",
+      "note": "Fold your top 2–3 skills, plus any certification, into a sentence that frames your track record."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Delivered a $2M platform migration 3 weeks early through ==risk management== and ==stakeholder alignment==, keeping the project 8% under budget.",
+      "note": "The most convincing place — show a skill delivering a measurable result: on time, on budget, on scope."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "Agile",
+      "better": "Agile delivery — Scrum, sprint planning, backlog grooming, retrospectives"
+    },
+    {
+      "basic": "Risk Management",
+      "better": "Risk management — assessment, mitigation planning, and contingency execution"
+    },
+    {
+      "basic": "Budgeting",
+      "better": "Budget management — cost control and forecasting on projects up to $2M"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking a project manager skilled in ==Agile== and ==Waterfall==, ==project planning==, ==risk management==, ==budget management==, and ==stakeholder communication==. PMP preferred.\"",
+    "prioritizedSkills": [
+      "Agile",
+      "Project Planning",
+      "Risk Management",
+      "Budget Management",
+      "Stakeholder Management"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing duties instead of skills.",
+      "detail": "“Ran standups” is a task. The skill is Agile delivery, facilitation, stakeholder alignment."
+    },
+    {
+      "title": "No numbers on scope or budget.",
+      "detail": "PMs are judged on delivery. Show budget size, timeline, or team size you managed."
+    },
+    {
+      "title": "Only one methodology.",
+      "detail": "Many teams run hybrid. If you've done Agile and Waterfall, list both."
+    },
+    {
+      "title": "Burying your certifications.",
+      "detail": "PMP, CSM, and PRINCE2 are keywords recruiters filter on — surface them clearly."
+    },
+    {
+      "title": "Generic soft-skill lists.",
+      "detail": "“Organized” is filler. Prove leadership and communication with a delivered outcome."
+    },
+    {
+      "title": "Ignoring the tools.",
+      "detail": "Jira, MS Project, and Asana are scanned by name — include the ones you actually use."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern project manager roles these are assumed or too generic — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Office",
+      "Email",
+      "PowerPoint",
+      "Multitasking",
+      "Team Player",
+      "Detail-Oriented"
+    ]
+  },
+  "related": [
+    "product-manager",
+    "business-analyst",
+    "digital-marketing-manager",
+    "financial-analyst",
+    "data-analyst"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a project manager put on a resume?",
+      "a": "Aim for 12–16 skills spanning methodology, planning, risk, budget, and communication, plus any certifications. Enough to show you cover the full delivery lifecycle, but curated to what you can defend with a project you actually ran."
+    },
+    {
+      "q": "What are the most important project manager skills?",
+      "a": "Methodologies (Agile, Scrum, Waterfall), project planning and scheduling, risk management, budget management, and stakeholder communication are the core. Tools like Jira and MS Project, plus certifications like PMP or CSM, round out a strong resume."
+    },
+    {
+      "q": "Should I list PMP or other certifications on my resume?",
+      "a": "Absolutely — PMP, PRINCE2, CSM, and PMI-ACP are keywords recruiters and ATS filter on. Put them near the top, in your summary or a dedicated line, and include ones you're actively pursuing (marked as “in progress”) if the role values them."
+    },
+    {
+      "q": "Do project managers need Agile and Scrum?",
+      "a": "For most modern roles, yes. Even outside software, teams run Agile or hybrid delivery, so Scrum, Kanban, and sprint planning are common requirements. List Waterfall too if you've delivered with it — many organizations run both depending on the project."
+    },
+    {
+      "q": "What skills should a junior project manager or coordinator include?",
+      "a": "Focus on delivery fundamentals you can demonstrate: scheduling, status reporting, milestone tracking, a tool like Jira, and meeting facilitation. Back them with a project you supported. At entry level, evidence you kept work organized and on track beats claiming full budget ownership."
+    },
+    {
+      "q": "How is a project manager resume different from a product manager one?",
+      "a": "A project manager owns how and when — planning, scheduling, risk, and on-time, on-budget delivery. A product manager owns what and why — strategy, discovery, and product outcomes. They share Agile and stakeholder skills, so emphasize the planning-and-delivery side to read clearly as a project manager."
+    },
+    {
+      "q": "How do I tailor project management skills to a job description?",
+      "a": "Read the posting and note the methodology (Agile vs Waterfall), the tools, the budget or team scale, and any required certification. Mirror those in your own true words and move them toward the top, since ATS ranks you partly on how well your resume echoes the job's language."
+    }
+  ]
+}

@@ -10,6 +10,16 @@
 ## Resume skills reference
 
 - [Resume Skills by Profession](https://hirime.com/resume-skills/): Browse the skills that matter on a resume, organized by profession, category, and experience level (junior, mid, senior), with real examples.
+- [Frontend Developer Resume Skills](https://hirime.com/resume-skills/frontend-developer/): The frontend developer/engineer skills recruiters and ATS scan for — languages, frameworks, styling, testing, performance — by category and level.
+- [Backend Developer Resume Skills](https://hirime.com/resume-skills/backend-developer/): Backend/software engineer resume skills — languages, frameworks, databases, APIs, cloud, architecture — by category and level.
+- [Data Analyst Resume Skills](https://hirime.com/resume-skills/data-analyst/): SQL, Excel, Python, Tableau, Power BI, statistics and reporting skills for a data analyst resume, by category and level.
+- [Data Scientist Resume Skills](https://hirime.com/resume-skills/data-scientist/): Python, machine learning, SQL, statistics, deep learning and MLOps skills for a data scientist resume, by level.
+- [Product Manager Resume Skills](https://hirime.com/resume-skills/product-manager/): Product strategy, discovery, roadmapping, analytics and execution skills for a product manager resume, by level.
+- [Project Manager Resume Skills](https://hirime.com/resume-skills/project-manager/): Agile, planning, risk, budgeting, stakeholder and delivery skills for a project manager resume, plus certifications like PMP.
+- [Business Analyst Resume Skills](https://hirime.com/resume-skills/business-analyst/): Requirements, process modeling, SQL, data analysis and documentation skills for a business analyst resume, by level.
+- [UX Designer Resume Skills](https://hirime.com/resume-skills/ux-designer/): User research, wireframing, prototyping, Figma, interaction design and accessibility skills for a UX designer resume.
+- [Digital Marketing Resume Skills](https://hirime.com/resume-skills/digital-marketing-manager/): SEO, PPC, content, social, email and analytics skills for a digital marketing manager resume, by channel and level.
+- [Financial Analyst Resume Skills](https://hirime.com/resume-skills/financial-analyst/): Financial modeling, Excel, valuation, forecasting and analysis skills for a financial analyst resume, plus CFA/CPA.
 
 ## Product
 

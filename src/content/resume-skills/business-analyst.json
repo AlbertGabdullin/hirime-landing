@@ -1,0 +1,353 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Business Analyst",
+    "shortName": "Business Analyst",
+    "category": "Business & Management",
+    "family": "business-analyst",
+    "familyName": "Business Analyst",
+    "order": 2
+  },
+  "seo": {
+    "title": "Business Analyst Resume Skills: 90+ for 2026 | Hirime",
+    "description": "Business analyst resume skills for 2026 — the requirements, process modeling, SQL and stakeholder keywords recruiters and ATS scan for, by level.",
+    "keywords": "business analyst resume skills, BA resume skills, business analysis skills resume, requirements gathering resume skills, SQL business analyst skills, BABOK, ATS keywords"
+  },
+  "hero": {
+    "title": "Business Analyst Resume Skills: *90+ skills* for your resume",
+    "lede": "The business analysis skills hiring managers and ATS actually scan for in 2026 — requirements engineering, process modeling, data analysis, and the stakeholder communication that connects business to delivery. Organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Requirements Gathering",
+      "Business Process Modeling",
+      "SQL",
+      "Data Analysis",
+      "User Stories",
+      "Stakeholder Management",
+      "Agile",
+      "UML",
+      "Gap Analysis",
+      "UAT"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a business analyst put on a resume?",
+    "answer": "Lead with the core craft — requirements gathering, requirements analysis, and documentation — then process modeling (BPMN, workflow analysis) and data analysis (SQL, Excel, a BI tool). Show the methodologies you work in (Agile, Waterfall), the tools you use (Jira, Visio), and the stakeholder communication that ties business needs to delivery. Tailor the exact mix to the industry and seniority you're targeting.",
+    "essentials": [
+      "Requirements Gathering",
+      "Requirements Analysis",
+      "Business Process Modeling",
+      "SQL",
+      "Data Analysis",
+      "User Stories",
+      "Stakeholder Management",
+      "Gap Analysis",
+      "Agile",
+      "UAT"
+    ]
+  },
+  "categories": [
+    {
+      "id": "requirements",
+      "title": "Requirements Engineering",
+      "lead": "The heart of the BA role — and the most-scanned skill area. Name the artifacts you produce.",
+      "skills": [
+        "Requirements Gathering",
+        "Requirements Analysis",
+        "Elicitation",
+        "User Stories",
+        { "label": "Business Requirements Document (BRD)", "tier": "mid" },
+        { "label": "Functional Requirements (FRD)", "tier": "mid" },
+        { "label": "Use Cases", "tier": "mid" },
+        { "label": "Acceptance Criteria", "tier": "mid" },
+        { "label": "Gap Analysis", "tier": "mid" },
+        { "label": "Requirements Traceability", "tier": "senior" },
+        { "label": "Requirements Prioritization", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "process",
+      "title": "Process Analysis & Modeling",
+      "lead": "How you map and improve the way work gets done. A strong differentiator for BAs.",
+      "skills": [
+        "Business Process Modeling",
+        "Process Mapping",
+        "Workflow Analysis",
+        { "label": "BPMN", "tier": "mid" },
+        { "label": "As-Is / To-Be Analysis", "tier": "mid" },
+        { "label": "Process Improvement", "tier": "mid" },
+        { "label": "Value Stream Mapping", "tier": "senior" },
+        { "label": "Lean", "tier": "senior" },
+        { "label": "Six Sigma", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Data Analysis",
+      "lead": "Increasingly central to the role. List the query and reporting skills you actually use.",
+      "skills": [
+        "SQL",
+        "Microsoft Excel",
+        "Data Analysis",
+        "Reporting",
+        { "label": "Pivot Tables", "tier": "mid" },
+        { "label": "Data Modeling", "tier": "mid" },
+        { "label": "Data Visualization", "tier": "mid" },
+        { "label": "Tableau", "tier": "mid" },
+        { "label": "Power BI", "tier": "mid" },
+        { "label": "KPIs & Metrics", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "documentation",
+      "title": "Documentation & Modeling",
+      "lead": "How you make requirements unambiguous. Diagrams and specs that engineers can build from.",
+      "skills": [
+        { "label": "UML", "tier": "mid" },
+        { "label": "Wireframing", "tier": "mid" },
+        { "label": "Use Case Diagrams", "tier": "mid" },
+        { "label": "Data Flow Diagrams", "tier": "mid" },
+        { "label": "Entity-Relationship Diagrams (ERD)", "tier": "senior" },
+        { "label": "Functional Specifications", "tier": "mid" },
+        { "label": "Mockups", "tier": "mid" },
+        { "label": "Process Documentation", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "methodologies",
+      "title": "Methodologies",
+      "lead": "The delivery frameworks you work within. Most BA roles are Agile, hybrid, or both.",
+      "skills": [
+        "Agile",
+        "Scrum",
+        "Waterfall",
+        { "label": "SDLC", "tier": "mid" },
+        { "label": "Kanban", "tier": "mid" },
+        { "label": "SAFe", "tier": "senior" },
+        { "label": "Business Analysis Planning", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "business",
+      "title": "Domain & Business Analysis",
+      "lead": "The commercial reasoning behind the requirements. These signal you think about value, not just features.",
+      "skills": [
+        "Stakeholder Management",
+        { "label": "Cost-Benefit Analysis", "tier": "mid" },
+        { "label": "SWOT Analysis", "tier": "mid" },
+        { "label": "Feasibility Study", "tier": "mid" },
+        { "label": "Business Case", "tier": "senior" },
+        { "label": "ROI Analysis", "tier": "senior" },
+        { "label": "Domain Knowledge", "tier": "mid" },
+        { "label": "Impact Analysis", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "Testing & Validation",
+      "lead": "How you make sure the delivered solution meets the requirement. Often a BA's responsibility.",
+      "skills": [
+        { "label": "User Acceptance Testing (UAT)", "tier": "mid" },
+        { "label": "Test Cases", "tier": "mid" },
+        { "label": "Requirements Validation", "tier": "mid" },
+        { "label": "Quality Assurance", "tier": "mid" },
+        { "label": "Traceability Matrix", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools",
+      "lead": "List the ones you genuinely work in — recruiters scan for these by name.",
+      "skills": [
+        "Jira",
+        "Microsoft Excel",
+        "Confluence",
+        { "label": "Microsoft Visio", "tier": "mid" },
+        { "label": "Lucidchart", "tier": "mid" },
+        { "label": "Balsamiq", "tier": "mid" },
+        { "label": "SharePoint", "tier": "mid" },
+        { "label": "Draw.io", "tier": "mid" },
+        { "label": "Tableau", "tier": "mid" },
+        { "label": "Power BI", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "certs",
+      "title": "Certifications",
+      "lead": "Credentials recruiters filter on. List the ones you hold or are pursuing.",
+      "skills": [
+        { "label": "BABOK", "tier": "mid" },
+        { "label": "ECBA", "tier": "mid" },
+        { "label": "CCBA", "tier": "senior" },
+        { "label": "CBAP", "tier": "senior" },
+        { "label": "PMI-PBA", "tier": "senior" },
+        { "label": "Agile Analysis Certification", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can prove through real work — a BA who can't bridge business and tech adds no value.",
+      "skills": [
+        "Communication",
+        "Analytical Thinking",
+        "Problem Solving",
+        "Attention to Detail",
+        { "label": "Stakeholder Management", "tier": "mid" },
+        { "label": "Critical Thinking", "tier": "mid" },
+        { "label": "Facilitation", "tier": "mid" },
+        { "label": "Negotiation", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Requirements",
+    "types": ["Requirements", "Process Modeling", "Data Analysis", "Documentation", "Methodologies", "Soft Skills", "All"],
+    "levels": ["Junior BA", "Business Analyst", "Senior / Lead BA"],
+    "defaultLevel": "Business Analyst"
+  },
+  "experienceLevels": [
+    {
+      "name": "Junior BA",
+      "subtitle": "Learn the craft",
+      "filled": 1,
+      "skills": ["Requirements Gathering", "User Stories", "Process Mapping", "Excel", "Documentation", "Jira"]
+    },
+    {
+      "name": "Business Analyst",
+      "subtitle": "Own requirements end to end",
+      "filled": 2,
+      "skills": ["Requirements Analysis", "BPMN", "SQL", "Gap Analysis", "UAT", "Stakeholder Management"]
+    },
+    {
+      "name": "Senior / Lead BA",
+      "subtitle": "Shape solutions & strategy",
+      "filled": 3,
+      "skills": ["Business Case", "ROI Analysis", "Value Stream Mapping", "Requirements Traceability", "Impact Analysis", "Facilitation"]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Requirements Gathering", "BPMN", "SQL", "User Stories", "UAT", "Stakeholder Management"],
+      "note": "A tight, scannable mix of requirements, process, and data skills — the three areas recruiters scan for."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Business Analyst with 5+ years translating business needs into clear ==requirements== and ==process models==, using ==SQL== and ==data analysis== to drive decisions across Agile delivery teams.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and the value you bridge."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Led ==requirements gathering== and ==process re-design== for an order-management system, cutting manual handling by 40% and reducing errors by 25%.",
+      "note": "The most convincing place — show a skill delivering a measurable business result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "Requirements Gathering",
+      "better": "Requirements elicitation — stakeholder workshops, BRDs, and traceable acceptance criteria"
+    },
+    {
+      "basic": "Process Modeling",
+      "better": "Business process modeling — BPMN, as-is/to-be analysis, and process improvement"
+    },
+    {
+      "basic": "Data Analysis",
+      "better": "Data analysis — SQL queries, Excel modeling, and Power BI reporting"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking a business analyst experienced in ==requirements gathering==, ==business process modeling==, ==SQL/data analysis==, ==Agile==, and ==stakeholder management==.\"",
+    "prioritizedSkills": [
+      "Requirements Gathering",
+      "Business Process Modeling",
+      "SQL",
+      "Agile",
+      "Stakeholder Management"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Vague “requirements” with no artifacts.",
+      "detail": "Name what you produce — BRDs, user stories, use cases, acceptance criteria."
+    },
+    {
+      "title": "No data skills.",
+      "detail": "Modern BA roles expect SQL and Excel at minimum. Leaving them off dates your resume."
+    },
+    {
+      "title": "Listing duties instead of skills.",
+      "detail": "“Attended meetings” is a task. The skill is elicitation, facilitation, stakeholder management."
+    },
+    {
+      "title": "No business impact.",
+      "detail": "Tie your work to outcomes — cost saved, errors reduced, process time cut."
+    },
+    {
+      "title": "Only technical, no business (or vice versa).",
+      "detail": "A BA bridges both. Show you understand the business case and the delivery detail."
+    },
+    {
+      "title": "Ignoring methodology.",
+      "detail": "Agile vs Waterfall matters to teams — state how you work, since it's often a filter."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern business analyst roles these are assumed or too generic — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Word",
+      "Email",
+      "PowerPoint",
+      "Typing",
+      "Team Player",
+      "Multitasking"
+    ]
+  },
+  "related": [
+    "data-analyst",
+    "product-manager",
+    "project-manager",
+    "financial-analyst",
+    "data-scientist"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a business analyst put on a resume?",
+      "a": "Aim for 12–16 skills across requirements, process modeling, data analysis, and methodology, plus tools and any certification. Enough to show you bridge business and delivery, but curated to what you can defend with a real project."
+    },
+    {
+      "q": "What are the most important business analyst skills?",
+      "a": "Requirements gathering and analysis are the core, followed by business process modeling, data analysis (SQL and Excel), and documentation (user stories, use cases, UML). Stakeholder management and clear communication tie them together, and Agile fluency is expected in most roles."
+    },
+    {
+      "q": "Do business analysts need SQL?",
+      "a": "Increasingly, yes. Many BA roles now expect you to pull and analyze your own data rather than wait on an analyst, so SQL and Excel appear in most job descriptions. If you know SQL, list it with a hint of depth (“SQL — joins, aggregations”); it's a strong differentiator."
+    },
+    {
+      "q": "Should I list BABOK or a BA certification?",
+      "a": "Yes, if you hold one — ECBA, CCBA, CBAP, and PMI-PBA are keywords recruiters filter on, and BABOK knowledge signals you know the discipline's framework. Put certifications near the top and include ones you're actively pursuing if the role values them."
+    },
+    {
+      "q": "What skills should a junior business analyst include?",
+      "a": "Focus on fundamentals you can demonstrate: requirements gathering, user stories, process mapping, Excel, documentation, and a tool like Jira. Back them with a project you supported. At entry level, evidence you can capture and organize requirements clearly beats claiming senior-level strategy work."
+    },
+    {
+      "q": "How is a business analyst resume different from a data analyst one?",
+      "a": "A business analyst centers on requirements, process modeling, and bridging stakeholders to delivery, with data analysis as support. A data analyst centers on SQL, statistics, and BI tools to produce insight. If you're transitioning toward data, emphasize the SQL and reporting work; toward BA, emphasize requirements and process."
+    },
+    {
+      "q": "How do I tailor business analyst skills to a job description?",
+      "a": "Read the posting and note whether it leans requirements, process improvement, or data, plus the methodology and tools it names. Mirror those in your own true words and move them toward the top of your skills section, since ATS ranks you partly on how well your resume echoes the job's language."
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Financial Analyst",
+    "shortName": "Financial Analyst",
+    "category": "Finance",
+    "family": "financial-analyst",
+    "familyName": "Financial Analyst",
+    "order": 1
+  },
+  "seo": {
+    "title": "Financial Analyst Resume Skills: 90+ for 2026 | Hirime",
+    "description": "Financial analyst resume skills for 2026 — the financial modeling, Excel, valuation, forecasting and analysis keywords recruiters and ATS scan for.",
+    "keywords": "financial analyst resume skills, financial analyst skills resume, financial modeling resume skills, Excel financial analyst skills, FP&A resume skills, valuation resume skills, ATS keywords"
+  },
+  "hero": {
+    "title": "Financial Analyst Resume Skills: *90+ skills* for your resume",
+    "lede": "The financial analysis skills hiring managers and ATS actually scan for in 2026 — modeling, valuation, forecasting, and the Excel and reporting depth behind every recommendation. Organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Financial Modeling",
+      "Advanced Excel",
+      "Valuation",
+      "Forecasting",
+      "Budgeting",
+      "Financial Analysis",
+      "Variance Analysis",
+      "DCF Analysis",
+      "GAAP",
+      "Data Visualization"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a financial analyst put on a resume?",
+    "answer": "Lead with the technical core every finance team expects — financial modeling, advanced Excel, and financial analysis (variance, ratio, trend) — then the planning and valuation depth: budgeting, forecasting, DCF and valuation. Add accounting fundamentals (GAAP), the systems you work in (SAP, Bloomberg), and any certification like CFA or CPA. Round it out with the communication to present findings. Tailor the exact mix to corporate FP&A, banking, or investment roles.",
+    "essentials": [
+      "Financial Modeling",
+      "Advanced Excel",
+      "Financial Analysis",
+      "Forecasting",
+      "Budgeting",
+      "Valuation",
+      "Variance Analysis",
+      "GAAP",
+      "Data Visualization",
+      "Financial Reporting"
+    ]
+  },
+  "categories": [
+    {
+      "id": "modeling",
+      "title": "Financial Modeling",
+      "lead": "The signature skill of the role. Name the model types you actually build, not just “modeling”.",
+      "skills": [
+        "Financial Modeling",
+        { "label": "Three-Statement Model", "tier": "mid" },
+        { "label": "DCF Analysis", "tier": "mid" },
+        { "label": "Valuation", "tier": "mid" },
+        { "label": "Scenario Analysis", "tier": "mid" },
+        { "label": "Sensitivity Analysis", "tier": "mid" },
+        { "label": "Comparable Company Analysis", "tier": "senior" },
+        { "label": "LBO Modeling", "tier": "senior" },
+        { "label": "M&A Modeling", "tier": "senior" },
+        { "label": "Revenue Forecasting", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "analysis",
+      "title": "Financial Analysis",
+      "lead": "The everyday analytical craft. Even a few here signal you interpret numbers, not just report them.",
+      "skills": [
+        "Financial Analysis",
+        "Variance Analysis",
+        { "label": "Ratio Analysis", "tier": "mid" },
+        { "label": "Trend Analysis", "tier": "mid" },
+        { "label": "Profitability Analysis", "tier": "mid" },
+        { "label": "Cash Flow Analysis", "tier": "mid" },
+        { "label": "Cost Analysis", "tier": "mid" },
+        { "label": "Working Capital Analysis", "tier": "senior" },
+        { "label": "Break-Even Analysis", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "planning",
+      "title": "FP&A & Planning",
+      "lead": "The forward-looking side. Core to corporate finance and often the most-scanned area.",
+      "skills": [
+        "Budgeting",
+        "Forecasting",
+        "Financial Planning",
+        { "label": "FP&A", "tier": "mid" },
+        { "label": "Management Reporting", "tier": "mid" },
+        { "label": "Cost Management", "tier": "mid" },
+        { "label": "Capital Budgeting", "tier": "senior" },
+        { "label": "Long-Range Planning", "tier": "senior" },
+        { "label": "Financial Reporting", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "accounting",
+      "title": "Accounting",
+      "lead": "The foundation under the analysis. Show you understand the statements you're modeling.",
+      "skills": [
+        "Financial Statements",
+        "GAAP",
+        { "label": "IFRS", "tier": "mid" },
+        { "label": "Balance Sheet Analysis", "tier": "mid" },
+        { "label": "Income Statement", "tier": "mid" },
+        { "label": "Cash Flow Statement", "tier": "mid" },
+        { "label": "General Ledger", "tier": "mid" },
+        { "label": "Month-End Close", "tier": "senior" },
+        { "label": "Reconciliation", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "excel",
+      "title": "Excel & Productivity",
+      "lead": "Still the primary tool of the trade. Depth beyond basic formulas is a real differentiator.",
+      "skills": [
+        "Advanced Excel",
+        "Pivot Tables",
+        "Financial Functions",
+        { "label": "VLOOKUP / XLOOKUP", "tier": "mid" },
+        { "label": "INDEX / MATCH", "tier": "mid" },
+        { "label": "Macros / VBA", "tier": "senior" },
+        { "label": "PowerPoint", "tier": "mid" },
+        { "label": "Google Sheets", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "bi",
+      "title": "Data & BI",
+      "lead": "The modern edge. Analysts who can pull and visualize their own data stand out.",
+      "skills": [
+        { "label": "SQL", "tier": "mid" },
+        { "label": "Power BI", "tier": "mid" },
+        { "label": "Tableau", "tier": "mid" },
+        { "label": "Data Analysis", "tier": "mid" },
+        { "label": "Data Visualization", "tier": "mid" },
+        { "label": "Dashboards", "tier": "mid" },
+        { "label": "Python", "tier": "senior" },
+        { "label": "KPI Reporting", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "systems",
+      "title": "ERP & Systems",
+      "lead": "The enterprise tools finance runs on. List the ones you've actually worked in.",
+      "skills": [
+        { "label": "SAP", "tier": "mid" },
+        { "label": "Oracle", "tier": "mid" },
+        { "label": "Hyperion", "tier": "senior" },
+        { "label": "NetSuite", "tier": "mid" },
+        { "label": "QuickBooks", "tier": "mid" },
+        { "label": "Bloomberg Terminal", "tier": "senior" },
+        { "label": "FactSet", "tier": "senior" },
+        { "label": "Workday Adaptive Planning", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "corp",
+      "title": "Corporate & Investment Finance",
+      "lead": "The domain depth for banking, equity research, and treasury roles.",
+      "skills": [
+        { "label": "Corporate Finance", "tier": "mid" },
+        { "label": "Investment Analysis", "tier": "mid" },
+        { "label": "Capital Markets", "tier": "senior" },
+        { "label": "Risk Management", "tier": "mid" },
+        { "label": "Treasury", "tier": "senior" },
+        { "label": "Equity Research", "tier": "senior" },
+        { "label": "Portfolio Analysis", "tier": "senior" },
+        { "label": "Cost of Capital (WACC)", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "certs",
+      "title": "Certifications",
+      "lead": "Credentials recruiters filter on. List the ones you hold or are pursuing.",
+      "skills": [
+        { "label": "CFA", "tier": "senior" },
+        { "label": "CPA", "tier": "senior" },
+        { "label": "FMVA", "tier": "mid" },
+        { "label": "FRM", "tier": "senior" },
+        { "label": "MBA (Finance)", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can prove through real work — an analyst who can't communicate findings has less impact.",
+      "skills": [
+        "Analytical Thinking",
+        "Attention to Detail",
+        "Communication",
+        "Problem Solving",
+        { "label": "Business Acumen", "tier": "mid" },
+        { "label": "Presentation Skills", "tier": "mid" },
+        { "label": "Critical Thinking", "tier": "mid" },
+        { "label": "Time Management", "tier": "mid" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Financial Modeling",
+    "types": ["Financial Modeling", "Financial Analysis", "FP&A & Planning", "Accounting", "Excel & Data", "Soft Skills", "All"],
+    "levels": ["Junior Analyst", "Financial Analyst", "Senior / Lead Analyst"],
+    "defaultLevel": "Financial Analyst"
+  },
+  "experienceLevels": [
+    {
+      "name": "Junior Analyst",
+      "subtitle": "Build the fundamentals",
+      "filled": 1,
+      "skills": ["Advanced Excel", "Financial Statements", "Variance Analysis", "Financial Reporting", "GAAP", "Data Visualization"]
+    },
+    {
+      "name": "Financial Analyst",
+      "subtitle": "Own analysis & forecasts",
+      "filled": 2,
+      "skills": ["Financial Modeling", "Forecasting", "Budgeting", "Valuation", "DCF Analysis", "FP&A"]
+    },
+    {
+      "name": "Senior / Lead Analyst",
+      "subtitle": "Drive strategy & decisions",
+      "filled": 3,
+      "skills": ["Capital Budgeting", "M&A Modeling", "Long-Range Planning", "Investment Analysis", "Business Acumen", "Presentation Skills"]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Financial Modeling", "Advanced Excel", "Valuation (DCF)", "Forecasting", "Variance Analysis", "Power BI"],
+      "note": "A tight, scannable mix of modeling, analysis, and tools — the three areas recruiters scan for."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Financial Analyst with 5+ years building ==financial models== and ==forecasts== in Excel, using ==variance analysis== and ==valuation== to guide budgeting and investment decisions.",
+      "note": "Fold your top 2–3 skills, plus any certification, into a sentence that frames your analytical impact."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Built a ==three-statement model== and ==DCF valuation== that supported a $30M acquisition, and automated monthly ==variance analysis== to cut reporting time 50%.",
+      "note": "The most convincing place — show a skill delivering a measurable result or a decision it informed."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "Financial Modeling",
+      "better": "Financial modeling — three-statement models, DCF valuation, scenario analysis"
+    },
+    {
+      "basic": "Excel",
+      "better": "Advanced Excel — pivot tables, complex formulas, financial functions, VBA"
+    },
+    {
+      "basic": "Forecasting",
+      "better": "Budgeting and forecasting — driver-based models and variance analysis"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking a financial analyst with strong ==financial modeling==, ==advanced Excel==, ==forecasting and budgeting==, ==variance analysis==, and knowledge of ==GAAP==. CFA a plus.\"",
+    "prioritizedSkills": [
+      "Financial Modeling",
+      "Advanced Excel",
+      "Forecasting",
+      "Variance Analysis",
+      "GAAP"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing “Excel” without depth.",
+      "detail": "Every analyst claims Excel — specify pivot tables, complex formulas, financial functions, VBA."
+    },
+    {
+      "title": "No modeling specifics.",
+      "detail": "Name the models — three-statement, DCF, LBO — not just “financial modeling”."
+    },
+    {
+      "title": "No quantified impact.",
+      "detail": "Tie skills to decisions or results — a valuation that supported a deal, time saved on close."
+    },
+    {
+      "title": "Burying certifications.",
+      "detail": "CFA, CPA, and FMVA are keywords recruiters filter on — surface them near the top."
+    },
+    {
+      "title": "Generic soft-skill filler.",
+      "detail": "“Detail-oriented” is expected — prove it with accurate models and clean reporting."
+    },
+    {
+      "title": "Ignoring data/BI tools.",
+      "detail": "SQL and Power BI increasingly appear in finance roles — include them if you have them."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern financial analyst roles these are assumed or too generic — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Word",
+      "Email",
+      "Basic Math",
+      "Data Entry",
+      "Typing",
+      "Team Player"
+    ]
+  },
+  "related": [
+    "data-analyst",
+    "business-analyst",
+    "product-manager",
+    "project-manager",
+    "data-scientist"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a financial analyst put on a resume?",
+      "a": "Aim for 12–16 skills across modeling, analysis, planning, and tools, plus any certification. Enough to show technical depth and business judgment, but curated to what you can defend in an interview and back with real work."
+    },
+    {
+      "q": "What are the most important financial analyst skills?",
+      "a": "Financial modeling and advanced Excel are the foundation, followed by financial analysis (variance, ratio, trend), forecasting and budgeting, and valuation (DCF). Accounting fundamentals like GAAP, plus the ability to present findings clearly, round out a strong resume."
+    },
+    {
+      "q": "Should I list CFA or CPA on my resume?",
+      "a": "Yes — CFA, CPA, FMVA, and FRM are keywords recruiters and ATS filter on, and they signal serious commitment to the field. Put them near the top, and include ones you're actively pursuing (e.g. “CFA Level II candidate”) since many employers value the progress."
+    },
+    {
+      "q": "How technical should a financial analyst resume be?",
+      "a": "Technical enough to prove you build, not just read, models. Beyond Excel, data skills like SQL, Power BI, and even Python are increasingly valued as finance teams automate reporting. List them if you have them — they're a growing differentiator, especially for FP&A and corporate roles."
+    },
+    {
+      "q": "How do I show impact on a finance resume?",
+      "a": "Pair each skill with a decision it informed or a number it moved: a valuation that supported an acquisition, a forecast accuracy improvement, reporting time cut through automation, or cost savings identified. Analysts are hired for judgment, so show the outcome, not just the task."
+    },
+    {
+      "q": "What skills should a junior financial analyst include?",
+      "a": "Focus on fundamentals you can demonstrate: advanced Excel, reading financial statements, variance analysis, reporting, and GAAP basics. Back them with an internship or project. At entry level, accuracy and a clean model beat claiming senior valuation or M&A experience."
+    },
+    {
+      "q": "How do I tailor financial analyst skills to a job description?",
+      "a": "Read the posting and note whether it's corporate FP&A, banking, or investment focused, plus the systems it names (SAP, Bloomberg) and any required certification. Mirror those in your own true words and move them toward the top, since ATS ranks you partly on how well your resume echoes the job's language."
+    }
+  ]
+}

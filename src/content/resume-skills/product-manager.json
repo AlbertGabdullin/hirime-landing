@@ -1,0 +1,362 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Product Manager",
+    "shortName": "Product Manager",
+    "category": "Product & Design",
+    "family": "product-manager",
+    "familyName": "Product Manager",
+    "order": 1
+  },
+  "seo": {
+    "title": "Product Manager Resume Skills: 90+ for 2026 | Hirime",
+    "description": "Product manager resume skills for 2026 — the strategy, discovery, analytics and execution keywords recruiters and ATS scan for, with real examples.",
+    "keywords": "product manager resume skills, PM resume skills, product management skills resume, roadmapping resume skills, product analytics resume skills, ATS keywords"
+  },
+  "hero": {
+    "title": "Product Manager Resume Skills: *90+ skills* for your resume",
+    "lede": "The product management skills hiring managers and ATS actually scan for in 2026 — strategy, discovery, execution, and the data fluency behind good decisions. Organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Product Strategy",
+      "Roadmapping",
+      "User Research",
+      "Agile",
+      "Product Analytics",
+      "A/B Testing",
+      "Prioritization",
+      "Stakeholder Management",
+      "Go-to-Market",
+      "SQL"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a product manager put on a resume?",
+    "answer": "Balance three sides of the role. Strategy and discovery — roadmapping, user research, prioritization — show you decide what to build. Execution — Agile, backlog management, writing PRDs — shows you ship it. Data — product analytics, A/B testing, KPIs — shows you know if it worked. Wrap it in stakeholder communication and leadership. Tailor the exact mix to the seniority and product type you're targeting.",
+    "essentials": [
+      "Product Strategy",
+      "Roadmapping",
+      "User Research",
+      "Agile / Scrum",
+      "Prioritization",
+      "Product Analytics",
+      "A/B Testing",
+      "Stakeholder Management",
+      "Go-to-Market",
+      "Cross-functional Leadership"
+    ]
+  },
+  "categories": [
+    {
+      "id": "strategy",
+      "title": "Product Strategy",
+      "lead": "The “what and why” of the role. These signal you think beyond the backlog.",
+      "skills": [
+        "Product Strategy",
+        "Roadmapping",
+        "Product Vision",
+        { "label": "Competitive Analysis", "tier": "mid" },
+        { "label": "Market Research", "tier": "mid" },
+        { "label": "Product-Market Fit", "tier": "mid" },
+        { "label": "OKRs", "tier": "mid" },
+        { "label": "Business Model", "tier": "senior" },
+        { "label": "Pricing Strategy", "tier": "senior" },
+        { "label": "Portfolio Strategy", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "discovery",
+      "title": "Discovery & Research",
+      "lead": "How you decide what's worth building. Even a couple of these signal customer-centered thinking.",
+      "skills": [
+        "User Research",
+        "Customer Interviews",
+        "User Personas",
+        { "label": "Jobs-to-be-Done (JTBD)", "tier": "mid" },
+        { "label": "Usability Testing", "tier": "mid" },
+        { "label": "Surveys", "tier": "mid" },
+        { "label": "Voice of Customer", "tier": "mid" },
+        { "label": "Problem Discovery", "tier": "senior" },
+        { "label": "Concept Testing", "tier": "senior" },
+        { "label": "Continuous Discovery", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "Execution & Delivery",
+      "lead": "The day-to-day of shipping. List the artifacts and rituals you actually run.",
+      "skills": [
+        "Agile",
+        "Scrum",
+        "Backlog Management",
+        "User Stories",
+        { "label": "Kanban", "tier": "mid" },
+        { "label": "Sprint Planning", "tier": "mid" },
+        { "label": "Product Requirements Documents (PRDs)", "tier": "mid" },
+        { "label": "Feature Specs", "tier": "mid" },
+        { "label": "Prioritization (RICE, MoSCoW)", "tier": "mid" },
+        { "label": "Release Management", "tier": "senior" },
+        { "label": "Roadmap Execution", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "analytics",
+      "title": "Data & Analytics",
+      "lead": "How you know it worked. Increasingly the skill that separates strong PMs from the rest.",
+      "skills": [
+        "Product Analytics",
+        "KPIs",
+        "Metrics",
+        { "label": "A/B Testing", "tier": "mid" },
+        { "label": "Funnel Analysis", "tier": "mid" },
+        { "label": "Cohort Analysis", "tier": "mid" },
+        { "label": "Retention Analysis", "tier": "mid" },
+        { "label": "SQL", "tier": "mid" },
+        { "label": "Amplitude", "tier": "mid" },
+        { "label": "Mixpanel", "tier": "mid" },
+        { "label": "Google Analytics", "tier": "mid" },
+        { "label": "North Star Metric", "tier": "senior" },
+        { "label": "Experimentation", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "design",
+      "title": "UX & Design Collaboration",
+      "lead": "PMs don't design, but they speak the language. List what you use to collaborate on product design.",
+      "skills": [
+        { "label": "Wireframing", "tier": "mid" },
+        { "label": "Prototyping", "tier": "mid" },
+        { "label": "Figma", "tier": "mid" },
+        { "label": "User Flows", "tier": "mid" },
+        { "label": "Design Thinking", "tier": "mid" },
+        { "label": "UX Principles", "tier": "mid" },
+        { "label": "Information Architecture", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical Fluency",
+      "lead": "You don't have to code, but understanding the stack earns trust with engineers.",
+      "skills": [
+        { "label": "APIs", "tier": "mid" },
+        { "label": "SQL", "tier": "mid" },
+        { "label": "Agile Development", "tier": "mid" },
+        { "label": "Technical Requirements", "tier": "mid" },
+        { "label": "SDLC", "tier": "senior" },
+        { "label": "System Design (fundamentals)", "tier": "senior" },
+        { "label": "QA / Acceptance Criteria", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "gtm",
+      "title": "Growth & Go-to-Market",
+      "lead": "Launching and growing the product, not just building it. Strong signal for senior roles.",
+      "skills": [
+        { "label": "Go-to-Market Strategy", "tier": "mid" },
+        { "label": "Product Launch", "tier": "mid" },
+        { "label": "Positioning", "tier": "mid" },
+        { "label": "Customer Segmentation", "tier": "mid" },
+        { "label": "Onboarding", "tier": "mid" },
+        { "label": "Growth Loops", "tier": "senior" },
+        { "label": "Monetization", "tier": "senior" },
+        { "label": "Retention Strategy", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools",
+      "lead": "List the ones you genuinely use to run product — skip anything you've only opened once.",
+      "skills": [
+        "Jira",
+        "Confluence",
+        "Notion",
+        { "label": "Aha!", "tier": "mid" },
+        { "label": "Productboard", "tier": "mid" },
+        { "label": "Miro", "tier": "mid" },
+        { "label": "Figma", "tier": "mid" },
+        { "label": "Amplitude", "tier": "mid" },
+        { "label": "Linear", "tier": "mid" },
+        { "label": "Asana", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "leadership",
+      "title": "Leadership & Stakeholders",
+      "lead": "PMs lead without authority. These carry the most weight as you move up.",
+      "skills": [
+        "Stakeholder Management",
+        "Cross-functional Leadership",
+        { "label": "Influence Without Authority", "tier": "mid" },
+        { "label": "Executive Communication", "tier": "senior" },
+        { "label": "Storytelling", "tier": "mid" },
+        { "label": "Negotiation", "tier": "senior" },
+        { "label": "Team Leadership", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can prove through real work — for PMs these are core, not filler.",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Strategic Thinking",
+        "Empathy",
+        { "label": "Decision Making", "tier": "mid" },
+        { "label": "Adaptability", "tier": "mid" },
+        { "label": "Analytical Thinking", "tier": "mid" },
+        { "label": "Leadership", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Strategy",
+    "types": ["Strategy", "Discovery & Research", "Execution", "Data & Analytics", "Go-to-Market", "Soft Skills", "All"],
+    "levels": ["Associate PM", "Product Manager", "Senior / Lead PM"],
+    "defaultLevel": "Product Manager"
+  },
+  "experienceLevels": [
+    {
+      "name": "Associate PM",
+      "subtitle": "Learn to ship",
+      "filled": 1,
+      "skills": ["Agile", "User Stories", "Backlog Management", "User Research", "KPIs", "Wireframing"]
+    },
+    {
+      "name": "Product Manager",
+      "subtitle": "Own a product area",
+      "filled": 2,
+      "skills": ["Roadmapping", "Prioritization", "A/B Testing", "Product Analytics", "Go-to-Market", "Stakeholder Management"]
+    },
+    {
+      "name": "Senior / Lead PM",
+      "subtitle": "Own strategy & outcomes",
+      "filled": 3,
+      "skills": ["Product Strategy", "Product Vision", "Cross-functional Leadership", "OKRs", "Monetization", "Executive Communication"]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Product Strategy", "Roadmapping", "A/B Testing", "SQL", "Agile / Scrum", "Stakeholder Management"],
+      "note": "A tight, scannable mix of strategy, execution, and data skills — the three sides recruiters look for."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Product Manager with 6+ years owning ==product strategy== and ==roadmaps== for B2B SaaS, using ==data== and ==user research== to ship features that moved retention and revenue.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your scope and impact."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Led ==discovery and A/B testing== for a new onboarding flow that lifted activation 28% and cut time-to-value from 9 days to 2.",
+      "note": "The most convincing place — show a skill delivering a measurable outcome."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "Roadmapping",
+      "better": "Roadmapping — prioritization with RICE, OKR alignment, stakeholder buy-in"
+    },
+    {
+      "basic": "Analytics",
+      "better": "Product analytics — A/B testing, funnel and retention analysis in Amplitude"
+    },
+    {
+      "basic": "Agile",
+      "better": "Agile delivery — backlog management, sprint planning, writing clear PRDs"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking a product manager with strong ==product strategy==, ==roadmapping==, ==user research==, ==data analysis (A/B testing)==, and ==cross-functional leadership==.\"",
+    "prioritizedSkills": [
+      "Product Strategy",
+      "Roadmapping",
+      "User Research",
+      "A/B Testing",
+      "Cross-functional Leadership"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing responsibilities, not skills.",
+      "detail": "“Managed the roadmap” is a duty. The skill is prioritization, discovery, stakeholder alignment."
+    },
+    {
+      "title": "All strategy, no execution (or vice versa).",
+      "detail": "Recruiters want both — the vision to decide and the discipline to ship."
+    },
+    {
+      "title": "No metrics anywhere.",
+      "detail": "PMs are judged on outcomes. Tie skills to activation, retention, or revenue you moved."
+    },
+    {
+      "title": "Ignoring data fluency.",
+      "detail": "Modern PM roles expect analytics and often SQL — leaving them off dates your resume."
+    },
+    {
+      "title": "Generic leadership buzzwords.",
+      "detail": "“Leader” means nothing alone. Show cross-functional leadership through a shipped outcome."
+    },
+    {
+      "title": "Overloading tool names.",
+      "detail": "Jira and Figma are table stakes. Lead with the thinking skills, not the tool logos."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern product manager roles these are assumed or too generic — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Office",
+      "Email",
+      "PowerPoint",
+      "Team Player",
+      "Multitasking",
+      "Hard Working"
+    ]
+  },
+  "related": [
+    "project-manager",
+    "ux-designer",
+    "business-analyst",
+    "data-analyst",
+    "digital-marketing-manager"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a product manager put on a resume?",
+      "a": "Aim for 12–16 skills that balance strategy, execution, and data. Enough to show you cover the full role, but curated to what you can defend in an interview and back with a shipped outcome. A wall of frameworks and tool logos reads as noise."
+    },
+    {
+      "q": "What are the most important product manager skills?",
+      "a": "Product strategy, roadmapping, prioritization, and user research on the decision side; Agile, backlog management, and clear specs on the execution side; and product analytics with A/B testing on the measurement side. Stakeholder management and communication tie it all together."
+    },
+    {
+      "q": "Do product managers need technical skills?",
+      "a": "You don't need to code, but technical fluency helps. SQL for pulling your own data, an understanding of APIs and the SDLC, and comfort talking architecture with engineers all build trust and appear in many job descriptions. List them if you have them; don't fake depth you can't back up."
+    },
+    {
+      "q": "Should a PM resume list soft skills?",
+      "a": "Yes — for PMs they're core, not filler, because the job is influence without authority. But show them in context: prove “stakeholder management” with a bullet about aligning engineering, design, and sales on a launch, rather than a bare list of adjectives."
+    },
+    {
+      "q": "What skills should an associate or junior PM include?",
+      "a": "Focus on execution fundamentals you can demonstrate: Agile, user stories, backlog management, basic analytics, and user research, plus one product you helped ship. At entry level, evidence you can move a product forward beats claiming strategy you haven't owned."
+    },
+    {
+      "q": "How is a product manager resume different from a project manager one?",
+      "a": "A product manager owns what to build and why — strategy, discovery, analytics, outcomes. A project manager owns how and when — planning, scheduling, risk, delivery on time and budget. They share Agile and stakeholder skills, so emphasize the outcome-and-discovery side to read clearly as a PM."
+    },
+    {
+      "q": "How do I tailor product skills to a job description?",
+      "a": "Read the posting and note whether it leans strategy, growth, technical, or delivery, plus the analytics tools it names. Mirror those in your own true words and move them toward the top of your skills section, since ATS ranks you partly on how well your resume echoes the job's language."
+    }
+  ]
+}

@@ -144,8 +144,9 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Resume Skills', item: new URL('/resume-skills', Astro.site).href },
-    { '@type': 'ListItem', position: 2, name: `${name} Resume Skills`, item: canonical },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: 'Resume Skills', item: new URL('/resume-skills', Astro.site).href },
+    { '@type': 'ListItem', position: 3, name: `${name} Resume Skills`, item: canonical },
   ],
 };
 ---

@@ -1,0 +1,362 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Digital Marketing Manager",
+    "shortName": "Digital Marketing",
+    "category": "Marketing",
+    "family": "digital-marketing-manager",
+    "familyName": "Digital Marketing Manager",
+    "order": 1
+  },
+  "seo": {
+    "title": "Digital Marketing Resume Skills: 100+ for 2026 | Hirime",
+    "description": "Digital marketing manager resume skills for 2026 — the SEO, PPC, content, social, email and analytics keywords recruiters and ATS scan for.",
+    "keywords": "digital marketing manager resume skills, digital marketing skills resume, SEO resume skills, PPC resume skills, Google Ads resume skills, marketing analytics skills, ATS keywords"
+  },
+  "hero": {
+    "title": "Digital Marketing Manager Resume Skills: *100+ skills* for your resume",
+    "lede": "The digital marketing skills hiring managers and ATS actually scan for in 2026 — SEO, paid media, content, social, email, and the analytics that prove ROI. Organized by channel and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "SEO",
+      "Google Ads",
+      "PPC",
+      "Content Marketing",
+      "Social Media Marketing",
+      "Email Marketing",
+      "Google Analytics",
+      "Marketing Strategy",
+      "Conversion Optimization",
+      "Marketing Automation"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a digital marketing manager put on a resume?",
+    "answer": "Show breadth across channels plus proof you drive results. Cover the acquisition mix — SEO, PPC/Google Ads, content, social, and email — then the analytics that prove it worked: Google Analytics, conversion tracking, and ROI. Add the strategy and leadership that make you a manager, not just a specialist, and name the platforms you run campaigns in. Tailor the exact mix to the channels the role prioritizes.",
+    "essentials": [
+      "SEO",
+      "Google Ads",
+      "Content Marketing",
+      "Social Media Marketing",
+      "Email Marketing",
+      "Google Analytics",
+      "Marketing Strategy",
+      "Conversion Rate Optimization",
+      "Marketing Automation",
+      "ROI Analysis"
+    ]
+  },
+  "categories": [
+    {
+      "id": "seo-sem",
+      "title": "SEO & SEM",
+      "lead": "The organic and search-paid foundation. List the specific tactics you run, not just “SEO”.",
+      "skills": [
+        "SEO",
+        "SEM",
+        "Keyword Research",
+        { "label": "On-Page SEO", "tier": "mid" },
+        { "label": "Technical SEO", "tier": "mid" },
+        { "label": "Link Building", "tier": "mid" },
+        { "label": "Local SEO", "tier": "mid" },
+        { "label": "Google Search Console", "tier": "mid" },
+        { "label": "SERP Analysis", "tier": "senior" },
+        { "label": "Content SEO", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "paid",
+      "title": "Paid Media & PPC",
+      "lead": "Where budget meets results. Name the platforms and the metrics you optimize toward.",
+      "skills": [
+        "PPC",
+        "Google Ads",
+        { "label": "Meta Ads (Facebook / Instagram)", "tier": "mid" },
+        { "label": "LinkedIn Ads", "tier": "mid" },
+        { "label": "Display Advertising", "tier": "mid" },
+        { "label": "Retargeting", "tier": "mid" },
+        { "label": "Campaign Optimization", "tier": "mid" },
+        { "label": "Media Buying", "tier": "senior" },
+        { "label": "Programmatic Advertising", "tier": "senior" },
+        { "label": "ROAS Optimization", "tier": "senior" },
+        { "label": "Budget Management", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "content",
+      "title": "Content Marketing",
+      "lead": "The engine behind organic and social. Show you can plan and produce, not just post.",
+      "skills": [
+        "Content Marketing",
+        "Content Strategy",
+        "Copywriting",
+        { "label": "Content Calendar", "tier": "mid" },
+        { "label": "SEO Copywriting", "tier": "mid" },
+        { "label": "Blogging", "tier": "mid" },
+        { "label": "Video Marketing", "tier": "mid" },
+        { "label": "Storytelling", "tier": "mid" },
+        { "label": "Editorial Management", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "social",
+      "title": "Social Media",
+      "lead": "Organic and community. List the platforms and the strategy behind them.",
+      "skills": [
+        "Social Media Marketing",
+        "Social Media Strategy",
+        { "label": "Community Management", "tier": "mid" },
+        { "label": "Instagram Marketing", "tier": "mid" },
+        { "label": "LinkedIn Marketing", "tier": "mid" },
+        { "label": "TikTok Marketing", "tier": "mid" },
+        { "label": "Influencer Marketing", "tier": "senior" },
+        { "label": "Social Listening", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "email",
+      "title": "Email & Automation",
+      "lead": "Owned-channel and lifecycle marketing. Name the platform and the tactics, not just “email”.",
+      "skills": [
+        "Email Marketing",
+        { "label": "Marketing Automation", "tier": "mid" },
+        { "label": "Lead Nurturing", "tier": "mid" },
+        { "label": "Segmentation", "tier": "mid" },
+        { "label": "Drip Campaigns", "tier": "mid" },
+        { "label": "A/B Testing", "tier": "mid" },
+        { "label": "Lifecycle Marketing", "tier": "senior" },
+        { "label": "CRM Marketing", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "analytics",
+      "title": "Analytics & Data",
+      "lead": "How you prove ROI. Increasingly the skill that separates managers from posters.",
+      "skills": [
+        "Google Analytics (GA4)",
+        "Conversion Tracking",
+        "KPIs",
+        { "label": "Google Tag Manager", "tier": "mid" },
+        { "label": "ROI Analysis", "tier": "mid" },
+        { "label": "Attribution Modeling", "tier": "senior" },
+        { "label": "Looker Studio", "tier": "mid" },
+        { "label": "Marketing Dashboards", "tier": "mid" },
+        { "label": "Excel / Sheets", "tier": "mid" },
+        { "label": "Data-Driven Decision Making", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "cro",
+      "title": "CRO & Web",
+      "lead": "Turning traffic into results. A strong differentiator for growth-focused roles.",
+      "skills": [
+        { "label": "Conversion Rate Optimization (CRO)", "tier": "mid" },
+        { "label": "Landing Page Optimization", "tier": "mid" },
+        { "label": "A/B Testing", "tier": "mid" },
+        { "label": "Funnel Optimization", "tier": "mid" },
+        { "label": "Heatmaps (Hotjar)", "tier": "senior" },
+        { "label": "WordPress", "tier": "mid" },
+        { "label": "Web Analytics", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "strategy",
+      "title": "Strategy & Growth",
+      "lead": "The manager-level thinking. These signal you set direction, not just execute channels.",
+      "skills": [
+        { "label": "Marketing Strategy", "tier": "mid" },
+        { "label": "Growth Marketing", "tier": "mid" },
+        { "label": "Go-to-Market Strategy", "tier": "senior" },
+        { "label": "Brand Strategy", "tier": "senior" },
+        { "label": "Customer Journey Mapping", "tier": "mid" },
+        { "label": "Market Research", "tier": "mid" },
+        { "label": "Competitive Analysis", "tier": "mid" },
+        { "label": "Positioning", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools & Platforms",
+      "lead": "List the ones you genuinely run campaigns and analysis in — recruiters scan for these by name.",
+      "skills": [
+        "Google Analytics",
+        "Google Ads",
+        "Meta Business Suite",
+        { "label": "HubSpot", "tier": "mid" },
+        { "label": "Mailchimp", "tier": "mid" },
+        { "label": "SEMrush", "tier": "mid" },
+        { "label": "Ahrefs", "tier": "mid" },
+        { "label": "Hootsuite", "tier": "mid" },
+        { "label": "Canva", "tier": "mid" },
+        { "label": "Salesforce", "tier": "senior" },
+        { "label": "Google Tag Manager", "tier": "mid" },
+        { "label": "Klaviyo", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can prove through real campaigns — managers need to lead as well as execute.",
+      "skills": [
+        "Communication",
+        "Creativity",
+        "Analytical Thinking",
+        "Project Management",
+        { "label": "Leadership", "tier": "mid" },
+        { "label": "Collaboration", "tier": "mid" },
+        { "label": "Adaptability", "tier": "mid" },
+        { "label": "Budget Management", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "SEO & SEM",
+    "types": ["SEO & SEM", "Paid Media", "Content", "Social Media", "Email & Automation", "Analytics", "All"],
+    "levels": ["Specialist", "Marketing Manager", "Senior / Head of Marketing"],
+    "defaultLevel": "Marketing Manager"
+  },
+  "experienceLevels": [
+    {
+      "name": "Specialist",
+      "subtitle": "Run the channels",
+      "filled": 1,
+      "skills": ["SEO", "Google Ads", "Social Media Marketing", "Email Marketing", "Google Analytics", "Copywriting"]
+    },
+    {
+      "name": "Marketing Manager",
+      "subtitle": "Own the mix & the numbers",
+      "filled": 2,
+      "skills": ["Marketing Strategy", "PPC", "Conversion Rate Optimization", "Marketing Automation", "ROI Analysis", "Budget Management"]
+    },
+    {
+      "name": "Senior / Head of Marketing",
+      "subtitle": "Own growth & the team",
+      "filled": 3,
+      "skills": ["Growth Marketing", "Go-to-Market Strategy", "Brand Strategy", "Attribution Modeling", "Leadership", "Positioning"]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["SEO", "Google Ads (PPC)", "Content Marketing", "Marketing Automation", "Google Analytics", "Conversion Optimization"],
+      "note": "A tight, scannable mix of channels plus analytics — show breadth and the ability to measure it."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Digital Marketing Manager with 6+ years driving growth across ==SEO==, ==paid media==, and ==email==, using ==analytics== to lift pipeline and ROI for B2B and DTC brands.",
+      "note": "Fold your top channels and your analytics strength into a sentence that frames measurable growth."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Scaled ==paid search and SEO== to grow organic traffic 140% and cut cost-per-acquisition 35% while managing a $50K/month ad budget.",
+      "note": "The most convincing place — show a channel skill delivering a measurable result and the budget you owned."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "SEO",
+      "better": "SEO — technical, on-page, and content strategy with measurable traffic growth"
+    },
+    {
+      "basic": "Google Ads",
+      "better": "Paid search — Google Ads campaign management, optimization, and ROAS tracking"
+    },
+    {
+      "basic": "Social Media",
+      "better": "Social media strategy — organic growth, paid social, and community management"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking a digital marketing manager with expertise in ==SEO==, ==PPC (Google Ads)==, ==content marketing==, ==email/marketing automation==, and ==analytics (Google Analytics)== to drive measurable ROI.\"",
+    "prioritizedSkills": [
+      "SEO",
+      "Google Ads",
+      "Content Marketing",
+      "Marketing Automation",
+      "Google Analytics"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing channels with no results.",
+      "detail": "“SEO” and “social media” mean little alone — back them with traffic, leads, or ROI."
+    },
+    {
+      "title": "No analytics skills.",
+      "detail": "Managers are judged on ROI. Google Analytics and conversion tracking are must-haves."
+    },
+    {
+      "title": "All execution, no strategy.",
+      "detail": "For a manager role, show you set direction and own budget, not just run campaigns."
+    },
+    {
+      "title": "Buzzword soup.",
+      "detail": "“Guru”, “ninja”, “rockstar” read as filler. Use the actual skill names recruiters scan for."
+    },
+    {
+      "title": "Ignoring the budget you managed.",
+      "detail": "Ad spend and team size signal scope — quantify what you were responsible for."
+    },
+    {
+      "title": "One channel only.",
+      "detail": "Manager roles want an integrated mix. Show breadth even if you have a specialty."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern digital marketing manager roles these are assumed or too generic — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Office",
+      "Email (as basic use)",
+      "Internet Research",
+      "Social Media (as personal use)",
+      "Team Player",
+      "Marketing Guru"
+    ]
+  },
+  "related": [
+    "product-manager",
+    "data-analyst",
+    "ux-designer",
+    "business-analyst",
+    "financial-analyst"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a digital marketing manager put on a resume?",
+      "a": "Aim for 14–18 skills that show breadth across channels plus analytics and strategy. Enough to prove you can run an integrated mix, but curated to what you can back with results. If you have a specialty (say, paid or SEO), lead with it while still showing range."
+    },
+    {
+      "q": "What are the most important digital marketing skills?",
+      "a": "SEO, PPC/Google Ads, content marketing, social media, and email are the core channels, and Google Analytics with conversion tracking is the non-negotiable measurement layer. For a manager role, add strategy, budget management, and leadership to show you direct the mix, not just execute one part of it."
+    },
+    {
+      "q": "Do digital marketers need analytics and data skills?",
+      "a": "Yes — analytics is now central to the role. Google Analytics (GA4), Google Tag Manager, conversion tracking, and ROI/attribution analysis appear in most job descriptions because employers hire marketers who can prove impact, not just run campaigns. List them prominently."
+    },
+    {
+      "q": "Should I list specific tools like HubSpot and SEMrush?",
+      "a": "Yes — platform names are keywords recruiters and ATS scan for. List the ones you genuinely use: HubSpot or Mailchimp for automation, SEMrush or Ahrefs for SEO, Google Ads and Meta Business Suite for paid. Depth in a few beats naming every tool you've opened once."
+    },
+    {
+      "q": "What skills should a junior digital marketer include?",
+      "a": "Focus on hands-on channel skills you can demonstrate: SEO basics, running Google Ads or social campaigns, email marketing, copywriting, and Google Analytics. Back each with a real campaign and its numbers. At entry level, evidence you moved a metric beats claiming full strategy ownership."
+    },
+    {
+      "q": "How do I show ROI on a marketing resume?",
+      "a": "Pair each channel skill with a quantified outcome: traffic growth, cost-per-acquisition reduced, conversion rate lifted, pipeline or revenue generated, and the budget you managed. Numbers turn a list of channels into evidence you drive business results — which is what hiring managers filter for."
+    },
+    {
+      "q": "How do I tailor marketing skills to a job description?",
+      "a": "Read the posting and note which channels it prioritizes (paid vs organic vs lifecycle), the tools it names, and whether it's execution- or strategy-focused. Mirror those in your own true words and move them toward the top, since ATS ranks you partly on how well your resume echoes the job's language."
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Data Analyst",
+    "shortName": "Data Analyst",
+    "category": "Data & AI",
+    "family": "data-analyst",
+    "familyName": "Data Analyst",
+    "order": 1
+  },
+  "seo": {
+    "title": "Data Analyst Resume Skills: 90+ for 2026 | Hirime",
+    "description": "Data analyst resume skills for 2026 — the SQL, Excel, Python, Tableau and Power BI keywords recruiters and ATS scan for, by category and level.",
+    "keywords": "data analyst resume skills, data analyst skills resume, SQL resume skills, Tableau resume skills, Power BI resume skills, Excel data analysis skills, ATS keywords"
+  },
+  "hero": {
+    "title": "Data Analyst Resume Skills: *90+ skills* for your resume",
+    "lede": "The data analytics skills hiring managers and ATS actually scan for in 2026 — SQL, Excel, Python, and the BI tools that turn raw data into decisions. Organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI",
+      "Data Visualization",
+      "Statistics",
+      "Data Cleaning",
+      "A/B Testing",
+      "Dashboards"
+    ],
+    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a data analyst put on a resume?",
+    "answer": "Lead with the technical core every analytics team expects — SQL, Excel, and a BI tool like Tableau or Power BI — then add the analysis depth that separates you: statistics, data cleaning, and increasingly Python or R. Round it out with the business skills that turn numbers into decisions: KPI reporting, data storytelling, and stakeholder communication. Tailor the exact mix to the job you're targeting.",
+    "essentials": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Tableau",
+      "Power BI",
+      "Statistics",
+      "Data Cleaning",
+      "Data Visualization",
+      "KPI Reporting",
+      "Data Storytelling"
+    ]
+  },
+  "categories": [
+    {
+      "id": "sql",
+      "title": "SQL & Databases",
+      "lead": "The single most-scanned data analyst skill. List the dialects and the query techniques you actually use — “SQL (window functions, CTEs)” signals more than “SQL” alone.",
+      "skills": [
+        "SQL",
+        "MySQL",
+        "PostgreSQL",
+        { "label": "Joins", "tier": "mid" },
+        { "label": "Subqueries", "tier": "mid" },
+        { "label": "Aggregate Functions", "tier": "mid" },
+        { "label": "Window Functions", "tier": "mid" },
+        { "label": "CTEs (Common Table Expressions)", "tier": "mid" },
+        { "label": "Microsoft SQL Server", "tier": "mid" },
+        { "label": "T-SQL", "tier": "mid" },
+        { "label": "Oracle SQL", "tier": "mid" },
+        { "label": "Stored Procedures", "tier": "senior" },
+        { "label": "Query Optimization", "tier": "senior" },
+        { "label": "Database Design", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "spreadsheets",
+      "title": "Excel & Spreadsheets",
+      "lead": "Still the everyday tool of the trade. Show depth beyond basic formulas — pivot tables and lookups are what recruiters look for.",
+      "skills": [
+        "Microsoft Excel",
+        "Pivot Tables",
+        "Google Sheets",
+        "Formulas & Functions",
+        { "label": "VLOOKUP / XLOOKUP", "tier": "mid" },
+        { "label": "INDEX / MATCH", "tier": "mid" },
+        { "label": "Conditional Formatting", "tier": "mid" },
+        { "label": "Power Query", "tier": "mid" },
+        { "label": "Power Pivot", "tier": "senior" },
+        { "label": "Macros / VBA", "tier": "senior" },
+        { "label": "Data Validation", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "viz",
+      "title": "Data Visualization & BI",
+      "lead": "Pick the BI platforms you've built real dashboards in — depth in one beats a shallow list of five.",
+      "skills": [
+        "Tableau",
+        "Power BI",
+        "Data Visualization",
+        "Dashboards",
+        { "label": "Looker", "tier": "mid" },
+        { "label": "Looker Studio (Google Data Studio)", "tier": "mid" },
+        { "label": "Qlik Sense", "tier": "mid" },
+        { "label": "Metabase", "tier": "mid" },
+        { "label": "Mode Analytics", "tier": "senior" },
+        { "label": "DAX", "tier": "senior" },
+        { "label": "Report Automation", "tier": "senior" },
+        { "label": "Dashboard Design", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "programming",
+      "title": "Programming & Scripting",
+      "lead": "Increasingly expected even for “non-technical” analyst roles. List the libraries you use, not just the language.",
+      "skills": [
+        { "label": "Python", "tier": "mid" },
+        { "label": "pandas", "tier": "mid" },
+        { "label": "NumPy", "tier": "mid" },
+        { "label": "R", "tier": "mid" },
+        { "label": "Jupyter Notebooks", "tier": "mid" },
+        { "label": "dplyr / tidyverse", "tier": "senior" },
+        { "label": "Matplotlib", "tier": "senior" },
+        { "label": "Seaborn", "tier": "senior" },
+        "Git",
+        { "label": "Bash / Command Line", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "stats",
+      "title": "Statistics & Analysis",
+      "lead": "The reasoning behind the charts. Even a few of these signal you understand the “why”, not just the “what”.",
+      "skills": [
+        "Descriptive Statistics",
+        "Data Analysis",
+        { "label": "Hypothesis Testing", "tier": "mid" },
+        { "label": "A/B Testing", "tier": "mid" },
+        { "label": "Regression Analysis", "tier": "mid" },
+        { "label": "Correlation Analysis", "tier": "mid" },
+        { "label": "Cohort Analysis", "tier": "mid" },
+        { "label": "Time Series Analysis", "tier": "senior" },
+        { "label": "Confidence Intervals", "tier": "senior" },
+        { "label": "Forecasting", "tier": "senior" },
+        { "label": "Statistical Modeling", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "dataprep",
+      "title": "Data Preparation & ETL",
+      "lead": "Analysts spend most of their time here — showing you can wrangle messy data is a strong signal.",
+      "skills": [
+        "Data Cleaning",
+        "Data Wrangling",
+        { "label": "Data Validation", "tier": "mid" },
+        { "label": "Data Modeling", "tier": "mid" },
+        { "label": "ETL", "tier": "mid" },
+        { "label": "Data Pipelines", "tier": "senior" },
+        { "label": "dbt", "tier": "senior" },
+        { "label": "Alteryx", "tier": "senior" },
+        { "label": "Apache Airflow", "tier": "senior" },
+        { "label": "Data Quality", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "reporting",
+      "title": "Analytics & Reporting",
+      "lead": "The business-facing side of the role — the outcomes an analyst is hired to deliver.",
+      "skills": [
+        "KPI Reporting",
+        "Ad Hoc Analysis",
+        "Business Intelligence",
+        { "label": "Google Analytics (GA4)", "tier": "mid" },
+        { "label": "Web Analytics", "tier": "mid" },
+        { "label": "Reporting Automation", "tier": "senior" },
+        { "label": "Metric Definition", "tier": "senior" },
+        { "label": "Requirements Gathering", "tier": "mid" },
+        { "label": "Data Storytelling", "tier": "mid" }
+      ]
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud & Big Data",
+      "lead": "Where modern analytics data lives. List the warehouses and platforms you've actually queried.",
+      "skills": [
+        { "label": "BigQuery", "tier": "mid" },
+        { "label": "Snowflake", "tier": "mid" },
+        { "label": "Amazon Redshift", "tier": "senior" },
+        { "label": "AWS", "tier": "senior" },
+        { "label": "Google Cloud Platform (GCP)", "tier": "senior" },
+        { "label": "Azure", "tier": "senior" },
+        { "label": "Databricks", "tier": "senior" },
+        { "label": "Apache Spark", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can demonstrate through real work examples — an analyst who can't communicate findings gets ignored.",
+      "skills": [
+        "Communication",
+        "Attention to Detail",
+        "Problem Solving",
+        "Critical Thinking",
+        { "label": "Data Storytelling", "tier": "mid" },
+        { "label": "Stakeholder Management", "tier": "mid" },
+        { "label": "Business Acumen", "tier": "mid" },
+        { "label": "Presentation Skills", "tier": "mid" },
+        { "label": "Cross-functional Collaboration", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "SQL & Databases",
+    "types": ["SQL & Databases", "Excel", "Visualization & BI", "Programming", "Statistics", "Soft Skills", "All"],
+    "levels": ["Entry Level", "Mid Level", "Senior"],
+    "defaultLevel": "Mid Level"
+  },
+  "experienceLevels": [
+    {
+      "name": "Entry Level",
+      "subtitle": "Master the core tools",
+      "filled": 1,
+      "skills": ["SQL", "Excel", "Data Cleaning", "Tableau", "Descriptive Statistics", "Data Visualization"]
+    },
+    {
+      "name": "Mid-Level",
+      "subtitle": "Analyze with depth",
+      "filled": 2,
+      "skills": ["Python", "A/B Testing", "Regression Analysis", "ETL", "Power BI", "Google Analytics"]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Drive decisions & strategy",
+      "filled": 3,
+      "skills": ["Statistical Modeling", "Data Storytelling", "Stakeholder Management", "Metric Definition", "Forecasting", "Data Pipelines"]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["SQL", "Python (pandas)", "Tableau", "Power BI", "A/B Testing", "Excel (Pivot Tables)"],
+      "note": "A tight, scannable list of your strongest, most relevant tools — pair each language with the depth you actually have."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Data Analyst with 4+ years turning ==SQL== and ==Python== analysis into ==dashboards== that drive decisions, with a focus on ==A/B testing== and KPI reporting.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and impact."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Built a ==Tableau dashboard== on top of a ==SQL== pipeline that cut weekly reporting time by 60% and surfaced a churn driver worth $200K.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "SQL",
+      "better": "SQL — complex joins, window functions, CTEs, query optimization"
+    },
+    {
+      "basic": "Excel",
+      "better": "Advanced Excel — pivot tables, VLOOKUP/XLOOKUP, Power Query"
+    },
+    {
+      "basic": "Data Visualization",
+      "better": "Data visualization and dashboard design in Tableau and Power BI"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking a data analyst proficient in ==SQL==, ==Excel==, ==Tableau== or ==Power BI==, with experience in ==statistical analysis== and stakeholder reporting.\"",
+    "prioritizedSkills": [
+      "SQL",
+      "Excel",
+      "Tableau",
+      "Power BI",
+      "Statistical Analysis"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing “data analysis” without the tools.",
+      "detail": "Recruiters and ATS scan for SQL, Excel, Tableau — name the specific tools you use."
+    },
+    {
+      "title": "Claiming Python without any depth.",
+      "detail": "If you list Python, be ready to talk pandas, cleaning, and a real analysis you ran."
+    },
+    {
+      "title": "Adding generic computer skills.",
+      "detail": "“Microsoft Office” and “email” are assumed and waste prime space."
+    },
+    {
+      "title": "Skills with no supporting results.",
+      "detail": "Back each headline skill with a bullet that shows a number you moved."
+    },
+    {
+      "title": "Keyword-stuffing every tool you've heard of.",
+      "detail": "A wall of tools you can't discuss reads as noise to recruiters and often to ATS."
+    },
+    {
+      "title": "Ignoring the business side.",
+      "detail": "Pure tool lists miss the point — show you turn data into decisions."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern data analyst roles these are assumed — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Word",
+      "Email",
+      "Internet Research",
+      "Basic computer skills",
+      "Typing",
+      "Data Entry"
+    ]
+  },
+  "related": [
+    "data-scientist",
+    "business-analyst",
+    "financial-analyst",
+    "product-manager",
+    "backend-developer"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a data analyst put on a resume?",
+      "a": "Aim for 12–16 well-chosen skills. Cover the core — SQL, Excel, a BI tool — plus the analysis and programming skills a specific job asks for. Curate to what you can actually discuss in an interview; a long list of tools you've only tried once dilutes your strongest signals."
+    },
+    {
+      "q": "What are the most important data analyst skills?",
+      "a": "SQL is the single most in-demand and most-scanned skill, followed by Excel and a BI tool like Tableau or Power BI. Beyond those, employers increasingly look for Python or R, statistics, data cleaning, and the communication skills to turn analysis into decisions."
+    },
+    {
+      "q": "Do data analysts need to know Python?",
+      "a": "It depends on the role, but Python is increasingly expected. Many analyst jobs run entirely on SQL and Excel, but roles at data-forward companies list Python (with pandas) as a requirement. If you know it, list it with a library so it reads as real skill rather than a course you took."
+    },
+    {
+      "q": "Should I list SQL and Excel if they feel basic?",
+      "a": "Yes — always. They are the two most-scanned data analyst keywords and a missing SQL is a common reason resumes get filtered out. Make them specific: “SQL (window functions, CTEs)” and “Advanced Excel (pivot tables, Power Query)” signal real depth."
+    },
+    {
+      "q": "Tableau or Power BI — which should I put on my resume?",
+      "a": "List whichever you've actually built dashboards in, and both if you use both. Power BI dominates in Microsoft-heavy enterprises; Tableau is common at product and tech companies. Depth in one you can demo beats naming three you've barely opened."
+    },
+    {
+      "q": "What skills should a junior data analyst include?",
+      "a": "Focus on the fundamentals you can demonstrate: SQL, Excel, data cleaning, one BI tool, and descriptive statistics. Back each with a project or a measurable result. At entry level, a couple of real analyses beat a long list of tools."
+    },
+    {
+      "q": "How do I tailor data analyst skills to a job description?",
+      "a": "Read the posting and note the exact tools and methods it names — SQL dialect, BI platform, whether Python is required. Mirror those in your own true words and move them toward the top of your skills section, since ATS ranks you partly on how well your resume echoes the job's language."
+    }
+  ]
+}
