@@ -150,6 +150,7 @@ export const es: Translations = {
   },
   footer: {
     tagline: 'Currículums con IA para cada oportunidad.',
+    company: 'Empresa',
     links: {
       about: 'Acerca de',
       privacy: 'Política de Privacidad',

@@ -148,6 +148,7 @@ export const en = {
   },
   footer: {
     tagline: 'AI-powered resumes for every opportunity.',
+    company: 'Company',
     links: {
       about: 'About',
       privacy: 'Privacy Policy',

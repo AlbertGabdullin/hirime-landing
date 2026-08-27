@@ -2,6 +2,7 @@
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import type { Translations } from '../i18n/en';
 import type { Lang } from '../i18n/utils';
+import { useTranslations } from '../i18n/utils';
 
 interface Props {
   t: Translations['footer'];
@@ -9,15 +10,34 @@ interface Props {
 }
 
 const { t, lang } = Astro.props;
+
+// Reuse the nav labels for the footer link columns.
+const nav = useTranslations(lang).nav;
+
+const linkColumns = [
+  {
+    title: nav.freeTools,
+    links: [
+      { href: '/tools/ats-resume-checker', label: nav.atsChecker },
+      { href: '/tools/resume-bullet-point-generator', label: nav.bulletGenerator },
+    ],
+  },
+  {
+    title: nav.resources,
+    links: [
+      { href: '/resume-skills', label: nav.resumeSkills },
+    ],
+  },
+];
 ---
 
 <footer style="padding: 3rem 1.5rem 2.5rem;">
   <div style="max-width: 1180px; margin: 0 auto;">
 
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6" style="margin-bottom: 2rem;">
+    <div class="footer-top" style="margin-bottom: 2rem;">
 
       <!-- Logo + tagline -->
-      <div>
+      <div class="footer-brand">
         <a
           href={lang === 'en' ? '/' : `/${lang}/`}
           style="
@@ -46,43 +66,35 @@ const { t, lang } = Astro.props;
         <p style="font-size: 0.875rem; color: var(--text-muted);">
           {t.tagline}
         </p>
+        <div style="margin-top: 1.25rem;">
+          <LanguageSwitcher currentLang={lang} />
+        </div>
       </div>
 
-      <!-- Links + language switcher -->
-      <div class="flex flex-col sm:items-end gap-3">
-        <nav aria-label="Footer navigation">
-          <ul style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.25rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-          ">
-            <li>
-              <a href="/about" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;">
-                {t.links.about}
-              </a>
-            </li>
-            <li>
-              <a href="/privacy" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;">
-                {t.links.privacy}
-              </a>
-            </li>
-            <li>
-              <a href="/terms" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;">
-                {t.links.terms}
-              </a>
-            </li>
-            <li>
-              <a href="mailto:hello@hirime.com" class="btn-ghost" style="font-size: 0.875rem; padding: 0.375rem 0.75rem;">
-                {t.links.contact}
-              </a>
-            </li>
+      <!-- Link columns -->
+      {linkColumns.map((col) => (
+        <nav class="footer-col" aria-label={col.title}>
+          <h3 class="footer-col-title">{col.title}</h3>
+          <ul class="footer-col-list">
+            {col.links.map((link) => (
+              <li>
+                <a href={link.href} class="footer-link">{link.label}</a>
+              </li>
+            ))}
           </ul>
         </nav>
-        <LanguageSwitcher currentLang={lang} />
-      </div>
+      ))}
+
+      <!-- Company column -->
+      <nav class="footer-col" aria-label={t.company}>
+        <h3 class="footer-col-title">{t.company}</h3>
+        <ul class="footer-col-list">
+          <li><a href="/about" class="footer-link">{t.links.about}</a></li>
+          <li><a href="/privacy" class="footer-link">{t.links.privacy}</a></li>
+          <li><a href="/terms" class="footer-link">{t.links.terms}</a></li>
+          <li><a href="mailto:hello@hirime.com" class="footer-link">{t.links.contact}</a></li>
+        </ul>
+      </nav>
 
     </div>
 
@@ -106,3 +118,55 @@ const { t, lang } = Astro.props;
 
   </div>
 </footer>
+
+<style>
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .footer-brand {
+    max-width: 22rem;
+  }
+  .footer-col-title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0 0 0.875rem;
+  }
+  .footer-col-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  .footer-link {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .footer-link:hover {
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 768px) {
+    .footer-top {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

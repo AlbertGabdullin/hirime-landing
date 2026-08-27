@@ -28,7 +28,7 @@
       "Go-to-Market",
       "SQL"
     ],
-    "primaryCta": { "label": "Build My Resume", "href": "#build" },
+    "primaryCta": { "label": "Get early access", "href": "#build" },
     "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
   },
   "quickAnswer": {
