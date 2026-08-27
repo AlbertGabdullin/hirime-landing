@@ -11,6 +11,11 @@ interface Props {
 
 const { t, lang } = Astro.props;
 
+// Anchor links (How it works / Features / Coming soon) only resolve on the
+// landing page, so only show them there.
+const path = Astro.url.pathname.replace(/\/$/, '');
+const isHome = path === '' || path === `/${lang}`;
+
 const tools = [
   {
     href: '/tools/ats-resume-checker',
@@ -140,9 +145,13 @@ const resources = [
           </div>
         </div>
 
-        <a href="#how-it-works" class="btn-ghost">{t.howItWorks}</a>
-        <a href="#features" class="btn-ghost">{t.features}</a>
-        <a href="#coming-soon" class="btn-ghost">{t.comingSoon}</a>
+        {isHome && (
+          <>
+            <a href="#how-it-works" class="btn-ghost">{t.howItWorks}</a>
+            <a href="#features" class="btn-ghost">{t.features}</a>
+            <a href="#coming-soon" class="btn-ghost">{t.comingSoon}</a>
+          </>
+        )}
       </div>
 
       <!-- Right controls -->
@@ -201,10 +210,14 @@ const resources = [
             <span>{item.title}</span>
           </a>
         ))}
-        <div style="height: 0.5rem;"></div>
-        <a href="#how-it-works" class="btn-ghost" style="justify-content: flex-start;">{t.howItWorks}</a>
-        <a href="#features" class="btn-ghost" style="justify-content: flex-start;">{t.features}</a>
-        <a href="#coming-soon" class="btn-ghost" style="justify-content: flex-start;">{t.comingSoon}</a>
+        {isHome && (
+          <>
+            <div style="height: 0.5rem;"></div>
+            <a href="#how-it-works" class="btn-ghost" style="justify-content: flex-start;">{t.howItWorks}</a>
+            <a href="#features" class="btn-ghost" style="justify-content: flex-start;">{t.features}</a>
+            <a href="#coming-soon" class="btn-ghost" style="justify-content: flex-start;">{t.comingSoon}</a>
+          </>
+        )}
       </div>
       <div class="flex items-center gap-3 mt-4">
         <LanguageSwitcher currentLang={lang} />
