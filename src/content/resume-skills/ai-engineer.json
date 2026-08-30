@@ -1,0 +1,353 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "AI Engineer",
+    "shortName": "AI Engineer",
+    "category": "Data & AI",
+    "family": "ai-engineer",
+    "familyName": "AI Engineer",
+    "order": 4
+  },
+  "seo": {
+    "title": "AI Engineer Resume Skills: 80+ for 2026 | Hirime",
+    "description": "AI and LLM engineer resume skills for 2026 — the ATS keywords recruiters scan for: LLMs, RAG, prompt engineering and vector databases. Free AI generator.",
+    "keywords": "ai engineer resume skills, llm engineer resume skills, generative ai resume skills, prompt engineering skills, rag skills, langchain, vector databases, skills for an ai engineer resume, ATS keywords"
+  },
+  "hero": {
+    "title": "AI Engineer Resume Skills: *80+ skills* for your resume",
+    "lede": "The LLM and generative-AI skills hiring managers and ATS actually scan for in 2026 — whether the role is called AI engineer, LLM engineer or generative AI engineer. Foundation models, RAG, prompt engineering, orchestration and deployment, organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Python",
+      "LLMs",
+      "RAG",
+      "Prompt Engineering",
+      "LangChain",
+      "Vector Databases",
+      "OpenAI API",
+      "Fine-Tuning",
+      "Embeddings",
+      "PyTorch"
+    ],
+    "primaryCta": { "label": "Get early access", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should an AI engineer put on a resume?",
+    "answer": "AI engineer and LLM engineer roles are about building products on top of foundation models — reliably and in production. Lead with Python and hands-on LLM work (OpenAI/Anthropic APIs, prompt engineering), retrieval-augmented generation (RAG) with a vector database, and an orchestration framework (LangChain or LlamaIndex), then the production side — deployment, evaluation and monitoring. As you grow, add fine-tuning, agents, multimodal models and inference optimization. Tailor the exact mix to the job you're targeting.",
+    "essentials": [
+      "Python",
+      "LLMs",
+      "RAG",
+      "Prompt Engineering",
+      "LangChain",
+      "Vector Databases",
+      "Embeddings",
+      "APIs",
+      "Fine-Tuning",
+      "Model Deployment"
+    ]
+  },
+  "categories": [
+    {
+      "id": "languages",
+      "title": "Languages & Core",
+      "lead": "Lead with Python — the default for AI work — and add the others you genuinely build with, e.g. “TypeScript (AI SDK, Next.js)”.",
+      "skills": [
+        "Python",
+        "SQL",
+        { "label": "TypeScript", "tier": "mid" },
+        { "label": "JavaScript", "tier": "mid" },
+        { "label": "FastAPI", "tier": "mid" },
+        { "label": "Bash", "tier": "senior" },
+        { "label": "Rust", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "llms",
+      "title": "LLMs & Foundation Models",
+      "lead": "The heart of the role — list the models and providers you've actually built with, and add depth in parentheses, e.g. “Claude (tool use, long context)”.",
+      "skills": [
+        "LLMs",
+        "OpenAI API",
+        { "label": "Anthropic / Claude API", "tier": "mid" },
+        { "label": "Hugging Face", "tier": "mid" },
+        { "label": "Open-Source Models (Llama)", "tier": "mid" },
+        { "label": "Function / Tool Calling", "tier": "mid" },
+        { "label": "Multimodal Models", "tier": "senior" },
+        { "label": "Model Context Protocol (MCP)", "tier": "senior" },
+        { "label": "Diffusion Models", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "rag",
+      "title": "RAG & Retrieval",
+      "lead": "The most common LLM system pattern — name the vector stores and retrieval techniques you've shipped.",
+      "skills": [
+        "RAG",
+        "Embeddings",
+        { "label": "Vector Databases", "tier": "mid" },
+        { "label": "Pinecone", "tier": "mid" },
+        { "label": "pgvector", "tier": "mid" },
+        { "label": "Semantic Search", "tier": "mid" },
+        { "label": "Chunking Strategies", "tier": "mid" },
+        { "label": "Hybrid Search", "tier": "senior" },
+        { "label": "Reranking", "tier": "senior" },
+        { "label": "Weaviate / Qdrant", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "prompting",
+      "title": "Prompt Engineering",
+      "lead": "The craft of getting reliable output from models — claim the techniques you've actually used to raise quality.",
+      "skills": [
+        "Prompt Engineering",
+        "Few-Shot Prompting",
+        { "label": "Chain-of-Thought", "tier": "mid" },
+        { "label": "System Prompts", "tier": "mid" },
+        { "label": "Structured Output", "tier": "mid" },
+        { "label": "Prompt Templates", "tier": "mid" },
+        { "label": "Guardrails", "tier": "senior" },
+        { "label": "Prompt Optimization", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "orchestration",
+      "title": "Frameworks & Agents",
+      "lead": "How you wire models into applications — list the orchestration tools and agent patterns you've built with.",
+      "skills": [
+        { "label": "LangChain", "tier": "mid" },
+        { "label": "LlamaIndex", "tier": "mid" },
+        { "label": "AI Agents", "tier": "mid" },
+        { "label": "Vercel AI SDK", "tier": "mid" },
+        { "label": "Tool Use", "tier": "mid" },
+        { "label": "LangGraph", "tier": "senior" },
+        { "label": "Multi-Agent Systems", "tier": "senior" },
+        { "label": "Workflow Orchestration", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "training",
+      "title": "Fine-Tuning & Training",
+      "lead": "The deeper model work that sets senior AI engineers apart — claim what you've actually run, not just read papers on.",
+      "skills": [
+        { "label": "Fine-Tuning", "tier": "mid" },
+        { "label": "PyTorch", "tier": "mid" },
+        { "label": "Transformers", "tier": "mid" },
+        { "label": "LoRA / PEFT", "tier": "senior" },
+        { "label": "RLHF", "tier": "senior" },
+        { "label": "Quantization", "tier": "senior" },
+        { "label": "Distillation", "tier": "senior" },
+        { "label": "Model Evaluation", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "production",
+      "title": "Deployment & LLMOps",
+      "lead": "Turning demos into products — name the tools you've used to ship, evaluate and monitor LLM systems.",
+      "skills": [
+        "APIs",
+        "Git",
+        { "label": "Docker", "tier": "mid" },
+        { "label": "Model Deployment", "tier": "mid" },
+        { "label": "LLM Evaluation", "tier": "mid" },
+        { "label": "Observability (LangSmith)", "tier": "mid" },
+        { "label": "AWS", "tier": "mid" },
+        { "label": "Inference Optimization", "tier": "senior" },
+        { "label": "Cost Optimization", "tier": "senior" },
+        { "label": "Caching / Streaming", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "responsible-ai",
+      "title": "Safety & Responsible AI",
+      "lead": "Even a couple of these signal you build carefully — list what you've actually implemented, not just heard of.",
+      "skills": [
+        { "label": "Hallucination Mitigation", "tier": "mid" },
+        { "label": "Content Moderation", "tier": "mid" },
+        { "label": "Evaluation Metrics", "tier": "mid" },
+        { "label": "Red Teaming", "tier": "senior" },
+        { "label": "Bias Mitigation", "tier": "senior" },
+        { "label": "Data Privacy", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can demonstrate through real work examples, not just claim — prove them in your experience bullets.",
+      "skills": [
+        "Problem Solving",
+        "Communication",
+        "Analytical Thinking",
+        "Collaboration",
+        { "label": "Research Skills", "tier": "mid" },
+        { "label": "Experimentation", "tier": "mid" },
+        { "label": "Product Sense", "tier": "mid" },
+        { "label": "Ownership", "tier": "senior" },
+        { "label": "Mentoring", "tier": "senior" },
+        { "label": "Technical Leadership", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "LLMs",
+    "types": ["LLMs", "RAG", "Prompt Engineering", "Frameworks & Agents", "Fine-Tuning", "Deployment", "Soft Skills", "All"],
+    "levels": ["Entry Level", "Mid Level", "Senior"],
+    "defaultLevel": "Mid Level"
+  },
+  "experienceLevels": [
+    {
+      "name": "Entry Level",
+      "subtitle": "Build with the APIs",
+      "filled": 1,
+      "skills": ["Python", "OpenAI API", "Prompt Engineering", "RAG", "Embeddings", "Git"]
+    },
+    {
+      "name": "Mid-Level",
+      "subtitle": "Ship LLM features",
+      "filled": 2,
+      "skills": [
+        "LangChain",
+        "Vector Databases",
+        "AI Agents",
+        "Fine-Tuning",
+        "LLM Evaluation",
+        "Docker"
+      ]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Own AI systems in production",
+      "filled": 3,
+      "skills": [
+        "Multi-Agent Systems",
+        "LoRA / PEFT",
+        "Inference Optimization",
+        "LLMOps",
+        "Cost Optimization",
+        "Technical Leadership"
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Python", "LLMs", "RAG", "LangChain", "Vector Databases", "Fine-Tuning"],
+      "note": "A tight, scannable list that balances LLM building blocks and production — not every model you've prompted once."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "AI Engineer with 3+ years building ==LLM-powered products== — ==RAG pipelines== over vector databases and ==agentic workflows== with LangChain — shipped to production with evaluation and monitoring.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and focus."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Cut support resolution time 35% by ==building a RAG assistant== over the docs with ==pgvector and reranking==, plus ==LLM evaluation== to keep answer quality above 90%.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "LLMs",
+      "better": "LLMs — OpenAI & Claude APIs, tool calling, structured output, streaming"
+    },
+    {
+      "basic": "RAG",
+      "better": "RAG — pgvector retrieval, chunking, hybrid search and reranking, eval-driven"
+    },
+    {
+      "basic": "Prompt engineering",
+      "better": "Prompt engineering — few-shot, chain-of-thought, guardrails, measured on an eval set"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking an AI engineer experienced with ==LLMs==, ==RAG and vector databases==, ==prompt engineering==, ==LangChain==, and ==deploying AI features to production==, comfortable evaluating and monitoring model quality.\"",
+    "prioritizedSkills": [
+      "LLMs",
+      "RAG / Vector Databases",
+      "Prompt Engineering",
+      "LangChain",
+      "Model Deployment"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing \"ChatGPT\" as a skill.",
+      "detail": "Using a chatbot isn't engineering. Show APIs, RAG, orchestration and production work instead."
+    },
+    {
+      "title": "Claiming AI impact you can't quantify.",
+      "detail": "\"Built an AI feature\" is empty. Attach numbers — accuracy, latency, cost per call, business metric moved."
+    },
+    {
+      "title": "All demos, no production.",
+      "detail": "Notebooks and hackathon prototypes don't prove you can ship. Show evaluation, monitoring and reliability."
+    },
+    {
+      "title": "Buzzword-stuffing every AI term.",
+      "detail": "Listing RLHF, agents and fine-tuning you've never run is transparent in an interview. Claim what you've built."
+    },
+    {
+      "title": "Skipping the software engineering fundamentals.",
+      "detail": "AI engineers write production code. Python, APIs, Git and Docker matter as much as the model choice."
+    },
+    {
+      "title": "Listing skills you never demonstrate in your experience.",
+      "detail": "Back each headline skill with a bullet that proves it in a shipped system."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern AI engineer roles these are assumed, vague or off-target — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "ChatGPT (as a skill)",
+      "Microsoft Office",
+      "Basic computer skills",
+      "AI (as a bare word)",
+      "Typing",
+      "Email"
+    ]
+  },
+  "related": [
+    "ml-engineer",
+    "data-scientist",
+    "backend-developer",
+    "fullstack-developer"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should an AI engineer put on a resume?",
+      "a": "Aim for 14–18 well-chosen skills. Enough to cover Python, LLM APIs, RAG and vector search, an orchestration framework, and the production/evaluation side — but curated to what you can actually discuss. A wall of 80 buzzwords reads as noise and dilutes your strongest signals."
+    },
+    {
+      "q": "Is an AI engineer the same as an LLM engineer or ML engineer?",
+      "a": "\"AI engineer\" and \"LLM engineer\" are used almost interchangeably in 2026 for building products on top of foundation models — RAG, agents, prompt engineering and LLM deployment. ML engineer is broader and more training-focused (building and shipping custom models across domains). If a posting says LLM or generative AI engineer, lead with your LLM, RAG and orchestration skills; every skill on this page applies."
+    },
+    {
+      "q": "What are the most important AI engineer skills?",
+      "a": "Python, hands-on LLM API work (OpenAI/Anthropic), prompt engineering, and RAG with a vector database are the foundation, usually wired together with an orchestration framework like LangChain or LlamaIndex. Beyond those, employers look for evaluation, deployment and monitoring — with fine-tuning, agents and inference optimization growing in weight as you get more senior."
+    },
+    {
+      "q": "Do I need deep ML theory to be an AI engineer?",
+      "a": "Less than an ML engineer. Most AI engineer roles are about building reliable products on existing models, so software engineering, RAG, prompt engineering and evaluation matter more than deriving gradients. Foundations help you debug and fine-tune, but you don't need to train models from scratch — being able to ship an evaluated, monitored LLM system is the core signal."
+    },
+    {
+      "q": "Should I list prompt engineering on my resume?",
+      "a": "Yes, but make it concrete. \"Prompt engineering\" alone is weak; pair it with the techniques and results — few-shot, chain-of-thought, structured output, guardrails — and a metric from an evaluation set. Framed as measurable quality work rather than \"good at writing prompts,\" it reads as engineering, not a hobby."
+    },
+    {
+      "q": "What skills should a junior AI engineer include?",
+      "a": "Focus on the fundamentals you can demonstrate: Python, calling LLM APIs, prompt engineering, embeddings and a basic RAG pipeline over a vector database, plus Git. Back each with a project you actually built and, ideally, deployed. At entry level, one working, evaluated LLM app beats a long list of techniques you've only read about."
+    },
+    {
+      "q": "How do I tailor AI engineer skills to a job description?",
+      "a": "Read the posting and note the specific tools it names — model providers, vector database, orchestration framework, deployment stack. Mirror those in your own true words and move them toward the top of your skills section. Applicant tracking systems rank you partly on how well your resume echoes the job's language, so relevant, honest overlap matters."
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Fullstack Developer",
+    "shortName": "Fullstack",
+    "category": "Software Engineering",
+    "family": "fullstack-developer",
+    "familyName": "Fullstack Developer",
+    "order": 4
+  },
+  "seo": {
+    "title": "Fullstack Developer Resume Skills: 100+ for 2026 | Hirime",
+    "description": "Full stack developer resume skills for 2026 — the ATS keywords recruiters scan for across frontend, backend, databases and cloud. Free AI generator.",
+    "keywords": "full stack developer resume skills, fullstack developer skills, full stack engineer resume skills, skills for a full stack developer resume, MERN stack skills, ATS keywords"
+  },
+  "hero": {
+    "title": "Fullstack Developer Resume Skills: *100+ skills* for your resume",
+    "lede": "The end-to-end skills hiring managers and ATS actually scan for in 2026 — whether the role is called full stack developer or full stack engineer. Frontend, backend, databases, APIs and cloud, organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "AWS",
+      "Git",
+      "CI/CD"
+    ],
+    "primaryCta": { "label": "Get early access", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a full stack developer put on a resume?",
+    "answer": "Full stack developer and full stack engineer roles look for one person who can own a feature end to end. Lead with a language you ship in both layers (JavaScript/TypeScript or Python), a frontend framework (React) and a backend framework (Node.js/Express or Django), then a solid database story (PostgreSQL plus Redis), API design (REST, GraphQL where relevant), and the delivery basics — Git, Docker, CI/CD and a cloud provider. As you grow, add system design, auth and security, and testing across the stack. Tailor the exact mix to the job you're targeting.",
+    "essentials": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "SQL",
+      "PostgreSQL",
+      "REST APIs",
+      "Git",
+      "Docker",
+      "Testing"
+    ]
+  },
+  "categories": [
+    {
+      "id": "languages",
+      "title": "Languages",
+      "lead": "Full stack is about owning both layers — lead with a language you ship in on both ends, and add depth in parentheses where you can, e.g. “TypeScript (React, Node)”.",
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "SQL",
+        { "label": "Python", "tier": "mid" },
+        { "label": "PHP", "tier": "mid" },
+        { "label": "Java", "tier": "mid" },
+        { "label": "Bash", "tier": "mid" },
+        { "label": "Go", "tier": "senior" },
+        { "label": "C#", "tier": "senior" },
+        { "label": "Ruby", "tier": "senior" },
+        { "label": "Kotlin", "tier": "senior" },
+        { "label": "Rust", "tier": "senior" },
+        { "label": "Dart", "tier": "senior" },
+        { "label": "Scala", "tier": "senior" },
+        { "label": "Elixir", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "frontend",
+      "title": "Frontend",
+      "lead": "The client half of the stack — list the frameworks and styling tools you've actually shipped interfaces with.",
+      "skills": [
+        "React",
+        "Responsive Design",
+        "Tailwind CSS",
+        "Sass / SCSS",
+        { "label": "Next.js", "tier": "mid" },
+        { "label": "Vue", "tier": "mid" },
+        { "label": "Redux", "tier": "mid" },
+        { "label": "State Management", "tier": "mid" },
+        { "label": "TanStack Query", "tier": "mid" },
+        { "label": "Vite", "tier": "mid" },
+        { "label": "shadcn/ui", "tier": "mid" },
+        { "label": "Accessibility (a11y)", "tier": "mid" },
+        { "label": "Storybook", "tier": "mid" },
+        { "label": "Angular", "tier": "senior" },
+        { "label": "Svelte / SvelteKit", "tier": "senior" },
+        { "label": "Nuxt", "tier": "senior" },
+        { "label": "Web Performance", "tier": "senior" },
+        { "label": "PWAs", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Backend & Frameworks",
+      "lead": "The server half — the frameworks and runtimes you've built and operated services with, not everything you've read about.",
+      "skills": [
+        "Node.js",
+        "Express",
+        { "label": "REST APIs", "tier": "mid" },
+        { "label": "NestJS", "tier": "mid" },
+        { "label": "Fastify", "tier": "mid" },
+        { "label": "Django", "tier": "mid" },
+        { "label": "Flask", "tier": "mid" },
+        { "label": "FastAPI", "tier": "mid" },
+        { "label": "Ruby on Rails", "tier": "mid" },
+        { "label": "Laravel", "tier": "mid" },
+        { "label": "Spring Boot", "tier": "senior" },
+        { "label": "ASP.NET Core", "tier": "senior" },
+        { "label": "Symfony", "tier": "senior" },
+        { "label": "GraphQL Servers", "tier": "senior" },
+        { "label": "gRPC Services", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "databases",
+      "title": "Databases & Data",
+      "lead": "Show depth where you've designed schemas and tuned real queries — full stack roles expect you to own the data layer too.",
+      "skills": [
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "Redis",
+        "Database Design",
+        { "label": "MongoDB", "tier": "mid" },
+        { "label": "Prisma / ORMs", "tier": "mid" },
+        { "label": "Drizzle ORM", "tier": "mid" },
+        { "label": "Supabase / Firebase", "tier": "mid" },
+        { "label": "Query Optimization", "tier": "mid" },
+        { "label": "Indexing", "tier": "mid" },
+        { "label": "Elasticsearch", "tier": "senior" },
+        { "label": "DynamoDB", "tier": "senior" },
+        { "label": "Migrations", "tier": "senior" },
+        { "label": "Caching Strategies", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "apis",
+      "title": "APIs & Integration",
+      "lead": "How your frontend and backend talk — include the styles, auth and clients you've actually built with.",
+      "skills": [
+        "REST APIs",
+        "JSON",
+        "HTTP",
+        { "label": "API Design", "tier": "mid" },
+        { "label": "GraphQL", "tier": "mid" },
+        { "label": "tRPC", "tier": "mid" },
+        { "label": "Authentication", "tier": "mid" },
+        { "label": "OAuth 2.0 / JWT", "tier": "mid" },
+        { "label": "WebSockets", "tier": "mid" },
+        { "label": "Webhooks", "tier": "mid" },
+        { "label": "CORS", "tier": "mid" },
+        { "label": "Pagination", "tier": "mid" },
+        { "label": "gRPC", "tier": "senior" },
+        { "label": "OpenAPI / Swagger", "tier": "senior" },
+        { "label": "API Versioning", "tier": "senior" },
+        { "label": "Stripe / Payments", "tier": "senior" },
+        { "label": "Third-Party Integrations", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "cloud-devops",
+      "title": "Cloud & DevOps",
+      "lead": "Full stack increasingly means owning delivery — list the tools you genuinely operate day to day.",
+      "skills": [
+        "Git",
+        "Linux",
+        { "label": "Docker", "tier": "mid" },
+        { "label": "Docker Compose", "tier": "mid" },
+        { "label": "CI/CD", "tier": "mid" },
+        { "label": "AWS", "tier": "mid" },
+        { "label": "Vercel / Netlify", "tier": "mid" },
+        { "label": "Nginx", "tier": "mid" },
+        { "label": "GitHub Actions", "tier": "mid" },
+        { "label": "Cloudflare", "tier": "mid" },
+        { "label": "Kubernetes", "tier": "senior" },
+        { "label": "Terraform", "tier": "senior" },
+        { "label": "Serverless / Lambda", "tier": "senior" },
+        { "label": "GCP", "tier": "senior" },
+        { "label": "Azure", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture & Design",
+      "lead": "The judgment skills that grow with seniority — claim the ones you can defend with real decisions.",
+      "skills": [
+        { "label": "Clean Code", "tier": "mid" },
+        { "label": "MVC", "tier": "mid" },
+        { "label": "Design Patterns", "tier": "mid" },
+        { "label": "SOLID Principles", "tier": "mid" },
+        { "label": "System Design", "tier": "senior" },
+        { "label": "Microservices", "tier": "senior" },
+        { "label": "Monorepos", "tier": "senior" },
+        { "label": "Scalability", "tier": "senior" },
+        { "label": "Domain-Driven Design", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "Testing & Quality",
+      "lead": "Full stack testing spans both ends — add the ones you've used on real projects, from unit to end-to-end.",
+      "skills": [
+        "Unit Testing",
+        "Debugging",
+        { "label": "Jest", "tier": "mid" },
+        { "label": "Integration Testing", "tier": "mid" },
+        { "label": "React Testing Library", "tier": "mid" },
+        { "label": "End-to-End Testing", "tier": "mid" },
+        { "label": "Playwright / Cypress", "tier": "mid" },
+        { "label": "TDD", "tier": "senior" },
+        { "label": "Code Review", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools & Workflow",
+      "lead": "The everyday tooling that keeps a full stack workflow moving — list what you use, not what you've merely opened once.",
+      "skills": [
+        "Git",
+        "npm / pnpm",
+        "VS Code",
+        "Postman",
+        { "label": "Webpack / Vite", "tier": "mid" },
+        { "label": "ESLint / Prettier", "tier": "mid" },
+        { "label": "Jira", "tier": "mid" },
+        { "label": "Figma", "tier": "mid" },
+        { "label": "Monorepo Tooling", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can demonstrate through real work examples, not just claim — prove them in your experience bullets.",
+      "skills": [
+        "Communication",
+        "Problem Solving",
+        "Collaboration",
+        "Attention to Detail",
+        { "label": "Cross-Functional Work", "tier": "mid" },
+        { "label": "Agile / Scrum", "tier": "mid" },
+        { "label": "Documentation", "tier": "mid" },
+        { "label": "Ownership", "tier": "senior" },
+        { "label": "Mentoring", "tier": "senior" },
+        { "label": "Technical Leadership", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Frontend",
+    "types": ["Frontend", "Backend", "Databases", "APIs", "Cloud & DevOps", "Testing", "Soft Skills", "All"],
+    "levels": ["Entry Level", "Mid Level", "Senior"],
+    "defaultLevel": "Mid Level"
+  },
+  "experienceLevels": [
+    {
+      "name": "Entry Level",
+      "subtitle": "Build across the stack",
+      "filled": 1,
+      "skills": ["JavaScript", "React", "Node.js", "SQL", "Git", "REST APIs"]
+    },
+    {
+      "name": "Mid-Level",
+      "subtitle": "Own features end to end",
+      "filled": 2,
+      "skills": [
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "API Design",
+        "Testing",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Design systems & scale",
+      "filled": 3,
+      "skills": [
+        "System Design",
+        "Microservices",
+        "AWS",
+        "Kubernetes",
+        "Scalability",
+        "Technical Leadership"
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["TypeScript", "React", "Node.js", "PostgreSQL", "Docker", "AWS"],
+      "note": "A tight, scannable list that shows both ends of the stack — not everything you've touched."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Fullstack Developer with 4+ years shipping ==React front ends== and ==Node.js APIs== on ==PostgreSQL==, comfortable owning features from database to UI.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and focus."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Shipped a customer dashboard end to end — ==React front end==, ==Node.js/Express API==, and ==PostgreSQL schema== — cutting support tickets 30%.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "React",
+      "better": "React — hooks, TanStack Query, code-splitting, accessible components"
+    },
+    {
+      "basic": "Node.js",
+      "better": "Node.js — Express REST APIs, auth (JWT), PostgreSQL via Prisma"
+    },
+    {
+      "basic": "Full stack",
+      "better": "Fullstack — React front end, Node/Express API, PostgreSQL, Docker & CI/CD"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking a full stack developer strong in ==JavaScript/TypeScript==, ==React==, ==Node.js==, ==SQL databases==, and ==REST APIs==, comfortable owning features from front end to back end.\"",
+    "prioritizedSkills": [
+      "JavaScript / TypeScript",
+      "React",
+      "Node.js",
+      "SQL / PostgreSQL",
+      "REST APIs"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing every framework you've ever touched.",
+      "detail": "A wall of 60 tools reads as noise. Curate to what you can defend across both layers."
+    },
+    {
+      "title": "Only showing one side of the stack.",
+      "detail": "If your resume is all frontend or all backend, it reads as specialist, not full stack. Balance the two."
+    },
+    {
+      "title": "Claiming scale or impact you can't quantify.",
+      "detail": "\"Built scalable apps\" is empty. Attach numbers — users, latency, load, conversion."
+    },
+    {
+      "title": "Adding generic computer skills.",
+      "detail": "\"Microsoft Office\" and \"email\" are assumed and waste prime space."
+    },
+    {
+      "title": "Listing skills you can't discuss in an interview.",
+      "detail": "Every skill on the page is fair game for deep-dive and system-design questions."
+    },
+    {
+      "title": "Listing skills you never demonstrate in your experience.",
+      "detail": "Back each headline skill with a bullet that proves it."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern full stack roles these are assumed or off-target — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Office",
+      "Email",
+      "Basic computer skills",
+      "Typing",
+      "jQuery",
+      "Windows / macOS"
+    ]
+  },
+  "related": [
+    "frontend-developer",
+    "backend-developer",
+    "devops-engineer",
+    "qa-engineer",
+    "ai-engineer"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a full stack developer put on a resume?",
+      "a": "Aim for 14–18 well-chosen skills. Enough to show both ends of the stack — a language, a frontend framework, a backend framework, databases, APIs and the cloud or delivery tools a job asks for — but curated to what you can actually discuss. A wall of 60 tools reads as noise and hides your strongest signals."
+    },
+    {
+      "q": "Is a full stack developer the same as a full stack engineer?",
+      "a": "In most companies, yes — \"full stack developer\" and \"full stack engineer\" are used interchangeably, and job postings mix the two freely. \"Engineer\" sometimes signals a bit more emphasis on system design and scale, but the core skills are the same. Every skill on this page applies whether the posting says full stack developer or full stack engineer."
+    },
+    {
+      "q": "What are the most important full stack developer skills?",
+      "a": "A language you ship in on both ends (JavaScript/TypeScript or Python), a frontend framework (React), a backend framework (Node.js/Express or Django), and a solid database story (PostgreSQL plus Redis) are the foundation. Beyond those, employers look for REST API design, testing across the stack, Git, Docker, CI/CD and a cloud provider — with system design growing in weight as you get more senior."
+    },
+    {
+      "q": "Should I show both frontend and backend skills?",
+      "a": "Yes — that balance is the whole point of a full stack resume. If it's all React or all APIs, you read as a specialist. Group your skills so a recruiter sees both layers at a glance, and back it up with at least one experience bullet where you shipped a feature end to end, from database to UI."
+    },
+    {
+      "q": "Which stack should I put on my full stack resume — MERN, MEAN, or something else?",
+      "a": "Name the stack you've actually shipped with, and make it concrete: \"MERN (MongoDB, Express, React, Node)\" or \"React + Node + PostgreSQL\". Recruiters and ATS scan for those specific technologies, so mirror the language of the roles you're targeting rather than listing a stack you only tried in a tutorial."
+    },
+    {
+      "q": "What skills should a junior full stack developer include?",
+      "a": "Focus on the fundamentals you can demonstrate across both ends: JavaScript, React, Node.js, SQL and a relational database, Git, REST APIs and basic testing. Back each with a project or bullet. At entry level, one solid end-to-end project beats a long list of tools you've only tried once."
+    },
+    {
+      "q": "How do I tailor full stack skills to a job description?",
+      "a": "Read the posting and note the specific skills it names — language, frontend framework, backend framework, databases, cloud. Mirror those in your own true words and move them toward the top of your skills section. Applicant tracking systems rank you partly on how well your resume echoes the job's language, so relevant, honest overlap matters."
+    }
+  ]
+}

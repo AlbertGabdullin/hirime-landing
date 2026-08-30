@@ -1,0 +1,345 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "Machine Learning Engineer",
+    "shortName": "ML Engineer",
+    "category": "Data & AI",
+    "family": "ml-engineer",
+    "familyName": "ML Engineer",
+    "order": 3
+  },
+  "seo": {
+    "title": "Machine Learning Engineer Resume Skills: 80+ for 2026 | Hirime",
+    "description": "ML engineer resume skills for 2026 — the ATS keywords recruiters scan for: Python, PyTorch, MLOps, model deployment and cloud. Free AI generator.",
+    "keywords": "machine learning engineer resume skills, ml engineer resume skills, mlops resume skills, skills for a machine learning resume, pytorch tensorflow skills, model deployment, ATS keywords"
+  },
+  "hero": {
+    "title": "Machine Learning Engineer Resume Skills: *80+ skills* for your resume",
+    "lede": "The modeling and production skills hiring managers and ATS actually scan for in 2026 — whether the role is called ML engineer, machine learning engineer or MLOps engineer. Python, ML frameworks, MLOps, deployment and cloud, organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "scikit-learn",
+      "MLOps",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "SQL",
+      "Model Deployment"
+    ],
+    "primaryCta": { "label": "Get early access", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a machine learning engineer put on a resume?",
+    "answer": "ML engineer roles sit between data science and production engineering — they want models that ship and stay reliable. Lead with Python and an ML framework you've trained models in (PyTorch, TensorFlow or scikit-learn), a solid data foundation (SQL, pandas, feature engineering), and the production side that separates ML engineers from data scientists — model deployment, MLOps, Docker and a cloud provider. As you grow, add deep learning, distributed training, model monitoring and pipeline orchestration. Tailor the exact mix to the job you're targeting.",
+    "essentials": [
+      "Python",
+      "PyTorch",
+      "scikit-learn",
+      "SQL",
+      "pandas",
+      "MLOps",
+      "Docker",
+      "Model Deployment",
+      "AWS",
+      "Git"
+    ]
+  },
+  "categories": [
+    {
+      "id": "languages",
+      "title": "Languages & Core",
+      "lead": "Lead with Python — it's the lingua franca of ML — and add the others you genuinely use for data or performance work.",
+      "skills": [
+        "Python",
+        "SQL",
+        { "label": "NumPy", "tier": "mid" },
+        { "label": "pandas", "tier": "mid" },
+        { "label": "Bash", "tier": "mid" },
+        { "label": "C++", "tier": "senior" },
+        { "label": "Scala", "tier": "senior" },
+        { "label": "CUDA", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "ML & Deep Learning Frameworks",
+      "lead": "List the frameworks you've actually trained and shipped models with — add depth in parentheses, e.g. “PyTorch (custom training loops, DDP)”.",
+      "skills": [
+        "scikit-learn",
+        "PyTorch",
+        "TensorFlow",
+        { "label": "Keras", "tier": "mid" },
+        { "label": "XGBoost", "tier": "mid" },
+        { "label": "LightGBM", "tier": "mid" },
+        { "label": "Hugging Face", "tier": "mid" },
+        { "label": "JAX", "tier": "senior" },
+        { "label": "ONNX", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "techniques",
+      "title": "ML Techniques",
+      "lead": "The modeling toolkit you can actually apply and defend — claim the families you've built with, not skimmed.",
+      "skills": [
+        "Supervised Learning",
+        "Feature Engineering",
+        "Model Evaluation",
+        { "label": "Deep Learning", "tier": "mid" },
+        { "label": "Unsupervised Learning", "tier": "mid" },
+        { "label": "NLP", "tier": "mid" },
+        { "label": "Computer Vision", "tier": "mid" },
+        { "label": "Hyperparameter Tuning", "tier": "mid" },
+        { "label": "Recommender Systems", "tier": "senior" },
+        { "label": "Reinforcement Learning", "tier": "senior" },
+        { "label": "Time Series", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Data Engineering & Processing",
+      "lead": "Models are only as good as the data pipeline behind them — list the tools you've moved real data with.",
+      "skills": [
+        "SQL",
+        "pandas",
+        "Data Cleaning",
+        { "label": "ETL", "tier": "mid" },
+        { "label": "Feature Stores", "tier": "mid" },
+        { "label": "Apache Spark", "tier": "mid" },
+        { "label": "Airflow", "tier": "mid" },
+        { "label": "Data Pipelines", "tier": "senior" },
+        { "label": "Kafka", "tier": "senior" },
+        { "label": "dbt", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "mlops",
+      "title": "MLOps & Deployment",
+      "lead": "The production layer that defines an ML engineer — name the tools you've used to ship and operate models, not just train them.",
+      "skills": [
+        { "label": "Model Deployment", "tier": "mid" },
+        { "label": "MLOps", "tier": "mid" },
+        { "label": "MLflow", "tier": "mid" },
+        { "label": "Model Serving", "tier": "mid" },
+        { "label": "Experiment Tracking", "tier": "mid" },
+        { "label": "Model Monitoring", "tier": "senior" },
+        { "label": "Kubeflow", "tier": "senior" },
+        { "label": "Feature Pipelines", "tier": "senior" },
+        { "label": "A/B Testing", "tier": "senior" },
+        { "label": "Model Registry", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "cloud-infra",
+      "title": "Cloud & Infrastructure",
+      "lead": "ML engineers own delivery too — list the platforms and tools you genuinely operate day to day.",
+      "skills": [
+        "Git",
+        "Linux",
+        { "label": "Docker", "tier": "mid" },
+        { "label": "AWS", "tier": "mid" },
+        { "label": "SageMaker", "tier": "mid" },
+        { "label": "CI/CD", "tier": "mid" },
+        { "label": "GCP / Vertex AI", "tier": "mid" },
+        { "label": "Kubernetes", "tier": "senior" },
+        { "label": "GPU Training", "tier": "senior" },
+        { "label": "Distributed Training", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "foundations",
+      "title": "Math & Foundations",
+      "lead": "The theory that lets you choose and debug models — claim what you can actually reason about, not just name.",
+      "skills": [
+        "Statistics",
+        "Linear Algebra",
+        { "label": "Probability", "tier": "mid" },
+        { "label": "Optimization", "tier": "mid" },
+        { "label": "Calculus", "tier": "mid" },
+        { "label": "Bayesian Methods", "tier": "senior" },
+        { "label": "Experimental Design", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can demonstrate through real work examples, not just claim — prove them in your experience bullets.",
+      "skills": [
+        "Problem Solving",
+        "Communication",
+        "Analytical Thinking",
+        "Collaboration",
+        { "label": "Research Skills", "tier": "mid" },
+        { "label": "Documentation", "tier": "mid" },
+        { "label": "Cross-Functional Work", "tier": "mid" },
+        { "label": "Ownership", "tier": "senior" },
+        { "label": "Mentoring", "tier": "senior" },
+        { "label": "Technical Leadership", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Frameworks",
+    "types": ["Languages", "Frameworks", "ML Techniques", "Data Engineering", "MLOps", "Cloud", "Soft Skills", "All"],
+    "levels": ["Entry Level", "Mid Level", "Senior"],
+    "defaultLevel": "Mid Level"
+  },
+  "experienceLevels": [
+    {
+      "name": "Entry Level",
+      "subtitle": "Build & train models",
+      "filled": 1,
+      "skills": ["Python", "scikit-learn", "SQL", "pandas", "Feature Engineering", "Git"]
+    },
+    {
+      "name": "Mid-Level",
+      "subtitle": "Ship models to production",
+      "filled": 2,
+      "skills": [
+        "PyTorch",
+        "Model Deployment",
+        "MLOps",
+        "Docker",
+        "MLflow",
+        "AWS"
+      ]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Own ML systems at scale",
+      "filled": 3,
+      "skills": [
+        "Distributed Training",
+        "Model Monitoring",
+        "Kubernetes",
+        "Feature Pipelines",
+        "Kubeflow",
+        "Technical Leadership"
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Python", "PyTorch", "scikit-learn", "MLOps", "Docker", "AWS"],
+      "note": "A tight, scannable list that balances modeling and production — not everything you've imported once."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "Machine Learning Engineer with 4+ years training models in ==PyTorch== and shipping them to production with ==MLOps== on ==AWS==, focused on reliable, monitored deployments.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and focus."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Raised recommendation CTR 18% by ==training an XGBoost ranking model== and ==deploying it behind a low-latency serving API with model monitoring==.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "PyTorch",
+      "better": "PyTorch — custom training loops, distributed training (DDP), ONNX export"
+    },
+    {
+      "basic": "Machine Learning",
+      "better": "ML — feature engineering, model evaluation, hyperparameter tuning, deployment"
+    },
+    {
+      "basic": "Model deployment",
+      "better": "MLOps — MLflow tracking, Dockerized serving, CI/CD and model monitoring"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Looking for an ML engineer strong in ==Python==, ==PyTorch or TensorFlow==, ==model deployment==, ==MLOps==, and ==cloud (AWS/GCP)==, comfortable taking models from notebook to production.\"",
+    "prioritizedSkills": [
+      "Python",
+      "PyTorch / TensorFlow",
+      "Model Deployment",
+      "MLOps",
+      "AWS / GCP"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Reading like a data scientist, not an ML engineer.",
+      "detail": "The differentiator is production. Show deployment, MLOps and serving — not just notebooks and models."
+    },
+    {
+      "title": "Claiming model impact you can't quantify.",
+      "detail": "\"Improved the model\" is empty. Attach numbers — accuracy, AUC, latency, business metric moved."
+    },
+    {
+      "title": "Listing every algorithm you've read about.",
+      "detail": "A wall of techniques reads as noise. Curate to what you've actually trained and defended."
+    },
+    {
+      "title": "Skipping the engineering fundamentals.",
+      "detail": "ML engineers write production code. Git, Docker, testing and CI/CD matter as much as the model."
+    },
+    {
+      "title": "Adding generic computer skills.",
+      "detail": "\"Microsoft Office\" and \"email\" are assumed and waste prime space."
+    },
+    {
+      "title": "Listing skills you never demonstrate in your experience.",
+      "detail": "Back each headline skill with a bullet that proves it in a shipped system."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern ML engineer roles these are assumed or off-target — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Office",
+      "Email",
+      "Basic computer skills",
+      "Excel (as an ML tool)",
+      "Typing",
+      "Windows / macOS"
+    ]
+  },
+  "related": [
+    "data-scientist",
+    "ai-engineer",
+    "data-analyst",
+    "devops-engineer"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a machine learning engineer put on a resume?",
+      "a": "Aim for 14–18 well-chosen skills. Enough to cover Python, an ML framework, modeling techniques, the data layer and the MLOps/deployment side — but curated to what you can actually discuss. A wall of 80 tools and algorithms reads as noise and dilutes your strongest signals."
+    },
+    {
+      "q": "What's the difference between an ML engineer and a data scientist?",
+      "a": "They overlap on modeling, but the emphasis differs. Data scientists lean toward analysis, experimentation and communicating insight; ML engineers lean toward shipping and operating models in production — deployment, MLOps, serving, monitoring and scale. On an ML engineer resume, make the production and software-engineering side prominent, not just the notebooks."
+    },
+    {
+      "q": "What are the most important ML engineer skills?",
+      "a": "Python and an ML framework (PyTorch, TensorFlow or scikit-learn), a solid data foundation (SQL, pandas, feature engineering), and the production stack — model deployment, MLOps, Docker and a cloud provider — are the foundation. Beyond those, employers look for deep learning, model monitoring and pipeline orchestration, with distributed training and system design growing in weight as you get more senior."
+    },
+    {
+      "q": "Do ML engineers need strong software engineering skills?",
+      "a": "Yes — that's what separates the role from data science. ML engineers write production code, so Git, Docker, testing, CI/CD and clean, maintainable Python are expected alongside the modeling. Many ML engineer interviews include a standard coding round, so treat software engineering as core, not optional."
+    },
+    {
+      "q": "Should I list MLOps on my ML engineer resume?",
+      "a": "Yes — MLOps is often the deciding signal. Name the concrete tools and practices you've used: experiment tracking (MLflow), model serving, CI/CD for models, and monitoring for drift and performance. \"Deployed and monitored a model in production\" carries far more weight than \"trained a model\" alone."
+    },
+    {
+      "q": "What skills should a junior ML engineer include?",
+      "a": "Focus on the fundamentals you can demonstrate: Python, scikit-learn, SQL and pandas, feature engineering and model evaluation, plus Git and the start of deployment with Docker. Back each with a project that went at least partway to production. At entry level, one deployed model beats a long list of algorithms you've only read about."
+    },
+    {
+      "q": "How do I tailor ML engineer skills to a job description?",
+      "a": "Read the posting and note the specific tools it names — framework, cloud, MLOps stack, data tools. Mirror those in your own true words and move them toward the top of your skills section. Applicant tracking systems rank you partly on how well your resume echoes the job's language, so relevant, honest overlap matters."
+    }
+  ]
+}

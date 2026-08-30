@@ -1,0 +1,344 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "QA Engineer",
+    "shortName": "QA",
+    "category": "Quality & Security",
+    "family": "qa-engineer",
+    "familyName": "QA Engineer",
+    "order": 1
+  },
+  "seo": {
+    "title": "QA Engineer Resume Skills: 70+ for 2026 | Hirime",
+    "description": "QA engineer and SDET resume skills for 2026 — the ATS keywords recruiters scan for: test automation, Selenium, API testing and CI/CD. Free AI generator.",
+    "keywords": "qa engineer resume skills, qa automation resume skills, sdet resume skills, software tester skills, test automation skills, selenium playwright, skills for a qa resume, ATS keywords"
+  },
+  "hero": {
+    "title": "QA Engineer Resume Skills: *70+ skills* for your resume",
+    "lede": "The testing and automation skills hiring managers and ATS actually scan for in 2026 — whether the role is called QA engineer, test automation engineer or SDET. Test automation, frameworks, API testing, CI/CD and methodology, organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Test Automation",
+      "Selenium",
+      "Playwright",
+      "Cypress",
+      "API Testing",
+      "SQL",
+      "Java",
+      "Python",
+      "CI/CD",
+      "Jira"
+    ],
+    "primaryCta": { "label": "Get early access", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a QA engineer put on a resume?",
+    "answer": "QA, test automation and SDET roles look for someone who protects quality without slowing delivery. Lead with test automation and a framework you've shipped with (Selenium, Playwright or Cypress), a programming language (Java, Python or JavaScript), API testing (Postman, REST Assured) and SQL for data checks, then the fundamentals — test design, manual testing and bug tracking (Jira). As you grow, add CI/CD integration, performance and security testing, and test strategy. Tailor the exact mix to the job you're targeting.",
+    "essentials": [
+      "Test Automation",
+      "Selenium",
+      "API Testing",
+      "SQL",
+      "Java",
+      "Test Cases",
+      "Jira",
+      "CI/CD",
+      "Bug Tracking",
+      "Agile"
+    ]
+  },
+  "categories": [
+    {
+      "id": "automation",
+      "title": "Test Automation",
+      "lead": "The core of modern QA — list the frameworks you've actually built and maintained suites with, and add depth in parentheses, e.g. “Playwright (Page Object Model)”.",
+      "skills": [
+        "Test Automation",
+        "Selenium",
+        { "label": "Playwright", "tier": "mid" },
+        { "label": "Cypress", "tier": "mid" },
+        { "label": "WebDriver", "tier": "mid" },
+        { "label": "Appium", "tier": "mid" },
+        { "label": "Page Object Model", "tier": "mid" },
+        { "label": "TestNG", "tier": "senior" },
+        { "label": "Playwright / BDD", "tier": "senior" },
+        { "label": "Framework Design", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "languages",
+      "title": "Languages",
+      "lead": "Automation is code — lead with the language you write tests in and can defend in an interview.",
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        { "label": "TypeScript", "tier": "mid" },
+        { "label": "C#", "tier": "mid" },
+        { "label": "Bash", "tier": "senior" },
+        { "label": "Groovy", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "test-types",
+      "title": "Testing Types",
+      "lead": "The breadth of testing you own — list the ones you've genuinely done, not everything in the textbook.",
+      "skills": [
+        "Functional Testing",
+        "Regression Testing",
+        "Integration Testing",
+        "Smoke Testing",
+        { "label": "End-to-End Testing", "tier": "mid" },
+        { "label": "Cross-Browser Testing", "tier": "mid" },
+        { "label": "Exploratory Testing", "tier": "mid" },
+        { "label": "Mobile Testing", "tier": "mid" },
+        { "label": "Accessibility Testing", "tier": "senior" },
+        { "label": "Usability Testing", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "api-testing",
+      "title": "API & Backend Testing",
+      "lead": "How you verify the layer beneath the UI — include the tools and checks you've actually run.",
+      "skills": [
+        "API Testing",
+        "Postman",
+        "REST APIs",
+        { "label": "REST Assured", "tier": "mid" },
+        { "label": "SQL Queries", "tier": "mid" },
+        { "label": "JSON / XML", "tier": "mid" },
+        { "label": "GraphQL Testing", "tier": "senior" },
+        { "label": "Contract Testing", "tier": "senior" },
+        { "label": "Mock Servers", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "performance-security",
+      "title": "Performance & Security",
+      "lead": "The specialized testing that sets senior QA apart — claim what you've actually measured or exploited.",
+      "skills": [
+        { "label": "Performance Testing", "tier": "mid" },
+        { "label": "Load Testing", "tier": "mid" },
+        { "label": "JMeter", "tier": "mid" },
+        { "label": "k6", "tier": "senior" },
+        { "label": "Gatling", "tier": "senior" },
+        { "label": "Security Testing", "tier": "senior" },
+        { "label": "OWASP Top 10", "tier": "senior" },
+        { "label": "Penetration Testing", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "cicd",
+      "title": "CI/CD & Tooling",
+      "lead": "Automated tests only pay off when they run on every change — name the pipelines and tools you've wired in.",
+      "skills": [
+        "Git",
+        { "label": "CI/CD", "tier": "mid" },
+        { "label": "Jenkins", "tier": "mid" },
+        { "label": "GitHub Actions", "tier": "mid" },
+        { "label": "Docker", "tier": "mid" },
+        { "label": "GitLab CI", "tier": "senior" },
+        { "label": "Test Reporting", "tier": "senior" },
+        { "label": "Parallel Execution", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "process",
+      "title": "Process & Methodology",
+      "lead": "The craft of QA beyond tools — the practices you apply to catch defects early and keep releases safe.",
+      "skills": [
+        "Test Cases",
+        "Test Plans",
+        "Bug Tracking",
+        "Jira",
+        "Agile / Scrum",
+        { "label": "Test Strategy", "tier": "mid" },
+        { "label": "Risk-Based Testing", "tier": "mid" },
+        { "label": "SDLC / STLC", "tier": "mid" },
+        { "label": "BDD / Gherkin", "tier": "senior" },
+        { "label": "Shift-Left Testing", "tier": "senior" },
+        { "label": "Quality Metrics", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can demonstrate through real work examples, not just claim — prove them in your experience bullets.",
+      "skills": [
+        "Attention to Detail",
+        "Analytical Thinking",
+        "Communication",
+        "Problem Solving",
+        { "label": "Collaboration", "tier": "mid" },
+        { "label": "Documentation", "tier": "mid" },
+        { "label": "Bug Advocacy", "tier": "mid" },
+        { "label": "Ownership", "tier": "senior" },
+        { "label": "Mentoring", "tier": "senior" },
+        { "label": "Test Leadership", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Test Automation",
+    "types": ["Test Automation", "Testing Types", "API Testing", "Performance & Security", "CI/CD", "Process", "Soft Skills", "All"],
+    "levels": ["Entry Level", "Mid Level", "Senior"],
+    "defaultLevel": "Mid Level"
+  },
+  "experienceLevels": [
+    {
+      "name": "Entry Level",
+      "subtitle": "Master the fundamentals",
+      "filled": 1,
+      "skills": ["Test Cases", "Functional Testing", "Bug Tracking", "Jira", "SQL", "Agile"]
+    },
+    {
+      "name": "Mid-Level",
+      "subtitle": "Automate the suite",
+      "filled": 2,
+      "skills": [
+        "Selenium",
+        "Playwright",
+        "API Testing",
+        "Java",
+        "CI/CD",
+        "Regression Testing"
+      ]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Own quality strategy",
+      "filled": 3,
+      "skills": [
+        "Framework Design",
+        "Test Strategy",
+        "Performance Testing",
+        "Shift-Left Testing",
+        "Quality Metrics",
+        "Test Leadership"
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Selenium", "Playwright", "API Testing", "Java", "SQL", "CI/CD"],
+      "note": "A tight, scannable list of the frameworks and testing types you genuinely own — not everything you've tried."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "QA Engineer with 4+ years building ==test automation== with ==Selenium and Playwright==, integrating suites into ==CI/CD== and cutting regression cycles from days to hours.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and focus."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Cut regression testing from 3 days to 4 hours by ==automating 200+ end-to-end cases in Playwright== and ==running them in parallel on CI==.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "Selenium",
+      "better": "Selenium — Java, TestNG, Page Object Model, parallel Grid execution"
+    },
+    {
+      "basic": "API Testing",
+      "better": "API testing — Postman and REST Assured with schema and contract validation"
+    },
+    {
+      "basic": "Manual Testing",
+      "better": "Test design — risk-based test plans, exploratory testing, clear repro steps"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Seeking a QA engineer skilled in ==test automation== with ==Selenium or Playwright==, ==API testing==, ==SQL==, and ==CI/CD integration==, comfortable owning quality across the release cycle.\"",
+    "prioritizedSkills": [
+      "Test Automation",
+      "Selenium / Playwright",
+      "API Testing",
+      "SQL",
+      "CI/CD"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing \"manual testing\" and nothing else.",
+      "detail": "Modern QA roles expect automation. Lead with a framework and a language you can code in."
+    },
+    {
+      "title": "Claiming quality wins you can't quantify.",
+      "detail": "\"Improved quality\" is empty. Attach numbers — regression time cut, defect escape rate, coverage."
+    },
+    {
+      "title": "Listing every tool you've opened once.",
+      "detail": "A wall of 70 tools reads as noise. Curate to frameworks you've built real suites with."
+    },
+    {
+      "title": "Naming a language you can't write tests in.",
+      "detail": "SDET interviews include coding. Only claim the language you actually automate in."
+    },
+    {
+      "title": "Adding generic computer skills.",
+      "detail": "\"Microsoft Office\" and \"email\" are assumed and waste prime space."
+    },
+    {
+      "title": "Listing skills you never demonstrate in your experience.",
+      "detail": "Back each headline skill with a bullet that proves it on real releases."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern QA and SDET roles these are assumed or off-target — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Office",
+      "Email",
+      "Basic computer skills",
+      "Typing",
+      "Manual test execution (only)",
+      "Windows / macOS"
+    ]
+  },
+  "related": [
+    "backend-developer",
+    "fullstack-developer",
+    "devops-engineer",
+    "frontend-developer"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a QA engineer put on a resume?",
+      "a": "Aim for 14–18 well-chosen skills. Enough to cover automation frameworks, a programming language, API and database testing, CI/CD and test methodology — but curated to what you can actually discuss. A wall of 70 tools reads as noise and dilutes your strongest signals."
+    },
+    {
+      "q": "Is a QA engineer the same as an SDET or test automation engineer?",
+      "a": "They overlap, but with different emphasis. \"QA engineer\" is the broad term; \"SDET\" (software development engineer in test) and \"test automation engineer\" lean harder on coding, framework design and CI integration. If you're targeting SDET roles, put your programming language and automation framework first and prove them with a coded suite; the skills on this page apply across all three titles."
+    },
+    {
+      "q": "What are the most important QA engineer skills?",
+      "a": "Test automation with a framework (Selenium, Playwright or Cypress), a programming language (Java, Python or JavaScript), API testing and SQL are the foundation. Beyond those, employers look for solid test design, bug tracking (Jira), Agile experience and CI/CD integration — with performance testing, security testing and test strategy growing in weight as you get more senior."
+    },
+    {
+      "q": "Do QA engineers need to know how to code?",
+      "a": "For most roles now, yes. Automation is code, and even \"manual\" QA roles increasingly expect you to read and write test scripts. Java, Python and JavaScript/TypeScript cover most frameworks. You don't need to be an application developer, but being able to build and maintain an automation suite is expected at mid-level and above."
+    },
+    {
+      "q": "Should I list manual testing on a QA resume?",
+      "a": "Yes, but frame it as test design and exploratory skill, not just \"clicking through the app\". List it alongside your automation — recruiters value QA who can both write a smart test plan and automate it. Leading with only manual execution, however, signals an entry-level or dated profile for most 2026 roles."
+    },
+    {
+      "q": "What skills should a junior QA engineer include?",
+      "a": "Focus on the fundamentals you can demonstrate: writing clear test cases and bug reports, functional and regression testing, SQL for data checks, Jira and Agile basics, and the start of automation with Selenium or Playwright. Back each with a project. At entry level, solid test design plus one automated suite beats a long list of tools you've only read about."
+    },
+    {
+      "q": "How do I tailor QA skills to a job description?",
+      "a": "Read the posting and note the specific tools it names — automation framework, language, API tools, CI platform. Mirror those in your own true words and move them toward the top of your skills section. Applicant tracking systems rank you partly on how well your resume echoes the job's language, so relevant, honest overlap matters."
+    }
+  ]
+}

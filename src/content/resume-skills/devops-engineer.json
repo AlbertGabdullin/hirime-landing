@@ -1,0 +1,369 @@
+{
+  "status": "published",
+  "profession": {
+    "name": "DevOps Engineer",
+    "shortName": "DevOps",
+    "category": "Infrastructure & Cloud",
+    "family": "devops-engineer",
+    "familyName": "DevOps Engineer",
+    "order": 1
+  },
+  "seo": {
+    "title": "DevOps Engineer Resume Skills: 70+ for 2026 | Hirime",
+    "description": "DevOps and platform/SRE resume skills for 2026 — the ATS keywords recruiters scan for: CI/CD, Kubernetes, Terraform, cloud and observability. Free AI generator.",
+    "keywords": "devops engineer resume skills, devops resume skills, sre resume skills, platform engineer skills, skills for a devops resume, kubernetes terraform ci/cd, ATS keywords"
+  },
+  "hero": {
+    "title": "DevOps Engineer Resume Skills: *70+ skills* for your resume",
+    "lede": "The infrastructure and automation skills hiring managers and ATS actually scan for in 2026 — whether the role is called DevOps engineer, platform engineer or SRE. CI/CD, containers, cloud, infrastructure as code and observability, organized by category and experience level, with real examples of how to phrase them. Explore the list, or generate a set tailored to you.",
+    "featuredSkills": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "CI/CD",
+      "Linux",
+      "Ansible",
+      "Prometheus",
+      "GitHub Actions",
+      "Bash"
+    ],
+    "primaryCta": { "label": "Get early access", "href": "#build" },
+    "secondaryCta": { "label": "Generate Skills with AI", "href": "#generator" }
+  },
+  "quickAnswer": {
+    "question": "What skills should a DevOps engineer put on a resume?",
+    "answer": "DevOps, platform and SRE roles look for the same core: automate delivery, run infrastructure reliably, and make systems observable. Lead with containers and orchestration (Docker, Kubernetes), a cloud provider (AWS, GCP or Azure), CI/CD pipelines and infrastructure as code (Terraform), then Linux, scripting (Bash/Python) and configuration management (Ansible). As you grow, add observability (Prometheus, Grafana), security/DevSecOps, and reliability practices — SLOs, incident response and cost optimization. Tailor the exact mix to the job you're targeting.",
+    "essentials": [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "CI/CD",
+      "Bash",
+      "Git",
+      "Ansible",
+      "Monitoring"
+    ]
+  },
+  "categories": [
+    {
+      "id": "cloud",
+      "title": "Cloud Platforms",
+      "lead": "Lead with the cloud you actually operate — add the services in parentheses where you can, e.g. “AWS (EKS, EC2, S3, IAM)”.",
+      "skills": [
+        "AWS",
+        "Linux",
+        { "label": "GCP", "tier": "mid" },
+        { "label": "Azure", "tier": "mid" },
+        { "label": "EC2 / Compute", "tier": "mid" },
+        { "label": "S3 / Object Storage", "tier": "mid" },
+        { "label": "IAM", "tier": "mid" },
+        { "label": "VPC / Networking", "tier": "mid" },
+        { "label": "Cloud Cost Optimization", "tier": "senior" },
+        { "label": "Multi-Cloud", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "containers",
+      "title": "Containers & Orchestration",
+      "lead": "The core of modern delivery — list what you've shipped and operated, not just tried locally.",
+      "skills": [
+        "Docker",
+        { "label": "Kubernetes", "tier": "mid" },
+        { "label": "Helm", "tier": "mid" },
+        { "label": "Container Registries", "tier": "mid" },
+        { "label": "Docker Compose", "tier": "mid" },
+        { "label": "EKS / GKE / AKS", "tier": "senior" },
+        { "label": "Service Mesh (Istio)", "tier": "senior" },
+        { "label": "ArgoCD / GitOps", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "iac",
+      "title": "Infrastructure as Code",
+      "lead": "Show that you manage infrastructure in version control, not by clicking in a console.",
+      "skills": [
+        { "label": "Terraform", "tier": "mid" },
+        { "label": "Ansible", "tier": "mid" },
+        { "label": "CloudFormation", "tier": "mid" },
+        { "label": "Packer", "tier": "senior" },
+        { "label": "Pulumi", "tier": "senior" },
+        { "label": "Terragrunt", "tier": "senior" },
+        { "label": "Config Management", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "cicd",
+      "title": "CI/CD & Automation",
+      "lead": "The pipelines you've built and maintained — name the tools, not just the concept.",
+      "skills": [
+        "Git",
+        { "label": "CI/CD", "tier": "mid" },
+        { "label": "GitHub Actions", "tier": "mid" },
+        { "label": "GitLab CI", "tier": "mid" },
+        { "label": "Jenkins", "tier": "mid" },
+        { "label": "Build Automation", "tier": "mid" },
+        { "label": "Artifact Management", "tier": "senior" },
+        { "label": "Deployment Strategies", "tier": "senior" },
+        { "label": "Blue-Green / Canary", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "scripting",
+      "title": "Scripting & Programming",
+      "lead": "The glue of automation — list the languages you actually write tooling in.",
+      "skills": [
+        "Bash",
+        "Python",
+        { "label": "Shell Scripting", "tier": "mid" },
+        { "label": "YAML", "tier": "mid" },
+        { "label": "Go", "tier": "senior" },
+        { "label": "Groovy", "tier": "senior" },
+        { "label": "Regex", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "observability",
+      "title": "Observability & Monitoring",
+      "lead": "Higher signal when you can back it with a result — an SLA hit, an incident cut short, an outage prevented.",
+      "skills": [
+        { "label": "Monitoring", "tier": "mid" },
+        { "label": "Logging", "tier": "mid" },
+        { "label": "Prometheus", "tier": "mid" },
+        { "label": "Grafana", "tier": "mid" },
+        { "label": "ELK Stack", "tier": "mid" },
+        { "label": "Datadog", "tier": "mid" },
+        { "label": "Distributed Tracing", "tier": "senior" },
+        { "label": "OpenTelemetry", "tier": "senior" },
+        { "label": "Alerting", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "reliability",
+      "title": "Reliability & SRE",
+      "lead": "The reliability judgment that grows with seniority — claim the ones you can back with real incidents.",
+      "skills": [
+        { "label": "Incident Response", "tier": "mid" },
+        { "label": "On-Call", "tier": "mid" },
+        { "label": "High Availability", "tier": "senior" },
+        { "label": "SLOs / SLAs", "tier": "senior" },
+        { "label": "Disaster Recovery", "tier": "senior" },
+        { "label": "Capacity Planning", "tier": "senior" },
+        { "label": "Chaos Engineering", "tier": "senior" },
+        { "label": "Postmortems", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Security & DevSecOps",
+      "lead": "Even a couple of these signal you build safely — list what you've implemented, not just heard of.",
+      "skills": [
+        { "label": "Secrets Management", "tier": "mid" },
+        { "label": "IAM Policies", "tier": "mid" },
+        { "label": "TLS / SSL", "tier": "mid" },
+        { "label": "Vault", "tier": "senior" },
+        { "label": "Vulnerability Scanning", "tier": "senior" },
+        { "label": "Network Security", "tier": "senior" },
+        { "label": "Compliance (SOC 2)", "tier": "senior" },
+        { "label": "Policy as Code", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "networking",
+      "title": "Networking & Systems",
+      "lead": "The fundamentals under every deployment — list what you genuinely troubleshoot, not textbook trivia.",
+      "skills": [
+        "Linux",
+        "DNS",
+        "HTTP / HTTPS",
+        { "label": "Load Balancing", "tier": "mid" },
+        { "label": "Nginx", "tier": "mid" },
+        { "label": "TCP/IP", "tier": "mid" },
+        { "label": "Firewalls", "tier": "mid" },
+        { "label": "VPNs", "tier": "senior" },
+        { "label": "CDN", "tier": "senior" }
+      ]
+    },
+    {
+      "id": "soft",
+      "title": "Soft Skills",
+      "countLabel": "choose 3–5",
+      "lead": "Choose 3–5 you can demonstrate through real work examples, not just claim — prove them in your experience bullets.",
+      "skills": [
+        "Problem Solving",
+        "Communication",
+        "Collaboration",
+        "Troubleshooting",
+        { "label": "Documentation", "tier": "mid" },
+        { "label": "Agile / Scrum", "tier": "mid" },
+        { "label": "Cross-Functional Work", "tier": "mid" },
+        { "label": "Ownership", "tier": "senior" },
+        { "label": "Mentoring", "tier": "senior" },
+        { "label": "Technical Leadership", "tier": "senior" }
+      ]
+    }
+  ],
+  "generator": {
+    "defaultType": "Cloud",
+    "types": ["Cloud", "Containers", "Infrastructure as Code", "CI/CD", "Observability", "Security", "Soft Skills", "All"],
+    "levels": ["Entry Level", "Mid Level", "Senior"],
+    "defaultLevel": "Mid Level"
+  },
+  "experienceLevels": [
+    {
+      "name": "Entry Level",
+      "subtitle": "Automate the basics",
+      "filled": 1,
+      "skills": ["Linux", "Docker", "Bash", "Git", "CI/CD", "AWS"]
+    },
+    {
+      "name": "Mid-Level",
+      "subtitle": "Run production infra",
+      "filled": 2,
+      "skills": [
+        "Kubernetes",
+        "Terraform",
+        "Ansible",
+        "GitHub Actions",
+        "Prometheus",
+        "Monitoring"
+      ]
+    },
+    {
+      "name": "Senior",
+      "subtitle": "Own reliability & scale",
+      "filled": 3,
+      "skills": [
+        "SLOs / SLAs",
+        "GitOps",
+        "High Availability",
+        "Disaster Recovery",
+        "Cloud Cost Optimization",
+        "Technical Leadership"
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "title": "Skills section",
+      "kind": "skills",
+      "roleLabel": "SKILLS",
+      "skills": ["Kubernetes", "Terraform", "AWS", "CI/CD", "Prometheus", "Ansible"],
+      "note": "A tight, scannable list of the platforms and tools you genuinely operate — not everything you've read about."
+    },
+    {
+      "title": "Professional summary",
+      "kind": "summary",
+      "roleLabel": "SUMMARY",
+      "text": "DevOps Engineer with 4+ years automating delivery on ==AWS== and ==Kubernetes==, managing infrastructure as code with ==Terraform== and cutting deployment time and incident rates.",
+      "note": "Fold your top 2–3 skills into a sentence that frames your experience and focus."
+    },
+    {
+      "title": "Work experience",
+      "kind": "bullet",
+      "roleLabel": "EXPERIENCE · BULLET",
+      "text": "Cut deployment time from 40 to 6 minutes by ==rebuilding CI/CD in GitHub Actions== and ==containerizing services with Docker and Kubernetes==.",
+      "note": "The most convincing place — show a skill delivering a measurable result."
+    }
+  ],
+  "comparisons": [
+    {
+      "basic": "AWS",
+      "better": "AWS — EKS, EC2, S3, IAM, VPC, cost optimization"
+    },
+    {
+      "basic": "CI/CD",
+      "better": "CI/CD — GitHub Actions pipelines with canary deploys and automated rollback"
+    },
+    {
+      "basic": "Terraform",
+      "better": "Terraform — modular IaC for multi-account AWS with remote state and CI validation"
+    }
+  ],
+  "jobDescriptionExample": {
+    "excerpt": "\"Looking for a DevOps engineer experienced with ==AWS==, ==Kubernetes==, ==Terraform==, ==CI/CD pipelines==, and ==monitoring==, comfortable owning reliability and automating delivery.\"",
+    "prioritizedSkills": [
+      "AWS",
+      "Kubernetes",
+      "Terraform",
+      "CI/CD",
+      "Monitoring"
+    ]
+  },
+  "mistakes": [
+    {
+      "title": "Listing every tool in the CNCF landscape.",
+      "detail": "A wall of 70 tools reads as noise. Curate to what you've actually run in production."
+    },
+    {
+      "title": "Claiming reliability wins you can't quantify.",
+      "detail": "\"Improved uptime\" is empty. Attach numbers — 99.9% SLA, deploy time cut 80%, MTTR halved."
+    },
+    {
+      "title": "Listing a cloud you only clicked through once.",
+      "detail": "Interviewers probe cloud depth fast. Lead with the provider you genuinely operate."
+    },
+    {
+      "title": "Adding generic computer skills.",
+      "detail": "\"Microsoft Office\" and \"email\" are assumed and waste prime space."
+    },
+    {
+      "title": "Confusing tools with outcomes.",
+      "detail": "Naming Terraform and Kubernetes isn't enough — show what they let you deliver reliably."
+    },
+    {
+      "title": "Listing skills you never demonstrate in your experience.",
+      "detail": "Back each headline tool with a bullet that proves it in production."
+    }
+  ],
+  "skillsToAvoid": {
+    "heading": "Skills you usually don't need to list",
+    "description": "For modern DevOps roles these are assumed or off-target — including them dilutes your stronger skills. Leave them off unless a specific posting explicitly asks.",
+    "skills": [
+      "Microsoft Office",
+      "Email",
+      "Basic computer skills",
+      "Windows Server (unless required)",
+      "Typing",
+      "FTP"
+    ]
+  },
+  "related": [
+    "backend-developer",
+    "fullstack-developer",
+    "qa-engineer",
+    "ml-engineer"
+  ],
+  "faq": [
+    {
+      "q": "How many skills should a DevOps engineer put on a resume?",
+      "a": "Aim for 14–18 well-chosen skills. Enough to cover a cloud provider, containers and orchestration, CI/CD, infrastructure as code and observability — but curated to what you can actually operate and discuss. A wall of 70 tools reads as noise and dilutes your strongest signals."
+    },
+    {
+      "q": "Is a DevOps engineer the same as an SRE or platform engineer?",
+      "a": "They overlap heavily and share most core skills — cloud, Kubernetes, CI/CD, IaC and observability. SRE leans harder on reliability (SLOs, error budgets, incident response), and platform engineering leans on building internal developer platforms and self-service tooling. The skills on this page apply across all three; emphasize reliability or platform tooling depending on the posting."
+    },
+    {
+      "q": "What are the most important DevOps skills?",
+      "a": "Containers and orchestration (Docker, Kubernetes), a cloud provider (AWS, GCP or Azure), CI/CD pipelines and infrastructure as code (Terraform) are the foundation. Beyond those, employers look for Linux, scripting (Bash/Python), configuration management (Ansible) and observability (Prometheus, Grafana) — with reliability practices and security growing in weight as you get more senior."
+    },
+    {
+      "q": "Which cloud should I put on my DevOps resume?",
+      "a": "Lead with the cloud you genuinely operate and make it specific: \"AWS (EKS, EC2, S3, IAM, VPC)\" signals far more depth than the bare name. AWS is the most in-demand, but GCP and Azure are strong depending on the market. If you've used more than one, list your primary first and keep the others honest about depth."
+    },
+    {
+      "q": "Do DevOps engineers need to know how to code?",
+      "a": "Yes — scripting and automation are core. Bash and Python cover most tooling, pipelines and glue work, and Go is increasingly valued for building operators and internal tools. You don't need to be an application developer, but \"can automate anything and reads other people's code\" is expected at every level."
+    },
+    {
+      "q": "What skills should a junior DevOps engineer include?",
+      "a": "Focus on the fundamentals you can demonstrate: Linux, Docker, Git, basic CI/CD, Bash scripting and a cloud provider. Back each with a project — even a personal one where you containerized an app and set up a pipeline. At entry level, depth in the basics beats a long list of tools you've only read about."
+    },
+    {
+      "q": "How do I tailor DevOps skills to a job description?",
+      "a": "Read the posting and note the specific tools it names — cloud, orchestration, IaC, CI/CD platform, monitoring stack. Mirror those in your own true words and move them toward the top of your skills section. Applicant tracking systems rank you partly on how well your resume echoes the job's language, so relevant, honest overlap matters."
+    }
+  ]
+}
